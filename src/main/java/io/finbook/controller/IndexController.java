@@ -1,21 +1,26 @@
 package io.finbook.controller;
 
-import spark.Request;
-import spark.Response;
-import spark.Route;
+import io.finbook.MyResponse;
+import io.finbook.ResponseCreator;
 
-import java.util.HashMap;
-import java.util.Map;
+public class IndexController {
 
-public class IndexController extends Controller {
-
-    public IndexController() {
+    public static ResponseCreator index() {
+        return MyResponse.ok("{\"message\": \"INDEX - Welcome page\"}");
     }
 
-    public static Route index = (Request request, Response response) ->{
-        Map<String, Object> model = new HashMap<>();
-        System.out.println((String) request.session().attribute("currentUser"));
-        System.out.println(getSessionLocale(request));
-        return ViewUtil.render(request, model, Path.Template.INDEX);
-    };
+    public static ResponseCreator create() {
+        return MyResponse.ok("{\"message\": \"CREATE page\"}");
+    }
+
+    public static ResponseCreator getList() {
+        return MyResponse.ok("{\"message\": \"GET-LIST page\"}");
+    }
+
+    public static ResponseCreator getById(String id) {
+        return MyResponse.ok("{" +
+                "\"id\": id," +
+                "\"message\": \"GET-BY-ID page\"}");
+    }
+
 }

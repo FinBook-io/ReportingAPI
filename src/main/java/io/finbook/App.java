@@ -1,11 +1,18 @@
 package io.finbook;
 
-import static spark.Spark.get;
+import spark.Request;
+import spark.Response;
 
 public class App {
+
     public static void main(String[] args) {
-        // get("/", (request, response) -> "Hello World!");
+        // Set up all routes
         Routes routes = new Routes();
         routes.init();
     }
+
+    public interface Converter {
+        ResponseCreator convert(Request req, Response res);
+    }
+
 }
