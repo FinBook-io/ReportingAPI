@@ -19,7 +19,7 @@ public class IndexController {
 
     public static ResponseCreator getById(String id) {
         return MyResponse.ok("{" +
-                "\"id\": id," +
+                "\"id\": " + id + "," +
                 "\"message\": \"GET-BY-ID page\"}");
     }
 
