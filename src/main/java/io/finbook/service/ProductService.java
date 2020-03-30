@@ -4,7 +4,7 @@ import io.finbook.model.Product;
 
 import java.util.List;
 
-public class ProductDatabase extends Database {
+public class ProductService extends Database {
 
     public String addProduct(Product product) {
         datastore.save(product);

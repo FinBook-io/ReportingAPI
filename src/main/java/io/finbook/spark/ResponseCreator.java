@@ -1,4 +1,4 @@
-package io.finbook;
+package io.finbook.spark;
 
 import spark.Route;
 

@@ -1,7 +1,5 @@
-package io.finbook;
+package io.finbook.spark;
 
-import io.finbook.spark.ResponseCreator;
-import io.finbook.spark.Routes;
 import spark.Request;
 import spark.Response;
 
@@ -12,11 +10,9 @@ public class App {
     public App() {
     }
 
-    public void init(){
+    public void init() {
         // Setup Spark-java
         staticFiles.location("/public");
-
-        // Setup database connnection
 
         // Setup all routes
         Routes routes = new Routes();
