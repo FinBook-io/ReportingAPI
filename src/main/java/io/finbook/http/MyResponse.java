@@ -1,8 +1,8 @@
-package io.finbook;
+package io.finbook.controller;
 
 import com.google.gson.Gson;
+import io.finbook.spark.ResponseCreator;
 
-import java.util.List;
 import java.util.Map;
 
 public class MyResponse {
