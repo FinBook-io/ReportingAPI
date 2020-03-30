@@ -2,6 +2,7 @@ package io.finbook.spark;
 
 import io.finbook.controller.IndexController;
 import io.finbook.controller.ProductController;
+import io.finbook.controller.UserController;
 import spark.Route;
 
 import static spark.Spark.get;
@@ -19,10 +20,15 @@ public class Routes {
     public void init(){
         get("/", map((req, res) -> IndexController.index()));
 
+        // USERS
+        get("/users", map((req, res) -> UserController.getList()));
+        post("/users", map((req, res) -> UserController.create(req.body())));
+
         // PRODUCTS
         get("/products", map((req, res) -> ProductController.getList()));
+        //get("/products/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
         post("/products", map((req, res) -> ProductController.create(req.body())));
-    }
 
+    }
 
 }

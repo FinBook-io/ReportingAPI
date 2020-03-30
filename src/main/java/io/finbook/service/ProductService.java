@@ -6,9 +6,8 @@ import java.util.List;
 
 public class ProductService extends Database {
 
-    public String addProduct(Product product) {
+    public void addProduct(Product product) {
         datastore.save(product);
-        return "Product added";
     }
 
     public List<Product> getAllProduct() {

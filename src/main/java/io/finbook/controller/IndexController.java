@@ -10,11 +10,9 @@ public class IndexController {
 
     public static ResponseCreator index() {
         return MyResponse.ok(
-                new Gson().toJson(
-                        new StandardResponse(
-                                StatusResponse.SUCCESS,
-                                "INDEX Page")
-                )
+                new StandardResponse(
+                        StatusResponse.SUCCESS,
+                        "INDEX Page")
         );
     }
 

@@ -4,18 +4,18 @@ import com.google.gson.Gson;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.http.StatusResponse;
+import io.finbook.model.User;
+import io.finbook.service.UserService;
 import io.finbook.spark.ResponseCreator;
-import io.finbook.model.Product;
-import io.finbook.service.ProductService;
 
-public class ProductController {
+public class UserController {
 
-    private static ProductService productService = new ProductService();
+    private static UserService userService = new UserService();
 
     public static ResponseCreator create(String body) {
-        Product product = new Gson().fromJson(body, Product.class);
+        User user = new Gson().fromJson(body, User.class);
 
-        productService.addProduct(product);
+        userService.addUser(user);
 
         return MyResponse.ok(
                 new StandardResponse(StatusResponse.SUCCESS)
@@ -26,7 +26,7 @@ public class ProductController {
         return MyResponse.ok(
                 new StandardResponse(
                         StatusResponse.SUCCESS,
-                        new Gson().toJsonTree(productService.getAllProduct())
+                        new Gson().toJsonTree(userService.getAllUsers())
                 )
         );
     }
