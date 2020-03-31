@@ -12,7 +12,7 @@ public class IndexController {
         HashMap<String, Object> data = new HashMap<>();
         data.put("firstName", "Kevin");
         return MyResponse.ok(
-                new StandardResponse(null, "index")
+                new StandardResponse(data, "index")
         );
     }
 

@@ -1,8 +1,5 @@
 package io.finbook.spark;
 
-import com.mongodb.client.model.Filters;
-
-import static spark.Spark.before;
 import static spark.Spark.staticFiles;
 
 public class App {

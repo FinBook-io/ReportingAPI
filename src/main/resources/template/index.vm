@@ -2,5 +2,7 @@
 #@mainLayout()
     #if($firstName)
         <h1>Hola, $firstName</h1>
+    #else
+        <h1>Hola, Anónimo</h1>
     #end
 #end

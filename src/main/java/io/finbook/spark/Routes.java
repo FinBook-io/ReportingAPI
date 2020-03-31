@@ -1,5 +1,6 @@
 package io.finbook.spark;
 
+import io.finbook.controller.ErrorController;
 import io.finbook.controller.IndexController;
 import io.finbook.controller.ProductController;
 import io.finbook.controller.UserController;
@@ -30,6 +31,8 @@ public class Routes {
         //get("/products/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
         post("/products", map((req, res) -> ProductController.create(req.body())));
 
+        // ERRORS
+        get("*", map((req, res) -> ErrorController.notFound()));
     }
 
 }
