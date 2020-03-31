@@ -19,12 +19,11 @@ public class Routes {
 
     public void init(){
         get("/", map((req, res) -> IndexController.index()));
-        get("/name/:name", map((req, res) -> IndexController.indexWithName(req.params(":name"))));
 
         // USERS
         get("/users", map((req, res) -> UserController.getList()));
         post("/users", map((req, res) -> UserController.create(req.body())));
-        get("/users/:id", map((req, res) -> UserController.getUserById(req.params(":id"))));
+        get("/users/:id", map((req, res) -> UserController.getUserByEmail(req.params(":id"))));
 
         // PRODUCTS
         get("/products", map((req, res) -> ProductController.getList()));

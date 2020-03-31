@@ -2,47 +2,31 @@ package io.finbook.http;
 
 import com.google.gson.JsonElement;
 
+import java.util.Map;
+
 public class StandardResponse {
 
-    private StatusResponse status;
-    private String message;
-    private JsonElement data;
+    private Map data;
+    private String view;
 
-    public StandardResponse(StatusResponse status) {
-        this.status = status;
-    }
-
-    public StandardResponse(StatusResponse status, String message) {
-        this.status = status;
-        this.message = message;
-    }
-
-    public StandardResponse(StatusResponse status, JsonElement data) {
-        this.status = status;
+    public StandardResponse(Map data, String view) {
         this.data = data;
+        this.view = view;
     }
 
-    public StatusResponse getStatus() {
-        return status;
-    }
-
-    public void setStatus(StatusResponse status) {
-        this.status = status;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public JsonElement getData() {
+    public Map getData() {
         return data;
     }
 
-    public void setData(JsonElement data) {
+    public void setData(Map data) {
         this.data = data;
+    }
+
+    public String getView() {
+        return view;
+    }
+
+    public void setView(String view) {
+        this.view = view;
     }
 }

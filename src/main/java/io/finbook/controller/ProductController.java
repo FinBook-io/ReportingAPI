@@ -3,7 +3,6 @@ package io.finbook.controller;
 import com.google.gson.Gson;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
-import io.finbook.http.StatusResponse;
 import io.finbook.spark.ResponseCreator;
 import io.finbook.model.Product;
 import io.finbook.service.ProductService;
@@ -18,18 +17,14 @@ public class ProductController {
         productService.addProduct(product);
 
         return MyResponse.ok(
-                new StandardResponse(StatusResponse.SUCCESS),
-                "index"
+                new StandardResponse(null, "index")
         );
     }
 
     public static ResponseCreator getList() {
+        // new Gson().toJsonTree(productService.getAllProduct())
         return MyResponse.ok(
-                new StandardResponse(
-                        StatusResponse.SUCCESS,
-                        new Gson().toJsonTree(productService.getAllProduct())
-                ),
-                "index"
+                new StandardResponse(null, "index")
         );
     }
 

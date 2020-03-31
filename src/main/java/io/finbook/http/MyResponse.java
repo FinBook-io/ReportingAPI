@@ -3,15 +3,14 @@ package io.finbook.http;
 import com.google.gson.Gson;
 import io.finbook.spark.ResponseCreator;
 import io.finbook.spark.TemplateEngine;
-import io.finbook.view.DataAndView;
 
 public class MyResponse {
 
-    public static ResponseCreator ok(StandardResponse body, String pathViewFile) {
+    public static ResponseCreator ok(StandardResponse body) {
         return (req, res) -> {
             res.status(200);
             res.type("application/json");
-            return new TemplateEngine().render(new DataAndView(body.getData(), pathViewFile));
+            return new TemplateEngine().render(body);
         };
     }
 
