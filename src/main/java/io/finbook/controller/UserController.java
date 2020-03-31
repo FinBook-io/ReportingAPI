@@ -18,7 +18,7 @@ public class UserController {
         userService.addUser(user);
 
         return MyResponse.ok(
-                new StandardResponse(StatusResponse.SUCCESS)
+                new StandardResponse(StatusResponse.SUCCESS), "index"
         );
     }
 
@@ -27,7 +27,18 @@ public class UserController {
                 new StandardResponse(
                         StatusResponse.SUCCESS,
                         new Gson().toJsonTree(userService.getAllUsers())
-                )
+                ),
+                "index"
+        );
+    }
+
+    public static ResponseCreator getUserById(String email) {
+        return MyResponse.ok(
+                new StandardResponse(
+                        StatusResponse.SUCCESS,
+                        new Gson().toJsonTree(userService.findById(email))
+                ),
+                "index"
         );
     }
 

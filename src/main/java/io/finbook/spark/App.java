@@ -1,8 +1,8 @@
 package io.finbook.spark;
 
-import spark.Request;
-import spark.Response;
+import com.mongodb.client.model.Filters;
 
+import static spark.Spark.before;
 import static spark.Spark.staticFiles;
 
 public class App {
@@ -13,14 +13,11 @@ public class App {
     public void init() {
         // Setup Spark-java
         staticFiles.location("/public");
+        staticFiles.expireTime(600L);
 
         // Setup all routes
         Routes routes = new Routes();
         routes.init();
-    }
-
-    public interface Converter {
-        ResponseCreator convert(Request req, Response res);
     }
 
 }

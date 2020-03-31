@@ -13,16 +13,18 @@ public class Routes {
     public Routes() {
     }
 
-    private static Route map(App.Converter c) {
+    private static Route map(Converter c) {
         return (req, res) -> c.convert(req, res).handle(req, res);
     }
 
     public void init(){
         get("/", map((req, res) -> IndexController.index()));
+        get("/name/:name", map((req, res) -> IndexController.indexWithName(req.params(":name"))));
 
         // USERS
         get("/users", map((req, res) -> UserController.getList()));
         post("/users", map((req, res) -> UserController.create(req.body())));
+        get("/users/:id", map((req, res) -> UserController.getUserById(req.params(":id"))));
 
         // PRODUCTS
         get("/products", map((req, res) -> ProductController.getList()));

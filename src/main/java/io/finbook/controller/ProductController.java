@@ -18,7 +18,8 @@ public class ProductController {
         productService.addProduct(product);
 
         return MyResponse.ok(
-                new StandardResponse(StatusResponse.SUCCESS)
+                new StandardResponse(StatusResponse.SUCCESS),
+                "index"
         );
     }
 
@@ -27,7 +28,8 @@ public class ProductController {
                 new StandardResponse(
                         StatusResponse.SUCCESS,
                         new Gson().toJsonTree(productService.getAllProduct())
-                )
+                ),
+                "index"
         );
     }
 
