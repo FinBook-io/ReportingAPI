@@ -1,25 +1,26 @@
 #macro(mainLayout)
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!DOCTYPE html>
+    <html lang="en" class="h-100">
+        <head>
+            #parse("/template/partials/head.vm")
+        </head>
+    <body class="d-flex flex-column h-100">
+        <header>
+            #parse("/template/partials/nav.vm")
+        </header>
 
-        <link rel="stylesheet" href="/main.css">
-        <link rel="icon" href="/favicon.png">
+        <!-- Begin page content -->
+        <main role="main" class="flex-shrink-0">
+            <div class="container">
+                $bodyContent
+            </div>
+        </main>
 
-        <title>Reporting</title>
-    </head>
-    <body>
-    <header>
-        <nav></nav>
-    </header>
-    <main>
-        <div id="content">
-            $bodyContent
-        </div>
-    </main>
-    <footer>
-    </footer>
-    </body>
+        <footer class="footer mt-auto py-3">
+            #parse("/template/partials/footer.vm")
+        </footer>
+
+            #parse("/template/partials/footer_scripts.vm")
+        </body>
     </html>
 #end
