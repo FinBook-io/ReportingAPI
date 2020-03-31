@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Utilities {
 
-    public Map<String, Object> parseJsonToMap(JsonObject json){
+    public Map<String, Object> parseJsonElementToMap(JsonObject json){
         Map<String, Object> model = new HashMap<>();
         return model;
     }

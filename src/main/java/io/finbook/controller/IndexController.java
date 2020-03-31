@@ -9,7 +9,8 @@ import java.util.HashMap;
 public class IndexController {
 
     public static ResponseCreator index() {
-        HashMap<String, Object> model = new HashMap<>();
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("firstName", "Kevin");
         return MyResponse.ok(
                 new StandardResponse(null, "index")
         );
