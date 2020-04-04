@@ -13,10 +13,8 @@ import java.util.Map;
 public class TemplateEngine {
 
     protected VelocityTemplateEngine instance;
-    protected Template templateCompiler = null;
     protected String templatesFolder = "template";
     protected String templatesExtension = ".vm";
-    protected StringWriter writer = new StringWriter();
 
     public TemplateEngine() {
         instance = new VelocityTemplateEngine();

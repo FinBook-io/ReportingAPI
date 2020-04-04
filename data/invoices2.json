@@ -7,18 +7,14 @@
     "invoiceDate": {"$date":"2020-04-04T14:30:00Z"},
     "invoiceType": "I",
     "invoiceUse": "-",
-    "issuer": {
-      "fullName": "Company Test S.L.",
-      "idNumber": "B35290634",
-      "email": "info@companytest.com",
-      "phoneNumber": "928123456"
-    },
-    "receiver": {
-      "fullName": "Juan Kevin Trujillo",
-      "idNumber": "73661700Z",
-      "email": "me@juankevintrujillo.com",
-      "phoneNumber": "781243669"
-    },
+    "issuerFullName": "Company Test S.L.",
+    "issuerIdNumber": "B35290634",
+    "issuerEmail": "info@companytest.com",
+    "issuerPhoneNumber": "928123456",
+    "receiverFullName": "Juan Kevin Trujillo",
+    "receiverIdNumber": "73661700Z",
+    "receiverEmail": "me@juankevintrujillo.com",
+    "receiverPhoneNumber": "781243669",
     "concepts": [
       {
         "product": {

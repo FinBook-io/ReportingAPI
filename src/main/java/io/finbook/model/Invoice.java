@@ -13,13 +13,18 @@ public class Invoice {
     @Id
     private ObjectId id;
     private String invoiceNumber;
-    // CIF+EJERCICIO+NUMEROFACTURA
-    // 202045345662N00.000.010
     private Date invoiceDate;
-    private InvoiceType invoiceType;
     private String invoiceUse;
-    private User issuer;
-    private User receiver;
+    // private User issuer;
+    private String issuerFullName;
+    private String issuerIdNumber;
+    private String issuerEmail;
+    private String issuerPhoneNumber;
+    // private User receiver;
+    private String receiverFullName;
+    private String receiverIdNumber;
+    private String receiverEmail;
+    private String receiverPhoneNumber;
     private List<Concept> concepts;
     private String notes;
     private Float subtotal;
@@ -29,13 +34,22 @@ public class Invoice {
     public Invoice() {
     }
 
-    public Invoice(String invoiceNumber, Date invoiceDate, InvoiceType invoiceType, String invoiceUse, User issuer, User receiver, List<Concept> concepts, String notes, Float subtotal, Float totalTaxes, Float totalDue) {
+    public Invoice(String invoiceNumber, Date invoiceDate, String invoiceUse,
+                   String issuerFullName, String issuerIdNumber, String issuerEmail, String issuerPhoneNumber,
+                   String receiverFullName, String receiverIdNumber, String receiverEmail, String receiverPhoneNumber,
+                   List<Concept> concepts, String notes, Float subtotal, Float totalTaxes, Float totalDue) {
+        super();
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
-        this.invoiceType = invoiceType;
         this.invoiceUse = invoiceUse;
-        this.issuer = issuer;
-        this.receiver = receiver;
+        this.issuerFullName = issuerFullName;
+        this.issuerIdNumber = issuerIdNumber;
+        this.issuerEmail = issuerEmail;
+        this.issuerPhoneNumber = issuerPhoneNumber;
+        this.receiverFullName = receiverFullName;
+        this.receiverIdNumber = receiverIdNumber;
+        this.receiverEmail = receiverEmail;
+        this.receiverPhoneNumber = receiverPhoneNumber;
         this.concepts = concepts;
         this.notes = notes;
         this.subtotal = subtotal;
@@ -67,14 +81,6 @@ public class Invoice {
         this.invoiceDate = invoiceDate;
     }
 
-    public InvoiceType getInvoiceType() {
-        return invoiceType;
-    }
-
-    public void setInvoiceType(InvoiceType invoiceType) {
-        this.invoiceType = invoiceType;
-    }
-
     public String getInvoiceUse() {
         return invoiceUse;
     }
@@ -83,20 +89,68 @@ public class Invoice {
         this.invoiceUse = invoiceUse;
     }
 
-    public User getIssuer() {
-        return issuer;
+    public String getIssuerFullName() {
+        return issuerFullName;
     }
 
-    public void setIssuer(User issuer) {
-        this.issuer = issuer;
+    public void setIssuerFullName(String issuerFullName) {
+        this.issuerFullName = issuerFullName;
     }
 
-    public User getReceiver() {
-        return receiver;
+    public String getIssuerIdNumber() {
+        return issuerIdNumber;
     }
 
-    public void setReceiver(User receiver) {
-        this.receiver = receiver;
+    public void setIssuerIdNumber(String issuerIdNumber) {
+        this.issuerIdNumber = issuerIdNumber;
+    }
+
+    public String getIssuerEmail() {
+        return issuerEmail;
+    }
+
+    public void setIssuerEmail(String issuerEmail) {
+        this.issuerEmail = issuerEmail;
+    }
+
+    public String getIssuerPhoneNumber() {
+        return issuerPhoneNumber;
+    }
+
+    public void setIssuerPhoneNumber(String issuerPhoneNumber) {
+        this.issuerPhoneNumber = issuerPhoneNumber;
+    }
+
+    public String getReceiverFullName() {
+        return receiverFullName;
+    }
+
+    public void setReceiverFullName(String receiverFullName) {
+        this.receiverFullName = receiverFullName;
+    }
+
+    public String getReceiverIdNumber() {
+        return receiverIdNumber;
+    }
+
+    public void setReceiverIdNumber(String receiverIdNumber) {
+        this.receiverIdNumber = receiverIdNumber;
+    }
+
+    public String getReceiverEmail() {
+        return receiverEmail;
+    }
+
+    public void setReceiverEmail(String receiverEmail) {
+        this.receiverEmail = receiverEmail;
+    }
+
+    public String getReceiverPhoneNumber() {
+        return receiverPhoneNumber;
+    }
+
+    public void setReceiverPhoneNumber(String receiverPhoneNumber) {
+        this.receiverPhoneNumber = receiverPhoneNumber;
     }
 
     public List<Concept> getConcepts() {

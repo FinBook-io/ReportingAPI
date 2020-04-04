@@ -23,6 +23,15 @@ public class ProductController {
 
     public static ResponseCreator list() {
         HashMap<String, Object> data = new HashMap<>();
+
+        try {
+            data.put("products", productService.getAllProduct());
+        } catch (Exception ex) {
+            return MyResponse.internalServerError(
+                    new StandardResponse(null, "home/errors/500")
+            );
+        }
+
         data.put("products", productService.getAllProduct());
         // new Gson().toJsonTree(productService.getAllProduct())
         return MyResponse.ok(
