@@ -1,0 +1,31 @@
+#parse("/template/home/layout.vm")
+#@mainLayout()
+<!--Table-->
+<table id="invoicesList" class="table table-hover table-sm">
+    <!--Table head-->
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Issuer</th>
+        <th>Receiver</th>
+        <th>Total Taxes</th>
+        <th>Total Due</th>
+    </tr>
+    </thead>
+    <!--Table head-->
+    <!--Table body-->
+    <tbody>
+        #foreach( $invoice in $invoices )
+        <tr>
+            <td>$invoice.invoiceDate</td>
+            <td>$invoice.issuer</td>
+            <td>$invoice.receiver</td>
+            <td>$invoice.totalTaxes</td>
+            <td>$invoice.totalDue</td>
+        </tr>
+        #end
+    </tbody>
+    <!--Table body-->
+</table>
+<!--Table-->
+#end
