@@ -9,18 +9,22 @@ public class User {
 
     @Id
     private ObjectId id;
-    private String firstName;
-    private String lastName;
+    private String name;
+    private String surname;
+    private String cif;
     private String email;
+    private String phoneNumber;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String email) {
+    public User(ObjectId id, String name, String surname, String cif, String email, String phoneNumber) {
         super();
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
+        this.surname = surname;
+        this.cif = cif;
         this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public ObjectId getId() {
@@ -31,20 +35,28 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getCif() {
+        return cif;
+    }
+
+    public void setCif(String cif) {
+        this.cif = cif;
     }
 
     public String getEmail() {
@@ -55,4 +67,11 @@ public class User {
         this.email = email;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }
