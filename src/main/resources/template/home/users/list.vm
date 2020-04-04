@@ -1,0 +1,29 @@
+#parse("/template/home/layout.vm")
+#@mainLayout()
+<!--Table-->
+<table id="productList" class="table table-hover table-sm">
+    <!--Table head-->
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <!--Table head-->
+    <!--Table body-->
+    <tbody>
+        #foreach( $user in $users )
+        <tr>
+            <th>$user.id</th>
+            <td>$user.firstName</td>
+            <td>$user.lastName</td>
+            <td>$user.email</td>
+        </tr>
+        #end
+    </tbody>
+    <!--Table body-->
+</table>
+<!--Table-->
+#end

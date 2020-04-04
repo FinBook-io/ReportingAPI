@@ -7,6 +7,8 @@ import io.finbook.model.User;
 import io.finbook.service.UserService;
 import io.finbook.spark.ResponseCreator;
 
+import java.util.HashMap;
+
 public class UserController {
 
     private static UserService userService = new UserService();
@@ -17,21 +19,23 @@ public class UserController {
         userService.addUser(user);
 
         return MyResponse.ok(
-                new StandardResponse(null, "index")
+                new StandardResponse(null, "home/index")
         );
     }
 
     public static ResponseCreator getList() {
         // new Gson().toJsonTree(userService.getAllUsers())
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("users", userService.getAllUsers());
         return MyResponse.ok(
-                new StandardResponse(null, "index")
+                new StandardResponse(data, "home/users/list")
         );
     }
 
     public static ResponseCreator getUserByEmail(String email) {
         // new Gson().toJsonTree(userService.findById(email))
         return MyResponse.ok(
-                new StandardResponse(null, "index")
+                new StandardResponse(null, "home/index")
         );
     }
 

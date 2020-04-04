@@ -2,12 +2,12 @@
     <!DOCTYPE html>
     <html lang="en" class="h-100">
         <head>
-            #parse("/template/partials/head.vm")
+            #parse("/template/home/partials/head.vm")
         </head>
 
         <body class="d-flex flex-column h-100">
             <header>
-                #parse("/template/partials/nav.vm")
+                #parse("/template/home/partials/nav.vm")
             </header>
 
             <!-- Begin page content -->
@@ -18,10 +18,10 @@
             </main>
 
             <footer class="footer mt-auto py-3">
-                #parse("/template/partials/footer.vm")
+                #parse("/template/home/partials/footer.vm")
             </footer>
 
-                #parse("/template/partials/footer_scripts.vm")
+                #parse("/template/home/partials/footer_scripts.vm")
         </body>
 
     </html>

@@ -17,8 +17,8 @@ public class ProductController {
     public static ResponseCreator create(String body) {
         Product product = new Gson().fromJson(body, Product.class);
         productService.addProduct(product);
-        return MyResponse.ok(
-                new StandardResponse(null, "index")
+        return MyResponse.created(
+                new StandardResponse(null, "home/products/list")
         );
     }
 
@@ -27,7 +27,7 @@ public class ProductController {
         data.put("products", productService.getAllProduct());
         // new Gson().toJsonTree(productService.getAllProduct())
         return MyResponse.ok(
-                new StandardResponse(null, "index")
+                new StandardResponse(data, "home/products/list")
         );
     }
 

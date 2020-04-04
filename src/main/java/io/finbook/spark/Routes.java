@@ -1,7 +1,7 @@
 package io.finbook.spark;
 
 import io.finbook.controller.ErrorController;
-import io.finbook.controller.IndexController;
+import io.finbook.controller.HomeController;
 import io.finbook.controller.ProductController;
 import io.finbook.controller.UserController;
 import spark.Route;
@@ -19,7 +19,13 @@ public class Routes {
     }
 
     public void init(){
-        get("/", map((req, res) -> IndexController.index()));
+        get("/", map((req, res) -> HomeController.home()));
+
+        get("/login", map((req, res) -> HomeController.login()));
+        get("/logout", map((req, res) -> HomeController.logout(req.body())));
+
+        get("/dashboard", map((req, res) -> HomeController.dashboard()));
+
 
         // USERS
         get("/users", map((req, res) -> UserController.getList()));

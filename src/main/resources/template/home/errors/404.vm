@@ -1,4 +1,4 @@
-#parse("/template/layout.vm")
+#parse("/template/home/layout.vm")
 #@mainLayout()
 
 <div class="text-center" data-gr-c-s-loaded="true">

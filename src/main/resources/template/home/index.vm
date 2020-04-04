@@ -1,4 +1,4 @@
-#parse("/template/layout.vm")
+#parse("/template/home/layout.vm")
 #@mainLayout()
 
     <h1 class="mt-5">Sticky footer with fixed navbar</h1>
