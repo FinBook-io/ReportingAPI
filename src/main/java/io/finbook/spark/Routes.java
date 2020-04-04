@@ -1,13 +1,9 @@
 package io.finbook.spark;
 
-import io.finbook.controller.ErrorController;
-import io.finbook.controller.HomeController;
-import io.finbook.controller.ProductController;
-import io.finbook.controller.UserController;
+import io.finbook.controller.*;
 import spark.Route;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 public class Routes {
 
@@ -20,24 +16,42 @@ public class Routes {
 
     public void init(){
         get("/", map((req, res) -> HomeController.home()));
-
-        get("/login", map((req, res) -> HomeController.login()));
-        get("/logout", map((req, res) -> HomeController.logout(req.body())));
-
         get("/dashboard", map((req, res) -> HomeController.dashboard()));
 
+        // AUTHENTICATION
+        path("/auth", () -> {
+            get("/login", map((req, res) -> AuthController.login()));
+            post("/login", map((req, res) -> AuthController.initSession()));
+            get("/logout", map((req, res) -> AuthController.logout(req.body())));
+        });
 
         // USERS
-        get("/users", map((req, res) -> UserController.getList()));
-        post("/users", map((req, res) -> UserController.create(req.body())));
-        get("/users/:id", map((req, res) -> UserController.getUserByEmail(req.params(":id"))));
+        path("/users", () -> {
+            get("", map((req, res) -> UserController.list()));
+            post("", map((req, res) -> UserController.create(req.body())));
+            get("/:id", map((req, res) -> UserController.read(req.params(":id"))));
+            put("/:id", map((req, res) -> UserController.update(req.params(":id"))));
+            delete("/:id",  map((req, res) -> UserController.delete(req.params(":id"))));
+            get("/:id", map((req, res) -> UserController.getUserByEmail(req.params(":id"))));
+        });
 
         // PRODUCTS
-        get("/products", map((req, res) -> ProductController.getList()));
-        //get("/products/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
-        post("/products", map((req, res) -> ProductController.create(req.body())));
+        path("/products", () -> {
+            get("", map((req, res) -> ProductController.list()));
+            post("", map((req, res) -> ProductController.create(req.body())));
 
-        // ERRORS
+            //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
+        });
+
+        // INVOICES
+        path("/invoices", () -> {
+            get("", map((req, res) -> InvoiceController.list()));
+            post("", map((req, res) -> InvoiceController.create(req.body())));
+
+            //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
+        });
+
+        // ERROR - NOT FOUND
         get("*", map((req, res) -> ErrorController.notFound()));
     }
 

@@ -15,18 +15,40 @@ public class UserController {
 
     public static ResponseCreator create(String body) {
         User user = new Gson().fromJson(body, User.class);
-
         userService.addUser(user);
-
         return MyResponse.ok(
                 new StandardResponse(null, "home/index")
         );
     }
 
-    public static ResponseCreator getList() {
+    public static ResponseCreator read(String id) {
+        return MyResponse.ok(
+                new StandardResponse(null, "home/index")
+        );
+    }
+
+    public static ResponseCreator update(String id) {
+        return MyResponse.ok(
+                new StandardResponse(null, "home/index")
+        );
+    }
+
+    public static ResponseCreator delete(String id) {
+        return MyResponse.ok(
+                new StandardResponse(null, "home/index")
+        );
+    }
+
+    public static ResponseCreator list() {
         // new Gson().toJsonTree(userService.getAllUsers())
         HashMap<String, Object> data = new HashMap<>();
-        data.put("users", userService.getAllUsers());
+        try{
+            data.put("users", userService.getAllUsers());
+        }catch (Exception ex){
+            return MyResponse.internalServerError(
+                    new StandardResponse(null, "home/errors/500")
+            );
+        }
         return MyResponse.ok(
                 new StandardResponse(data, "home/users/list")
         );

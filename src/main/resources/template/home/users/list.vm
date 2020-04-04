@@ -1,13 +1,12 @@
 #parse("/template/home/layout.vm")
 #@mainLayout()
 <!--Table-->
-<table id="productList" class="table table-hover table-sm">
+<table id="userList" class="table table-hover table-sm">
     <!--Table head-->
     <thead>
     <tr>
         <th>#</th>
-        <th>First name</th>
-        <th>Last name</th>
+        <th>Full name</th>
         <th>Email</th>
     </tr>
     </thead>
@@ -16,9 +15,8 @@
     <tbody>
         #foreach( $user in $users )
         <tr>
-            <th>$user.id</th>
-            <td>$user.firstName</td>
-            <td>$user.lastName</td>
+            <th>$user.idNumber</th>
+            <td>$user.fullName</td>
             <td>$user.email</td>
         </tr>
         #end

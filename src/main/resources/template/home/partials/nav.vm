@@ -10,10 +10,13 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/users">Users <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/products">Products <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/users">Users <span class="sr-only"></span></a>
+                <a class="nav-link" href="/invoices">Invoices <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -25,10 +28,10 @@
                 <a class="nav-link" href="/dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Sign in</a>
+                <a class="nav-link" href="/auth/login">Sign in</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signup">Sign up</a>
+                <a class="nav-link" href="/auth/signup">Sign up</a>
             </li>
         </ul>
     </div>

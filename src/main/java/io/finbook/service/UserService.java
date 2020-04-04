@@ -12,7 +12,7 @@ public class UserService extends Database {
     }
 
     public List<User> getAllUsers() {
-        return datastore.find(User.class).asList();
+        return datastore.find(User.class).order("fullName").asList();
     }
 
     public User findById(String id) {

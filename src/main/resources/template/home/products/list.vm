@@ -1,14 +1,13 @@
 #parse("/template/home/layout.vm")
 #@mainLayout()
     <!--Table-->
-    <table id="productList" class="table table-hover table-sm">
+    <table id="productsList" class="table table-hover table-sm">
         <!--Table head-->
         <thead>
             <tr>
                 <th>Code</th>
-                <th>Name</th>
+                <th>Description</th>
                 <th>Price</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <!--Table head-->
@@ -17,9 +16,7 @@
             #foreach( $product in $products )
                 <tr>
                     <td>$product.code</td>
-                    <td>$product.name</td>
-                    <td>$product.price</td>
-                    <td>$product.price</td>
+                    <td>$product.description</td>
                     <td>$product.price</td>
                 </tr>
             #end
