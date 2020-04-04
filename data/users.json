@@ -1,0 +1,47 @@
+[
+  {
+    "_id": {
+      "$oid": "5e885bdaa3b57e87d45c3ee9"
+    },
+    "fullName": "Juan Kevin Trujillo",
+    "idNumber": "73661700Z",
+    "email": "me@juankevintrujillo.com",
+    "phoneNumber": "781243669"
+  },
+  {
+    "_id": {
+      "$oid": "5e885ca5d956b0aaa0970925"
+    },
+    "fullName": "Arador Valencia",
+    "idNumber": "19971336E",
+    "email": "AradorValenciaOrtiz@gustr.com\n",
+    "phoneNumber": "794629661"
+  },
+  {
+    "_id": {
+      "$oid": "5e885d670b39b3e41658d62c"
+    },
+    "fullName": "Jimmy Mota",
+    "idNumber": "47538747R",
+    "email": "JimmyMotaTeran@superrito.com",
+    "phoneNumber": "652203296"
+  },
+  {
+    "_id": {
+      "$oid": "5e885e1da26c8b7a8f12db19"
+    },
+    "fullName": "Naiara Santillán",
+    "idNumber": "98947081T",
+    "email": "NaiaraSantillanComejo@superrito.com",
+    "phoneNumber": "718860738"
+  },
+  {
+    "_id": {
+      "$oid": "5e885e252cdeacf1ec9048a1"
+    },
+    "fullName": "Lena Flórez",
+    "idNumber": "64970742C",
+    "email": "LenaFlorezSolis@gustr.com",
+    "phoneNumber": "665409351"
+  }
+]

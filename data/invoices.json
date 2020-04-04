@@ -1,0 +1,55 @@
+[
+  {
+    "_id": {
+      "$oid": "5e887bd3501e91bee57887d3"
+    },
+    "invoiceNumber": "GC2020040PZ",
+    "invoiceDate": {"$date":"2020-04-04T14:30:00Z"},
+    "invoiceType": "I",
+    "invoiceUse": "-",
+    "issuer": {
+      "name": "Company Test",
+      "surname": "SL",
+      "idNumber": "B35290634",
+      "email": "info@companytest.com",
+      "phoneNumber": "928123456"
+    },
+    "receiver": {
+      "name": "Juan Kevin",
+      "surname": "Trujillo",
+      "idNumber": "73661700Z",
+      "email": "me@juankevintrujillo.com",
+      "phoneNumber": "781243669"
+    },
+    "concepts": [
+      {
+        "product": {
+          "code": "CB29813",
+          "description": "iPad Pro 2020 de 11 pulgadas y 128 GB con Wi‑Fi + Cellular - Gris espacial",
+          "taxRate": 7,
+          "price": 1099
+        },
+        "units": 1,
+        "discountRate": 3,
+        "taxAmount": 0,
+        "amount": 1066.03
+      },
+      {
+        "product": {
+          "code": "CB24941",
+          "description": "Sistema de compensación equitativa por copia privada para iPad (Canon Digital)",
+          "taxRate": 0,
+          "price": 3.15
+        },
+        "units": 1,
+        "discountRate": 0,
+        "taxAmount": 0,
+        "amount": 3.15
+      }
+    ],
+    "notes": "",
+    "subtotal": 1069.18,
+    "totalTaxes": 0,
+    "totalDue": 1069.18
+  }
+]
