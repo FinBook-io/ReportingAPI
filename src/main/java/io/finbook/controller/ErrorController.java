@@ -12,4 +12,10 @@ public class ErrorController {
         );
     }
 
+    public static ResponseCreator internalServerError() {
+        return MyResponse.notFound(
+                new StandardResponse(null, "home/errors/500")
+        );
+    }
+
 }
