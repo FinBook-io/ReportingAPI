@@ -5,8 +5,9 @@ import io.finbook.http.StandardResponse;
 import io.finbook.model.Invoice;
 import io.finbook.service.InvoiceService;
 import io.finbook.spark.ResponseCreator;
+import io.finbook.util.Utilities;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class InvoiceController {
 
@@ -17,16 +18,8 @@ public class InvoiceController {
     }
 
     public static ResponseCreator list() {
-        HashMap<String, Object> data = new HashMap<>();
-
-        try {
-            data.put("invoices", invoiceService.getAllBills());
-        } catch (Exception ex) {
-            return MyResponse.internalServerError(
-                    new StandardResponse(null, "home/errors/500")
-            );
-        }
-
+        HashMap<String, List<Invoice>> data = new HashMap<>();
+        data.put("invoices", invoiceService.getAllInvoices());
         return MyResponse.created(
                 new StandardResponse(data, "home/invoices/list")
         );

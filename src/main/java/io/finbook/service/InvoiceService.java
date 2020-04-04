@@ -10,7 +10,7 @@ public class InvoiceService extends Database {
         datastore.save(invoice);
     }
 
-    public List<Invoice> getAllBills() {
+    public List<Invoice> getAllInvoices() {
         return datastore.find(Invoice.class).order("invoiceDate").asList();
     }
 
