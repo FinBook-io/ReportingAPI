@@ -1,0 +1,28 @@
+#macro(mainLayout)
+    <!DOCTYPE html>
+    <html lang="en" class="h-100">
+        <head>
+            #parse("/template/partials/head.vm")
+        </head>
+
+        <body class="d-flex flex-column h-100">
+            <header>
+                #parse("/template/partials/nav.vm")
+            </header>
+
+            <!-- Begin page content -->
+            <main role="main" class="flex-shrink-0">
+                <div class="container">
+                    $bodyContent
+                </div>
+            </main>
+
+            <footer class="footer mt-auto py-3">
+                #parse("/template/partials/footer.vm")
+            </footer>
+
+                #parse("/template/partials/footer_scripts.vm")
+        </body>
+
+    </html>
+#end

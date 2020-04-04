@@ -1,4 +1,0 @@
-#parse("/template/layout.vm")
-#@mainLayout()
-<h1>404: Page not found</h1>
-#end

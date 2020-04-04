@@ -1,0 +1,8 @@
+#parse("/template/layout.vm")
+#@mainLayout()
+
+<div class="text-center" data-gr-c-s-loaded="true">
+    <h1>404: Page not found</h1>
+</div>
+
+#end
