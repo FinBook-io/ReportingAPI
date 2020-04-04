@@ -4,14 +4,14 @@ public class Concept {
 
     private Product product;
     private Integer units;
-    private Float discountRate;
-    private Float taxAmount;
-    private Float amount;
+    private Double discountRate;
+    private Double taxAmount;
+    private Double amount;
 
     public Concept() {
     }
 
-    public Concept(Product product, Integer units, Float discountRate, Float taxAmount, Float amount) {
+    public Concept(Product product, Integer units, Double discountRate, Double taxAmount, Double amount) {
         super();
         this.product = product;
         this.units = units;
@@ -36,27 +36,27 @@ public class Concept {
         this.units = units;
     }
 
-    public Float getDiscountRate() {
+    public Double getDiscountRate() {
         return discountRate;
     }
 
-    public void setDiscountRate(Float discountRate) {
+    public void setDiscountRate(Double discountRate) {
         this.discountRate = discountRate;
     }
 
-    public Float getTaxAmount() {
+    public Double getTaxAmount() {
         return taxAmount;
     }
 
-    public void setTaxAmount(Float taxAmount) {
+    public void setTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
     }
 
-    public Float getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(Float amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 }

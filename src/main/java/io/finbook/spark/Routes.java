@@ -51,6 +51,13 @@ public class Routes {
             //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
         });
 
+        // REPORTS
+        path("/reports", () -> {
+            get("", map((req, res) -> ReportController.index()));
+            // post("", map((req, res) -> InvoiceController.create(req.body())));
+            //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
+        });
+
         // ERROR - NOT FOUND
         get("*", map((req, res) -> ErrorController.notFound()));
     }

@@ -11,13 +11,13 @@ public class Product {
     private ObjectId id;
     private String code;
     private String description;
-    private Float taxRate;
-    private Float price;
+    private Double taxRate;
+    private Double price;
 
     public Product() {
     }
 
-    public Product(String code, String description, Float taxRate, Float price) {
+    public Product(String code, String description, Double taxRate, Double price) {
         super();
         this.code = code;
         this.description = description;
@@ -49,19 +49,19 @@ public class Product {
         this.description = description;
     }
 
-    public Float getTaxRate() {
+    public Double getTaxRate() {
         return taxRate;
     }
 
-    public void setTaxRate(Float taxRate) {
+    public void setTaxRate(Double taxRate) {
         this.taxRate = taxRate;
     }
 
-    public Float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

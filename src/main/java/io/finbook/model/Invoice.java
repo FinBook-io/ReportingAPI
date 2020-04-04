@@ -14,6 +14,7 @@ public class Invoice {
     private ObjectId id;
     private String invoiceNumber;
     private Date invoiceDate;
+    private String invoiceType;
     private String invoiceUse;
     // private User issuer;
     private String issuerFullName;
@@ -27,20 +28,20 @@ public class Invoice {
     private String receiverPhoneNumber;
     private List<Concept> concepts;
     private String notes;
-    private Float subtotal;
-    private Float totalTaxes;
-    private Float totalDue;
+    private Double subtotal;
+    private Double totalTaxes;
+    private Double totalDue;
 
     public Invoice() {
     }
 
-    public Invoice(String invoiceNumber, Date invoiceDate, String invoiceUse,
+    public Invoice(String invoiceNumber, Date invoiceDate, String invoiceType, String invoiceUse,
                    String issuerFullName, String issuerIdNumber, String issuerEmail, String issuerPhoneNumber,
                    String receiverFullName, String receiverIdNumber, String receiverEmail, String receiverPhoneNumber,
-                   List<Concept> concepts, String notes, Float subtotal, Float totalTaxes, Float totalDue) {
-        super();
+                   List<Concept> concepts, String notes, Double subtotal, Double totalTaxes, Double totalDue) {
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
+        this.invoiceType = invoiceType;
         this.invoiceUse = invoiceUse;
         this.issuerFullName = issuerFullName;
         this.issuerIdNumber = issuerIdNumber;
@@ -79,6 +80,14 @@ public class Invoice {
 
     public void setInvoiceDate(Date invoiceDate) {
         this.invoiceDate = invoiceDate;
+    }
+
+    public String getInvoiceType() {
+        return invoiceType;
+    }
+
+    public void setInvoiceType(String invoiceType) {
+        this.invoiceType = invoiceType;
     }
 
     public String getInvoiceUse() {
@@ -169,27 +178,27 @@ public class Invoice {
         this.notes = notes;
     }
 
-    public Float getSubtotal() {
+    public Double getSubtotal() {
         return subtotal;
     }
 
-    public void setSubtotal(Float subtotal) {
+    public void setSubtotal(Double subtotal) {
         this.subtotal = subtotal;
     }
 
-    public Float getTotalTaxes() {
+    public Double getTotalTaxes() {
         return totalTaxes;
     }
 
-    public void setTotalTaxes(Float totalTaxes) {
+    public void setTotalTaxes(Double totalTaxes) {
         this.totalTaxes = totalTaxes;
     }
 
-    public Float getTotalDue() {
+    public Double getTotalDue() {
         return totalDue;
     }
 
-    public void setTotalDue(Float totalDue) {
+    public void setTotalDue(Double totalDue) {
         this.totalDue = totalDue;
     }
 }
