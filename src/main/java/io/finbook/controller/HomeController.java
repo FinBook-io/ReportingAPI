@@ -6,7 +6,7 @@ import io.finbook.spark.ResponseCreator;
 
 import java.util.HashMap;
 
-public class IndexController {
+public class HomeController {
 
     public static ResponseCreator home() {
         HashMap<String, Object> data = new HashMap<>();
