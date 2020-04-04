@@ -10,7 +10,6 @@ public class Product {
     @Id
     private ObjectId id;
     private String code;
-    private String name;
     private String description;
     private Float taxRate;
     private Float price;
@@ -18,10 +17,9 @@ public class Product {
     public Product() {
     }
 
-    public Product(ObjectId id, String code, String name, String description, Float taxRate, Float price) {
+    public Product(String code, String description, Float taxRate, Float price) {
         super();
         this.code = code;
-        this.name = name;
         this.description = description;
         this.taxRate = taxRate;
         this.price = price;
@@ -41,14 +39,6 @@ public class Product {
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDescription() {

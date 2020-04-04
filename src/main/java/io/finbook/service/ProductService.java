@@ -11,7 +11,7 @@ public class ProductService extends Database {
     }
 
     public List<Product> getAllProduct() {
-        return datastore.find(Product.class).asList();
+        return datastore.find(Product.class).order("description").asList();
     }
 
 }

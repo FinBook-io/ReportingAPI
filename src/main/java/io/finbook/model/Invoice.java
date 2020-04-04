@@ -7,8 +7,8 @@ import org.mongodb.morphia.annotations.Id;
 import java.util.Date;
 import java.util.List;
 
-@Entity(value = "bills", noClassnameStored = true)
-public class Bill {
+@Entity(value = "invoices", noClassnameStored = true)
+public class Invoice {
 
     @Id
     private ObjectId id;
@@ -16,26 +16,26 @@ public class Bill {
     // CIF+EJERCICIO+NUMEROFACTURA
     // 202045345662N00.000.010
     private Date invoiceDate;
-    private String invoiceType;
+    private InvoiceType invoiceType;
     private String invoiceUse;
-    private User issuer; // emisor
-    private User receiver; // receptor
+    private User issuer;
+    private User receiver;
     private List<Concept> concepts;
     private String notes;
     private Float subtotal;
     private Float totalTaxes;
     private Float totalDue;
 
-    public Bill() {
+    public Invoice() {
     }
 
-    public Bill(ObjectId id, String invoiceNumber, Date invoiceDate, User company, User client, List<Concept> concepts,
-                String notes, Float subtotal, Float totalTaxes, Float totalDue) {
-        super();
+    public Invoice(String invoiceNumber, Date invoiceDate, InvoiceType invoiceType, String invoiceUse, User issuer, User receiver, List<Concept> concepts, String notes, Float subtotal, Float totalTaxes, Float totalDue) {
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
-        this.issuer = company;
-        this.receiver = client;
+        this.invoiceType = invoiceType;
+        this.invoiceUse = invoiceUse;
+        this.issuer = issuer;
+        this.receiver = receiver;
         this.concepts = concepts;
         this.notes = notes;
         this.subtotal = subtotal;
@@ -65,6 +65,22 @@ public class Bill {
 
     public void setInvoiceDate(Date invoiceDate) {
         this.invoiceDate = invoiceDate;
+    }
+
+    public InvoiceType getInvoiceType() {
+        return invoiceType;
+    }
+
+    public void setInvoiceType(InvoiceType invoiceType) {
+        this.invoiceType = invoiceType;
+    }
+
+    public String getInvoiceUse() {
+        return invoiceUse;
+    }
+
+    public void setInvoiceUse(String invoiceUse) {
+        this.invoiceUse = invoiceUse;
     }
 
     public User getIssuer() {
