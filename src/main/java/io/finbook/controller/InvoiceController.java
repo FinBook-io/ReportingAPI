@@ -20,8 +20,6 @@ public class InvoiceController {
         HashMap<String, Object> data = new HashMap<>();
         data.put("invoices", invoiceService.getAllBills());
 
-        
-
         return MyResponse.created(
                 new StandardResponse(data, "home/invoices/list")
         );

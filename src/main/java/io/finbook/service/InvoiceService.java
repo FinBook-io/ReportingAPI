@@ -6,8 +6,8 @@ import java.util.List;
 
 public class InvoiceService extends Database {
 
-    public void addBill(Invoice bill) {
-        datastore.save(bill);
+    public void addBill(Invoice invoice) {
+        datastore.save(invoice);
     }
 
     public List<Invoice> getAllBills() {
