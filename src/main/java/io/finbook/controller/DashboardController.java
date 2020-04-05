@@ -10,7 +10,7 @@ import io.finbook.util.Utilities;
 import java.util.HashMap;
 import java.util.List;
 
-public class ReportingController {
+public class DashboardController {
 
     private static InvoiceService invoiceService = new InvoiceService();
 

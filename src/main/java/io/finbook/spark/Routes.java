@@ -15,8 +15,8 @@ public class Routes {
     }
 
     public void init(){
-        get("/", map((req, res) -> HomeController.home()));
-        get("/dashboard", map((req, res) -> HomeController.dashboard()));
+        get("/", map((req, res) -> HomeController.index()));
+        get("/dashboard", map((req, res) -> DashboardController.index()));
 
         // AUTHENTICATION
         path("/auth", () -> {

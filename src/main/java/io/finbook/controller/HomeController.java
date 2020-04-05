@@ -10,19 +10,11 @@ import java.util.HashMap;
 
 public class HomeController {
 
-    public static ResponseCreator home() {
+    public static ResponseCreator index() {
         HashMap<String, Object> data = new HashMap<>();
         data.put("firstName", "Kevin");
         return MyResponse.ok(
                 new StandardResponse(data, "home/index")
-        );
-    }
-
-    public static ResponseCreator dashboard() {
-        HashMap<String, Object> data = new HashMap<>();
-        data.put("firstName", "Kevin");
-        return MyResponse.ok(
-                new StandardResponse(data, "dashboard/index")
         );
     }
 

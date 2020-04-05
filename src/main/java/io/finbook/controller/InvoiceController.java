@@ -23,7 +23,7 @@ public class InvoiceController {
         data.put("invoices", invoiceService.getAllInvoices());
 
         return MyResponse.created(
-                new StandardResponse(data, "home/invoices/list")
+                new StandardResponse(data, "dashboard/invoices/list")
         );
     }
 

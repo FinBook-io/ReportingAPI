@@ -35,7 +35,7 @@ public class ProductController {
         data.put("products", productService.getAllProduct());
         // new Gson().toJsonTree(productService.getAllProduct())
         return MyResponse.ok(
-                new StandardResponse(data, "home/products/list")
+                new StandardResponse(data, "dashboard/products/list")
         );
     }
 

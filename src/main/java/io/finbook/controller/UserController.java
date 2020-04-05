@@ -50,7 +50,7 @@ public class UserController {
             );
         }
         return MyResponse.ok(
-                new StandardResponse(data, "home/users/list")
+                new StandardResponse(data, "dashboard/users/list")
         );
     }
 
