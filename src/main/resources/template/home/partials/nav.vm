@@ -19,7 +19,7 @@
                 <a class="nav-link" href="/invoices">Invoices <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/reports">Reports <span class="sr-only"></span></a>
+                <a class="nav-link" href="/reporting">Reports <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

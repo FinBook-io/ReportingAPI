@@ -1,0 +1,1902 @@
+[
+  {
+    "_id": {
+      "$oid": "5e891ea1e82df7900036e828"
+    },
+    "invoiceNumber": "2A576301BA",
+    "invoiceDate": {"$date":"2019-06-07T23:11:19Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Hadley Stanley",
+    "issuerIdNumber": "24237126W",
+    "issuerEmail": "feugiat.metus.sit@hendreritconsectetuercursus.edu",
+    "issuerPhoneNumber": "788964444",
+    "receiverFullName": "Bruce Williams",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "Lorem.ipsum.dolor@eueleifend.co.uk",
+    "receiverPhoneNumber": "997914316",
+    "subtotal": "670.22",
+    "totalTaxes": "287.69",
+    "totalDue": "957.91"
+  },
+  {
+    "_id": {
+      "$oid": "5e891eabd37f75e8dc946a47"
+    },
+    "invoiceNumber": "55592101IA",
+    "invoiceDate": {"$date":"2019-11-20T20:15:06Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Nevada Mack",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "Donec.fringilla.Donec@adlitoratorquent.ca",
+    "issuerPhoneNumber": "998982913",
+    "receiverFullName": "Charde Meyers",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "mauris.a.nunc@odioauctorvitae.ca",
+    "receiverPhoneNumber": "650010166",
+    "subtotal": "489.28",
+    "totalTaxes": "888.50",
+    "totalDue": "1377.78"
+  },
+  {
+    "_id": {
+      "$oid": "5e891eb19ef278230d2b0c26"
+    },
+    "invoiceNumber": "93137776DA",
+    "invoiceDate": {"$date":"2020-12-31T20:54:07Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Jocelyn Heath",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "Nunc.mauris@nonsollicitudin.net",
+    "issuerPhoneNumber": "704173009",
+    "receiverFullName": "Fredericka Foreman",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "magnis.dis@nisi.edu",
+    "receiverPhoneNumber": "764399190",
+    "subtotal": "494.59",
+    "totalTaxes": "942.44",
+    "totalDue": "1437.03"
+  },
+  {
+    "_id": {
+      "$oid": "5e891eb8d20d35c4b72bc476"
+    },
+    "invoiceNumber": "26473545JB",
+    "invoiceDate": {"$date":"2019-08-07T01:09:05Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Kareem Bush",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "nec.enim@consectetuer.com",
+    "issuerPhoneNumber": "722659224",
+    "receiverFullName": "Nasim Stokes",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "Donec@ac.com",
+    "receiverPhoneNumber": "982394589",
+    "subtotal": "824.26",
+    "totalTaxes": "154.55",
+    "totalDue": "978.81"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ec1adde00351603d091"
+    },
+    "invoiceNumber": "7B283174XB",
+    "invoiceDate": {"$date":"2020-06-20T01:43:08Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Flavia Shepherd",
+    "issuerIdNumber": "24237126W",
+    "issuerEmail": "lobortis.risus.In@Nuncquisarcu.com",
+    "issuerPhoneNumber": "668599794",
+    "receiverFullName": "Chadwick Trujillo",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "metus@duilectusrutrum.co.uk",
+    "receiverPhoneNumber": "903201819",
+    "subtotal": "526.16",
+    "totalTaxes": "747.67",
+    "totalDue": "1273.83"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ecb5159ec51f1583df6"
+    },
+    "invoiceNumber": "33484305WP",
+    "invoiceDate": {"$date":"2020-11-20T12:41:03Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Nash Donovan",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "non.massa.non@loremluctusut.net",
+    "issuerPhoneNumber": "687398325",
+    "receiverFullName": "Colleen Blankenship",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "Nulla.facilisis.Suspendisse@Integereu.edu",
+    "receiverPhoneNumber": "694589097",
+    "subtotal": "779.59",
+    "totalTaxes": "820.94",
+    "totalDue": "1600.53"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ed5f2ce6567b37102a6"
+    },
+    "invoiceNumber": "28734405PV",
+    "invoiceDate": {"$date":"2020-02-02T04:06:45Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Candice Ryan",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "eu.metus.In@orciUt.ca",
+    "issuerPhoneNumber": "612162976",
+    "receiverFullName": "Giselle Benton",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "sed@Sed.ca",
+    "receiverPhoneNumber": "748644958",
+    "subtotal": "704.62",
+    "totalTaxes": "119.42",
+    "totalDue": "824.04"
+  },
+  {
+    "_id": {
+      "$oid": "5e891edb3c2ea30bde0cf2a7"
+    },
+    "invoiceNumber": "B2791358LI",
+    "invoiceDate": {"$date":"2021-01-28T00:01:34Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Audrey Leonard",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "libero.Proin.sed@sitamet.edu",
+    "issuerPhoneNumber": "916731848",
+    "receiverFullName": "Nicole Woodward",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "mollis.nec@tempor.com",
+    "receiverPhoneNumber": "935137991",
+    "subtotal": "652.08",
+    "totalTaxes": "111.83",
+    "totalDue": "763.91"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ee21e666225d3346e40"
+    },
+    "invoiceNumber": "34963339MA",
+    "invoiceDate": {"$date":"2020-09-08T00:39:10Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Dolan Kent",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "non.luctus@aliquetodioEtiam.ca",
+    "issuerPhoneNumber": "751474465",
+    "receiverFullName": "Ciara Talley",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "placerat@dui.edu",
+    "receiverPhoneNumber": "640751923",
+    "subtotal": "947.00",
+    "totalTaxes": "407.49",
+    "totalDue": "1354.49"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ee8c767721157882487"
+    },
+    "invoiceNumber": "2F549429MF",
+    "invoiceDate": {"$date":"2019-11-09T01:09:07Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Perry Terrell",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "lectus@molestie.ca",
+    "issuerPhoneNumber": "602335954",
+    "receiverFullName": "Raven Acevedo",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "lacinia@metusVivamuseuismod.net",
+    "receiverPhoneNumber": "746386621",
+    "subtotal": "632.94",
+    "totalTaxes": "128.13",
+    "totalDue": "761.07"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ef1f571c0fec0b1a9c9"
+    },
+    "invoiceNumber": "10814485BZ",
+    "invoiceDate": {"$date":"2020-08-31T07:11:56Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Shelley Cooley",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "est.ac@Donec.net",
+    "issuerPhoneNumber": "940232112",
+    "receiverFullName": "Dante Charles",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "dictum@ridiculus.org",
+    "receiverPhoneNumber": "976489971",
+    "subtotal": "615.22",
+    "totalTaxes": "724.58",
+    "totalDue": "1339.8"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ef7e7a48bc4ea402731"
+    },
+    "invoiceNumber": "92484572XG",
+    "invoiceDate": {"$date":"2019-09-17T04:47:18Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Fay Carlson",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "sed.libero.Proin@mollisPhasellus.com",
+    "issuerPhoneNumber": "961670997",
+    "receiverFullName": "Samuel Peterson",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "Nullam.enim.Sed@suscipit.com",
+    "receiverPhoneNumber": "668405699",
+    "subtotal": "244.58",
+    "totalTaxes": "796.12",
+    "totalDue": "1040.7"
+  },
+  {
+    "_id": {
+      "$oid": "5e891efc5871b8452769688c"
+    },
+    "invoiceNumber": "AE987615YJ",
+    "invoiceDate": {"$date":"2020-01-18T11:34:33Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Meghan Madden",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "risus.Duis.a@nullaInteger.edu",
+    "issuerPhoneNumber": "698542395",
+    "receiverFullName": "Nehru Sheppard",
+    "receiverIdNumber": "02579822G",
+    "receiverEmail": "velit.Sed@euelitNulla.net",
+    "receiverPhoneNumber": "632100295",
+    "subtotal": "261.65",
+    "totalTaxes": "718.38",
+    "totalDue": "980.03"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f0147a8299d12cfc6ad"
+    },
+    "invoiceNumber": "71251130LS",
+    "invoiceDate": {"$date":"2019-09-19T20:57:38Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Rebecca Hardy",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "Quisque@adipiscingMauris.ca",
+    "issuerPhoneNumber": "956831601",
+    "receiverFullName": "Hyatt Aguilar",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "pede@primisin.org",
+    "receiverPhoneNumber": "682945743",
+    "subtotal": "461.53",
+    "totalTaxes": "561.55",
+    "totalDue": "1023.08"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f061777f690967a689f"
+    },
+    "invoiceNumber": "39237065TX",
+    "invoiceDate": {"$date":"2021-03-07T02:06:05Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Bryar Skinner",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "velit.Pellentesque.ultricies@NuncmaurisMorbi.com",
+    "issuerPhoneNumber": "938486729",
+    "receiverFullName": "Mollie Mclean",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "in.cursus@anteVivamus.co.uk",
+    "receiverPhoneNumber": "637186802",
+    "subtotal": "936.52",
+    "totalTaxes": "6.97",
+    "totalDue": "943.49"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f0f26e0857365c0080e"
+    },
+    "invoiceNumber": "BE862922RW",
+    "invoiceDate": {"$date":"2019-02-13T19:09:27Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Jenna Baxter",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "mi@mattis.co.uk",
+    "issuerPhoneNumber": "704948193",
+    "receiverFullName": "Tyrone Woods",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "Sed@acmieleifend.co.uk",
+    "receiverPhoneNumber": "609343193",
+    "subtotal": "443.16",
+    "totalTaxes": "785.72",
+    "totalDue": "1228.88"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f141d6a043e9a52d4c4"
+    },
+    "invoiceNumber": "6B865039QP",
+    "invoiceDate": {"$date":"2021-02-04T00:06:30Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Hector Rush",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "Vivamus.sit.amet@sit.ca",
+    "issuerPhoneNumber": "971958774",
+    "receiverFullName": "Ali Bright",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "lorem@penatibus.net",
+    "receiverPhoneNumber": "718877316",
+    "subtotal": "355.86",
+    "totalTaxes": "645.08",
+    "totalDue": "1000.94"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f1b6e71f7fe909c490c"
+    },
+    "invoiceNumber": "5E824597BC",
+    "invoiceDate": {"$date":"2020-01-04T18:08:23Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Denton Maynard",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "magna.Suspendisse@sagittissemper.co.uk",
+    "issuerPhoneNumber": "905623867",
+    "receiverFullName": "Reese Compton",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "morbi@varius.com",
+    "receiverPhoneNumber": "604912252",
+    "subtotal": "538.70",
+    "totalTaxes": "582.39",
+    "totalDue": "1121.09"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f2130feb2b3b23a9a41"
+    },
+    "invoiceNumber": "8B971551QM",
+    "invoiceDate": {"$date":"2019-10-28T09:15:21Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Judah Summers",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "dolor@lectusante.edu",
+    "issuerPhoneNumber": "993166641",
+    "receiverFullName": "Fritz Lane",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "sociis.natoque.penatibus@id.edu",
+    "receiverPhoneNumber": "730826927",
+    "subtotal": "454.32",
+    "totalTaxes": "457.30",
+    "totalDue": "911.62"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f2676c44fd627fd9f34"
+    },
+    "invoiceNumber": "01293500FG",
+    "invoiceDate": {"$date":"2019-07-05T09:11:45Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Wyoming Bowman",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "ad.litora@nonummy.edu",
+    "issuerPhoneNumber": "629866175",
+    "receiverFullName": "Larissa Harrison",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "sem.egestas@cubiliaCuraeDonec.ca",
+    "receiverPhoneNumber": "682481132",
+    "subtotal": "278.55",
+    "totalTaxes": "323.39",
+    "totalDue": "601.94"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f2c936034a98f0cdaa9"
+    },
+    "invoiceNumber": "F1659567KZ",
+    "invoiceDate": {"$date":"2019-01-03T17:49:06Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Sierra Berg",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "eros.turpis@Aliquam.org",
+    "issuerPhoneNumber": "978922619",
+    "receiverFullName": "Aurelia Shaffer",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "Suspendisse@lacusUt.com",
+    "receiverPhoneNumber": "907742725",
+    "subtotal": "33.39",
+    "totalTaxes": "336.73",
+    "totalDue": "370.12"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f31b7c98da20608e6b7"
+    },
+    "invoiceNumber": "36834380UF",
+    "invoiceDate": {"$date":"2019-01-27T21:31:37Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Charde Hester",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "non.justo@faucibusut.net",
+    "issuerPhoneNumber": "670633876",
+    "receiverFullName": "Orli Mccormick",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "elit.elit@necante.edu",
+    "receiverPhoneNumber": "663003973",
+    "subtotal": "490.30",
+    "totalTaxes": "529.15",
+    "totalDue": "1019.45"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f37830569abbd7e0732"
+    },
+    "invoiceNumber": "49221723UZ",
+    "invoiceDate": {"$date":"2020-12-15T14:53:37Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Kessie Howard",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "cursus.non.egestas@accumsan.edu",
+    "issuerPhoneNumber": "697682925",
+    "receiverFullName": "Barbara Middleton",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "Pellentesque.ultricies@ligulaNullamenim.com",
+    "receiverPhoneNumber": "950973231",
+    "subtotal": "870.34",
+    "totalTaxes": "975.94",
+    "totalDue": "1846.28"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f3f115334edd2e258d0"
+    },
+    "invoiceNumber": "53741787WT",
+    "invoiceDate": {"$date":"2020-10-22T16:59:48Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Daniel Benton",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "feugiat.tellus.lorem@neccursus.co.uk",
+    "issuerPhoneNumber": "964031084",
+    "receiverFullName": "Nelle Cole",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "libero.nec@Loremipsum.net",
+    "receiverPhoneNumber": "669314169",
+    "subtotal": "963.40",
+    "totalTaxes": "942.75",
+    "totalDue": "1906.15"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f44b14d91751cd5eb6b"
+    },
+    "invoiceNumber": "55788133UQ",
+    "invoiceDate": {"$date":"2020-04-12T11:55:46Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "a.auctor@augueeu.edu",
+    "issuerPhoneNumber": "980900383",
+    "receiverFullName": "Ann Nicholson",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "pede@Nuncullamcorpervelit.org",
+    "receiverPhoneNumber": "776816735",
+    "subtotal": "892.24",
+    "totalTaxes": "996.82",
+    "totalDue": "1889.06"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f4a2cd01a680e433186"
+    },
+    "invoiceNumber": "C6488510ZC",
+    "invoiceDate": {"$date":"2020-04-27T16:40:06Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Quin Case",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "amet@euismodmauris.ca",
+    "issuerPhoneNumber": "734717235",
+    "receiverFullName": "Penelope Miranda",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "Nunc.ullamcorper.velit@ac.org",
+    "receiverPhoneNumber": "651733594",
+    "subtotal": "413.14",
+    "totalTaxes": "180.78",
+    "totalDue": "593.92"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f508164601b3cb2aec2"
+    },
+    "invoiceNumber": "77527115BB",
+    "invoiceDate": {"$date":"2021-02-13T04:33:43Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "orci@cursusaenim.co.uk",
+    "issuerPhoneNumber": "925215389",
+    "receiverFullName": "Britanney Mccray",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "tristique.pharetra.Quisque@Phasellus.com",
+    "receiverPhoneNumber": "901913839",
+    "subtotal": "588.40",
+    "totalTaxes": "977.30",
+    "totalDue": "1565.7"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f5514bce58f6066633d"
+    },
+    "invoiceNumber": "73873503WB",
+    "invoiceDate": {"$date":"2020-08-12T06:52:04Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Ignacia George",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "tempus.scelerisque.lorem@fermentumrisus.org",
+    "issuerPhoneNumber": "654791032",
+    "receiverFullName": "Avye Key",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "vel@nibhAliquamornare.org",
+    "receiverPhoneNumber": "976901438",
+    "subtotal": "485.99",
+    "totalTaxes": "287.66",
+    "totalDue": "773.65"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f5cabc5e59a33731be3"
+    },
+    "invoiceNumber": "EC788218OH",
+    "invoiceDate": {"$date":"2019-02-27T12:31:50Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Driscoll Cote",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "sed.dictum@primisinfaucibus.com",
+    "issuerPhoneNumber": "979662400",
+    "receiverFullName": "Yasir Valencia",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "et@tellusNunclectus.com",
+    "receiverPhoneNumber": "681711929",
+    "subtotal": "311.90",
+    "totalTaxes": "808.22",
+    "totalDue": "1120.12"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f61497f59b82f7c0f85"
+    },
+    "invoiceNumber": "3C911000JV",
+    "invoiceDate": {"$date":"2020-06-26T02:06:52Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Travis Kim",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "volutpat@utdolordapibus.org",
+    "issuerPhoneNumber": "979653817",
+    "receiverFullName": "Noble Hull",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "eros.nec@sodalesMaurisblandit.net",
+    "receiverPhoneNumber": "790257813",
+    "subtotal": "968.12",
+    "totalTaxes": "609.35",
+    "totalDue": "1577.47"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f675aa128e34373e60f"
+    },
+    "invoiceNumber": "16254974WA",
+    "invoiceDate": {"$date":"2020-09-26T01:39:55Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Cynthia Gibson",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "tincidunt.aliquam.arcu@Quisquelibero.co.uk",
+    "issuerPhoneNumber": "728009236",
+    "receiverFullName": "Vernon Davenport",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "varius.Nam@infaucibusorci.org",
+    "receiverPhoneNumber": "951197640",
+    "subtotal": "116.80",
+    "totalTaxes": "321.37",
+    "totalDue": "438.17"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f6f3537f6878f60aead"
+    },
+    "invoiceNumber": "CA982446JH",
+    "invoiceDate": {"$date":"2020-04-22T06:43:46Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Evelyn Thornton",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "dui.in.sodales@egestasAliquam.net",
+    "issuerPhoneNumber": "682713041",
+    "receiverFullName": "Jemima Richard",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "ac.orci.Ut@sempererat.com",
+    "receiverPhoneNumber": "720260129",
+    "subtotal": "372.11",
+    "totalTaxes": "844.33",
+    "totalDue": "1216.44"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f7423cf802dd116abdf"
+    },
+    "invoiceNumber": "DA316866YF",
+    "invoiceDate": {"$date":"2019-10-19T22:14:16Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "eleifend.non@vehicula.org",
+    "issuerPhoneNumber": "946185850",
+    "receiverFullName": "Joy Pace",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "fringilla.mi.lacinia@Namporttitorscelerisque.edu",
+    "receiverPhoneNumber": "677753106",
+    "subtotal": "865.80",
+    "totalTaxes": "539.76",
+    "totalDue": "1405.56"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f7c357698b092b9aa4c"
+    },
+    "invoiceNumber": "8A739443RF",
+    "invoiceDate": {"$date":"2019-08-15T17:28:16Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Lara Richardson",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "dolor.sit.amet@temporlorem.net",
+    "issuerPhoneNumber": "643123508",
+    "receiverFullName": "Amy Haynes",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "dictum@Cumsociis.edu",
+    "receiverPhoneNumber": "683747066",
+    "subtotal": "733.60",
+    "totalTaxes": "755.83",
+    "totalDue": "1489.43"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f81183ba8e7a6a8ed56"
+    },
+    "invoiceNumber": "5E163715TX",
+    "invoiceDate": {"$date":"2020-07-29T14:25:49Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Joelle Moody",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "feugiat.Lorem.ipsum@nulla.com",
+    "issuerPhoneNumber": "984791001",
+    "receiverFullName": "Serina Hopper",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "mauris.sit.amet@massarutrummagna.edu",
+    "receiverPhoneNumber": "760323301",
+    "subtotal": "475.25",
+    "totalTaxes": "731.81",
+    "totalDue": "1207.06"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f860846c2445b31a233"
+    },
+    "invoiceNumber": "63362669YS",
+    "invoiceDate": {"$date":"2019-01-05T10:50:48Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "placerat.eget.venenatis@Fuscemilorem.com",
+    "issuerPhoneNumber": "970352010",
+    "receiverFullName": "Erica Wolfe",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "ut@sociosqu.com",
+    "receiverPhoneNumber": "708922083",
+    "subtotal": "292.44",
+    "totalTaxes": "562.93",
+    "totalDue": "855.37"
+  },
+  {
+    "_id": {
+      "$oid": "5e89216eea8410b9720274d8"
+    },
+    "invoiceNumber": "B4955648XA",
+    "invoiceDate": {"$date":"2019-09-04T11:15:48Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Rhona Donovan",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "mattis@inmolestie.edu",
+    "issuerPhoneNumber": "789668069",
+    "receiverFullName": "Susan Cooke",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "penatibus@nislQuisquefringilla.edu",
+    "receiverPhoneNumber": "749988353",
+    "subtotal": "278.06",
+    "totalTaxes": "529.35",
+    "totalDue": "807.41"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f8b9abc0bebe235cd27"
+    },
+    "invoiceNumber": "DC356951EJ",
+    "invoiceDate": {"$date":"2020-03-03T01:46:27Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Ginger Wiggins",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "ligula@necorci.ca",
+    "issuerPhoneNumber": "735233509",
+    "receiverFullName": "Wyoming Duran",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "adipiscing.enim.mi@inceptos.com",
+    "receiverPhoneNumber": "769342147",
+    "subtotal": "952.03",
+    "totalTaxes": "868.86",
+    "totalDue": "1820.89"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f96b4b95ce6aeae85ff"
+    },
+    "invoiceNumber": "F7826706PX",
+    "invoiceDate": {"$date":"2020-12-30T00:29:44Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Maryam Lowery",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "ac@semNullainterdum.com",
+    "issuerPhoneNumber": "605479538",
+    "receiverFullName": "Aiko Chavez",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "amet@lectusCumsociis.ca",
+    "receiverPhoneNumber": "695754394",
+    "subtotal": "255.11",
+    "totalTaxes": "658.64",
+    "totalDue": "913.75"
+  },
+  {
+    "_id": {
+      "$oid": "5e891f9d0021429697115a94"
+    },
+    "invoiceNumber": "E1452005MZ",
+    "invoiceDate": {"$date":"2020-01-28T11:03:59Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Madison Ford",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "egestas.Aliquam.nec@pharetrased.co.uk",
+    "issuerPhoneNumber": "697696404",
+    "receiverFullName": "Cailin Jefferson",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "facilisi.Sed@ullamcorperviverra.com",
+    "receiverPhoneNumber": "778174551",
+    "subtotal": "852.50",
+    "totalTaxes": "628.06",
+    "totalDue": "1480.56"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fa2a38a9264fb3094c8"
+    },
+    "invoiceNumber": "4D946112EP",
+    "invoiceDate": {"$date":"2019-07-10T06:52:42Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Eden Crosby",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "metus.Aenean.sed@rutrumurnanec.net",
+    "issuerPhoneNumber": "780252754",
+    "receiverFullName": "Tad Franks",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "sodales.at@Sedid.com",
+    "receiverPhoneNumber": "908562467",
+    "subtotal": "577.02",
+    "totalTaxes": "978.37",
+    "totalDue": "1555.39"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fa83fc87ff2d375f879"
+    },
+    "invoiceNumber": "7B586482OW",
+    "invoiceDate": {"$date":"2020-01-09T15:54:12Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Sylvia Rodriguez",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "ligula.Nullam@sagittisfelisDonec.com",
+    "issuerPhoneNumber": "629853069",
+    "receiverFullName": "Hedwig Hansen",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "tempus.scelerisque@et.co.uk",
+    "receiverPhoneNumber": "921701449",
+    "subtotal": "114.06",
+    "totalTaxes": "355.03",
+    "totalDue": "469.09"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fae269fb0083bb259b2"
+    },
+    "invoiceNumber": "29643286NU",
+    "invoiceDate": {"$date":"2019-06-07T02:27:11Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Isadora Wilkerson",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "vel.sapien@nisiaodio.org",
+    "issuerPhoneNumber": "724687240",
+    "receiverFullName": "Tyler Chaney",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "facilisis@euismod.net",
+    "receiverPhoneNumber": "666761826",
+    "subtotal": "946.11",
+    "totalTaxes": "348.61",
+    "totalDue": "1294.72"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fb4d81bb592d0ba8398"
+    },
+    "invoiceNumber": "6F756241IK",
+    "invoiceDate": {"$date":"2019-06-19T05:46:43Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Reece Gates",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "dolor@eteuismod.net",
+    "issuerPhoneNumber": "674294676",
+    "receiverFullName": "Conan Cash",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "congue.a.aliquet@eu.co.uk",
+    "receiverPhoneNumber": "972756740",
+    "subtotal": "250.18",
+    "totalTaxes": "492.94",
+    "totalDue": "743.12"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fe2e8c8a42757e6698f"
+    },
+    "invoiceNumber": "59685114FT",
+    "invoiceDate": {"$date":"2020-12-27T13:53:28Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Norman Bush",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "varius@neceuismod.com",
+    "issuerPhoneNumber": "980039114",
+    "receiverFullName": "Joan Holcomb",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "Praesent@Sed.com",
+    "receiverPhoneNumber": "769930350",
+    "subtotal": "366.82",
+    "totalTaxes": "282.69",
+    "totalDue": "649.51"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fe736b865b33439d23c"
+    },
+    "invoiceNumber": "E9853187PJ",
+    "invoiceDate": {"$date":"2020-03-12T04:18:55Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Yasir Beard",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "massa.non.ante@ridiculusmusDonec.com",
+    "issuerPhoneNumber": "942922241",
+    "receiverFullName": "Elvis Sims",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "Aliquam.nec@elit.net",
+    "receiverPhoneNumber": "645851681",
+    "subtotal": "597.03",
+    "totalTaxes": "808.78",
+    "totalDue": "1405.81"
+  },
+  {
+    "_id": {
+      "$oid": "5e891fec2b91e7d757f8cf4c"
+    },
+    "invoiceNumber": "FE846107YL",
+    "invoiceDate": {"$date":"2020-01-02T11:02:12Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Abel Ochoa",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "purus.Duis@sit.edu",
+    "issuerPhoneNumber": "635280167",
+    "receiverFullName": "Oprah Patterson",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "sed.sem.egestas@nequevenenatislacus.ca",
+    "receiverPhoneNumber": "914297894",
+    "subtotal": "115.15",
+    "totalTaxes": "832.14",
+    "totalDue": "947.29"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ff2c857750a99e5bf37"
+    },
+    "invoiceNumber": "26478977IO",
+    "invoiceDate": {"$date":"2019-06-17T10:59:55Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Camille Rivas",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "In.lorem@accumsan.edu",
+    "issuerPhoneNumber": "960339604",
+    "receiverFullName": "Keegan Mccullough",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "Proin.vel.arcu@mifelis.co.uk",
+    "receiverPhoneNumber": "642131048",
+    "subtotal": "381.11",
+    "totalTaxes": "810.74",
+    "totalDue": "1191.85"
+  },
+  {
+    "_id": {
+      "$oid": "5e89217cb1db111639d3a5fe"
+    },
+    "invoiceNumber": "28712996II",
+    "invoiceDate": {"$date":"2021-02-15T08:39:04Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Zenia Cleveland",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "sed.tortor.Integer@Morbi.net",
+    "issuerPhoneNumber": "974091185",
+    "receiverFullName": "Mechelle Ramirez",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "eu@Nullaeu.org",
+    "receiverPhoneNumber": "607268981",
+    "subtotal": "964.53",
+    "totalTaxes": "932.00",
+    "totalDue": "1896.53"
+  },
+  {
+    "_id": {
+      "$oid": "5e891ffd1610d7a2657f46b1"
+    },
+    "invoiceNumber": "7B498374UC",
+    "invoiceDate": {"$date":"2020-11-02T14:26:31Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Serena Barber",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "enim.Suspendisse@rhoncusidmollis.net",
+    "issuerPhoneNumber": "664779034",
+    "receiverFullName": "Jonas Frye",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "a@arcuSedet.co.uk",
+    "receiverPhoneNumber": "745870504",
+    "subtotal": "712.44",
+    "totalTaxes": "10.79",
+    "totalDue": "723.23"
+  },
+  {
+    "_id": {
+      "$oid": "5e89200d96c297efb4b5e511"
+    },
+    "invoiceNumber": "DB769955EV",
+    "invoiceDate": {"$date":"2019-06-25T19:53:34Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Stella Bradford",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "ligula.Donec.luctus@dictum.net",
+    "issuerPhoneNumber": "672747444",
+    "receiverFullName": "Ingrid Carter",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "eget@euismodmauris.ca",
+    "receiverPhoneNumber": "981269463",
+    "subtotal": "999.63",
+    "totalTaxes": "348.55",
+    "totalDue": "1348.18"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920122290af5cbccefd2f"
+    },
+    "invoiceNumber": "80426591IU",
+    "invoiceDate": {"$date":"2019-04-03T01:00:25Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Jacqueline Cherry",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "Aliquam.rutrum@egestasDuisac.co.uk",
+    "issuerPhoneNumber": "733584266",
+    "receiverFullName": "Adrienne Calhoun",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "cursus.et.magna@orci.net",
+    "receiverPhoneNumber": "765483473",
+    "subtotal": "646.58",
+    "totalTaxes": "964.07",
+    "totalDue": "1610.65"
+  },
+  {
+    "_id": {
+      "$oid": "5e892019157b3392106b0411"
+    },
+    "invoiceNumber": "6C989321FK",
+    "invoiceDate": {"$date":"2019-07-26T10:36:26Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Ariel Malone",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "sit.amet.consectetuer@nonduinec.ca",
+    "issuerPhoneNumber": "754499307",
+    "receiverFullName": "Lawrence Doyle",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "mollis.vitae.posuere@aaliquetvel.org",
+    "receiverPhoneNumber": "900746887",
+    "subtotal": "771.11",
+    "totalTaxes": "539.23",
+    "totalDue": "1310.34"
+  },
+  {
+    "_id": {
+      "$oid": "5e89202287a8476208e83481"
+    },
+    "invoiceNumber": "B7999224SJ",
+    "invoiceDate": {"$date":"2020-01-17T09:23:09Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Ahmed Barlow",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "tincidunt.vehicula@mi.com",
+    "issuerPhoneNumber": "669532192",
+    "receiverFullName": "Kato Patton",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "penatibus@rhoncusid.edu",
+    "receiverPhoneNumber": "606925234",
+    "subtotal": "458.50",
+    "totalTaxes": "959.76",
+    "totalDue": "1418.26"
+  },
+  {
+    "_id": {
+      "$oid": "5e892028520c8b07c1414530"
+    },
+    "invoiceNumber": "0A268067BK",
+    "invoiceDate": {"$date":"2019-08-05T14:07:17Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Noelani Charles",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "eu.odio.Phasellus@nonbibendum.co.uk",
+    "issuerPhoneNumber": "663882020",
+    "receiverFullName": "Hayden Banks",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "egestas.Aliquam@elitpellentesquea.ca",
+    "receiverPhoneNumber": "935805829",
+    "subtotal": "14.15",
+    "totalTaxes": "346.94",
+    "totalDue": "361.09"
+  },
+  {
+    "_id": {
+      "$oid": "5e89202e4d135e43bc7fea6d"
+    },
+    "invoiceNumber": "1C957050GR",
+    "invoiceDate": {"$date":"2020-02-15T16:13:30Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Daryl Burgess",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "volutpat.Nulla.dignissim@Phasellus.com",
+    "issuerPhoneNumber": "779771484",
+    "receiverFullName": "Merritt Phillips",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "ornare@imperdietnec.co.uk",
+    "receiverPhoneNumber": "620528181",
+    "subtotal": "261.09",
+    "totalTaxes": "244.42",
+    "totalDue": "505.51"
+  },
+  {
+    "_id": {
+      "$oid": "5e892033e5989679a401f1e0"
+    },
+    "invoiceNumber": "9B639460SB",
+    "invoiceDate": {"$date":"2020-08-25T06:47:48Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Ciaran Vasquez",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "in.molestie@nuncac.net",
+    "issuerPhoneNumber": "718373853",
+    "receiverFullName": "Lionel Garza",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "pede.blandit@magnaSuspendisse.ca",
+    "receiverPhoneNumber": "674771562",
+    "subtotal": "928.47",
+    "totalTaxes": "48.68",
+    "totalDue": "977.15"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920397e53a3326188089f"
+    },
+    "invoiceNumber": "38524325BR",
+    "invoiceDate": {"$date":"2020-05-29T06:58:15Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Lillith Beasley",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "rutrum.urna@placerategetvenenatis.edu",
+    "issuerPhoneNumber": "791584368",
+    "receiverFullName": "Alfonso Schroeder",
+    "receiverIdNumber": "02579822G",
+    "receiverEmail": "quis.accumsan.convallis@sit.org",
+    "receiverPhoneNumber": "935897080",
+    "subtotal": "450.09",
+    "totalTaxes": "754.22",
+    "totalDue": "1204.31"
+  },
+  {
+    "_id": {
+      "$oid": "5e89203ef83a6d105b0c7899"
+    },
+    "invoiceNumber": "8A699287XV",
+    "invoiceDate": {"$date":"2019-04-25T00:47:38Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Ebony Buckley",
+    "issuerIdNumber": "24237126W",
+    "issuerEmail": "Nulla@Mauris.ca",
+    "issuerPhoneNumber": "751540285",
+    "receiverFullName": "Hannah Guy",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "quis@Curabiturut.net",
+    "receiverPhoneNumber": "996226397",
+    "subtotal": "481.21",
+    "totalTaxes": "503.99",
+    "totalDue": "985.2"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920438039c8b2afc599f0"
+    },
+    "invoiceNumber": "CC711165SB",
+    "invoiceDate": {"$date":"2020-01-29T20:45:45Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "vitae@maurisidsapien.net",
+    "issuerPhoneNumber": "643562003",
+    "receiverFullName": "Sade Shields",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "Nullam.enim.Sed@anteMaecenas.org",
+    "receiverPhoneNumber": "674696152",
+    "subtotal": "785.56",
+    "totalTaxes": "711.35",
+    "totalDue": "1496.91"
+  },
+  {
+    "_id": {
+      "$oid": "5e892048cb157a36e22edfc7"
+    },
+    "invoiceNumber": "99781715ZR",
+    "invoiceDate": {"$date":"2020-03-21T14:48:30Z"},
+    "invoiceType": "S",
+    "issuerFullName": "David Page",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "Proin.nisl@nibhlacinia.ca",
+    "issuerPhoneNumber": "960994570",
+    "receiverFullName": "Hector Perkins",
+    "receiverIdNumber": "02579822G",
+    "receiverEmail": "montes.nascetur.ridiculus@liberoMorbi.edu",
+    "receiverPhoneNumber": "758080431",
+    "subtotal": "565.74",
+    "totalTaxes": "412.54",
+    "totalDue": "978.28"
+  },
+  {
+    "_id": {
+      "$oid": "5e89204d50cc0a0af9a7ceb7"
+    },
+    "invoiceNumber": "7B236791BC",
+    "invoiceDate": {"$date":"2020-02-06T23:39:50Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Chelsea Obrien",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "pede@dictum.net",
+    "issuerPhoneNumber": "690863937",
+    "receiverFullName": "Bethany Landry",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "orci.Ut.sagittis@infaucibus.com",
+    "receiverPhoneNumber": "920324359",
+    "subtotal": "604.57",
+    "totalTaxes": "242.44",
+    "totalDue": "847.01"
+  },
+  {
+    "_id": {
+      "$oid": "5e89205377747890503f8380"
+    },
+    "invoiceNumber": "DC716385AG",
+    "invoiceDate": {"$date":"2021-03-25T08:18:13Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Illana Hammond",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "tempor.bibendum@Phasellusdapibusquam.co.uk",
+    "issuerPhoneNumber": "951781725",
+    "receiverFullName": "Nolan Doyle",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "odio.semper.cursus@sed.com",
+    "receiverPhoneNumber": "612992966",
+    "subtotal": "286.54",
+    "totalTaxes": "670.20",
+    "totalDue": "956.74"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920582f70d37a5859d68b"
+    },
+    "invoiceNumber": "77519180KH",
+    "invoiceDate": {"$date":"2020-01-01T16:17:37Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Ora Christensen",
+    "issuerIdNumber": "24237126W",
+    "issuerEmail": "a.scelerisque.sed@nec.ca",
+    "issuerPhoneNumber": "602347839",
+    "receiverFullName": "Mira Meadows",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "enim@risusaultricies.co.uk",
+    "receiverPhoneNumber": "610876849",
+    "subtotal": "442.28",
+    "totalTaxes": "971.32",
+    "totalDue": "1413.6"
+  },
+  {
+    "_id": {
+      "$oid": "5e89205eed41596a5cf4b57b"
+    },
+    "invoiceNumber": "D3156162KZ",
+    "invoiceDate": {"$date":"2019-04-08T06:29:26Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Kylee Conway",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "semper@orciUtsemper.org",
+    "issuerPhoneNumber": "665770247",
+    "receiverFullName": "Dominique Weiss",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "tincidunt@Nullamsuscipitest.ca",
+    "receiverPhoneNumber": "669597148",
+    "subtotal": "744.35",
+    "totalTaxes": "397.15",
+    "totalDue": "1141.5"
+  },
+  {
+    "_id": {
+      "$oid": "5e892063d52ff14959c5f28f"
+    },
+    "invoiceNumber": "D6699105NK",
+    "invoiceDate": {"$date":"2020-01-27T23:17:04Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Nathaniel Bentley",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "diam.Duis.mi@pedesagittis.co.uk",
+    "issuerPhoneNumber": "992871618",
+    "receiverFullName": "Tatyana Small",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "erat@interdumCurabitur.org",
+    "receiverPhoneNumber": "972757837",
+    "subtotal": "247.86",
+    "totalTaxes": "844.63",
+    "totalDue": "1092.49"
+  },
+  {
+    "_id": {
+      "$oid": "5e892068a03a5cc1ee72522b"
+    },
+    "invoiceNumber": "42696952XA",
+    "invoiceDate": {"$date":"2019-10-12T10:48:17Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "blandit.Nam.nulla@magnaa.com",
+    "issuerPhoneNumber": "979011397",
+    "receiverFullName": "Gary Guerra",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "Duis@Integer.ca",
+    "receiverPhoneNumber": "950184182",
+    "subtotal": "494.05",
+    "totalTaxes": "241.33",
+    "totalDue": "735.38"
+  },
+  {
+    "_id": {
+      "$oid": "5e89206dddf5b222c47b7167"
+    },
+    "invoiceNumber": "4A641961VO",
+    "invoiceDate": {"$date":"2020-02-16T12:31:18Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Cally Justice",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "scelerisque.mollis@arcuiaculisenim.co.uk",
+    "issuerPhoneNumber": "719598495",
+    "receiverFullName": "Autumn Hamilton",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "fringilla.cursus.purus@necmalesuadaut.edu",
+    "receiverPhoneNumber": "911560427",
+    "subtotal": "170.50",
+    "totalTaxes": "514.60",
+    "totalDue": "685.1"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920736fc649b42883de3a"
+    },
+    "invoiceNumber": "2A917262HV",
+    "invoiceDate": {"$date":"2020-01-11T03:46:12Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Mechelle Avila",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "luctus.ipsum@nibh.net",
+    "issuerPhoneNumber": "915659049",
+    "receiverFullName": "Juan Kevin Trujillo",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "parturient.montes.nascetur@Maurismolestie.ca",
+    "receiverPhoneNumber": "948581523",
+    "subtotal": "677.09",
+    "totalTaxes": "725.54",
+    "totalDue": "1402.63"
+  },
+  {
+    "_id": {
+      "$oid": "5e892078314608b2e14ef093"
+    },
+    "invoiceNumber": "95626557TX",
+    "invoiceDate": {"$date":"2020-09-02T05:28:14Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Colton Keller",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "Morbi@Duisami.net",
+    "issuerPhoneNumber": "622790145",
+    "receiverFullName": "Shannon Newton",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "lectus.convallis@Nunc.ca",
+    "receiverPhoneNumber": "926867203",
+    "subtotal": "862.47",
+    "totalTaxes": "903.70",
+    "totalDue": "1766.17"
+  },
+  {
+    "_id": {
+      "$oid": "5e89207fe00e4cac692e0443"
+    },
+    "invoiceNumber": "45766613XO",
+    "invoiceDate": {"$date":"2019-08-27T04:42:05Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "eleifend.vitae.erat@in.org",
+    "issuerPhoneNumber": "969658370",
+    "receiverFullName": "Talon Atkins",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "eu.metus.In@nunc.ca",
+    "receiverPhoneNumber": "736190425",
+    "subtotal": "720.29",
+    "totalTaxes": "558.17",
+    "totalDue": "1278.46"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920857e1af2fcb5ceb19c"
+    },
+    "invoiceNumber": "ED263343UX",
+    "invoiceDate": {"$date":"2019-01-03T05:47:20Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Quintessa Moran",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "ornare.sagittis.felis@eu.ca",
+    "issuerPhoneNumber": "989160821",
+    "receiverFullName": "Leo Winters",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "lectus.pede@et.edu",
+    "receiverPhoneNumber": "656218730",
+    "subtotal": "553.53",
+    "totalTaxes": "141.10",
+    "totalDue": "694.63"
+  },
+  {
+    "_id": {
+      "$oid": "5e89208b0185bff7a4b52a00"
+    },
+    "invoiceNumber": "A3824121DS",
+    "invoiceDate": {"$date":"2019-10-09T00:14:41Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Lester Warner",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "Nunc.ullamcorper.velit@Fuscefermentumfermentum.net",
+    "issuerPhoneNumber": "913351547",
+    "receiverFullName": "Roth Kirk",
+    "receiverIdNumber": "43763308N",
+    "receiverEmail": "ligula@loremvehiculaet.com",
+    "receiverPhoneNumber": "797754010",
+    "subtotal": "570.14",
+    "totalTaxes": "750.57",
+    "totalDue": "1320.71"
+  },
+  {
+    "_id": {
+      "$oid": "5e892091d6d65023393ce692"
+    },
+    "invoiceNumber": "79713923LG",
+    "invoiceDate": {"$date":"2019-08-15T20:12:26Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Gillian Johns",
+    "issuerIdNumber": "20334562D",
+    "issuerEmail": "ligula@MaurisnullaInteger.ca",
+    "issuerPhoneNumber": "956855194",
+    "receiverFullName": "Avye Franco",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "nec.diam.Duis@semperegestas.org",
+    "receiverPhoneNumber": "760290973",
+    "subtotal": "826.99",
+    "totalTaxes": "628.90",
+    "totalDue": "1455.89"
+  },
+  {
+    "_id": {
+      "$oid": "5e89209729cd3e142a354088"
+    },
+    "invoiceNumber": "53583253BC",
+    "invoiceDate": {"$date":"2019-12-27T09:02:09Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Sasha Bruce",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "Donec.feugiat@metusAliquam.ca",
+    "issuerPhoneNumber": "964906985",
+    "receiverFullName": "Joelle Hawkins",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "rhoncus.Nullam.velit@auctor.ca",
+    "receiverPhoneNumber": "656056386",
+    "subtotal": "489.80",
+    "totalTaxes": "740.44",
+    "totalDue": "1230.24"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920a18bcf3c88d0867da2"
+    },
+    "invoiceNumber": "DF132514RH",
+    "invoiceDate": {"$date":"2020-08-25T06:17:28Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Vielka Munoz",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "pede.Cras@Aliquamadipiscinglobortis.org",
+    "issuerPhoneNumber": "935176774",
+    "receiverFullName": "Moses Wilder",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "Cum@lacusvestibulumlorem.net",
+    "receiverPhoneNumber": "972209319",
+    "subtotal": "973.36",
+    "totalTaxes": "185.74",
+    "totalDue": "1159.1"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920a6ecbf327fa7ce3f8d"
+    },
+    "invoiceNumber": "B5374266FU",
+    "invoiceDate": {"$date":"2019-06-30T03:38:16Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "Curabitur.ut@portaelit.net",
+    "issuerPhoneNumber": "623931718",
+    "receiverFullName": "Norman Winters",
+    "receiverIdNumber": "02579822G",
+    "receiverEmail": "Donec@Crasegetnisi.edu",
+    "receiverPhoneNumber": "788392706",
+    "subtotal": "302.40",
+    "totalTaxes": "40.00",
+    "totalDue": "342.4"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920acd64a418d14f5508b"
+    },
+    "invoiceNumber": "F2216385ZQ",
+    "invoiceDate": {"$date":"2019-05-20T08:59:42Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Louis Joyce",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "turpis.egestas@ultrices.co.uk",
+    "issuerPhoneNumber": "654502493",
+    "receiverFullName": "Michael Kinney",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "massa@sedtortorInteger.com",
+    "receiverPhoneNumber": "640149484",
+    "subtotal": "951.05",
+    "totalTaxes": "389.40",
+    "totalDue": "1340.45"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920b14969fa19c1f804b5"
+    },
+    "invoiceNumber": "B8687659OF",
+    "invoiceDate": {"$date":"2019-11-06T08:47:03Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Piper Oneal",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "ornare@maurissagittis.edu",
+    "issuerPhoneNumber": "951355958",
+    "receiverFullName": "Brynn Miranda",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "ullamcorper.Duis.at@gravidamolestie.com",
+    "receiverPhoneNumber": "709767090",
+    "subtotal": "689.92",
+    "totalTaxes": "847.95",
+    "totalDue": "1537.87"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920b8429474ca76da2c15"
+    },
+    "invoiceNumber": "87683006QK",
+    "invoiceDate": {"$date":"2020-03-20T02:05:22Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Kirk Raymond",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "magna.Praesent@interdumSed.org",
+    "issuerPhoneNumber": "687566795",
+    "receiverFullName": "Jasper Steele",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "sem@Praesent.edu",
+    "receiverPhoneNumber": "954327994",
+    "subtotal": "462.78",
+    "totalTaxes": "768.57",
+    "totalDue": "1231.35"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920bd711cb99391000d5d"
+    },
+    "invoiceNumber": "7F277297RB",
+    "invoiceDate": {"$date":"2019-10-25T23:06:37Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Sophia Dominguez",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "purus.sapien@auctorvelit.co.uk",
+    "issuerPhoneNumber": "651604998",
+    "receiverFullName": "Fitzgerald Baldwin",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "turpis.egestas.Aliquam@ridiculus.org",
+    "receiverPhoneNumber": "950646088",
+    "subtotal": "625.53",
+    "totalTaxes": "851.37",
+    "totalDue": "1476.9"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920c48cc1ca6d80d03475"
+    },
+    "invoiceNumber": "3A771623OV",
+    "invoiceDate": {"$date":"2020-09-10T08:27:44Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Nasim Marshall",
+    "issuerIdNumber": "00514526Q",
+    "issuerEmail": "sit@fringillacursuspurus.ca",
+    "issuerPhoneNumber": "735779819",
+    "receiverFullName": "Petra Henry",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "Donec.at.arcu@sollicitudincommodo.com",
+    "receiverPhoneNumber": "917348553",
+    "subtotal": "671.61",
+    "totalTaxes": "706.38",
+    "totalDue": "1377.99"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920c9964f9438244ade68"
+    },
+    "invoiceNumber": "B2452840EK",
+    "invoiceDate": {"$date":"2019-08-03T06:35:47Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Rigel Wells",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "placerat.orci.lacus@rutrum.ca",
+    "issuerPhoneNumber": "774305227",
+    "receiverFullName": "Juan Kevin Trujillo",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "ornare@ultriciesadipiscingenim.org",
+    "receiverPhoneNumber": "727524339",
+    "subtotal": "813.49",
+    "totalTaxes": "173.14",
+    "totalDue": "986.63"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920d09b5dfff445012c65"
+    },
+    "invoiceNumber": "04563493MS",
+    "invoiceDate": {"$date":"2020-11-18T12:13:54Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Perry Forbes",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "tellus.faucibus.leo@dui.co.uk",
+    "issuerPhoneNumber": "794125151",
+    "receiverFullName": "Tasha Mcclain",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "vitae@velvenenatis.co.uk",
+    "receiverPhoneNumber": "937924595",
+    "subtotal": "901.55",
+    "totalTaxes": "32.75",
+    "totalDue": "934.3"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920d4e70cde78a10daf15"
+    },
+    "invoiceNumber": "80878584ZR",
+    "invoiceDate": {"$date":"2019-05-01T09:12:41Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Christian Richard",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "Phasellus@egestasrhoncus.com",
+    "issuerPhoneNumber": "764291429",
+    "receiverFullName": "Connor Nunez",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "euismod@Etiamimperdietdictum.org",
+    "receiverPhoneNumber": "767073245",
+    "subtotal": "456.17",
+    "totalTaxes": "727.06",
+    "totalDue": "1183.23"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920db54fcf0a279fb4700"
+    },
+    "invoiceNumber": "51476161ZV",
+    "invoiceDate": {"$date":"2020-01-08T15:14:28Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Heather Snow",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "non.bibendum@massaSuspendisseeleifend.co.uk",
+    "issuerPhoneNumber": "706720573",
+    "receiverFullName": "Whitney Edwards",
+    "receiverIdNumber": "02579822G",
+    "receiverEmail": "Sed@magnaatortor.ca",
+    "receiverPhoneNumber": "689154298",
+    "subtotal": "176.11",
+    "totalTaxes": "828.91",
+    "totalDue": "1005.02"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920e0fbc1afd105340a54"
+    },
+    "invoiceNumber": "B0539288EN",
+    "invoiceDate": {"$date":"2019-07-13T19:47:09Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Allistair Dominguez",
+    "issuerIdNumber": "76304925X",
+    "issuerEmail": "faucibus.orci.luctus@felisullamcorperviverra.com",
+    "issuerPhoneNumber": "680309063",
+    "receiverFullName": "Zeus Olson",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "Cras.dolor@consequatauctor.com",
+    "receiverPhoneNumber": "999563524",
+    "subtotal": "665.45",
+    "totalTaxes": "725.82",
+    "totalDue": "1391.27"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920e68f97a92045ada5bf"
+    },
+    "invoiceNumber": "C3677113NN",
+    "invoiceDate": {"$date":"2020-06-20T11:13:18Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "ipsum.cursus.vestibulum@lectus.edu",
+    "issuerPhoneNumber": "626935788",
+    "receiverFullName": "Jelani Mack",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "urna.Nunc@SuspendisseeleifendCras.edu",
+    "receiverPhoneNumber": "728928695",
+    "subtotal": "65.74",
+    "totalTaxes": "632.66",
+    "totalDue": "698.4"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920ec130095398dfb9448"
+    },
+    "invoiceNumber": "7C782629SJ",
+    "invoiceDate": {"$date":"2020-03-15T02:59:35Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Amelia Farley",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "nisl.sem@ipsumSuspendissenon.edu",
+    "issuerPhoneNumber": "685964490",
+    "receiverFullName": "Abra Daniels",
+    "receiverIdNumber": "00514526Q",
+    "receiverEmail": "mus.Donec@velitegestas.co.uk",
+    "receiverPhoneNumber": "986639674",
+    "subtotal": "999.70",
+    "totalTaxes": "518.44",
+    "totalDue": "1518.14"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920f12324ea35e0dda3ff"
+    },
+    "invoiceNumber": "CA661973AG",
+    "invoiceDate": {"$date":"2019-03-29T12:09:17Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Elvis Beard",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "non@est.edu",
+    "issuerPhoneNumber": "773563160",
+    "receiverFullName": "Harriet Snider",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "Maecenas.iaculis@auctorodioa.edu",
+    "receiverPhoneNumber": "962534846",
+    "subtotal": "619.34",
+    "totalTaxes": "322.90",
+    "totalDue": "942.24"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920f6dd84985c84d7cc76"
+    },
+    "invoiceNumber": "23296886OK",
+    "invoiceDate": {"$date":"2020-07-11T10:52:09Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Kerry Wise",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "dui@mauriserateget.org",
+    "issuerPhoneNumber": "617428564",
+    "receiverFullName": "Neville Levine",
+    "receiverIdNumber": "72432550F",
+    "receiverEmail": "posuere.vulputate.lacus@felisNulla.ca",
+    "receiverPhoneNumber": "736108685",
+    "subtotal": "696.28",
+    "totalTaxes": "145.55",
+    "totalDue": "841.83"
+  },
+  {
+    "_id": {
+      "$oid": "5e8920fbc9d914bb215b7756"
+    },
+    "invoiceNumber": "EF321469RE",
+    "invoiceDate": {"$date":"2020-12-22T11:25:31Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Fiona Martinez",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "ipsum@blanditatnisi.co.uk",
+    "issuerPhoneNumber": "664997473",
+    "receiverFullName": "Kadeem Osborn",
+    "receiverIdNumber": "24237126W",
+    "receiverEmail": "Donec@rutrum.net",
+    "receiverPhoneNumber": "971796794",
+    "subtotal": "855.66",
+    "totalTaxes": "564.68",
+    "totalDue": "1420.34"
+  },
+  {
+    "_id": {
+      "$oid": "5e892101447d03ff62724845"
+    },
+    "invoiceNumber": "6F213330IZ",
+    "invoiceDate": {"$date":"2020-04-13T05:18:31Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Wylie Jenkins",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "Etiam@ultricesaauctor.co.uk",
+    "issuerPhoneNumber": "765151213",
+    "receiverFullName": "Jonas Tyler",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "magnis.dis.parturient@Aliquam.net",
+    "receiverPhoneNumber": "744894284",
+    "subtotal": "833.02",
+    "totalTaxes": "803.00",
+    "totalDue": "1636.02"
+  },
+  {
+    "_id": {
+      "$oid": "5e89210767ed1237df9c3833"
+    },
+    "invoiceNumber": "16846875GS",
+    "invoiceDate": {"$date":"2019-04-17T02:33:05Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Kylynn Francis",
+    "issuerIdNumber": "12141409P",
+    "issuerEmail": "vel.pede.blandit@malesuadaaugueut.net",
+    "issuerPhoneNumber": "908878563",
+    "receiverFullName": "Jessica Garrison",
+    "receiverIdNumber": "20334562D",
+    "receiverEmail": "Praesent.interdum@nequeNullamnisl.co.uk",
+    "receiverPhoneNumber": "751487528",
+    "subtotal": "36.92",
+    "totalTaxes": "298.67",
+    "totalDue": "335.59"
+  },
+  {
+    "_id": {
+      "$oid": "5e89210cfc05b3f7c39ddd7d"
+    },
+    "invoiceNumber": "DA258111LX",
+    "invoiceDate": {"$date":"2019-06-05T02:16:11Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Ahmed Vinson",
+    "issuerIdNumber": "02579822G",
+    "issuerEmail": "auctor.ullamcorper@enimnislelementum.co.uk",
+    "issuerPhoneNumber": "625384814",
+    "receiverFullName": "Ezra Knox",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "pellentesque.a.facilisis@adlitora.net",
+    "receiverPhoneNumber": "786745087",
+    "subtotal": "467.68",
+    "totalTaxes": "203.29",
+    "totalDue": "670.97"
+  },
+  {
+    "_id": {
+      "$oid": "5e892112e9db712b1e4bbdd6"
+    },
+    "invoiceNumber": "64825737QH",
+    "invoiceDate": {"$date":"2019-08-20T04:36:00Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Micah Blackwell",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "euismod.mauris@etultricesposuere.org",
+    "issuerPhoneNumber": "700810887",
+    "receiverFullName": "Alice Harris",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "eu.tellus@nequeSedeget.com",
+    "receiverPhoneNumber": "799297340",
+    "subtotal": "259.79",
+    "totalTaxes": "187.51",
+    "totalDue": "447.3"
+  },
+  {
+    "_id": {
+      "$oid": "5e892117ec04544480f8118e"
+    },
+    "invoiceNumber": "05432876RQ",
+    "invoiceDate": {"$date":"2021-03-27T20:38:22Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Vincent Hoffman",
+    "issuerIdNumber": "72432550F",
+    "issuerEmail": "fermentum.metus.Aenean@maurisipsum.edu",
+    "issuerPhoneNumber": "991183037",
+    "receiverFullName": "Beau Blevins",
+    "receiverIdNumber": "76304925X",
+    "receiverEmail": "erat.neque@loremsemper.edu",
+    "receiverPhoneNumber": "624388307",
+    "subtotal": "905.01",
+    "totalTaxes": "493.94",
+    "totalDue": "1398.95"
+  },
+  {
+    "_id": {
+      "$oid": "5e89211de853e800304f060e"
+    },
+    "invoiceNumber": "17124602JN",
+    "invoiceDate": {"$date":"2019-03-06T15:01:07Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Shelly Colon",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "non.lobortis.quis@nibhenimgravida.co.uk",
+    "issuerPhoneNumber": "963073605",
+    "receiverFullName": "Juan Kevin Trujillo",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "fringilla.cursus@convallisin.edu",
+    "receiverPhoneNumber": "631601635",
+    "subtotal": "229.50",
+    "totalTaxes": "601.24",
+    "totalDue": "830.74"
+  },
+  {
+    "_id": {
+      "$oid": "5e8921227431dae9ac7438e5"
+    },
+    "invoiceNumber": "04927303ZF",
+    "invoiceDate": {"$date":"2020-09-19T04:43:09Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Ariel Macdonald",
+    "issuerIdNumber": "43763308N",
+    "issuerEmail": "mauris.eu.elit@dolortempusnon.co.uk",
+    "issuerPhoneNumber": "719197604",
+    "receiverFullName": "Tamara Sharpe",
+    "receiverIdNumber": "12141409P",
+    "receiverEmail": "eu.accumsan@Nullamvelitdui.org",
+    "receiverPhoneNumber": "926311352",
+    "subtotal": "366.07",
+    "totalTaxes": "293.26",
+    "totalDue": "659.33"
+  },
+  {
+    "_id": {
+      "$oid": "5e8921277f8c92c3cbdb9eda"
+    },
+    "invoiceNumber": "C2694421AT",
+    "invoiceDate": {"$date":"2020-10-21T09:38:46Z"},
+    "invoiceType": "S",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "nisi@etarcuimperdiet.org",
+    "issuerPhoneNumber": "615546691",
+    "receiverFullName": "Veda Underwood",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "blandit.mattis@enimCurabiturmassa.net",
+    "receiverPhoneNumber": "942970250",
+    "subtotal": "211.20",
+    "totalTaxes": "463.29",
+    "totalDue": "674.49"
+  }
+]

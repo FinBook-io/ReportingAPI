@@ -19,7 +19,9 @@ public class InvoiceController {
 
     public static ResponseCreator list() {
         HashMap<String, List<Invoice>> data = new HashMap<>();
+
         data.put("invoices", invoiceService.getAllInvoices());
+
         return MyResponse.created(
                 new StandardResponse(data, "home/invoices/list")
         );

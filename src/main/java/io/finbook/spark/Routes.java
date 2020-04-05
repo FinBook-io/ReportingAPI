@@ -52,8 +52,8 @@ public class Routes {
         });
 
         // REPORTS
-        path("/reports", () -> {
-            get("", map((req, res) -> ReportController.index()));
+        path("/reporting", () -> {
+            get("", map((req, res) -> ReportingController.index()));
             // post("", map((req, res) -> InvoiceController.create(req.body())));
             //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
         });
