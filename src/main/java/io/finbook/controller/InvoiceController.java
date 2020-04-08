@@ -18,7 +18,7 @@ public class InvoiceController {
     }
 
     public static ResponseCreator list() {
-        HashMap<String, List<Invoice>> data = new HashMap<>();
+        HashMap<String, Object> data = new HashMap<>();
 
         data.put("invoices", invoiceService.getAllInvoices());
 

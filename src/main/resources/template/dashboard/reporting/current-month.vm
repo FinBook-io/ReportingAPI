@@ -1,0 +1,31 @@
+#parse("/template/dashboard/layout.vm")
+#@mainLayout()
+
+<h2>Current month</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-sm">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Total Amounts</th>
+            <th>Total Taxes</th>
+            <th>Total Taxes Due</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Incomes</th>
+            <th>$totalIncomes</th>
+            <th>$totalIncomesTaxes</th>
+            <th rowspan="2">$totalTaxesDue</th>
+        </tr>
+        <tr>
+            <th>Refunds</th>
+            <th>$totalRefunds</th>
+            <th>$totalRefundsTaxes</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+#end

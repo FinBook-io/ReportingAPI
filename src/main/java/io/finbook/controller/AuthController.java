@@ -3,7 +3,6 @@ package io.finbook.controller;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.spark.ResponseCreator;
-import io.finbook.http.Session;
 
 import java.util.HashMap;
 

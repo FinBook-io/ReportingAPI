@@ -7,6 +7,9 @@ import io.finbook.service.InvoiceService;
 import io.finbook.spark.ResponseCreator;
 import io.finbook.util.Utilities;
 
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -17,34 +20,46 @@ public class ReportingController {
     public static ResponseCreator index() {
         HashMap<String, Object> data = new HashMap<>();
 
-        // Incomes
-        List<Invoice> invoices = invoiceService.findAllInvoicesByIssuerId(Utilities.getCurrentUser());
-        Double incomes = 0.0;
-        for(Invoice invoice : invoices){
-            incomes += invoice.getTotalDue();
+        // MONTHLY
+        // monthlyIncomes -  monthlyIncomeTaxes -  monthlyRefunds -  monthlyRefundTaxes -  monthlyTotalTaxesDue
+        /*Date startDate = new Date();
+        try {
+            startDate = Utilities.parseStringToDate("2020-04-01");
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
-        data.put("incomes", incomes);
-
-        // data.put("refunds", "");
-        invoices = invoiceService.findAllInvoicesByReceiverId(Utilities.getCurrentUser());
-        Double refunds = 0.0;
+        Date today = Utilities.getCurrentDateAndHour();
+        List<Invoice> invoices = invoiceService.getAllInvoiceByIssuerIdBetweenTwoDates(Utilities.getCurrentUser(), startDate , today);
+        Double monthlyIncomes = 0.0;
+        Double monthlyIncomeTaxes = 0.0;
         for(Invoice invoice : invoices){
-            refunds += invoice.getTotalDue();
+            monthlyIncomes += invoice.getTotalDue();
+            monthlyIncomeTaxes += invoice.getTotalTaxes();
         }
-        data.put("refunds", refunds);
+        data.put("monthlyIncomes", monthlyIncomes);
+        data.put("monthlyIncomeTaxes", monthlyIncomeTaxes);*/
 
-        // data.put("salaries", "");
-        invoices = invoiceService.findAllSalaryInvoicesByIssuerId(Utilities.getCurrentUser());
-        Double salaries = 0.0;
-        for(Invoice invoice : invoices){
-            salaries += invoice.getTotalDue();
-        }
-        data.put("salaries", salaries);
+        // QUARTERLY
+        // quarterlyIncomes - quarterlyIncomeTaxes - quarterlyRefunds - quarterlyRefundTaxes - quarterlyTotalTaxesDue
 
-        data.put("invoices", invoiceService.getAllInvoices());
+
+        // BIANNUAL
+        // biannualIncomes - biannualIncomeTaxes - biannualRefunds - biannualRefundTaxes - biannualTotalTaxesDue
+
+
+
+        // ANNUAL
+        // annualIncomes - annualIncomeTaxes - annualRefunds - annualRefundTaxes - annualTotalTaxesDue
 
         return MyResponse.ok(
-                new StandardResponse(data, "dashboard/index")
+                new StandardResponse(data, "dashboard/reporting/index")
+        );
+    }
+
+    public static ResponseCreator currentMonth() {
+        HashMap<String, Object> data = new HashMap<>();
+        return MyResponse.ok(
+                new StandardResponse(data, "dashboard/reporting/current-month")
         );
     }
 

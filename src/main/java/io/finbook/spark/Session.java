@@ -1,4 +1,4 @@
-package io.finbook.http;
+package io.finbook.spark;
 
 import javax.servlet.http.HttpSession;
 

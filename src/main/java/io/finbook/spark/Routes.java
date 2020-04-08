@@ -16,7 +16,7 @@ public class Routes {
 
     public void init(){
         get("/", map((req, res) -> HomeController.index()));
-        get("/dashboard", map((req, res) -> DashboardController.index()));
+        get("/dashboard", map((req, res) -> DashboardController.index(req.session())));
 
         // AUTHENTICATION
         path("/auth", () -> {
@@ -54,6 +54,7 @@ public class Routes {
         // REPORTS
         path("/reporting", () -> {
             get("", map((req, res) -> ReportingController.index()));
+            get("/current-month", map((req, res) -> ReportingController.currentMonth()));
             // post("", map((req, res) -> InvoiceController.create(req.body())));
             //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
         });

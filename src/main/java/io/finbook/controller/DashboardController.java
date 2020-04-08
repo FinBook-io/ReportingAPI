@@ -6,6 +6,7 @@ import io.finbook.model.Invoice;
 import io.finbook.service.InvoiceService;
 import io.finbook.spark.ResponseCreator;
 import io.finbook.util.Utilities;
+import spark.Session;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,11 +15,11 @@ public class DashboardController {
 
     private static InvoiceService invoiceService = new InvoiceService();
 
-    public static ResponseCreator index() {
+    public static ResponseCreator index(Session session) {
         HashMap<String, Object> data = new HashMap<>();
 
         // Incomes
-        List<Invoice> invoices = invoiceService.findAllInvoicesByIssuerId(Utilities.getCurrentUser());
+        List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerId(Utilities.getCurrentUser());
         Double incomes = 0.0;
         for(Invoice invoice : invoices){
             incomes += invoice.getTotalDue();
@@ -26,7 +27,7 @@ public class DashboardController {
         data.put("incomes", incomes);
 
         // data.put("refunds", "");
-        invoices = invoiceService.findAllInvoicesByReceiverId(Utilities.getCurrentUser());
+        invoices = invoiceService.getAllInvoicesByReceiverId(Utilities.getCurrentUser());
         Double refunds = 0.0;
         for(Invoice invoice : invoices){
             refunds += invoice.getTotalDue();
@@ -34,7 +35,7 @@ public class DashboardController {
         data.put("refunds", refunds);
 
         // data.put("salaries", "");
-        invoices = invoiceService.findAllSalaryInvoicesByIssuerId(Utilities.getCurrentUser());
+        invoices = invoiceService.getAllSalaryInvoicesByIssuerId(Utilities.getCurrentUser());
         Double salaries = 0.0;
         for(Invoice invoice : invoices){
             salaries += invoice.getTotalDue();

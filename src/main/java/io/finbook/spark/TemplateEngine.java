@@ -1,12 +1,10 @@
 package io.finbook.spark;
 
 import io.finbook.http.StandardResponse;
-import org.apache.velocity.Template;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.io.File;
-import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
