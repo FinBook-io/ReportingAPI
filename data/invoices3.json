@@ -42,7 +42,7 @@
       "$oid": "5e891eb19ef278230d2b0c26"
     },
     "invoiceNumber": "93137776DA",
-    "invoiceDate": {"$date":"2020-12-31T20:54:07Z"},
+    "invoiceDate": {"$date":"2020-03-31T20:54:07Z"},
     "invoiceType": "S",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -80,7 +80,7 @@
       "$oid": "5e891ec1adde00351603d091"
     },
     "invoiceNumber": "7B283174XB",
-    "invoiceDate": {"$date":"2020-06-20T01:43:08Z"},
+    "invoiceDate": {"$date":"2020-03-20T01:43:08Z"},
     "invoiceType": "R",
     "issuerFullName": "Hadley Stanley",
     "issuerIdNumber": "24237126W",
@@ -99,7 +99,7 @@
       "$oid": "5e891ecb5159ec51f1583df6"
     },
     "invoiceNumber": "33484305WP",
-    "invoiceDate": {"$date":"2020-11-20T12:41:03Z"},
+    "invoiceDate": {"$date":"2020-01-20T12:41:03Z"},
     "invoiceType": "I",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -137,7 +137,7 @@
       "$oid": "5e891edb3c2ea30bde0cf2a7"
     },
     "invoiceNumber": "B2791358LI",
-    "invoiceDate": {"$date":"2021-01-28T00:01:34Z"},
+    "invoiceDate": {"$date":"2020-01-28T00:01:34Z"},
     "invoiceType": "S",
     "issuerFullName": "Audrey Leonard",
     "issuerIdNumber": "07300179W",
@@ -156,7 +156,7 @@
       "$oid": "5e891ee21e666225d3346e40"
     },
     "invoiceNumber": "34963339MA",
-    "invoiceDate": {"$date":"2020-09-08T00:39:10Z"},
+    "invoiceDate": {"$date":"2020-02-08T00:39:10Z"},
     "invoiceType": "S",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -194,7 +194,7 @@
       "$oid": "5e891ef1f571c0fec0b1a9c9"
     },
     "invoiceNumber": "10814485BZ",
-    "invoiceDate": {"$date":"2020-08-31T07:11:56Z"},
+    "invoiceDate": {"$date":"2020-04-01T07:11:56Z"},
     "invoiceType": "S",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -270,7 +270,7 @@
       "$oid": "5e891f061777f690967a689f"
     },
     "invoiceNumber": "39237065TX",
-    "invoiceDate": {"$date":"2021-03-07T02:06:05Z"},
+    "invoiceDate": {"$date":"2020-03-07T02:06:05Z"},
     "invoiceType": "R",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -308,7 +308,7 @@
       "$oid": "5e891f141d6a043e9a52d4c4"
     },
     "invoiceNumber": "6B865039QP",
-    "invoiceDate": {"$date":"2021-02-04T00:06:30Z"},
+    "invoiceDate": {"$date":"2020-02-04T00:06:30Z"},
     "invoiceType": "S",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -422,7 +422,7 @@
       "$oid": "5e891f37830569abbd7e0732"
     },
     "invoiceNumber": "49221723UZ",
-    "invoiceDate": {"$date":"2020-12-15T14:53:37Z"},
+    "invoiceDate": {"$date":"2020-03-15T14:53:37Z"},
     "invoiceType": "S",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -441,7 +441,7 @@
       "$oid": "5e891f3f115334edd2e258d0"
     },
     "invoiceNumber": "53741787WT",
-    "invoiceDate": {"$date":"2020-10-22T16:59:48Z"},
+    "invoiceDate": {"$date":"2020-02-22T16:59:48Z"},
     "invoiceType": "S",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -460,7 +460,7 @@
       "$oid": "5e891f44b14d91751cd5eb6b"
     },
     "invoiceNumber": "55788133UQ",
-    "invoiceDate": {"$date":"2020-04-12T11:55:46Z"},
+    "invoiceDate": {"$date":"2020-04-05T11:55:46Z"},
     "invoiceType": "I",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
@@ -479,7 +479,7 @@
       "$oid": "5e891f4a2cd01a680e433186"
     },
     "invoiceNumber": "C6488510ZC",
-    "invoiceDate": {"$date":"2020-04-27T16:40:06Z"},
+    "invoiceDate": {"$date":"2020-04-03T16:40:06Z"},
     "invoiceType": "S",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -498,7 +498,7 @@
       "$oid": "5e891f508164601b3cb2aec2"
     },
     "invoiceNumber": "77527115BB",
-    "invoiceDate": {"$date":"2021-02-13T04:33:43Z"},
+    "invoiceDate": {"$date":"2020-02-13T04:33:43Z"},
     "invoiceType": "R",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
@@ -517,7 +517,7 @@
       "$oid": "5e891f5514bce58f6066633d"
     },
     "invoiceNumber": "73873503WB",
-    "invoiceDate": {"$date":"2020-08-12T06:52:04Z"},
+    "invoiceDate": {"$date":"2020-04-01T06:52:04Z"},
     "invoiceType": "S",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -555,7 +555,7 @@
       "$oid": "5e891f61497f59b82f7c0f85"
     },
     "invoiceNumber": "3C911000JV",
-    "invoiceDate": {"$date":"2020-06-26T02:06:52Z"},
+    "invoiceDate": {"$date":"2020-03-26T02:06:52Z"},
     "invoiceType": "I",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -574,7 +574,7 @@
       "$oid": "5e891f675aa128e34373e60f"
     },
     "invoiceNumber": "16254974WA",
-    "invoiceDate": {"$date":"2020-09-26T01:39:55Z"},
+    "invoiceDate": {"$date":"2020-03-26T01:39:55Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -593,7 +593,7 @@
       "$oid": "5e891f6f3537f6878f60aead"
     },
     "invoiceNumber": "CA982446JH",
-    "invoiceDate": {"$date":"2020-04-22T06:43:46Z"},
+    "invoiceDate": {"$date":"2020-04-05T06:43:46Z"},
     "invoiceType": "I",
     "issuerFullName": "Giselle Benton",
     "issuerIdNumber": "00514526Q",
@@ -650,7 +650,7 @@
       "$oid": "5e891f81183ba8e7a6a8ed56"
     },
     "invoiceNumber": "5E163715TX",
-    "invoiceDate": {"$date":"2020-07-29T14:25:49Z"},
+    "invoiceDate": {"$date":"2020-02-29T14:25:49Z"},
     "invoiceType": "I",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -726,7 +726,7 @@
       "$oid": "5e891f96b4b95ce6aeae85ff"
     },
     "invoiceNumber": "F7826706PX",
-    "invoiceDate": {"$date":"2020-12-30T00:29:44Z"},
+    "invoiceDate": {"$date":"2020-03-30T00:29:44Z"},
     "invoiceType": "S",
     "issuerFullName": "Nevada Mack",
     "issuerIdNumber": "02579822G",
@@ -840,7 +840,7 @@
       "$oid": "5e891fe2e8c8a42757e6698f"
     },
     "invoiceNumber": "59685114FT",
-    "invoiceDate": {"$date":"2020-12-27T13:53:28Z"},
+    "invoiceDate": {"$date":"2020-02-27T13:53:28Z"},
     "invoiceType": "R",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -916,7 +916,7 @@
       "$oid": "5e89217cb1db111639d3a5fe"
     },
     "invoiceNumber": "28712996II",
-    "invoiceDate": {"$date":"2021-02-15T08:39:04Z"},
+    "invoiceDate": {"$date":"2020-02-15T08:39:04Z"},
     "invoiceType": "S",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -935,7 +935,7 @@
       "$oid": "5e891ffd1610d7a2657f46b1"
     },
     "invoiceNumber": "7B498374UC",
-    "invoiceDate": {"$date":"2020-11-02T14:26:31Z"},
+    "invoiceDate": {"$date":"2020-01-02T14:26:31Z"},
     "invoiceType": "I",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -1068,7 +1068,7 @@
       "$oid": "5e892033e5989679a401f1e0"
     },
     "invoiceNumber": "9B639460SB",
-    "invoiceDate": {"$date":"2020-08-25T06:47:48Z"},
+    "invoiceDate": {"$date":"2020-03-25T06:47:48Z"},
     "invoiceType": "S",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -1087,7 +1087,7 @@
       "$oid": "5e8920397e53a3326188089f"
     },
     "invoiceNumber": "38524325BR",
-    "invoiceDate": {"$date":"2020-05-29T06:58:15Z"},
+    "invoiceDate": {"$date":"2020-03-29T06:58:15Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -1182,7 +1182,7 @@
       "$oid": "5e89205377747890503f8380"
     },
     "invoiceNumber": "DC716385AG",
-    "invoiceDate": {"$date":"2021-03-25T08:18:13Z"},
+    "invoiceDate": {"$date":"2020-03-25T08:18:13Z"},
     "invoiceType": "S",
     "issuerFullName": "Giselle Benton",
     "issuerIdNumber": "00514526Q",
@@ -1315,7 +1315,7 @@
       "$oid": "5e892078314608b2e14ef093"
     },
     "invoiceNumber": "95626557TX",
-    "invoiceDate": {"$date":"2020-09-02T05:28:14Z"},
+    "invoiceDate": {"$date":"2020-01-02T05:28:14Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -1429,7 +1429,7 @@
       "$oid": "5e8920a18bcf3c88d0867da2"
     },
     "invoiceNumber": "DF132514RH",
-    "invoiceDate": {"$date":"2020-08-25T06:17:28Z"},
+    "invoiceDate": {"$date":"2020-03-25T06:17:28Z"},
     "invoiceType": "R",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -1543,7 +1543,7 @@
       "$oid": "5e8920c48cc1ca6d80d03475"
     },
     "invoiceNumber": "3A771623OV",
-    "invoiceDate": {"$date":"2020-09-10T08:27:44Z"},
+    "invoiceDate": {"$date":"2020-03-10T08:27:44Z"},
     "invoiceType": "I",
     "issuerFullName": "Giselle Benton",
     "issuerIdNumber": "00514526Q",
@@ -1581,7 +1581,7 @@
       "$oid": "5e8920d09b5dfff445012c65"
     },
     "invoiceNumber": "04563493MS",
-    "invoiceDate": {"$date":"2020-11-18T12:13:54Z"},
+    "invoiceDate": {"$date":"2020-01-18T12:13:54Z"},
     "invoiceType": "S",
     "issuerFullName": "Nevada Mack",
     "issuerIdNumber": "02579822G",
@@ -1657,7 +1657,7 @@
       "$oid": "5e8920e68f97a92045ada5bf"
     },
     "invoiceNumber": "C3677113NN",
-    "invoiceDate": {"$date":"2020-06-20T11:13:18Z"},
+    "invoiceDate": {"$date":"2020-02-20T11:13:18Z"},
     "invoiceType": "I",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
@@ -1714,7 +1714,7 @@
       "$oid": "5e8920f6dd84985c84d7cc76"
     },
     "invoiceNumber": "23296886OK",
-    "invoiceDate": {"$date":"2020-07-11T10:52:09Z"},
+    "invoiceDate": {"$date":"2020-02-11T10:52:09Z"},
     "invoiceType": "S",
     "issuerFullName": "Audrey Leonard",
     "issuerIdNumber": "07300179W",
@@ -1733,7 +1733,7 @@
       "$oid": "5e8920fbc9d914bb215b7756"
     },
     "invoiceNumber": "EF321469RE",
-    "invoiceDate": {"$date":"2020-12-22T11:25:31Z"},
+    "invoiceDate": {"$date":"2020-02-22T11:25:31Z"},
     "invoiceType": "S",
     "issuerFullName": "Nevada Mack",
     "issuerIdNumber": "02579822G",
@@ -1752,7 +1752,7 @@
       "$oid": "5e892101447d03ff62724845"
     },
     "invoiceNumber": "6F213330IZ",
-    "invoiceDate": {"$date":"2020-04-13T05:18:31Z"},
+    "invoiceDate": {"$date":"2020-04-04T05:18:31Z"},
     "invoiceType": "I",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -1828,7 +1828,7 @@
       "$oid": "5e892117ec04544480f8118e"
     },
     "invoiceNumber": "05432876RQ",
-    "invoiceDate": {"$date":"2021-03-27T20:38:22Z"},
+    "invoiceDate": {"$date":"2020-03-27T20:38:22Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -1866,7 +1866,7 @@
       "$oid": "5e8921227431dae9ac7438e5"
     },
     "invoiceNumber": "04927303ZF",
-    "invoiceDate": {"$date":"2020-09-19T04:43:09Z"},
+    "invoiceDate": {"$date":"2020-01-19T04:43:09Z"},
     "invoiceType": "S",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -1885,7 +1885,7 @@
       "$oid": "5e8921277f8c92c3cbdb9eda"
     },
     "invoiceNumber": "C2694421AT",
-    "invoiceDate": {"$date":"2020-10-21T09:38:46Z"},
+    "invoiceDate": {"$date":"2020-02-21T09:38:46Z"},
     "invoiceType": "S",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
