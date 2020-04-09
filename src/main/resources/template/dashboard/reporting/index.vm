@@ -7,9 +7,7 @@
         <thead>
         <tr>
             <th>Period</th>
-            <th>Incomes</th>
             <th>Income taxes</th>
-            <th>Refunds</th>
             <th>Refund taxes</th>
             <th>Total Taxes Due</th>
         </tr>
@@ -17,34 +15,26 @@
         <tbody>
             <tr>
                 <td>Monthly</td>
-                <td>$monthlyIncomes</td>
-                <td>$monthlyIncomeTaxes</td>
-                <td>$monthlyRefunds</td>
-                <td>$monthlyRefundTaxes</td>
+                <td>$monthlyIncomesTaxes</td>
+                <td>$monthlyRefundsTaxes</td>
                 <td>$monthlyTotalTaxesDue</td>
             </tr>
             <tr>
                 <td>Quarterly</td>
-                <td>$quarterlyIncomes</td>
-                <td>$quarterlyIncomeTaxes</td>
-                <td>$quarterlyRefunds</td>
-                <td>$quarterlyRefundTaxes</td>
+                <td>$quarterlyIncomesTaxes</td>
+                <td>$quarterlyRefundsTaxes</td>
                 <td>$quarterlyTotalTaxesDue</td>
             </tr>
             <tr>
                 <td>Biannual</td>
-                <td>$biannualIncomes</td>
-                <td>$biannualIncomeTaxes</td>
-                <td>$biannualRefunds</td>
-                <td>$biannualRefundTaxes</td>
+                <td>$biannualIncomesTaxes</td>
+                <td>$biannualRefundsTaxes</td>
                 <td>$biannualTotalTaxesDue</td>
             </tr>
             <tr>
                 <td>Annual</td>
-                <td>$annualIncomes</td>
-                <td>$annualIncomeTaxes</td>
-                <td>$annualRefunds</td>
-                <td>$annualRefundTaxes</td>
+                <td>$annualIncomesTaxes</td>
+                <td>$annualRefundsTaxes</td>
                 <td>$annualTotalTaxesDue</td>
             </tr>
         </tbody>

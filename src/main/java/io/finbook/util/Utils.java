@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
-public class Utilities {
+public class Utils {
 
     private static String currentUser = "11111111H";
 
@@ -15,7 +15,7 @@ public class Utilities {
         return currentUser;
     }
 
-    public static Date getCurrentDateAndHour(){
+    public static Date getCurrentDate(){
         LocalDateTime localDateTime = LocalDateTime.now();
         return Date.from( localDateTime.atZone( ZoneId.systemDefault()).toInstant());
     }

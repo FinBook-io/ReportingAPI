@@ -16,7 +16,7 @@ public class UserService extends Database {
     }
 
     public User findById(String id) {
-        Query<User> query = datastore.createQuery(User.class).field("_id").equal(id);
+        Query<User> query = datastore.createQuery(User.class).filter("_id", id);
         return query.get();
     }
 

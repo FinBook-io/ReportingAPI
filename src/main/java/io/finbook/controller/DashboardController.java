@@ -5,7 +5,7 @@ import io.finbook.http.StandardResponse;
 import io.finbook.model.Invoice;
 import io.finbook.service.InvoiceService;
 import io.finbook.spark.ResponseCreator;
-import io.finbook.util.Utilities;
+import io.finbook.util.Utils;
 import spark.Session;
 
 import java.util.HashMap;
@@ -18,31 +18,21 @@ public class DashboardController {
     public static ResponseCreator index(Session session) {
         HashMap<String, Object> data = new HashMap<>();
 
-        // Incomes
-        List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerId(Utilities.getCurrentUser());
-        Double incomes = 0.0;
-        for(Invoice invoice : invoices){
-            incomes += invoice.getTotalDue();
-        }
-        data.put("incomes", incomes);
+        // Incomes of the current user
+        List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerId(Utils.getCurrentUser());
+        Double incomes = invoiceService.getSumTotalTaxes(invoices);
+        data.put("incomes", Utils.formatDouble(incomes));
 
-        // data.put("refunds", "");
-        invoices = invoiceService.getAllInvoicesByReceiverId(Utilities.getCurrentUser());
-        Double refunds = 0.0;
-        for(Invoice invoice : invoices){
-            refunds += invoice.getTotalDue();
-        }
-        data.put("refunds", refunds);
+        // Refunds of the current user
+        invoices = invoiceService.getAllInvoicesByReceiverId(Utils.getCurrentUser());
+        Double refunds = invoiceService.getSumTotalTaxes(invoices);
+        data.put("refunds", Utils.formatDouble(refunds));
 
-        // data.put("salaries", "");
-        invoices = invoiceService.getAllSalaryInvoicesByIssuerId(Utilities.getCurrentUser());
-        Double salaries = 0.0;
-        for(Invoice invoice : invoices){
-            salaries += invoice.getTotalDue();
-        }
-        data.put("salaries", salaries);
+        // Total taxes due
+        data.put("totalTaxesDue", Utils.formatDouble(incomes - refunds));
 
-        data.put("invoices", invoiceService.getAllInvoices());
+        // List of invoices of the current user
+        data.put("invoices", invoiceService.getAllInvoicesById(Utils.getCurrentUser()));
 
         return MyResponse.ok(
                 new StandardResponse(data, "dashboard/index")
