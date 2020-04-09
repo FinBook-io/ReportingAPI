@@ -1,5 +1,6 @@
 package io.finbook.util;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -21,6 +22,11 @@ public class Utilities {
 
     public static Date parseStringToDate(String strToDate) throws ParseException {
         return new SimpleDateFormat("yyyy-MM-dd").parse(strToDate);
+    }
+
+    public static String formatDouble(Double numberToFormat){
+        DecimalFormat df = new DecimalFormat("#,###.##");
+        return df.format(numberToFormat);
     }
 
 }
