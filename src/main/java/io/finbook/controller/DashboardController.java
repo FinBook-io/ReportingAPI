@@ -6,7 +6,6 @@ import io.finbook.model.Invoice;
 import io.finbook.service.InvoiceService;
 import io.finbook.spark.ResponseCreator;
 import io.finbook.util.Utils;
-import spark.Session;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,7 +14,7 @@ public class DashboardController {
 
     private static InvoiceService invoiceService = new InvoiceService();
 
-    public static ResponseCreator index(Session session) {
+    public static ResponseCreator index() {
         HashMap<String, Object> data = new HashMap<>();
 
         // Incomes of the current user

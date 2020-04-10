@@ -1,6 +1,8 @@
 package io.finbook.spark;
 
 import io.finbook.controller.*;
+import spark.Request;
+import spark.Response;
 import spark.Route;
 
 import static spark.Spark.*;
@@ -16,12 +18,13 @@ public class Routes {
 
     public void init(){
         get("/", map((req, res) -> HomeController.index()));
-        get("/dashboard", map((req, res) -> DashboardController.index(req.session())));
+        get("/dashboard", map((req, res) -> DashboardController.index()));
 
         // AUTHENTICATION
         path("/auth", () -> {
             get("/login", map((req, res) -> AuthController.login()));
-            post("/login", map((req, res) -> AuthController.initSession()));
+            // post("/login", map((req, res) -> AuthController.initSession()));
+            post("/login", this::login);
             get("/logout", map((req, res) -> AuthController.logout(req.body())));
         });
 
@@ -61,6 +64,13 @@ public class Routes {
 
         // ERROR - NOT FOUND
         get("*", map((req, res) -> ErrorController.notFound()));
+    }
+
+    private String login(Request request, Response response) {
+        System.out.println("Perfect - " + request.queryParams("dni"));
+        TemplateEngine te = new TemplateEngine();
+        response.redirect("/dashboard");
+        return null;
     }
 
 }
