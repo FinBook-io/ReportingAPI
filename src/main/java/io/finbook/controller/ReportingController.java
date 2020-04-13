@@ -16,7 +16,7 @@ public class ReportingController {
 
     private static InvoiceService invoiceService = new InvoiceService();
 
-    public static ResponseCreator index() {
+    public static ResponseCreator index(String currentUserId) {
         HashMap<String, Object> data = new HashMap<>();
 
         // MONTHLY
@@ -31,11 +31,11 @@ public class ReportingController {
 
 
         List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerIdBetweenTwoDates(
-                Utils.getCurrentUser(), startDate , today);
+                currentUserId, startDate , today);
         Double monthlyIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyIncomesTaxes", Utils.formatDouble(monthlyIncomesTaxes));
         invoices = invoiceService.getAllInvoicesByReceiverIdBetweenTwoDates(
-                Utils.getCurrentUser(), startDate , today);
+                currentUserId, startDate , today);
         Double monthlyRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyRefundsTaxes", Utils.formatDouble(monthlyRefundsTaxes));
         data.put("monthlyTotalTaxesDue", Utils.formatDouble(monthlyIncomesTaxes - monthlyRefundsTaxes));

@@ -1,7 +1,8 @@
 <!-- Fixed navbar -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="/">Reporting</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -13,13 +14,17 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>-->
             <li class="nav-item">
-                <a class="nav-link" style="color: red" href="/dashboard">Dashboard</a>
+                <a class="nav-link" style="color: red" href="/admin/dashboard">Dashboard</a>
             </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/auth/login">Sign in</a>
+                #if( $logged )
+                    <a class="nav-link" href="/auth/logout">Sign out</a>
+                #else
+                    <a class="nav-link" href="/auth/login">Sign in</a>
+                #end
             </li>
         </ul>
     </div>

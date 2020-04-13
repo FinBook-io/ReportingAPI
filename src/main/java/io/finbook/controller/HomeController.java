@@ -10,12 +10,18 @@ import java.util.HashMap;
 
 public class HomeController {
 
-    public static ResponseCreator index() {
-        HashMap<String, Object> data = new HashMap<>();
-        data.put("firstName", "Kevin");
-        return MyResponse.ok(
-                new StandardResponse(data, "home/index")
-        );
+    public static ResponseCreator index(boolean isLogged) {
+        if (isLogged){
+            HashMap<String, Object> data = new HashMap<>();
+            data.put("logged", true);
+            return MyResponse.ok(
+                    new StandardResponse(data, "home/index")
+            );
+        }else {
+            return MyResponse.ok(
+                    new StandardResponse(null, "home/index")
+            );
+        }
     }
 
 }
