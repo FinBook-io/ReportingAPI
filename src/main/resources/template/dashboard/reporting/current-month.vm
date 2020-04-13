@@ -14,12 +14,12 @@
         <tbody>
         <tr>
             <th>Incomes</th>
-            <th>$totalIncomesTaxes</th>
-            <th rowspan="2">$totalTaxesDue</th>
+            <th>$monthlyIncomesTaxes</th>
+            <th rowspan="2">$monthlyTotalTaxesDue</th>
         </tr>
         <tr>
             <th>Refunds</th>
-            <th>$totalRefundsTaxes</th>
+            <th>$monthlyRefundsTaxes</th>
         </tr>
         </tbody>
     </table>

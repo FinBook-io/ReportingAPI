@@ -62,7 +62,7 @@ public class Routes {
             // REPORTS
             path("/reporting", () -> {
                 get("", map((req, res) -> ReportingController.index(Auth.getCurrentUserId(req))));
-                get("/current-month", map((req, res) -> ReportingController.currentMonth()));
+                get("/current-month", map((req, res) -> ReportingController.currentMonth(Auth.getCurrentUserId(req))));
                 // post("", map((req, res) -> InvoiceController.create(req.body())));
                 //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
