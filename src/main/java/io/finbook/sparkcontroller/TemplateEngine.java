@@ -1,4 +1,4 @@
-package io.finbook.spark;
+package io.finbook.sparkcontroller;
 
 import io.finbook.http.StandardResponse;
 import spark.ModelAndView;

@@ -1,10 +1,10 @@
-package io.finbook.controller;
+package io.finbook.command;
 
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
-import io.finbook.spark.ResponseCreator;
+import io.finbook.sparkcontroller.ResponseCreator;
 
-public class ErrorController {
+public class ErrorCommand {
 
     public static ResponseCreator notFound() {
         return MyResponse.notFound(

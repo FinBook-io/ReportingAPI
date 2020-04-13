@@ -1,15 +1,15 @@
-package io.finbook.controller;
+package io.finbook.command;
 
 import com.google.gson.Gson;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.model.User;
 import io.finbook.service.UserService;
-import io.finbook.spark.ResponseCreator;
+import io.finbook.sparkcontroller.ResponseCreator;
 
 import java.util.HashMap;
 
-public class UserController {
+public class UserCommand {
 
     private static UserService userService = new UserService();
 

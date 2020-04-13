@@ -1,6 +1,6 @@
 package io.finbook;
 
-import io.finbook.spark.App;
+import io.finbook.sparkcontroller.App;
 
 public class Main {
 

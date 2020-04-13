@@ -1,7 +1,7 @@
 package io.finbook.http;
 
-import io.finbook.spark.ResponseCreator;
-import io.finbook.spark.TemplateEngine;
+import io.finbook.sparkcontroller.ResponseCreator;
+import io.finbook.sparkcontroller.TemplateEngine;
 
 public class MyResponse {
 

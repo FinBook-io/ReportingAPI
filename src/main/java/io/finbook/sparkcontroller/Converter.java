@@ -1,4 +1,4 @@
-package io.finbook.spark;
+package io.finbook.sparkcontroller;
 
 import spark.Request;
 import spark.Response;

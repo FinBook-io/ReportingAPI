@@ -1,14 +1,12 @@
-package io.finbook.controller;
+package io.finbook.command;
 
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
-import io.finbook.model.Invoice;
-import io.finbook.model.InvoiceType;
-import io.finbook.spark.ResponseCreator;
+import io.finbook.sparkcontroller.ResponseCreator;
 
 import java.util.HashMap;
 
-public class HomeController {
+public class HomeCommand {
 
     public static ResponseCreator index(boolean isLogged) {
         if (isLogged){

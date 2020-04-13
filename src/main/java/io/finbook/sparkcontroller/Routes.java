@@ -1,6 +1,6 @@
-package io.finbook.spark;
+package io.finbook.sparkcontroller;
 
-import io.finbook.controller.*;
+import io.finbook.command.*;
 import spark.Route;
 
 import static spark.Spark.*;
@@ -15,7 +15,7 @@ public class Routes {
     }
 
     public void init(){
-        get("/", map((req, res) -> HomeController.index(Auth.isLogged(req))));
+        get("/", map((req, res) -> HomeCommand.index(Auth.isLogged(req))));
 
         // AUTHENTICATION
         path("/auth", () -> {
@@ -31,38 +31,38 @@ public class Routes {
             before("/*", Auth::authFilter);
 
             // DASHBOARD
-            get("/dashboard", map((req, res) -> DashboardController.index(Auth.getCurrentUserId(req))));
+            get("/dashboard", map((req, res) -> DashboardCommand.index(Auth.getCurrentUserId(req))));
 
             // USERS
             path("/users", () -> {
-                get("", map((req, res) -> UserController.list()));
-                post("", map((req, res) -> UserController.create(req.body())));
-                get("/:id", map((req, res) -> UserController.read(req.params(":id"))));
-                put("/:id", map((req, res) -> UserController.update(req.params(":id"))));
-                delete("/:id",  map((req, res) -> UserController.delete(req.params(":id"))));
-                get("/:id", map((req, res) -> UserController.getUserByEmail(req.params(":id"))));
+                get("", map((req, res) -> UserCommand.list()));
+                post("", map((req, res) -> UserCommand.create(req.body())));
+                get("/:id", map((req, res) -> UserCommand.read(req.params(":id"))));
+                put("/:id", map((req, res) -> UserCommand.update(req.params(":id"))));
+                delete("/:id",  map((req, res) -> UserCommand.delete(req.params(":id"))));
+                get("/:id", map((req, res) -> UserCommand.getUserByEmail(req.params(":id"))));
             });
 
             // PRODUCTS
             path("/products", () -> {
-                get("", map((req, res) -> ProductController.list()));
-                post("", map((req, res) -> ProductController.create(req.body())));
+                get("", map((req, res) -> ProductCommand.list()));
+                post("", map((req, res) -> ProductCommand.create(req.body())));
 
                 //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
 
             // INVOICES
             path("/invoices", () -> {
-                get("", map((req, res) -> InvoiceController.list()));
-                post("", map((req, res) -> InvoiceController.create(req.body())));
+                get("", map((req, res) -> InvoiceCommand.list()));
+                post("", map((req, res) -> InvoiceCommand.create(req.body())));
 
                 //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
 
             // REPORTS
             path("/reporting", () -> {
-                get("", map((req, res) -> ReportingController.index(Auth.getCurrentUserId(req))));
-                get("/current-month", map((req, res) -> ReportingController.currentMonth(Auth.getCurrentUserId(req))));
+                get("", map((req, res) -> ReportingCommand.index(Auth.getCurrentUserId(req))));
+                get("/current-month", map((req, res) -> ReportingCommand.currentMonth(Auth.getCurrentUserId(req))));
                 // post("", map((req, res) -> InvoiceController.create(req.body())));
                 //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
@@ -70,7 +70,7 @@ public class Routes {
         });
 
         // ERROR - NOT FOUND
-        get("*", map((req, res) -> ErrorController.notFound()));
+        get("*", map((req, res) -> ErrorCommand.notFound()));
 
     }
 

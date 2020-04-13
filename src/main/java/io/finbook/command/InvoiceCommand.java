@@ -1,13 +1,13 @@
-package io.finbook.controller;
+package io.finbook.command;
 
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.service.InvoiceService;
-import io.finbook.spark.ResponseCreator;
+import io.finbook.sparkcontroller.ResponseCreator;
 
 import java.util.*;
 
-public class InvoiceController {
+public class InvoiceCommand {
 
     private static InvoiceService invoiceService = new InvoiceService();
 
