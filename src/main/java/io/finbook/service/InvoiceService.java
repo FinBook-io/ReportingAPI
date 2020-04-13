@@ -2,6 +2,7 @@ package io.finbook.service;
 
 import io.finbook.model.Invoice;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class InvoiceService extends Database {
@@ -11,9 +12,14 @@ public class InvoiceService extends Database {
     }
 
     public List<Invoice> getAllInvoices() {
-        return datastore.find(Invoice.class)
+        List<Invoice> invoicesList = datastore.find(Invoice.class).asList();
+        invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
+
+        return invoicesList;
+
+        /*return datastore.find(Invoice.class)
                 .order("invoiceDate")
-                .asList();
+                .asList();*/
     }
 
     public List<Invoice> getAllInvoicesById(String id) {
@@ -39,7 +45,7 @@ public class InvoiceService extends Database {
                 .asList();
     }
 
-    public List<Invoice> getAllInvoicesByIssuerIdBetweenTwoDates(String id, Date date1, Date date2) {
+    public List<Invoice> getAllInvoicesByIssuerIdBetweenTwoDates(String id, LocalDateTime date1, LocalDateTime date2) {
         return datastore.find(Invoice.class)
                 .filter("issuerIdNumber", id)
                 .field("invoiceDate").greaterThan(date1)
@@ -47,7 +53,7 @@ public class InvoiceService extends Database {
                 .asList();
     }
 
-    public List<Invoice> getAllInvoicesByReceiverIdBetweenTwoDates(String id, Date date1, Date date2) {
+    public List<Invoice> getAllInvoicesByReceiverIdBetweenTwoDates(String id, LocalDateTime date1, LocalDateTime date2) {
         return datastore.find(Invoice.class)
                 .filter("receiverIdNumber", id)
                 .field("invoiceDate").greaterThan(date1)

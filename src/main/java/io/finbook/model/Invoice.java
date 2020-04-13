@@ -4,6 +4,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class Invoice {
     @Id
     private ObjectId id;
     private String invoiceNumber;
-    private Date invoiceDate;
+    private LocalDateTime invoiceDate;
     private String invoiceType;
     private String invoiceUse;
     // private User issuer;
@@ -35,7 +36,7 @@ public class Invoice {
     public Invoice() {
     }
 
-    public Invoice(String invoiceNumber, Date invoiceDate, String invoiceType, String invoiceUse,
+    public Invoice(String invoiceNumber, LocalDateTime invoiceDate, String invoiceType, String invoiceUse,
                    String issuerFullName, String issuerIdNumber, String issuerEmail, String issuerPhoneNumber,
                    String receiverFullName, String receiverIdNumber, String receiverEmail, String receiverPhoneNumber,
                    List<Concept> concepts, String notes, Double subtotal, Double totalTaxes, Double totalDue) {
@@ -74,11 +75,11 @@ public class Invoice {
         this.invoiceNumber = invoiceNumber;
     }
 
-    public Date getInvoiceDate() {
+    public LocalDateTime getInvoiceDate() {
         return invoiceDate;
     }
 
-    public void setInvoiceDate(Date invoiceDate) {
+    public void setInvoiceDate(LocalDateTime invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
 
