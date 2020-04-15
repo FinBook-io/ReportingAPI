@@ -2,8 +2,7 @@ package io.finbook.model;
 
 public enum InvoiceType {
     I("Income"),
-    R("Refund"),
-    S("Salary");
+    R("Refund");
 
     private final String description;
 
