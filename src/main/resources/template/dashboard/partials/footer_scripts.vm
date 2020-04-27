@@ -1,7 +1,10 @@
 <!-- REQUIRED SCRIPTS -->
-<!-- jQuery first, then Bootstrap (Popper included) -->
+<!-- jQuery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<!-- Bootstrap (Popper included) -->
+<script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap-Select -->
+<script type="text/javascript" src="/bootstrapselect/js/bootstrap-select.min.js"></script>
 
 <!-- ChartJS -->
 <script type="text/javascript" src="/chartjs/js/Chart.min.js"></script>
