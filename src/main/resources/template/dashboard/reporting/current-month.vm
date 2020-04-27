@@ -1,28 +1,55 @@
 #parse("/template/dashboard/layout.vm")
 #@mainLayout()
 
-<h2>Current month</h2>
-<div class="table-responsive">
-    <table class="table table-bordered table-sm">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Total Taxes</th>
-            <th>Total Taxes Due</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th>Incomes</th>
-            <th>$monthlyIncomesTaxes</th>
-            <th rowspan="2">$monthlyTotalTaxesDue</th>
-        </tr>
-        <tr>
-            <th>Refunds</th>
-            <th>$monthlyRefundsTaxes</th>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Current month</h1>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <!--<div class="container-fluid">-->
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Incomes and Refunds of current month</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-bordered table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Total Taxes</th>
+                                <th>Total Taxes Due</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Incomes</th>
+                                <th>$monthlyIncomesTaxes</th>
+                                <th rowspan="2">$monthlyTotalTaxesDue</th>
+                            </tr>
+                            <tr>
+                                <th>Refunds</th>
+                                <th>$monthlyRefundsTaxes</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div><!-- /.column -->
+    </div> <!-- /Main row -->
+    <!--</div> /.container-fluid -->
+</section>
 
 #end

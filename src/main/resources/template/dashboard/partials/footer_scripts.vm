@@ -1,0 +1,19 @@
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery first, then Bootstrap (Popper included) -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<!-- ChartJS -->
+<script type="text/javascript" src="/chartjs/js/Chart.min.js"></script>
+
+<!-- DataTables -->
+<script type="text/javascript" src="/datatables/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="/datatables/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="/datatables/js/responsive.bootstrap4.min.js"></script>
+
+<!-- AdminLTE scripts -->
+<script type="text/javascript" src="/adminlte/js/adminlte.min.js"></script>
+
+<!-- Custom scripts -->
+<script type="text/javascript" src="/finbook/js/dashboard_scripts.js"></script>

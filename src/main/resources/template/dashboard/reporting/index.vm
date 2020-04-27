@@ -1,44 +1,72 @@
 #parse("/template/dashboard/layout.vm")
 #@mainLayout()
 
-<h2>Reporting</h2>
-<div class="table-responsive">
-    <table class="table table-striped table-sm">
-        <thead>
-        <tr>
-            <th>Period</th>
-            <th>Income taxes</th>
-            <th>Refund taxes</th>
-            <th>Total Taxes Due</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Monthly</td>
-                <td>$monthlyIncomesTaxes</td>
-                <td>$monthlyRefundsTaxes</td>
-                <td>$monthlyTotalTaxesDue</td>
-            </tr>
-            <tr>
-                <td>Quarterly</td>
-                <td>$quarterlyIncomesTaxes</td>
-                <td>$quarterlyRefundsTaxes</td>
-                <td>$quarterlyTotalTaxesDue</td>
-            </tr>
-            <tr>
-                <td>Biannual</td>
-                <td>$biannualIncomesTaxes</td>
-                <td>$biannualRefundsTaxes</td>
-                <td>$biannualTotalTaxesDue</td>
-            </tr>
-            <tr>
-                <td>Annual</td>
-                <td>$annualIncomesTaxes</td>
-                <td>$annualRefundsTaxes</td>
-                <td>$annualTotalTaxesDue</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Reporting</h1>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <!--<div class="container-fluid">-->
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Incomes and Refunds per period</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-bordered table-hover text-nowrap">
+                        <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Income taxes</th>
+                            <th>Refund taxes</th>
+                            <th>Total Taxes Due</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Monthly</td>
+                            <td>$monthlyIncomesTaxes</td>
+                            <td>$monthlyRefundsTaxes</td>
+                            <td>$monthlyTotalTaxesDue</td>
+                        </tr>
+                        <tr>
+                            <td>Quarterly</td>
+                            <td>$quarterlyIncomesTaxes</td>
+                            <td>$quarterlyRefundsTaxes</td>
+                            <td>$quarterlyTotalTaxesDue</td>
+                        </tr>
+                        <tr>
+                            <td>Biannual</td>
+                            <td>$biannualIncomesTaxes</td>
+                            <td>$biannualRefundsTaxes</td>
+                            <td>$biannualTotalTaxesDue</td>
+                        </tr>
+                        <tr>
+                            <td>Annual</td>
+                            <td>$annualIncomesTaxes</td>
+                            <td>$annualRefundsTaxes</td>
+                            <td>$annualTotalTaxesDue</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div><!-- /.column -->
+    </div> <!-- /Main row -->
+    <!--</div> /.container-fluid -->
+</section>
+
 
 #end
