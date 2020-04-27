@@ -1,28 +1,63 @@
 #macro(mainLayout)
-    <!DOCTYPE html>
-    <html lang="en" class="h-100">
-        <head>
-            #parse("/template/home/partials/head.vm")
-        </head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="author" content="Juan Kevin Trujillo">
 
-        <body class="d-flex flex-column h-100">
-            <header>
-                #parse("/template/home/partials/nav.vm")
-            </header>
+        <!-- Favicon -->
+        <link rel="icon" href="/favicon.png">
 
-            <!-- Begin page content -->
-            <main role="main" class="flex-shrink-0">
-                <div class="container">
-                    $bodyContent
+        <title>Reporting</title>
+
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
+        <!-- AdminLTE styles -->
+        <link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" type="text/css" href="/finbook/css/home_styles.css">
+    </head>
+
+    <body class="hold-transition layout-top-nav">
+        <div class="wrapper">
+            #parse("/template/home/partials/nav.vm")
+
+            <!-- Content Wrapper - Contains page content -->
+            <div class="content-wrapper">
+                $bodyContent
+            </div>
+            <!-- /.content-wrapper -->
+
+            <footer class="main-footer">
+                <!-- To the right -->
+                <div class="float-right d-none d-sm-inline">
+                    Anything you want
                 </div>
-            </main>
-
-            <footer class="footer mt-auto py-3">
-                #parse("/template/home/partials/footer.vm")
+                <!-- Default to the left -->
+                <strong>Copyright &copy; 2020 <a href="https://juankevintrujillo.com/">juankevintrujillo.com</a>.</strong> All rights reserved.
             </footer>
+        </div><!-- ./wrapper -->
 
-                #parse("/template/home/partials/footer_scripts.vm")
-        </body>
+        <!-- REQUIRED SCRIPTS -->
+        <!-- jQuery first, then Bootstrap (Popper included) -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-    </html>
+        <!-- AdminLTE scripts -->
+        <script src="/adminlte/js/adminlte.min.js"></script>
+
+        <!-- Custom scripts -->
+        <script src="/finbook/js/home_scripts.js"></script>
+    </body>
+</html>
 #end

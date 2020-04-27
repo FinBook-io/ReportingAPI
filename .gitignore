@@ -285,3 +285,5 @@ $RECYCLE.BIN/
 ### CUSTOM FILES IGNORED
 ###
 /.idea/codeStyles/
+/.idea/inspectionProfiles/
+/.idea/jsLibraryMappings.xml
