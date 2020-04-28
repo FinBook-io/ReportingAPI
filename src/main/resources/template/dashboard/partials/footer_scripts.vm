@@ -6,6 +6,9 @@
 <!-- Bootstrap-Select -->
 <script type="text/javascript" src="/bootstrapselect/js/bootstrap-select.min.js"></script>
 
+<!-- Font Awesome Icons -->
+<script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
+
 <!-- ChartJS -->
 <script type="text/javascript" src="/chartjs/js/Chart.min.js"></script>
 

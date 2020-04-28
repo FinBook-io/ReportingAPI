@@ -9,12 +9,7 @@
     max-width: 100%;
 }
 
-@media (min-width: 369px) {
-    a.span.admin_logout_icon {display:inline-block}
-    a.span.admin_logout_text {display:none}
-}
-
 @media (max-width: 370px) {
-    span.admin_logout_icon {display:inline-block}
+    /*span.admin_logout_icon {display:inline-block}*/
     span.admin_logout_text {display:none}
 }

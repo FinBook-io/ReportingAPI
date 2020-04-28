@@ -13,8 +13,6 @@
 
         <title>Reporting</title>
 
-        <!-- Font Awesome Icons -->
-        <script src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
         <!-- AdminLTE styles -->
         <link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
         <!-- Google Font: Source Sans Pro -->
@@ -51,6 +49,9 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <!-- Bootstrap (Popper included) -->
         <script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Font Awesome Icons -->
+        <script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
 
         <!-- AdminLTE scripts -->
         <script src="/adminlte/js/adminlte.min.js"></script>

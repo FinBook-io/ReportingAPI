@@ -9,8 +9,6 @@
 
 <title>Reporting</title>
 
-<!-- Font Awesome Icons -->
-<script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
 <!-- AdminLTE styles -->
 <link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
 <!-- DataTables -->
