@@ -15,14 +15,8 @@ public class ReportingCommand {
 
     private static InvoiceService invoiceService = new InvoiceService();
 
-    private static LocalDateTime today;
-    private static int currentMonthNumber;
-
     public static ResponseCreator index(String currentUserId) {
         HashMap<String, Object> data = new HashMap<>();
-
-        today = Utils.getCurrentDate();
-        currentMonthNumber = Utils.getCurrentMonth();
 
         // MONTHLY
         data.putAll(getDataForCurrentMonth(currentUserId));
@@ -42,17 +36,19 @@ public class ReportingCommand {
     }
 
     public static ResponseCreator currentMonth(String currentUserId) {
+        HashMap<String, Object> data = new HashMap<>();
+        data.putAll(getDataForCurrentMonth(currentUserId));
         return MyResponse.ok(
-                new StandardResponse(new HashMap<>(getDataForCurrentMonth(currentUserId)), "dashboard/reporting/current-month")
+                new StandardResponse(data, "dashboard/reporting/current-month")
         );
     }
 
-    private static List<Invoice> getInvoicesByIssuerIdListBetweenTwoDates(String currentUserId, LocalDateTime startDate){
-        return invoiceService.getAllInvoicesByIssuerIdBetweenTwoDates(currentUserId, startDate , today);
+    private static List<Invoice> getInvoicesByIssuerIdListPerPeriod(String currentUserId, LocalDateTime startDate, LocalDateTime endDate){
+        return invoiceService.getAllInvoicesByIssuerIdBetweenTwoDates(currentUserId, startDate , endDate);
     }
 
-    private static List<Invoice> getInvoicesByReceiverIdListBetweenTwoDates(String currentUserId, LocalDateTime startDate){
-        return invoiceService.getAllInvoicesByReceiverIdBetweenTwoDates(currentUserId, startDate , today);
+    private static List<Invoice> getInvoicesByReceiverIdListPerPeriod(String currentUserId, LocalDateTime startDate, LocalDateTime endDate){
+        return invoiceService.getAllInvoicesByReceiverIdBetweenTwoDates(currentUserId, startDate , endDate);
     }
 
     private static HashMap<String, Object> getDataForCurrentMonth(String currentUserId){
@@ -60,12 +56,13 @@ public class ReportingCommand {
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = Utils.getFirstDayCurrentMonth();
+        LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesByIssuerIdListBetweenTwoDates(currentUserId, startDate);
+        List<Invoice> invoices = getInvoicesByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
         Double monthlyIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyIncomesTaxes", Utils.formatDouble(monthlyIncomesTaxes));
 
-        invoices = getInvoicesByReceiverIdListBetweenTwoDates(currentUserId, startDate);
+        invoices = getInvoicesByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
         Double monthlyRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyRefundsTaxes", Utils.formatDouble(monthlyRefundsTaxes));
 
@@ -75,6 +72,7 @@ public class ReportingCommand {
     }
 
     private static LocalDateTime getFirstDateOfCurrentQuarter(){
+        int currentMonthNumber = Utils.getCurrentMonth();
         if (currentMonthNumber >= 1 && currentMonthNumber <= 3){
             return Utils.getDateOfSpecificMonth(1); // starting in January
         }else if (currentMonthNumber >= 4 && currentMonthNumber <= 6){
@@ -91,12 +89,13 @@ public class ReportingCommand {
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = getFirstDateOfCurrentQuarter();
+        LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesByIssuerIdListBetweenTwoDates(currentUserId, startDate);
+        List<Invoice> invoices = getInvoicesByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
         Double quarterlyIncomeTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("quarterlyIncomesTaxes", Utils.formatDouble(quarterlyIncomeTaxes));
 
-        invoices = getInvoicesByReceiverIdListBetweenTwoDates(currentUserId, startDate);
+        invoices = getInvoicesByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
         Double quarterlyRefundTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("quarterlyRefundsTaxes", Utils.formatDouble(quarterlyRefundTaxes));
 
@@ -106,6 +105,7 @@ public class ReportingCommand {
     }
 
     private static LocalDateTime getFirstDateOfCurrentBiannual(){
+        int currentMonthNumber = Utils.getCurrentMonth();
         if (currentMonthNumber >= 1 && currentMonthNumber <= 6){
             return Utils.getDateOfSpecificMonth(1); // starting in January
         }else{
@@ -118,12 +118,13 @@ public class ReportingCommand {
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = getFirstDateOfCurrentBiannual();
+        LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesByIssuerIdListBetweenTwoDates(currentUserId, startDate);
+        List<Invoice> invoices = getInvoicesByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
         Double biannualIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("biannualIncomesTaxes", Utils.formatDouble(biannualIncomesTaxes));
 
-        invoices = getInvoicesByReceiverIdListBetweenTwoDates(currentUserId, startDate);
+        invoices = getInvoicesByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
         Double biannualRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("biannualRefundsTaxes", Utils.formatDouble(biannualRefundsTaxes));
 
@@ -137,12 +138,13 @@ public class ReportingCommand {
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = Utils.getDateOfSpecificMonth(1); // starting in January
+        LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesByIssuerIdListBetweenTwoDates(currentUserId, startDate);
+        List<Invoice> invoices = getInvoicesByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
         Double annualIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("annualIncomesTaxes", Utils.formatDouble(annualIncomesTaxes));
 
-        invoices = getInvoicesByReceiverIdListBetweenTwoDates(currentUserId, startDate);
+        invoices = getInvoicesByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
         Double annualRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("annualRefundsTaxes", Utils.formatDouble(annualRefundsTaxes));
 
