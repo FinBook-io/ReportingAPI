@@ -42,16 +42,16 @@
                             <td>$monthlyTotalTaxesDue</td>
                         </tr>
                         <tr>
-                            <td>Quarterly</td>
-                            <td>$quarterlyIncomesTaxes</td>
-                            <td>$quarterlyRefundsTaxes</td>
-                            <td>$quarterlyTotalTaxesDue</td>
+                            <td>trimester</td>
+                            <td>$trimesterIncomesTaxes</td>
+                            <td>$trimesterRefundsTaxes</td>
+                            <td>$trimesterTotalTaxesDue</td>
                         </tr>
                         <tr>
-                            <td>Biannual</td>
-                            <td>$biannualIncomesTaxes</td>
-                            <td>$biannualRefundsTaxes</td>
-                            <td>$biannualTotalTaxesDue</td>
+                            <td>semester</td>
+                            <td>$semesterIncomesTaxes</td>
+                            <td>$semesterRefundsTaxes</td>
+                            <td>$semesterTotalTaxesDue</td>
                         </tr>
                         <tr>
                             <td>Annual</td>

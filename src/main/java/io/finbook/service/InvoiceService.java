@@ -7,19 +7,13 @@ import java.util.*;
 
 public class InvoiceService extends Database {
 
-    public void addInvoice(Invoice invoice) {
-        datastore.save(invoice);
-    }
+    private String invoiceDate = "invoiceDate";
 
     public List<Invoice> getAllInvoices() {
         List<Invoice> invoicesList = datastore.find(Invoice.class).asList();
         invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
 
         return invoicesList;
-
-        /*return datastore.find(Invoice.class)
-                .order("invoiceDate")
-                .asList();*/
     }
 
     public List<Invoice> getAllInvoicesById(String id) {
@@ -45,19 +39,19 @@ public class InvoiceService extends Database {
                 .asList();
     }
 
-    public List<Invoice> getAllInvoicesByIssuerIdBetweenTwoDates(String id, LocalDateTime date1, LocalDateTime date2) {
+    public List<Invoice> getAllInvoicesByIssuerIdPerPeriod(String id, LocalDateTime date1, LocalDateTime date2) {
         return datastore.find(Invoice.class)
                 .filter("issuerIdNumber", id)
-                .field("invoiceDate").greaterThan(date1)
-                .field("invoiceDate").lessThan(date2)
+                .field(invoiceDate).greaterThan(date1)
+                .field(invoiceDate).lessThan(date2)
                 .asList();
     }
 
-    public List<Invoice> getAllInvoicesByReceiverIdBetweenTwoDates(String id, LocalDateTime date1, LocalDateTime date2) {
+    public List<Invoice> getAllInvoicesByReceiverIdPerPeriod(String id, LocalDateTime date1, LocalDateTime date2) {
         return datastore.find(Invoice.class)
                 .filter("receiverIdNumber", id)
-                .field("invoiceDate").greaterThan(date1)
-                .field("invoiceDate").lessThan(date2)
+                .field(invoiceDate).greaterThan(date1)
+                .field(invoiceDate).lessThan(date2)
                 .asList();
     }
 

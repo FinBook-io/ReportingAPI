@@ -6,9 +6,6 @@
 <!-- Bootstrap-Select -->
 <script type="text/javascript" src="/bootstrapselect/js/bootstrap-select.min.js"></script>
 
-<!-- Font Awesome Icons -->
-<script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
-
 <!-- ChartJS -->
 <script type="text/javascript" src="/chartjs/js/Chart.min.js"></script>
 
@@ -17,6 +14,12 @@
 <script type="text/javascript" src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript" src="/datatables/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript" src="/datatables/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Font Awesome Icons -->
+<script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
+
+<!-- SweetAlert 2 -->
+<script type="text/javascript" src="/sweetalert2/js/sweetalert2.min.js"></script>
 
 <!-- AdminLTE scripts -->
 <script type="text/javascript" src="/adminlte/js/adminlte.min.js"></script>
