@@ -47,24 +47,18 @@ public class Routes {
             path("/products", () -> {
                 get("", map((req, res) -> ProductCommand.list()));
                 post("", map((req, res) -> ProductCommand.create(req.body())));
-
-                //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
 
             // INVOICES
             path("/invoices", () -> {
                 get("", map((req, res) -> InvoiceCommand.list()));
                 post("", map((req, res) -> InvoiceCommand.create(req.body())));
-
-                //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
 
             // REPORTS
             path("/reporting", () -> {
                 get("", map((req, res) -> ReportingCommand.index(Auth.getCurrentUserId(req))));
                 get("/current-month", map((req, res) -> ReportingCommand.currentMonth(Auth.getCurrentUserId(req))));
-                // post("", map((req, res) -> InvoiceController.create(req.body())));
-                //get("/:id", map((req, res) -> ProductController.getById(req.params(":id"))));
             });
 
         });

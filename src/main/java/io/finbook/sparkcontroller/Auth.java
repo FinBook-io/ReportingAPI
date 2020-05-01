@@ -5,6 +5,8 @@ import io.finbook.http.StandardResponse;
 import spark.Request;
 import spark.Response;
 
+import static spark.Spark.halt;
+
 public class Auth {
 
     public static ResponseCreator login(Request request, Response response) {
@@ -33,6 +35,7 @@ public class Auth {
     public static void authFilter(Request request, Response response) {
         if (!isLogged(request)) {
             redirectTo(response, "/auth/login");
+            halt(401, "Go Away!");
         }
     }
 
