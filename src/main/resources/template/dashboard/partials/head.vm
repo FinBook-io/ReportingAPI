@@ -9,17 +9,24 @@
 
 <title>Reporting</title>
 
-<!-- AdminLTE styles -->
-<link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+
+<!-- Bootstrap-Select -->
+<link rel="stylesheet" type="text/css" href="/bootstrapselect/css/bootstrap-select.min.css">
+
 <!-- DataTables -->
 <link rel="stylesheet" type="text/css" href="/datatables/css/dataTables.bootstrap4.min.css"/>
 <link rel="stylesheet" type="text/css" href="/datatables/css/responsive.bootstrap4.min.css"/>
+
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
-<!-- Bootstrap-Select -->
-<link rel="stylesheet" type="text/css" href="/bootstrapselect/css/bootstrap-select.min.css">
+
+<!-- SweetAlert 2 -->
+<link rel="stylesheet" type="text/css" href="/sweetalert2/css/sweetalert2.min.css">
+
+<!-- AdminLTE styles -->
+<link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
 
 <!-- Custom styles -->
 <link rel="stylesheet" type="text/css" href="/finbook/css/dashboard_styles.css">
