@@ -15,9 +15,11 @@ function highlightCurrentPageInNav(){
     $('#sidebar .nav-sidebar a[href="/admin/' + highlightRoute + '"]').addClass('active');
 }
 
+function drawChart(dataChart){
+
+}
+
 $(function() {
-
-
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -52,6 +54,7 @@ $(function() {
                 $('#incomes').text(data.incomes);
                 $('#refunds').text(data.refunds);
                 $('#totalTaxesDue').text(data.totalTaxesDue);
+                // drawChart(data.dataChart)
             },
             error: function () {
                 Toast.fire({
@@ -88,26 +91,26 @@ $(function() {
     *
     *
     * */
-    let pageBarChart = $('#barChart');
+    let pageBarChart = $('#chartToDraw');
     if (pageBarChart.length){
         let areaChartData = {
             labels  : ['January'],
             datasets: [
                 {
-                    label               : 'Digital Goods',
-                    backgroundColor     : 'rgba(60,141,188,0.9)',
-                    borderColor         : 'rgba(60,141,188,0.8)',
+                    label               : 'Incomes',
+                    backgroundColor     : '#5cb85c',
+                    borderColor         : '#5cb85c',
                     pointRadius          : false,
                     pointColor          : '#3b8bba',
                     pointStrokeColor    : 'rgba(60,141,188,1)',
                     pointHighlightFill  : '#fff',
                     pointHighlightStroke: 'rgba(60,141,188,1)',
-                    data                : [200]
+                    data                : [800]
                 },
                 {
-                    label               : 'Electronics',
-                    backgroundColor     : 'rgba(210, 214, 222, 1)',
-                    borderColor         : 'rgba(210, 214, 222, 1)',
+                    label               : 'Refunds',
+                    backgroundColor     : '#d9534f',
+                    borderColor         : '#d9534f',
                     pointRadius         : false,
                     pointColor          : 'rgba(210, 214, 222, 1)',
                     pointStrokeColor    : '#c1c7d1',
@@ -116,9 +119,9 @@ $(function() {
                     data                : [1000]
                 },
                 {
-                    label               : 'Digital Goods',
-                    backgroundColor     : 'rgba(60,141,188,0.9)',
-                    borderColor         : 'rgba(60,141,188,0.8)',
+                    label               : 'Total due',
+                    backgroundColor     : '#f0ad4e',
+                    borderColor         : '#f0ad4e',
                     pointRadius          : false,
                     pointColor          : '#3b8bba',
                     pointStrokeColor    : 'rgba(60,141,188,1)',
@@ -134,9 +137,6 @@ $(function() {
         //-------------
         let barChartCanvas = pageBarChart.get(0).getContext('2d');
         let barChartData = jQuery.extend(true, {}, areaChartData);
-        let temp0 = areaChartData.datasets[0];
-        barChartData.datasets[0] = areaChartData.datasets[1];
-        barChartData.datasets[1] = temp0;
 
         let barChartOptions = {
             responsive              : true,
