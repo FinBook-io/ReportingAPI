@@ -13,16 +13,12 @@
 
         <title>Reporting</title>
 
-        <!-- Font Awesome Icons -->
-        <script src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
         <!-- AdminLTE styles -->
         <link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
         <!-- Google Font: Source Sans Pro -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
         <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-              crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
 
         <!-- Custom styles -->
         <link rel="stylesheet" type="text/css" href="/finbook/css/home_styles.css">
@@ -49,9 +45,13 @@
         </div><!-- ./wrapper -->
 
         <!-- REQUIRED SCRIPTS -->
-        <!-- jQuery first, then Bootstrap (Popper included) -->
+        <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap (Popper included) -->
+        <script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Font Awesome Icons -->
+        <script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
 
         <!-- AdminLTE scripts -->
         <script src="/adminlte/js/adminlte.min.js"></script>

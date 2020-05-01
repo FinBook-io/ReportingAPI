@@ -1898,5 +1898,43 @@
     "subtotal": "211.20",
     "totalTaxes": "463.29",
     "totalDue": "674.49"
+  },
+  {
+  "_id": {
+    "$oid": "5eac04d42cfcd90fd158baa3"
+  },
+  "invoiceNumber": "04927303ZF",
+  "invoiceDate": {"$date":"2020-05-01T00:00:00Z"},
+  "invoiceType": "I",
+  "issuerFullName": "Juan Kevin Trujillo",
+  "issuerIdNumber": "11111111H",
+  "issuerEmail": "mauris.eu.elit@dolortempusnon.co.uk",
+  "issuerPhoneNumber": "719197604",
+  "receiverFullName": "Jocelyn Heath",
+  "receiverIdNumber": "12141409P",
+  "receiverEmail": "eu.accumsan@Nullamvelitdui.org",
+  "receiverPhoneNumber": "926311352",
+  "subtotal": "366.07",
+  "totalTaxes": "293.26",
+  "totalDue": "659.33"
+},
+  {
+    "_id": {
+      "$oid": "5eac04dad0eacf0fdf5fca0e"
+    },
+    "invoiceNumber": "C2694421AT",
+    "invoiceDate": {"$date":"2020-05-01T00:00:00Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Juan Kevin Trujillo",
+    "issuerIdNumber": "11111111H",
+    "issuerEmail": "nisi@etarcuimperdiet.org",
+    "issuerPhoneNumber": "615546691",
+    "receiverFullName": "Audrey Leonard",
+    "receiverIdNumber": "07300179W",
+    "receiverEmail": "blandit.mattis@enimCurabiturmassa.net",
+    "receiverPhoneNumber": "942970250",
+    "subtotal": "211.20",
+    "totalTaxes": "463.29",
+    "totalDue": "674.49"
   }
 ]

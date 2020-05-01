@@ -7,6 +7,7 @@ import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Utils;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 
@@ -17,21 +18,21 @@ public class DashboardCommand {
     public static ResponseCreator index(String currentUserId) {
         HashMap<String, Object> data = new HashMap<>();
 
+        LocalDateTime startDate = Utils.getFirstDayCurrentMonth();
+        LocalDateTime endDate = Utils.getCurrentDate();
+
         // Incomes of the current user
-        List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerId(currentUserId);
+        List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerIdPerPeriod(currentUserId, startDate, endDate);
         Double incomes = invoiceService.getSumTotalTaxes(invoices);
         data.put("incomes", Utils.formatDouble(incomes));
 
         // Refunds of the current user
-        invoices = invoiceService.getAllInvoicesByReceiverId(currentUserId);
+        invoices = invoiceService.getAllInvoicesByReceiverIdPerPeriod(currentUserId, startDate, endDate);
         Double refunds = invoiceService.getSumTotalTaxes(invoices);
         data.put("refunds", Utils.formatDouble(refunds));
 
         // Total taxes due
         data.put("totalTaxesDue", Utils.formatDouble(incomes - refunds));
-
-        // List of invoices of the current user
-        // data.put("invoices", invoiceService.getAllInvoicesById(currentUserId));
 
         return MyResponse.ok(
                 new StandardResponse(data, "dashboard/index")
