@@ -33,16 +33,6 @@ public class Routes {
             // DASHBOARD
             get("/dashboard", map((req, res) -> DashboardCommand.index(Auth.getCurrentUserId(req))));
 
-            // USERS
-            path("/users", () -> {
-                get("", map((req, res) -> UserCommand.list()));
-                post("", map((req, res) -> UserCommand.create(req.body())));
-                get("/:id", map((req, res) -> UserCommand.read(req.params(":id"))));
-                put("/:id", map((req, res) -> UserCommand.update(req.params(":id"))));
-                delete("/:id",  map((req, res) -> UserCommand.delete(req.params(":id"))));
-                get("/:id", map((req, res) -> UserCommand.getUserByEmail(req.params(":id"))));
-            });
-
             // PRODUCTS
             path("/products", () -> {
                 get("", map((req, res) -> ProductCommand.list()));
@@ -51,14 +41,12 @@ public class Routes {
 
             // INVOICES
             path("/invoices", () -> {
-                get("", map((req, res) -> InvoiceCommand.list()));
-                post("", map((req, res) -> InvoiceCommand.create(req.body())));
+                get("", map((req, res) -> InvoiceCommand.list(Auth.getCurrentUserId(req))));
             });
 
             // REPORTS
             path("/reporting", () -> {
                 get("", map((req, res) -> ReportingCommand.index(Auth.getCurrentUserId(req))));
-                get("/current-month", map((req, res) -> ReportingCommand.currentMonth(Auth.getCurrentUserId(req))));
                 post("/ajax-datepicker", (req, res) -> ReportingCommand.getDataForPeriod(Auth.getCurrentUserId(req), req.queryParams("datepicker_value")));
             });
 

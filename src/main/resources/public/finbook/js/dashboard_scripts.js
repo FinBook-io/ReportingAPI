@@ -15,6 +15,20 @@ function highlightCurrentPageInNav(){
     $('#sidebar .nav-sidebar a[href="/admin/' + highlightRoute + '"]').addClass('active');
 }
 
+function format_amounts() {
+    let amounts = $('.currency');
+    if (amounts.length){
+        amounts.each(function() {
+            let monetary_value = $(this).text();
+            let i = new Intl.NumberFormat('de-DE', {
+                style: 'currency',
+                currency: 'EUR'
+            }).format(monetary_value);
+            $(this).text(i);
+        });
+    }
+}
+
 function drawChart(dataChart){
 
 }
@@ -36,6 +50,14 @@ $(function() {
     * */
     highlightCurrentPageInNav();
 
+    /*
+    *
+    *
+    * FORMAT AMOUNTS INTO CURRENCIES
+    *
+    *
+    * */
+    format_amounts();
 
     /*
     *
@@ -54,6 +76,7 @@ $(function() {
                 $('#incomes').text(data.incomes);
                 $('#refunds').text(data.refunds);
                 $('#totalTaxesDue').text(data.totalTaxesDue);
+                format_amounts();
                 // drawChart(data.dataChart)
             },
             error: function () {
@@ -91,7 +114,7 @@ $(function() {
     *
     *
     * */
-    let pageBarChart = $('#chartToDraw');
+    let pageBarChart = $('#barChart');
     if (pageBarChart.length){
         let areaChartData = {
             labels  : ['January'],
@@ -99,34 +122,16 @@ $(function() {
                 {
                     label               : 'Incomes',
                     backgroundColor     : '#5cb85c',
-                    borderColor         : '#5cb85c',
-                    pointRadius          : false,
-                    pointColor          : '#3b8bba',
-                    pointStrokeColor    : 'rgba(60,141,188,1)',
-                    pointHighlightFill  : '#fff',
-                    pointHighlightStroke: 'rgba(60,141,188,1)',
                     data                : [800]
                 },
                 {
                     label               : 'Refunds',
                     backgroundColor     : '#d9534f',
-                    borderColor         : '#d9534f',
-                    pointRadius         : false,
-                    pointColor          : 'rgba(210, 214, 222, 1)',
-                    pointStrokeColor    : '#c1c7d1',
-                    pointHighlightFill  : '#fff',
-                    pointHighlightStroke: 'rgba(220,220,220,1)',
                     data                : [1000]
                 },
                 {
                     label               : 'Total due',
                     backgroundColor     : '#f0ad4e',
-                    borderColor         : '#f0ad4e',
-                    pointRadius          : false,
-                    pointColor          : '#3b8bba',
-                    pointStrokeColor    : 'rgba(60,141,188,1)',
-                    pointHighlightFill  : '#fff',
-                    pointHighlightStroke: 'rgba(60,141,188,1)',
                     data                : [356]
                 }
             ]
@@ -148,6 +153,40 @@ $(function() {
             type: 'bar',
             data: barChartData,
             options: barChartOptions
+        })
+    }
+
+    let pagePieChart = $('#pieChart');
+    if (pagePieChart.length){
+        let donutData        = {
+            labels: [
+                'Incomes',
+                'Refunds',
+            ],
+            datasets: [
+                {
+                    data: [700,500],
+                    backgroundColor : ['#5cb85c', '#d9534f'],
+                }
+            ]
+        };
+
+        //-------------
+        //- PIE CHART -
+        //-------------
+        // Get context with jQuery - using jQuery's .get() method.
+        let pieChartCanvas = pagePieChart.get(0).getContext('2d');
+        let pieData        = donutData;
+        let pieOptions     = {
+            maintainAspectRatio : false,
+            responsive : true,
+        };
+        //Create pie or douhnut chart
+        // You can switch between pie and douhnut using the method below.
+        let pieChart = new Chart(pieChartCanvas, {
+            type: 'pie',
+            data: pieData,
+            options: pieOptions
         })
     }
 

@@ -3,6 +3,7 @@ package io.finbook.command;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.model.Invoice;
+import io.finbook.model.InvoiceType;
 import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Utils;
@@ -22,17 +23,17 @@ public class DashboardCommand {
         LocalDateTime endDate = Utils.getCurrentDate();
 
         // Incomes of the current user
-        List<Invoice> invoices = invoiceService.getAllInvoicesByIssuerIdPerPeriod(currentUserId, startDate, endDate);
+        List<Invoice> invoices = invoiceService.getInvoicesPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
         Double incomes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("incomes", Utils.formatDouble(incomes));
+        data.put("incomes", incomes);
 
         // Refunds of the current user
-        invoices = invoiceService.getAllInvoicesByReceiverIdPerPeriod(currentUserId, startDate, endDate);
+        invoices = invoiceService.getInvoicesPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
         Double refunds = invoiceService.getSumTotalTaxes(invoices);
-        data.put("refunds", Utils.formatDouble(refunds));
+        data.put("refunds", refunds);
 
         // Total taxes due
-        data.put("totalTaxesDue", Utils.formatDouble(incomes - refunds));
+        data.put("totalTaxesDue", incomes - refunds);
 
         return MyResponse.ok(
                 new StandardResponse(data, "dashboard/index")

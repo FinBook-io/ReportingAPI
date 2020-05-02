@@ -1,16 +1,16 @@
 package io.finbook.model;
 
 public enum InvoiceType {
-    I("Income"),
-    R("Refund");
+    INCOME("I"),
+    REFUND("R");
 
-    private final String description;
+    private final String label;
 
-    InvoiceType(String description) {
-        this.description = description;
+    InvoiceType(String label) {
+        this.label = label;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLabel() {
+        return label;
     }
 }

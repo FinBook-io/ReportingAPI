@@ -42,7 +42,7 @@
       "$oid": "5e891eb19ef278230d2b0c26"
     },
     "invoiceNumber": "93137776DA",
-    "invoiceDate": {"$date":"2020-03-31T20:54:07Z"},
+    "invoiceDate": {"$date":"2020-01-31T20:54:07Z"},
     "invoiceType": "I",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -80,7 +80,7 @@
       "$oid": "5e891ec1adde00351603d091"
     },
     "invoiceNumber": "7B283174XB",
-    "invoiceDate": {"$date":"2020-03-20T01:43:08Z"},
+    "invoiceDate": {"$date":"2020-01-20T01:43:08Z"},
     "invoiceType": "R",
     "issuerFullName": "Hadley Stanley",
     "issuerIdNumber": "24237126W",
@@ -118,7 +118,7 @@
       "$oid": "5e891ed5f2ce6567b37102a6"
     },
     "invoiceNumber": "28734405PV",
-    "invoiceDate": {"$date":"2020-02-02T04:06:45Z"},
+    "invoiceDate": {"$date":"2020-01-02T04:06:45Z"},
     "invoiceType": "R",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -156,7 +156,7 @@
       "$oid": "5e891ee21e666225d3346e40"
     },
     "invoiceNumber": "34963339MA",
-    "invoiceDate": {"$date":"2020-02-08T00:39:10Z"},
+    "invoiceDate": {"$date":"2020-01-08T00:39:10Z"},
     "invoiceType": "I",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -270,7 +270,7 @@
       "$oid": "5e891f061777f690967a689f"
     },
     "invoiceNumber": "39237065TX",
-    "invoiceDate": {"$date":"2020-03-07T02:06:05Z"},
+    "invoiceDate": {"$date":"2020-01-07T02:06:05Z"},
     "invoiceType": "R",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -308,7 +308,7 @@
       "$oid": "5e891f141d6a043e9a52d4c4"
     },
     "invoiceNumber": "6B865039QP",
-    "invoiceDate": {"$date":"2020-02-04T00:06:30Z"},
+    "invoiceDate": {"$date":"2020-01-04T00:06:30Z"},
     "invoiceType": "I",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -422,7 +422,7 @@
       "$oid": "5e891f37830569abbd7e0732"
     },
     "invoiceNumber": "49221723UZ",
-    "invoiceDate": {"$date":"2020-03-15T14:53:37Z"},
+    "invoiceDate": {"$date":"2020-01-15T14:53:37Z"},
     "invoiceType": "I",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -441,7 +441,7 @@
       "$oid": "5e891f3f115334edd2e258d0"
     },
     "invoiceNumber": "53741787WT",
-    "invoiceDate": {"$date":"2020-02-22T16:59:48Z"},
+    "invoiceDate": {"$date":"2020-01-22T16:59:48Z"},
     "invoiceType": "I",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -498,7 +498,7 @@
       "$oid": "5e891f508164601b3cb2aec2"
     },
     "invoiceNumber": "77527115BB",
-    "invoiceDate": {"$date":"2020-02-13T04:33:43Z"},
+    "invoiceDate": {"$date":"2020-01-13T04:33:43Z"},
     "invoiceType": "R",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
@@ -555,7 +555,7 @@
       "$oid": "5e891f61497f59b82f7c0f85"
     },
     "invoiceNumber": "3C911000JV",
-    "invoiceDate": {"$date":"2020-03-26T02:06:52Z"},
+    "invoiceDate": {"$date":"2020-01-26T02:06:52Z"},
     "invoiceType": "I",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -574,7 +574,7 @@
       "$oid": "5e891f675aa128e34373e60f"
     },
     "invoiceNumber": "16254974WA",
-    "invoiceDate": {"$date":"2020-03-26T01:39:55Z"},
+    "invoiceDate": {"$date":"2020-01-26T01:39:55Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -650,7 +650,7 @@
       "$oid": "5e891f81183ba8e7a6a8ed56"
     },
     "invoiceNumber": "5E163715TX",
-    "invoiceDate": {"$date":"2020-02-29T14:25:49Z"},
+    "invoiceDate": {"$date":"2020-01-29T14:25:49Z"},
     "invoiceType": "I",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -707,7 +707,7 @@
       "$oid": "5e891f8b9abc0bebe235cd27"
     },
     "invoiceNumber": "DC356951EJ",
-    "invoiceDate": {"$date":"2020-03-03T01:46:27Z"},
+    "invoiceDate": {"$date":"2020-01-03T01:46:27Z"},
     "invoiceType": "R",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -726,7 +726,7 @@
       "$oid": "5e891f96b4b95ce6aeae85ff"
     },
     "invoiceNumber": "F7826706PX",
-    "invoiceDate": {"$date":"2020-03-30T00:29:44Z"},
+    "invoiceDate": {"$date":"2020-01-30T00:29:44Z"},
     "invoiceType": "R",
     "issuerFullName": "Nevada Mack",
     "issuerIdNumber": "02579822G",
@@ -840,7 +840,7 @@
       "$oid": "5e891fe2e8c8a42757e6698f"
     },
     "invoiceNumber": "59685114FT",
-    "invoiceDate": {"$date":"2020-02-27T13:53:28Z"},
+    "invoiceDate": {"$date":"2020-01-27T13:53:28Z"},
     "invoiceType": "R",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -859,7 +859,7 @@
       "$oid": "5e891fe736b865b33439d23c"
     },
     "invoiceNumber": "E9853187PJ",
-    "invoiceDate": {"$date":"2020-03-12T04:18:55Z"},
+    "invoiceDate": {"$date":"2020-01-12T04:18:55Z"},
     "invoiceType": "R",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -916,7 +916,7 @@
       "$oid": "5e89217cb1db111639d3a5fe"
     },
     "invoiceNumber": "28712996II",
-    "invoiceDate": {"$date":"2020-02-15T08:39:04Z"},
+    "invoiceDate": {"$date":"2020-01-15T08:39:04Z"},
     "invoiceType": "I",
     "issuerFullName": "Nasim Stokes",
     "issuerIdNumber": "43763308N",
@@ -1049,7 +1049,7 @@
       "$oid": "5e89202e4d135e43bc7fea6d"
     },
     "invoiceNumber": "1C957050GR",
-    "invoiceDate": {"$date":"2020-02-15T16:13:30Z"},
+    "invoiceDate": {"$date":"2020-01-15T16:13:30Z"},
     "invoiceType": "I",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -1068,7 +1068,7 @@
       "$oid": "5e892033e5989679a401f1e0"
     },
     "invoiceNumber": "9B639460SB",
-    "invoiceDate": {"$date":"2020-03-25T06:47:48Z"},
+    "invoiceDate": {"$date":"2020-01-25T06:47:48Z"},
     "invoiceType": "R",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -1087,7 +1087,7 @@
       "$oid": "5e8920397e53a3326188089f"
     },
     "invoiceNumber": "38524325BR",
-    "invoiceDate": {"$date":"2020-03-29T06:58:15Z"},
+    "invoiceDate": {"$date":"2020-01-29T06:58:15Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -1144,7 +1144,7 @@
       "$oid": "5e892048cb157a36e22edfc7"
     },
     "invoiceNumber": "99781715ZR",
-    "invoiceDate": {"$date":"2020-03-21T14:48:30Z"},
+    "invoiceDate": {"$date":"2020-01-21T14:48:30Z"},
     "invoiceType": "R",
     "issuerFullName": "Audrey Leonard",
     "issuerIdNumber": "07300179W",
@@ -1163,7 +1163,7 @@
       "$oid": "5e89204d50cc0a0af9a7ceb7"
     },
     "invoiceNumber": "7B236791BC",
-    "invoiceDate": {"$date":"2020-02-06T23:39:50Z"},
+    "invoiceDate": {"$date":"2020-01-06T23:39:50Z"},
     "invoiceType": "I",
     "issuerFullName": "Eden Crosby",
     "issuerIdNumber": "20334562D",
@@ -1182,7 +1182,7 @@
       "$oid": "5e89205377747890503f8380"
     },
     "invoiceNumber": "DC716385AG",
-    "invoiceDate": {"$date":"2020-03-25T08:18:13Z"},
+    "invoiceDate": {"$date":"2020-01-25T08:18:13Z"},
     "invoiceType": "R",
     "issuerFullName": "Giselle Benton",
     "issuerIdNumber": "00514526Q",
@@ -1277,7 +1277,7 @@
       "$oid": "5e89206dddf5b222c47b7167"
     },
     "invoiceNumber": "4A641961VO",
-    "invoiceDate": {"$date":"2020-02-16T12:31:18Z"},
+    "invoiceDate": {"$date":"2020-01-16T12:31:18Z"},
     "invoiceType": "I",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -1429,7 +1429,7 @@
       "$oid": "5e8920a18bcf3c88d0867da2"
     },
     "invoiceNumber": "DF132514RH",
-    "invoiceDate": {"$date":"2020-03-25T06:17:28Z"},
+    "invoiceDate": {"$date":"2020-01-25T06:17:28Z"},
     "invoiceType": "R",
     "issuerFullName": "Jocelyn Heath",
     "issuerIdNumber": "12141409P",
@@ -1505,7 +1505,7 @@
       "$oid": "5e8920b8429474ca76da2c15"
     },
     "invoiceNumber": "87683006QK",
-    "invoiceDate": {"$date":"2020-03-20T02:05:22Z"},
+    "invoiceDate": {"$date":"2020-01-20T02:05:22Z"},
     "invoiceType": "R",
     "issuerFullName": "Kareem Bush",
     "issuerIdNumber": "76304925X",
@@ -1543,7 +1543,7 @@
       "$oid": "5e8920c48cc1ca6d80d03475"
     },
     "invoiceNumber": "3A771623OV",
-    "invoiceDate": {"$date":"2020-03-10T08:27:44Z"},
+    "invoiceDate": {"$date":"2020-01-10T08:27:44Z"},
     "invoiceType": "I",
     "issuerFullName": "Giselle Benton",
     "issuerIdNumber": "00514526Q",
@@ -1657,7 +1657,7 @@
       "$oid": "5e8920e68f97a92045ada5bf"
     },
     "invoiceNumber": "C3677113NN",
-    "invoiceDate": {"$date":"2020-02-20T11:13:18Z"},
+    "invoiceDate": {"$date":"2020-01-20T11:13:18Z"},
     "invoiceType": "I",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
@@ -1676,7 +1676,7 @@
       "$oid": "5e8920ec130095398dfb9448"
     },
     "invoiceNumber": "7C782629SJ",
-    "invoiceDate": {"$date":"2020-03-15T02:59:35Z"},
+    "invoiceDate": {"$date":"2020-01-15T02:59:35Z"},
     "invoiceType": "R",
     "issuerFullName": "Nevada Mack",
     "issuerIdNumber": "02579822G",
@@ -1714,7 +1714,7 @@
       "$oid": "5e8920f6dd84985c84d7cc76"
     },
     "invoiceNumber": "23296886OK",
-    "invoiceDate": {"$date":"2020-02-11T10:52:09Z"},
+    "invoiceDate": {"$date":"2020-01-11T10:52:09Z"},
     "invoiceType": "R",
     "issuerFullName": "Audrey Leonard",
     "issuerIdNumber": "07300179W",
@@ -1733,7 +1733,7 @@
       "$oid": "5e8920fbc9d914bb215b7756"
     },
     "invoiceNumber": "EF321469RE",
-    "invoiceDate": {"$date":"2020-02-22T11:25:31Z"},
+    "invoiceDate": {"$date":"2020-01-22T11:25:31Z"},
     "invoiceType": "R",
     "issuerFullName": "Nevada Mack",
     "issuerIdNumber": "02579822G",
@@ -1828,7 +1828,7 @@
       "$oid": "5e892117ec04544480f8118e"
     },
     "invoiceNumber": "05432876RQ",
-    "invoiceDate": {"$date":"2020-03-27T20:38:22Z"},
+    "invoiceDate": {"$date":"2020-01-27T20:38:22Z"},
     "invoiceType": "R",
     "issuerFullName": "Vincent Hoffman",
     "issuerIdNumber": "72432550F",
@@ -1885,7 +1885,7 @@
       "$oid": "5e8921277f8c92c3cbdb9eda"
     },
     "invoiceNumber": "C2694421AT",
-    "invoiceDate": {"$date":"2020-02-21T09:38:46Z"},
+    "invoiceDate": {"$date":"2020-01-21T09:38:46Z"},
     "invoiceType": "R",
     "issuerFullName": "Juan Kevin Trujillo",
     "issuerIdNumber": "11111111H",
@@ -1903,7 +1903,7 @@
   "_id": {
     "$oid": "5eac04d42cfcd90fd158baa3"
   },
-  "invoiceNumber": "04927303ZF",
+  "invoiceNumber": "04923303ZF",
   "invoiceDate": {"$date":"2020-05-01T00:00:00Z"},
   "invoiceType": "I",
   "issuerFullName": "Juan Kevin Trujillo",
@@ -1915,14 +1915,14 @@
   "receiverEmail": "eu.accumsan@Nullamvelitdui.org",
   "receiverPhoneNumber": "926311352",
   "subtotal": "366.07",
-  "totalTaxes": "293.26",
+  "totalTaxes": "100.50",
   "totalDue": "659.33"
-},
+  },
   {
     "_id": {
       "$oid": "5eac04dad0eacf0fdf5fca0e"
     },
-    "invoiceNumber": "C2694421AT",
+    "invoiceNumber": "C2444221AT",
     "invoiceDate": {"$date":"2020-05-01T00:00:00Z"},
     "invoiceType": "R",
     "issuerFullName": "Juan Kevin Trujillo",
@@ -1934,7 +1934,45 @@
     "receiverEmail": "blandit.mattis@enimCurabiturmassa.net",
     "receiverPhoneNumber": "942970250",
     "subtotal": "211.20",
-    "totalTaxes": "463.29",
+    "totalTaxes": "50.50",
+    "totalDue": "674.49"
+  },
+  {
+    "_id": {
+      "$oid": "5eaca097fed536a50f6fe71d"
+    },
+    "invoiceNumber": "C2694426AT",
+    "invoiceDate": {"$date":"2020-05-01T00:00:00Z"},
+    "invoiceType": "I",
+    "issuerFullName": "Audrey Leonard",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "nisi@etarcuimperdiet.org",
+    "issuerPhoneNumber": "615546691",
+    "receiverFullName": "Juan Kevin Trujillo",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "blandit.mattis@enimCurabiturmassa.net",
+    "receiverPhoneNumber": "942970250",
+    "subtotal": "211.20",
+    "totalTaxes": "900",
+    "totalDue": "674.49"
+  },
+  {
+    "_id": {
+      "$oid": "5eaca47fd3e6ec002be432fa"
+    },
+    "invoiceNumber": "C2694426AT",
+    "invoiceDate": {"$date":"2020-05-01T00:00:00Z"},
+    "invoiceType": "R",
+    "issuerFullName": "Audrey Leonard",
+    "issuerIdNumber": "07300179W",
+    "issuerEmail": "nisi@etarcuimperdiet.org",
+    "issuerPhoneNumber": "615546691",
+    "receiverFullName": "Juan Kevin Trujillo",
+    "receiverIdNumber": "11111111H",
+    "receiverEmail": "blandit.mattis@enimCurabiturmassa.net",
+    "receiverPhoneNumber": "942970250",
+    "subtotal": "211.20",
+    "totalTaxes": "900",
     "totalDue": "674.49"
   }
 ]

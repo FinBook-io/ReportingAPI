@@ -37,27 +37,27 @@
                         <tbody>
                         <tr>
                             <td>Monthly</td>
-                            <td>$monthlyIncomesTaxes</td>
-                            <td>$monthlyRefundsTaxes</td>
-                            <td>$monthlyTotalTaxesDue</td>
+                            <td class="currency">$monthlyIncomesTaxes</td>
+                            <td class="currency">$monthlyRefundsTaxes</td>
+                            <td class="currency">$monthlyTotalTaxesDue</td>
                         </tr>
                         <tr>
-                            <td>trimester</td>
-                            <td>$trimesterIncomesTaxes</td>
-                            <td>$trimesterRefundsTaxes</td>
-                            <td>$trimesterTotalTaxesDue</td>
+                            <td>Trimester</td>
+                            <td class="currency">$trimesterIncomesTaxes</td>
+                            <td class="currency">$trimesterRefundsTaxes</td>
+                            <td class="currency">$trimesterTotalTaxesDue</td>
                         </tr>
                         <tr>
-                            <td>semester</td>
-                            <td>$semesterIncomesTaxes</td>
-                            <td>$semesterRefundsTaxes</td>
-                            <td>$semesterTotalTaxesDue</td>
+                            <td>Semester</td>
+                            <td class="currency">$semesterIncomesTaxes</td>
+                            <td class="currency">$semesterRefundsTaxes</td>
+                            <td class="currency">$semesterTotalTaxesDue</td>
                         </tr>
                         <tr>
                             <td>Annual</td>
-                            <td>$annualIncomesTaxes</td>
-                            <td>$annualRefundsTaxes</td>
-                            <td>$annualTotalTaxesDue</td>
+                            <td class="currency">$annualIncomesTaxes</td>
+                            <td class="currency">$annualRefundsTaxes</td>
+                            <td class="currency">$annualTotalTaxesDue</td>
                         </tr>
                         </tbody>
                     </table>

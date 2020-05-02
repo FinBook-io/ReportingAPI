@@ -3,6 +3,7 @@ package io.finbook.command;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.model.Invoice;
+import io.finbook.model.InvoiceType;
 import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Utils;
@@ -25,8 +26,8 @@ public class ReportingCommand {
         // TRIMESTER
         data.putAll(getDataForCurrentTrimester(currentUserId));
 
-        // semester
-        data.putAll(getDataForCurrentsemester(currentUserId));
+        // Semester
+        data.putAll(getDataForCurrentSemester(currentUserId));
 
         // ANNUAL
         data.putAll(getDataForCurrentAnnual(currentUserId));
@@ -36,127 +37,85 @@ public class ReportingCommand {
         );
     }
 
-    public static ResponseCreator currentMonth(String currentUserId) {
-        return MyResponse.ok(
-                new StandardResponse(new HashMap<>(getDataForCurrentMonth(currentUserId)), "dashboard/reporting/current-month")
-        );
-    }
-
-    private static List<Invoice> getInvoicesListByIssuerIdListPerPeriod(String currentUserId, LocalDateTime startDate, LocalDateTime endDate){
-        return invoiceService.getAllInvoicesByIssuerIdPerPeriod(currentUserId, startDate , endDate);
-    }
-
-    private static List<Invoice> getInvoicesListByReceiverIdListPerPeriod(String currentUserId, LocalDateTime startDate, LocalDateTime endDate){
-        return invoiceService.getAllInvoicesByReceiverIdPerPeriod(currentUserId, startDate , endDate);
-    }
-
     private static HashMap<String, Object> getDataForCurrentMonth(String currentUserId){
-        // monthlyIncomesTaxes -  monthlyRefundsTaxes -  monthlyTotalTaxesDue
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = Utils.getFirstDayCurrentMonth();
         LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesListByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
+        List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
         Double monthlyIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("monthlyIncomesTaxes", Utils.formatDouble(monthlyIncomesTaxes));
+        data.put("monthlyIncomesTaxes", monthlyIncomesTaxes);
 
-        invoices = getInvoicesListByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
         Double monthlyRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("monthlyRefundsTaxes", Utils.formatDouble(monthlyRefundsTaxes));
+        data.put("monthlyRefundsTaxes", monthlyRefundsTaxes);
 
-        data.put("monthlyTotalTaxesDue", Utils.formatDouble(monthlyIncomesTaxes - monthlyRefundsTaxes));
+        data.put("monthlyTotalTaxesDue", monthlyIncomesTaxes - monthlyRefundsTaxes);
 
         return data;
     }
 
-    private static LocalDateTime getFirstDateOfCurrentTrimester(){
-        int currentMonthNumber = Utils.getCurrentMonth();
-        if (currentMonthNumber >= 1 && currentMonthNumber <= 3){
-            return Utils.getDateOfSpecificMonth(1); // starting in January
-        }else if (currentMonthNumber >= 4 && currentMonthNumber <= 6){
-            return Utils.getDateOfSpecificMonth(4); // starting in April
-        }else if (currentMonthNumber >= 7 && currentMonthNumber <= 9){
-            return Utils.getDateOfSpecificMonth(7); // starting in July
-        }else{
-            return Utils.getDateOfSpecificMonth(10); // starting in July
-        }
-    }
-
     private static HashMap<String, Object> getDataForCurrentTrimester(String currentUserId){
-        // trimesterIncomesTaxes - trimesterRefundsTaxes - trimesterTotalTaxesDue
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = getFirstDateOfCurrentTrimester();
         LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesListByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
+        List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
         Double trimesterIncomeTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("trimesterIncomesTaxes", Utils.formatDouble(trimesterIncomeTaxes));
+        data.put("trimesterIncomesTaxes", trimesterIncomeTaxes);
 
-        invoices = getInvoicesListByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
         Double trimesterRefundTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("trimesterRefundsTaxes", Utils.formatDouble(trimesterRefundTaxes));
+        data.put("trimesterRefundsTaxes", trimesterRefundTaxes);
 
-        data.put("trimesterTotalTaxesDue", Utils.formatDouble(trimesterIncomeTaxes - trimesterRefundTaxes));
+        data.put("trimesterTotalTaxesDue", trimesterIncomeTaxes - trimesterRefundTaxes);
 
         return data;
     }
 
-    private static LocalDateTime getFirstDateOfCurrentSemester(){
-        int currentMonthNumber = Utils.getCurrentMonth();
-        if (currentMonthNumber >= 1 && currentMonthNumber <= 6){
-            return Utils.getDateOfSpecificMonth(1); // starting in January
-        }else{
-            return Utils.getDateOfSpecificMonth(7); // starting in July
-        }
-    }
-
-    private static HashMap<String, Object> getDataForCurrentsemester(String currentUserId){
-        // semesterIncomesTaxes - semesterRefundsTaxes - semesterTotalTaxesDue
+    private static HashMap<String, Object> getDataForCurrentSemester(String currentUserId){
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = getFirstDateOfCurrentSemester();
         LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesListByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
+        List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
         Double semesterIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("semesterIncomesTaxes", Utils.formatDouble(semesterIncomesTaxes));
+        data.put("semesterIncomesTaxes", semesterIncomesTaxes);
 
-        invoices = getInvoicesListByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
         Double semesterRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("semesterRefundsTaxes", Utils.formatDouble(semesterRefundsTaxes));
+        data.put("semesterRefundsTaxes", semesterRefundsTaxes);
 
-        data.put("semesterTotalTaxesDue", Utils.formatDouble(semesterIncomesTaxes - semesterRefundsTaxes));
+        data.put("semesterTotalTaxesDue", semesterIncomesTaxes - semesterRefundsTaxes);
 
         return data;
     }
 
     private static HashMap<String, Object> getDataForCurrentAnnual(String currentUserId){
-        // annualIncomesTaxes - annualRefundsTaxes - annualTotalTaxesDue
         HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = Utils.getDateOfSpecificMonth(1); // starting in January
         LocalDateTime endDate = Utils.getCurrentDate();
 
-        List<Invoice> invoices = getInvoicesListByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
+        List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
         Double annualIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("annualIncomesTaxes", Utils.formatDouble(annualIncomesTaxes));
+        data.put("annualIncomesTaxes", annualIncomesTaxes);
 
-        invoices = getInvoicesListByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
         Double annualRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("annualRefundsTaxes", Utils.formatDouble(annualRefundsTaxes));
+        data.put("annualRefundsTaxes", annualRefundsTaxes);
 
-        data.put("annualTotalTaxesDue", Utils.formatDouble(annualIncomesTaxes - annualRefundsTaxes));
+        data.put("annualTotalTaxesDue", annualIncomesTaxes - annualRefundsTaxes);
 
         return data;
     }
 
     /*
     *
-    *
     * AJAX REQUESTS
-    *
     *
     * */
     public static JSONObject getDataForPeriod(String currentUserId, String period){
@@ -181,17 +140,50 @@ public class ReportingCommand {
                 return null;
         }
 
-        List<Invoice> invoices = getInvoicesListByIssuerIdListPerPeriod(currentUserId, startDate, endDate);
-        Double monthlyIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("incomes", Utils.formatDouble(monthlyIncomesTaxes));
+        List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+        Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
+        data.put("incomes", periodIncomesTaxes);
 
-        invoices = getInvoicesListByReceiverIdListPerPeriod(currentUserId, startDate, endDate);
-        Double monthlyRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
-        data.put("refunds", Utils.formatDouble(monthlyRefundsTaxes));
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
+        data.put("refunds", periodRefundsTaxes);
 
-        data.put("totalTaxesDue", Utils.formatDouble(monthlyIncomesTaxes - monthlyRefundsTaxes));
+        double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
+
+        data.put("totalTaxesDue", totalTaxesDue < 0 ? 0 : totalTaxesDue);
 
         return new JSONObject(data);
+    }
+
+    /*
+     *
+     * Useful methods
+     *
+     * */
+    private static LocalDateTime getFirstDateOfCurrentTrimester(){
+        int currentMonthNumber = Utils.getCurrentMonth();
+        if (currentMonthNumber >= 1 && currentMonthNumber <= 3){
+            return Utils.getDateOfSpecificMonth(1); // starting in January
+        }else if (currentMonthNumber >= 4 && currentMonthNumber <= 6){
+            return Utils.getDateOfSpecificMonth(4); // starting in April
+        }else if (currentMonthNumber >= 7 && currentMonthNumber <= 9){
+            return Utils.getDateOfSpecificMonth(7); // starting in July
+        }else{
+            return Utils.getDateOfSpecificMonth(10); // starting in July
+        }
+    }
+
+    private static LocalDateTime getFirstDateOfCurrentSemester(){
+        int currentMonthNumber = Utils.getCurrentMonth();
+        if (currentMonthNumber >= 1 && currentMonthNumber <= 6){
+            return Utils.getDateOfSpecificMonth(1); // starting in January
+        }else{
+            return Utils.getDateOfSpecificMonth(7); // starting in July
+        }
+    }
+
+    private static List<Invoice> getInvoicesListPerPeriodAndType(String currentUserId, InvoiceType invoiceType, LocalDateTime startDate, LocalDateTime endDate){
+        return invoiceService.getInvoicesPerPeriodAndType(currentUserId, invoiceType, startDate , endDate);
     }
 
 }

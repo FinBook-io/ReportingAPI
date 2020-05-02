@@ -50,7 +50,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Incomes - Total taxes</span>
-                        <span class="info-box-number"><span id="incomes">$incomes</span></span>
+                        <span class="info-box-number"><span class="currency" id="incomes">$incomes</span></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -63,7 +63,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Refunds - Total taxes</span>
-                        <span class="info-box-number"><span id="refunds">$refunds</span></span>
+                        <span class="info-box-number"><span class="currency" id="refunds">$refunds</span></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -75,8 +75,8 @@
                     <span class="info-box-icon bg-warning"><i class="fas fa-balance-scale-left"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Refunds - Total taxes</span>
-                        <span class="info-box-number"><span id="totalTaxesDue">$totalTaxesDue</span></span>
+                        <span class="info-box-text">Total taxes due</span>
+                        <span class="info-box-number"><span class="currency" id="totalTaxesDue">$totalTaxesDue</span></span>
                 </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -86,7 +86,7 @@
 
         <!-- Main row -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <!-- CHART -->
                 <div class="card card-primary card-outline">
                     <div class="card-header">
@@ -102,7 +102,30 @@
                     </div>
                     <div class="card-body">
                         <div class="chart">
-                            <canvas id="chartToDraw" class="barChart"></canvas>
+                            <canvas id="barChart" class="custom-chart"></canvas>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <div class="col-md-6">
+                <!-- CHART -->
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title">Chart</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart">
+                            <canvas id="pieChart" class="custom-chart"></canvas>
                         </div>
                     </div>
                     <!-- /.card-body -->

@@ -38,7 +38,7 @@
                             <tr>
                                 <td>$product.code</td>
                                 <td>$product.description</td>
-                                <td>$product.price</td>
+                                <td class="currency">$product.price</td>
                             </tr>
                             #end
                         </tbody>
