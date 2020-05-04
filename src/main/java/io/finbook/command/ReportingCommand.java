@@ -1,5 +1,7 @@
 package io.finbook.command;
 
+import com.google.gson.JsonObject;
+import io.finbook.chart.BarChart;
 import io.finbook.http.MyResponse;
 import io.finbook.http.StandardResponse;
 import io.finbook.model.Invoice;
@@ -7,9 +9,12 @@ import io.finbook.model.InvoiceType;
 import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Utils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.time.LocalDateTime;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.util.HashMap;
 import java.util.List;
 
@@ -122,19 +127,24 @@ public class ReportingCommand {
         HashMap<String, Object> data = new HashMap<>();
         LocalDateTime startDate;
         LocalDateTime endDate = Utils.getCurrentDate();
+        int amountMonths;
 
         switch (period){
             case "monthly":
                 startDate = Utils.getFirstDayCurrentMonth();
+                amountMonths = 1;
                 break;
             case "trimester":
                 startDate = getFirstDateOfCurrentTrimester();
+                amountMonths = 3;
                 break;
             case "semester":
                 startDate = getFirstDateOfCurrentSemester();
+                amountMonths = 6;
                 break;
             case "annual":
                 startDate = Utils.getDateOfSpecificMonth(1); // starting in January
+                amountMonths = 12;
                 break;
             default:
                 return null;
@@ -151,6 +161,15 @@ public class ReportingCommand {
         double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
 
         data.put("totalTaxesDue", totalTaxesDue < 0 ? 0 : totalTaxesDue);
+
+        BarChart barChart = new BarChart();
+        barChart.getData().setLabels(getMonthsNamesForChart(startDate, amountMonths));
+
+        barChart.getData().addDataset("Incomes", "#5cb85c", getIncomesPerMonth(currentUserId, startDate, amountMonths));
+        barChart.getData().addDataset("Refunds", "#d9534f", getRefundsPerMonth(currentUserId, startDate, amountMonths));
+        barChart.getData().addDataset("Total taxes due", "#f0ad4e", getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
+
+        data.put("barChart", barChart.toJSON());
 
         return new JSONObject(data);
     }
@@ -185,5 +204,66 @@ public class ReportingCommand {
     private static List<Invoice> getInvoicesListPerPeriodAndType(String currentUserId, InvoiceType invoiceType, LocalDateTime startDate, LocalDateTime endDate){
         return invoiceService.getInvoicesPerPeriodAndType(currentUserId, invoiceType, startDate , endDate);
     }
+
+    private static JSONArray getMonthsNamesForChart(LocalDateTime startDate, int amountMonths){
+        JSONArray months = new JSONArray();
+        for (int i = 0; i < amountMonths; i++) {
+            months.put(startDate.getMonth().plus(i).toString());
+        }
+        return months;
+    }
+
+    private static JSONArray getIncomesPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
+        JSONArray data = new JSONArray();
+
+        for (int i = 0; i < amountMonths; i++) {
+            LocalDateTime auxStartDate = startDate.plusMonths(i);
+            LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
+            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
+
+            Double total = invoiceService.getSumTotalTaxes(invoices);
+
+            data.put( total < 0 ? 0 : total);
+        }
+
+        return data;
+    }
+    private static JSONArray getRefundsPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
+        JSONArray data = new JSONArray();
+
+        for (int i = 0; i < amountMonths; i++) {
+            LocalDateTime auxStartDate = startDate.plusMonths(i);
+            LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
+            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, auxStartDate, endDate);
+
+            Double total = invoiceService.getSumTotalTaxes(invoices);
+
+            data.put(total < 0 ? 0 : total);
+        }
+
+        return data;
+    }
+
+    private static JSONArray getTotalTaxesDuePerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
+        JSONArray data = new JSONArray();
+
+        for (int i = 0; i < amountMonths; i++) {
+            LocalDateTime auxStartDate = startDate.plusMonths(i);
+            LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
+
+            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
+            Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
+
+            invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, auxStartDate, endDate);
+            Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
+
+            double total = periodIncomesTaxes - periodRefundsTaxes;
+
+            data.put(total < 0 ? 0 : total);
+        }
+
+        return data;
+    }
+
 
 }

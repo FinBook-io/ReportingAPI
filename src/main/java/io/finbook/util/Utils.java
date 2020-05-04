@@ -27,11 +27,11 @@ public class Utils {
     }
 
     public static Integer getCurrentMonth(){
-        return getCurrentDate().getDayOfMonth();
+        return getCurrentDate().getMonthValue();
     }
 
     public static Integer getCurrentYear(){
-        return getCurrentDate().getDayOfYear();
+        return getCurrentDate().getYear();
     }
 
     public static LocalDateTime getDateOfSpecificMonth(Integer month){
@@ -48,9 +48,9 @@ public class Utils {
         return new SimpleDateFormat("yyyy-MM-dd").parse(strToDate);
     }
 
-    public static String formatDouble(Double numberToFormat){
-        DecimalFormat df = new DecimalFormat("#,###.##");
-        return df.format(numberToFormat);
+    public static String doubleDecimalFormat(Double numberToFormat){
+        DecimalFormat decimalFormat = new DecimalFormat("#,##");
+        return decimalFormat.format(numberToFormat);
     }
 
 }

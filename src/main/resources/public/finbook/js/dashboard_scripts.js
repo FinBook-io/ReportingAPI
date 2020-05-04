@@ -1,5 +1,5 @@
 function highlightCurrentPageInNav(){
-    // Split route from /admin/
+    // Split route from admin e.g. "/admin/some/thing"
     let routeFromAdmin = location.pathname.split("/admin/");
     let highlightRoute = routeFromAdmin[1];
 
@@ -29,8 +29,32 @@ function format_amounts() {
     }
 }
 
-function drawChart(dataChart){
+function cleanChart(chartToClean){
+    if(chartToClean != null){
+        chartToClean.destroy();
+    }
+}
 
+let myBarChart = null;
+function drawBarChart(barChartObject){
+    let canvasBarChart = $('#canvasBarChart');
+    if (canvasBarChart.length){
+        let barChartOptions = {
+            responsive              : true,
+            maintainAspectRatio     : false,
+            datasetFill             : false
+        };
+
+        cleanChart(myBarChart);
+
+        let barChart = canvasBarChart.get(0).getContext('2d');
+
+        myBarChart = new Chart(barChart, {
+            type: barChartObject["type"],
+            data: barChartObject["data"],
+            options: barChartOptions
+        });
+    }
 }
 
 $(function() {
@@ -43,18 +67,14 @@ $(function() {
 
     /*
     *
-    *
     * HIGHLIGHT NAV WITH CURRENT PAGE
-    *
     *
     * */
     highlightCurrentPageInNav();
 
     /*
     *
-    *
     * FORMAT AMOUNTS INTO CURRENCIES
-    *
     *
     * */
     format_amounts();
@@ -77,7 +97,8 @@ $(function() {
                 $('#refunds').text(data.refunds);
                 $('#totalTaxesDue').text(data.totalTaxesDue);
                 format_amounts();
-                // drawChart(data.dataChart)
+                drawBarChart(data.barChart);
+                // alert(data.barChart["type"]);
             },
             error: function () {
                 Toast.fire({
@@ -91,9 +112,7 @@ $(function() {
 
     /*
     *
-    *
     * TABLES WITH DATATABLES
-    *
     *
     * */
     $('#datatables_list_with_agination').DataTable({
@@ -109,12 +128,10 @@ $(function() {
 
     /*
     *
-    *
     * CHARTS
     *
-    *
     * */
-    let pageBarChart = $('#barChart');
+    /*let pageBarChart = $('#barChart');
     if (pageBarChart.length){
         let areaChartData = {
             labels  : ['January'],
@@ -154,7 +171,7 @@ $(function() {
             data: barChartData,
             options: barChartOptions
         })
-    }
+    }*/
 
     let pagePieChart = $('#pieChart');
     if (pagePieChart.length){

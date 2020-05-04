@@ -102,7 +102,7 @@
                     </div>
                     <div class="card-body">
                         <div class="chart">
-                            <canvas id="barChart" class="custom-chart"></canvas>
+                            <canvas id="canvasBarChart" class="custom-chart"></canvas>
                         </div>
                     </div>
                     <!-- /.card-body -->
