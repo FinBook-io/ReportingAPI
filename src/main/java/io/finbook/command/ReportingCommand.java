@@ -1,6 +1,7 @@
 package io.finbook.command;
 
 import io.finbook.chart.BarChart;
+import io.finbook.chart.PieChart;
 import io.finbook.responses.MyResponse;
 import io.finbook.responses.StandardResponse;
 import io.finbook.model.Invoice;
@@ -168,6 +169,22 @@ public class ReportingCommand {
         barChart.getData().addDataset("Total taxes due", "#f0ad4e", getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
 
         data.put("barChart", barChart.toJSON());
+
+        PieChart pieChart = new PieChart();
+
+        JSONArray backgrounds = new JSONArray();
+        backgrounds.put("#5cb85c");
+        backgrounds.put("#d9534f");
+
+        pieChart.getData().addOneLabel("Incomes");
+        pieChart.getData().addOneLabel("Refunds");
+
+        JSONArray pieData = new JSONArray();
+        pieData.put(periodIncomesTaxes);
+        pieData.put(periodRefundsTaxes);
+        pieChart.getData().addPieDataset(backgrounds, pieData);
+
+        data.put("pieChart", pieChart.toJSON());
 
         return new JSONObject(data);
     }

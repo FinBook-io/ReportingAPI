@@ -42,6 +42,13 @@ public class ChartData {
         datasets.put(dataset);
     }
 
+    public void addPieDataset(JSONArray backgroundColors, JSONArray data){
+        JSONObject dataset = new JSONObject();
+        dataset.put("backgroundColor", backgroundColors);
+        dataset.put("data", data);
+        datasets.put(dataset);
+    }
+
     public JSONObject toJSON() {
         JSONObject objectToJson = new JSONObject();
         objectToJson.put("labels", getLabels());

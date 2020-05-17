@@ -125,7 +125,7 @@
                     </div>
                     <div class="card-body">
                         <div class="chart">
-                            <canvas id="pieChart" class="custom-chart"></canvas>
+                            <canvas id="canvasPieChart" class="custom-chart"></canvas>
                         </div>
                     </div>
                     <!-- /.card-body -->

@@ -57,6 +57,27 @@ function drawBarChart(barChartObject){
     }
 }
 
+let myPieChart = null;
+function drawPieChart(pieChartObject){
+    let canvasPieChart = $('#canvasPieChart');
+    if (canvasPieChart.length){
+        let pieChartOptions = {
+            maintainAspectRatio : false,
+            responsive : true,
+        };
+
+        cleanChart(myPieChart);
+
+        let pieChart = canvasPieChart.get(0).getContext('2d');
+
+        myPieChart = new Chart(pieChart, {
+            type: pieChartObject["type"],
+            data: pieChartObject["data"],
+            options: pieChartOptions
+        });
+    }
+}
+
 $(function() {
     const Toast = Swal.mixin({
         toast: true,
@@ -90,7 +111,7 @@ $(function() {
                 $('#totalTaxesDue').text(data.totalTaxesDue);
                 format_amounts();
                 drawBarChart(data.barChart);
-                // alert(data.barChart["type"]);
+                drawPieChart(data.pieChart);
             },
             error: function () {
                 Toast.fire({
@@ -113,7 +134,7 @@ $(function() {
                 $('#totalTaxesDue').text(data.totalTaxesDue);
                 format_amounts();
                 drawBarChart(data.barChart);
-                // alert(data.barChart["type"]);
+                drawPieChart(data.pieChart);
             },
             error: function () {
                 Toast.fire({
@@ -145,48 +166,7 @@ $(function() {
     *
     * CHARTS
     *
-    * */
-    /*let pageBarChart = $('#barChart');
-    if (pageBarChart.length){
-        let areaChartData = {
-            labels  : ['January'],
-            datasets: [
-                {
-                    label               : 'Incomes',
-                    backgroundColor     : '#5cb85c',
-                    data                : [800]
-                },
-                {
-                    label               : 'Refunds',
-                    backgroundColor     : '#d9534f',
-                    data                : [1000]
-                },
-                {
-                    label               : 'Total due',
-                    backgroundColor     : '#f0ad4e',
-                    data                : [356]
-                }
-            ]
-        };
-
-        //-------------
-        //- BAR CHART -
-        //-------------
-        let barChartCanvas = pageBarChart.get(0).getContext('2d');
-        let barChartData = jQuery.extend(true, {}, areaChartData);
-
-        let barChartOptions = {
-            responsive              : true,
-            maintainAspectRatio     : false,
-            datasetFill             : false
-        };
-
-        new Chart(barChartCanvas, {
-            type: 'bar',
-            data: barChartData,
-            options: barChartOptions
-        })
-    }*/
+    *
 
     let pagePieChart = $('#pieChart');
     if (pagePieChart.length){
@@ -207,12 +187,6 @@ $(function() {
         //- PIE CHART -
         //-------------
         // Get context with jQuery - using jQuery's .get() method.
-        let pieChartCanvas = pagePieChart.get(0).getContext('2d');
-        let pieData        = donutData;
-        let pieOptions     = {
-            maintainAspectRatio : false,
-            responsive : true,
-        };
         //Create pie or douhnut chart
         // You can switch between pie and douhnut using the method below.
         let pieChart = new Chart(pieChartCanvas, {
@@ -220,7 +194,7 @@ $(function() {
             data: pieData,
             options: pieOptions
         })
-    }
+    }*/
 
     /*
     *
