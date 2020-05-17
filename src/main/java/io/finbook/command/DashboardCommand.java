@@ -17,7 +17,7 @@ public class DashboardCommand {
     private static InvoiceService invoiceService = new InvoiceService();
 
     public static ResponseCreator index(String currentUserId) {
-        HashMap<String, Object> data = new HashMap<>();
+        /*HashMap<String, Object> data = new HashMap<>();
 
         LocalDateTime startDate = Utils.getFirstDayCurrentMonth();
         LocalDateTime endDate = Utils.getCurrentDate();
@@ -33,10 +33,10 @@ public class DashboardCommand {
         data.put("refunds", refunds);
 
         // Total taxes due
-        data.put("totalTaxesDue", incomes - refunds);
+        data.put("totalTaxesDue", incomes - refunds);*/
 
         return MyResponse.ok(
-                new StandardResponse(data, "dashboard/index")
+                new StandardResponse(null, "dashboard/index")
         );
     }
 

@@ -50,7 +50,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Incomes - Total taxes</span>
-                        <span class="info-box-number"><span class="currency" id="incomes">$incomes</span></span>
+                        <span class="info-box-number"><span class="currency" id="incomes"><!--$ incomes--></span></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -63,7 +63,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Refunds - Total taxes</span>
-                        <span class="info-box-number"><span class="currency" id="refunds">$refunds</span></span>
+                        <span class="info-box-number"><span class="currency" id="refunds"><!--$ refunds--></span></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -76,7 +76,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total taxes due</span>
-                        <span class="info-box-number"><span class="currency" id="totalTaxesDue">$totalTaxesDue</span></span>
+                        <span class="info-box-number"><span class="currency" id="totalTaxesDue"><!--$ totalTaxesDue--></span></span>
                 </div>
                     <!-- /.info-box-content -->
                 </div>

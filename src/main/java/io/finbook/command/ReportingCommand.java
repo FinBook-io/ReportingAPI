@@ -54,7 +54,7 @@ public class ReportingCommand {
         Double monthlyRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyRefundsTaxes", monthlyRefundsTaxes);
 
-        data.put("monthlyTotalTaxesDue", monthlyIncomesTaxes - monthlyRefundsTaxes);
+        data.put("monthlyTotalTaxesDue", Utils.formatDoubleTwoDecimals(monthlyIncomesTaxes - monthlyRefundsTaxes));
 
         return data;
     }
@@ -73,7 +73,7 @@ public class ReportingCommand {
         Double trimesterRefundTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("trimesterRefundsTaxes", trimesterRefundTaxes);
 
-        data.put("trimesterTotalTaxesDue", trimesterIncomeTaxes - trimesterRefundTaxes);
+        data.put("trimesterTotalTaxesDue", Utils.formatDoubleTwoDecimals(trimesterIncomeTaxes - trimesterRefundTaxes));
 
         return data;
     }
@@ -92,7 +92,7 @@ public class ReportingCommand {
         Double semesterRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("semesterRefundsTaxes", semesterRefundsTaxes);
 
-        data.put("semesterTotalTaxesDue", semesterIncomesTaxes - semesterRefundsTaxes);
+        data.put("semesterTotalTaxesDue", Utils.formatDoubleTwoDecimals(semesterIncomesTaxes - semesterRefundsTaxes));
 
         return data;
     }
@@ -111,7 +111,7 @@ public class ReportingCommand {
         Double annualRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("annualRefundsTaxes", annualRefundsTaxes);
 
-        data.put("annualTotalTaxesDue", annualIncomesTaxes - annualRefundsTaxes);
+        data.put("annualTotalTaxesDue", Utils.formatDoubleTwoDecimals(annualIncomesTaxes - annualRefundsTaxes));
 
         return data;
     }
@@ -158,7 +158,7 @@ public class ReportingCommand {
 
         double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
 
-        data.put("totalTaxesDue", totalTaxesDue < 0 ? 0 : totalTaxesDue);
+        data.put("totalTaxesDue", totalTaxesDue);
 
         BarChart barChart = new BarChart();
         barChart.getData().setLabels(getMonthsNamesForChart(startDate, amountMonths));
@@ -219,9 +219,7 @@ public class ReportingCommand {
             LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
             List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
 
-            Double total = invoiceService.getSumTotalTaxes(invoices);
-
-            data.put( total < 0 ? 0 : total);
+            data.put(invoiceService.getSumTotalTaxes(invoices));
         }
 
         return data;
@@ -234,9 +232,7 @@ public class ReportingCommand {
             LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
             List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, auxStartDate, endDate);
 
-            Double total = invoiceService.getSumTotalTaxes(invoices);
-
-            data.put(total < 0 ? 0 : total);
+            data.put(invoiceService.getSumTotalTaxes(invoices));
         }
 
         return data;
@@ -255,9 +251,7 @@ public class ReportingCommand {
             invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, auxStartDate, endDate);
             Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
 
-            double total = periodIncomesTaxes - periodRefundsTaxes;
-
-            data.put(total < 0 ? 0 : total);
+            data.put(Utils.formatDoubleTwoDecimals(periodIncomesTaxes - periodRefundsTaxes));
         }
 
         return data;

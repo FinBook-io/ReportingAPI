@@ -2,7 +2,9 @@ package io.finbook.service;
 
 import io.finbook.model.Invoice;
 import io.finbook.model.InvoiceType;
+import io.finbook.util.Utils;
 
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -101,7 +103,7 @@ public class InvoiceService extends Database {
         for(Invoice invoice : invoices){
             sum += invoice.getTotalTaxes();
         }
-        return sum;
+        return Utils.formatDoubleTwoDecimals(sum);
     }
 
 }

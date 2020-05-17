@@ -48,9 +48,8 @@ public class Utils {
         return new SimpleDateFormat("yyyy-MM-dd").parse(strToDate);
     }
 
-    public static String doubleDecimalFormat(Double numberToFormat){
-        DecimalFormat decimalFormat = new DecimalFormat("#,##");
-        return decimalFormat.format(numberToFormat);
+    public static Double formatDoubleTwoDecimals(Double number){
+        return (double) Math.round(number*100)/100;
     }
 
 }

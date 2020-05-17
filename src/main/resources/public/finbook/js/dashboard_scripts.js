@@ -74,16 +74,33 @@ $(function() {
 
     /*
     *
-    * FORMAT AMOUNTS INTO CURRENCIES
-    *
-    * */
-    format_amounts();
-
-    /*
-    *
     * TABLES WITH DATATABLES
     *
     * */
+    let date = $('#datepicker');
+    if (date.length){
+        $.ajax({
+            url: "/admin/reporting/ajax-datepicker",
+            method: "POST",
+            data: { datepicker_value : "monthly" },
+            dataType:"JSON",
+            success: function(data){
+                $('#incomes').text(data.incomes);
+                $('#refunds').text(data.refunds);
+                $('#totalTaxesDue').text(data.totalTaxesDue);
+                format_amounts();
+                drawBarChart(data.barChart);
+                // alert(data.barChart["type"]);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Something was wrong!'
+                })
+            }
+        });
+    }
+
     $('#datepicker').on('change', function() {
         $.ajax({
             url: "/admin/reporting/ajax-datepicker",
@@ -113,7 +130,7 @@ $(function() {
     * TABLES WITH DATATABLES
     *
     * */
-    $('#datatables_list_with_agination').DataTable({
+    $('#datatables_list_with_pagination').DataTable({
         "paging": true,
         "lengthChange": false,
         "searching": true,
@@ -204,5 +221,12 @@ $(function() {
             options: pieOptions
         })
     }
+
+    /*
+    *
+    * FORMAT AMOUNTS INTO CURRENCIES
+    *
+    * */
+    format_amounts();
 
 });
