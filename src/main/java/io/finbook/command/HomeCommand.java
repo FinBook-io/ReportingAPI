@@ -1,7 +1,7 @@
 package io.finbook.command;
 
-import io.finbook.http.MyResponse;
-import io.finbook.http.StandardResponse;
+import io.finbook.responses.MyResponse;
+import io.finbook.responses.StandardResponse;
 import io.finbook.sparkcontroller.ResponseCreator;
 
 import java.util.HashMap;

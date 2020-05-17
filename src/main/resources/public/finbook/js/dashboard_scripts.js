@@ -81,9 +81,7 @@ $(function() {
 
     /*
     *
-    *
     * TABLES WITH DATATABLES
-    *
     *
     * */
     $('#datepicker').on('change', function() {

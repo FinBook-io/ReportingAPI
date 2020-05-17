@@ -1,8 +1,8 @@
 package io.finbook.command;
 
 import com.google.gson.Gson;
-import io.finbook.http.MyResponse;
-import io.finbook.http.StandardResponse;
+import io.finbook.responses.MyResponse;
+import io.finbook.responses.StandardResponse;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.model.Product;
 import io.finbook.service.ProductService;

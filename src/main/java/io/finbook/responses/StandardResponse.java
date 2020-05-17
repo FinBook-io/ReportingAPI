@@ -1,4 +1,4 @@
-package io.finbook.http;
+package io.finbook.responses;
 
 import java.util.Map;
 

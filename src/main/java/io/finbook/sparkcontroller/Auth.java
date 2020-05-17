@@ -1,7 +1,7 @@
 package io.finbook.sparkcontroller;
 
-import io.finbook.http.MyResponse;
-import io.finbook.http.StandardResponse;
+import io.finbook.responses.MyResponse;
+import io.finbook.responses.StandardResponse;
 import spark.Request;
 import spark.Response;
 

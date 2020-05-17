@@ -1,4 +1,4 @@
-package io.finbook.http;
+package io.finbook.responses;
 
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.sparkcontroller.TemplateEngine;

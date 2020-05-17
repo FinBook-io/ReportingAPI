@@ -1,6 +1,7 @@
 package io.finbook.sparkcontroller;
 
 import io.finbook.command.*;
+import io.finbook.command.ReportingCommand;
 import spark.Route;
 
 import static spark.Spark.*;

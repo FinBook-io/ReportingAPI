@@ -1,6 +1,6 @@
 package io.finbook.sparkcontroller;
 
-import io.finbook.http.StandardResponse;
+import io.finbook.responses.StandardResponse;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
