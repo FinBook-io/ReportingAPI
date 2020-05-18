@@ -14,6 +14,8 @@ import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
@@ -149,12 +151,12 @@ public class ReportingCommand {
                 return null;
         }
 
-        List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
-        Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
+        List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+        Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
         data.put("incomes", periodIncomesTaxes);
 
-        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
-        Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
+        List<Invoice> invoicesRefunds = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoicesRefunds);
         data.put("refunds", periodRefundsTaxes);
 
         double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
@@ -185,6 +187,13 @@ public class ReportingCommand {
         pieChart.getData().addPieDataset(backgrounds, pieData);
 
         data.put("pieChart", pieChart.toJSON());
+
+        List<Invoice> invoicesList = new ArrayList<>();
+        invoicesList.addAll(invoicesIncomes);
+        invoicesList.addAll(invoicesRefunds);
+        invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
+
+        data.put("invoicesList", invoicesList);
 
         return new JSONObject(data);
     }

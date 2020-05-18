@@ -35,6 +35,30 @@ function cleanChart(chartToClean){
     }
 }
 
+function ajaxChangeReportPeriod(valueOfSelect){
+    $.ajax({
+        url: "/admin/reporting/ajax-datepicker",
+        method: "POST",
+        data: { datepicker_value : valueOfSelect },
+        dataType:"JSON",
+        success: function(data){
+            $('#incomes').text(data.incomes);
+            $('#refunds').text(data.refunds);
+            $('#totalTaxesDue').text(data.totalTaxesDue);
+            drawBarChart(data.barChart);
+            drawPieChart(data.pieChart);
+            fillOutTableBodyInvoiceList(data.invoicesList);
+            format_amounts();
+        },
+        error: function () {
+            Toast.fire({
+                icon: 'error',
+                title: 'Something was wrong!'
+            })
+        }
+    });
+}
+
 let myBarChart = null;
 function drawBarChart(barChartObject){
     let canvasBarChart = $('#canvasBarChart');
@@ -78,6 +102,24 @@ function drawPieChart(pieChartObject){
     }
 }
 
+function fillOutTableBodyInvoiceList(invoicesList){
+    let tableToFill = $('#datatables_list_with_pagination').DataTable();
+    tableToFill.clear();
+
+    $.each(invoicesList, function (i, invoice) {
+        tableToFill.row.add( [
+            invoice.invoiceDate,
+            invoice.issuerFullName,
+            invoice.receiverFullName,
+            invoice.subtotal,
+            invoice.totalTaxes,
+            invoice.totalDue
+        ] );
+    });
+
+    tableToFill.draw();
+}
+
 $(function() {
     const Toast = Swal.mixin({
         toast: true,
@@ -98,51 +140,12 @@ $(function() {
     * TABLES WITH DATATABLES
     *
     * */
-    let date = $('#datepicker');
-    if (date.length){
-        $.ajax({
-            url: "/admin/reporting/ajax-datepicker",
-            method: "POST",
-            data: { datepicker_value : "monthly" },
-            dataType:"JSON",
-            success: function(data){
-                $('#incomes').text(data.incomes);
-                $('#refunds').text(data.refunds);
-                $('#totalTaxesDue').text(data.totalTaxesDue);
-                format_amounts();
-                drawBarChart(data.barChart);
-                drawPieChart(data.pieChart);
-            },
-            error: function () {
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Something was wrong!'
-                })
-            }
-        });
+    let datepicker = $('#datepicker');
+    if (datepicker.length){
+        ajaxChangeReportPeriod("monthly")
     }
-
-    $('#datepicker').on('change', function() {
-        $.ajax({
-            url: "/admin/reporting/ajax-datepicker",
-            method: "POST",
-            data: { datepicker_value : this.value },
-            dataType:"JSON",
-            success: function(data){
-                $('#incomes').text(data.incomes);
-                $('#refunds').text(data.refunds);
-                $('#totalTaxesDue').text(data.totalTaxesDue);
-                format_amounts();
-                drawBarChart(data.barChart);
-                drawPieChart(data.pieChart);
-            },
-            error: function () {
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Something was wrong!'
-                })
-            }
-        });
+    datepicker.on('change', function() {
+        ajaxChangeReportPeriod(this.value)
     });
 
 
@@ -162,39 +165,6 @@ $(function() {
     });
 
 
-    /*
-    *
-    * CHARTS
-    *
-    *
-
-    let pagePieChart = $('#pieChart');
-    if (pagePieChart.length){
-        let donutData        = {
-            labels: [
-                'Incomes',
-                'Refunds',
-            ],
-            datasets: [
-                {
-                    data: [700,500],
-                    backgroundColor : ['#5cb85c', '#d9534f'],
-                }
-            ]
-        };
-
-        //-------------
-        //- PIE CHART -
-        //-------------
-        // Get context with jQuery - using jQuery's .get() method.
-        //Create pie or douhnut chart
-        // You can switch between pie and douhnut using the method below.
-        let pieChart = new Chart(pieChartCanvas, {
-            type: 'pie',
-            data: pieData,
-            options: pieOptions
-        })
-    }*/
 
     /*
     *
