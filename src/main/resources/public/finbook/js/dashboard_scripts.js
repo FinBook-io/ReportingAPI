@@ -109,8 +109,8 @@ function fillOutTableBodyInvoiceList(invoicesList){
     $.each(invoicesList, function (i, invoice) {
         tableToFill.row.add( [
             invoice.invoiceDate,
-            invoice.issuerFullName,
-            invoice.receiverFullName,
+            invoice.issuerName,
+            invoice.receiverName,
             invoice.subtotal,
             invoice.totalTaxes,
             invoice.totalDue

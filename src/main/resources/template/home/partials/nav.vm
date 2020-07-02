@@ -2,7 +2,7 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
         <a href="/" class="navbar-brand">
-            <img src="/favicon.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="/finbook/images/logo_finbook.jpeg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Reporting</span>
         </a>

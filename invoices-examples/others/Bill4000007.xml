@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Bill of a eating." Currency="euro" Date="2020-05-18T00:21:33" Location="39435"
+              SubTotal="239.93686330478826" TaxRate="0.06" Total="254.33307510307557" Type="income" UUID="4000007"
+              Use="G01">
+    <cfdi:Issuer IssuerName="Miss Asia San Fernando" IssuerRFC="1000016"/>
+    <cfdi:Receiver ReceiverName="Florence Upsdell" ReceiverRFC="3000323"/>
+</cfdi:Voucher>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Service for company." Currency="euro" Date="2020-05-30T14:40:45" Location="39598"
+              SubTotal="101.0" TaxRate="0.11" Total="112.11000000000001" Type="income" UUID="4001441" Use="G03">
+    <cfdi:Issuer IssuerName="CarMax" IssuerRFC="2000058"/>
+    <cfdi:Receiver ReceiverName="Erickson" ReceiverRFC="2000100"/>
+</cfdi:Voucher>

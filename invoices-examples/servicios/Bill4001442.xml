@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Service for company." Currency="euro" Date="2020-05-30T14:40:45" Location="37683"
+              SubTotal="101.0" TaxRate="0.1" Total="111.10000000000001" Type="income" UUID="4001442" Use="G03">
+    <cfdi:Issuer IssuerName="Team Guard SRL" IssuerRFC="2000065"/>
+    <cfdi:Receiver ReceiverName="Team Guard SRL" ReceiverRFC="2000101"/>
+</cfdi:Voucher>

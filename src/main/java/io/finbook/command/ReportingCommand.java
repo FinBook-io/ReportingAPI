@@ -53,7 +53,7 @@ public class ReportingCommand {
         Double monthlyIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyIncomesTaxes", monthlyIncomesTaxes);
 
-        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
         Double monthlyRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("monthlyRefundsTaxes", monthlyRefundsTaxes);
 
@@ -72,7 +72,7 @@ public class ReportingCommand {
         Double trimesterIncomeTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("trimesterIncomesTaxes", trimesterIncomeTaxes);
 
-        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
         Double trimesterRefundTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("trimesterRefundsTaxes", trimesterRefundTaxes);
 
@@ -91,7 +91,7 @@ public class ReportingCommand {
         Double semesterIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("semesterIncomesTaxes", semesterIncomesTaxes);
 
-        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
         Double semesterRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("semesterRefundsTaxes", semesterRefundsTaxes);
 
@@ -110,7 +110,7 @@ public class ReportingCommand {
         Double annualIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("annualIncomesTaxes", annualIncomesTaxes);
 
-        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
         Double annualRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
         data.put("annualRefundsTaxes", annualRefundsTaxes);
 
@@ -155,7 +155,7 @@ public class ReportingCommand {
         Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
         data.put("incomes", periodIncomesTaxes);
 
-        List<Invoice> invoicesRefunds = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, startDate, endDate);
+        List<Invoice> invoicesRefunds = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
         Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoicesRefunds);
         data.put("refunds", periodRefundsTaxes);
 
@@ -256,7 +256,7 @@ public class ReportingCommand {
         for (int i = 0; i < amountMonths; i++) {
             LocalDateTime auxStartDate = startDate.plusMonths(i);
             LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
-            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, auxStartDate, endDate);
+            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
 
             data.put(invoiceService.getSumTotalTaxes(invoices));
         }
@@ -274,7 +274,7 @@ public class ReportingCommand {
             List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
             Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
 
-            invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.REFUND, auxStartDate, endDate);
+            invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
             Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
 
             data.put(Utils.formatDoubleTwoDecimals(periodIncomesTaxes - periodRefundsTaxes));

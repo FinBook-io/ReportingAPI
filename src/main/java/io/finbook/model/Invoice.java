@@ -5,201 +5,171 @@ import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
 
 @Entity(value = "invoices", noClassnameStored = true)
 public class Invoice {
 
-    @Id
-    private ObjectId id;
-    private String invoiceNumber;
-    private LocalDateTime invoiceDate;
-    private String invoiceType;
-    private String invoiceUse;
-    // private User issuer;
-    private String issuerFullName;
-    private String issuerIdNumber;
-    private String issuerEmail;
-    private String issuerPhoneNumber;
-    // private User receiver;
-    private String receiverFullName;
-    private String receiverIdNumber;
-    private String receiverEmail;
-    private String receiverPhoneNumber;
-    private List<Concept> concepts;
-    private String notes;
-    private Double subtotal;
-    private Double totalTaxes;
-    private Double totalDue;
+	@Id
+	private ObjectId id;
 
-    public Invoice() {
-    }
+	private String invoiceUUID;
+	private LocalDateTime invoiceDate;
+	private Integer zipCode;
+	private String invoiceType;
+	private String usoCFDI;
+	private String issuerName;
+	private String issuerId;
+	private String receiverName;
+	private String receiverId;
+	private String concept;
+	private Double subtotal;
+	private Double taxRate;
+	private Double totalDue;
+	private String currency;
 
-    public Invoice(String invoiceNumber, LocalDateTime invoiceDate, String invoiceType, String invoiceUse,
-                   String issuerFullName, String issuerIdNumber, String issuerEmail, String issuerPhoneNumber,
-                   String receiverFullName, String receiverIdNumber, String receiverEmail, String receiverPhoneNumber,
-                   List<Concept> concepts, String notes, Double subtotal, Double totalTaxes, Double totalDue) {
-        this.invoiceNumber = invoiceNumber;
-        this.invoiceDate = invoiceDate;
-        this.invoiceType = invoiceType;
-        this.invoiceUse = invoiceUse;
-        this.issuerFullName = issuerFullName;
-        this.issuerIdNumber = issuerIdNumber;
-        this.issuerEmail = issuerEmail;
-        this.issuerPhoneNumber = issuerPhoneNumber;
-        this.receiverFullName = receiverFullName;
-        this.receiverIdNumber = receiverIdNumber;
-        this.receiverEmail = receiverEmail;
-        this.receiverPhoneNumber = receiverPhoneNumber;
-        this.concepts = concepts;
-        this.notes = notes;
-        this.subtotal = subtotal;
-        this.totalTaxes = totalTaxes;
-        this.totalDue = totalDue;
-    }
+	public Invoice() {
+	}
 
-    public ObjectId getId() {
-        return id;
-    }
+	public Invoice(String invoiceUUID, LocalDateTime invoiceDate, Integer zipCode, String invoiceType,
+				   String usoCFDI, String issuerName, String issuerId, String receiverName, String receiverId,
+				   String concept, Double subtotal, Double taxRate, Double totalDue, String currency) {
+		this.invoiceUUID = invoiceUUID;
+		this.invoiceDate = invoiceDate;
+		this.zipCode = zipCode;
+		this.invoiceType = invoiceType;
+		this.usoCFDI = usoCFDI;
+		this.issuerName = issuerName;
+		this.issuerId = issuerId;
+		this.receiverName = receiverName;
+		this.receiverId = receiverId;
+		this.concept = concept;
+		this.subtotal = subtotal;
+		this.taxRate = taxRate;
+		this.totalDue = totalDue;
+		this.currency = currency;
+	}
 
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
+	public Double getTotalTaxes() {
+		return subtotal * taxRate;
+	}
 
-    public String getInvoiceNumber() {
-        return invoiceNumber;
-    }
+	public ObjectId getId() {
+		return id;
+	}
 
-    public void setInvoiceNumber(String invoiceNumber) {
-        this.invoiceNumber = invoiceNumber;
-    }
+	public void setId(ObjectId id) {
+		this.id = id;
+	}
 
-    public LocalDateTime getInvoiceDate() {
-        return invoiceDate;
-    }
+	public String getInvoiceUUID() {
+		return invoiceUUID;
+	}
 
-    public void setInvoiceDate(LocalDateTime invoiceDate) {
-        this.invoiceDate = invoiceDate;
-    }
+	public void setInvoiceUUID(String invoiceUUID) {
+		this.invoiceUUID = invoiceUUID;
+	}
 
-    public String getInvoiceType() {
-        return invoiceType;
-    }
+	public LocalDateTime getInvoiceDate() {
+		return invoiceDate;
+	}
 
-    public void setInvoiceType(String invoiceType) {
-        this.invoiceType = invoiceType;
-    }
+	public void setInvoiceDate(LocalDateTime invoiceDate) {
+		this.invoiceDate = invoiceDate;
+	}
 
-    public String getInvoiceUse() {
-        return invoiceUse;
-    }
+	public Integer getZipCode() {
+		return zipCode;
+	}
 
-    public void setInvoiceUse(String invoiceUse) {
-        this.invoiceUse = invoiceUse;
-    }
+	public void setZipCode(Integer zipCode) {
+		this.zipCode = zipCode;
+	}
 
-    public String getIssuerFullName() {
-        return issuerFullName;
-    }
+	public String getInvoiceType() {
+		return invoiceType;
+	}
 
-    public void setIssuerFullName(String issuerFullName) {
-        this.issuerFullName = issuerFullName;
-    }
+	public void setInvoiceType(String invoiceType) {
+		this.invoiceType = invoiceType;
+	}
 
-    public String getIssuerIdNumber() {
-        return issuerIdNumber;
-    }
+	public String getUsoCFDI() {
+		return usoCFDI;
+	}
 
-    public void setIssuerIdNumber(String issuerIdNumber) {
-        this.issuerIdNumber = issuerIdNumber;
-    }
+	public void setUsoCFDI(String usoCFDI) {
+		this.usoCFDI = usoCFDI;
+	}
 
-    public String getIssuerEmail() {
-        return issuerEmail;
-    }
+	public String getIssuerName() {
+		return issuerName;
+	}
 
-    public void setIssuerEmail(String issuerEmail) {
-        this.issuerEmail = issuerEmail;
-    }
+	public void setIssuerName(String issuerName) {
+		this.issuerName = issuerName;
+	}
 
-    public String getIssuerPhoneNumber() {
-        return issuerPhoneNumber;
-    }
+	public String getIssuerId() {
+		return issuerId;
+	}
 
-    public void setIssuerPhoneNumber(String issuerPhoneNumber) {
-        this.issuerPhoneNumber = issuerPhoneNumber;
-    }
+	public void setIssuerId(String issuerId) {
+		this.issuerId = issuerId;
+	}
 
-    public String getReceiverFullName() {
-        return receiverFullName;
-    }
+	public String getReceiverName() {
+		return receiverName;
+	}
 
-    public void setReceiverFullName(String receiverFullName) {
-        this.receiverFullName = receiverFullName;
-    }
+	public void setReceiverName(String receiverName) {
+		this.receiverName = receiverName;
+	}
 
-    public String getReceiverIdNumber() {
-        return receiverIdNumber;
-    }
+	public String getReceiverId() {
+		return receiverId;
+	}
 
-    public void setReceiverIdNumber(String receiverIdNumber) {
-        this.receiverIdNumber = receiverIdNumber;
-    }
+	public void setReceiverId(String receiverId) {
+		this.receiverId = receiverId;
+	}
 
-    public String getReceiverEmail() {
-        return receiverEmail;
-    }
+	public String getConcept() {
+		return concept;
+	}
 
-    public void setReceiverEmail(String receiverEmail) {
-        this.receiverEmail = receiverEmail;
-    }
+	public void setConcept(String concept) {
+		this.concept = concept;
+	}
 
-    public String getReceiverPhoneNumber() {
-        return receiverPhoneNumber;
-    }
+	public Double getSubtotal() {
+		return subtotal;
+	}
 
-    public void setReceiverPhoneNumber(String receiverPhoneNumber) {
-        this.receiverPhoneNumber = receiverPhoneNumber;
-    }
+	public void setSubtotal(Double subtotal) {
+		this.subtotal = subtotal;
+	}
 
-    public List<Concept> getConcepts() {
-        return concepts;
-    }
+	public Double getTaxRate() {
+		return taxRate;
+	}
 
-    public void setConcepts(List<Concept> concepts) {
-        this.concepts = concepts;
-    }
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
+	}
 
-    public String getNotes() {
-        return notes;
-    }
+	public Double getTotalDue() {
+		return totalDue;
+	}
 
-    public void setNotes(String notes) {
-        this.notes = notes;
-    }
+	public void setTotalDue(Double totalDue) {
+		this.totalDue = totalDue;
+	}
 
-    public Double getSubtotal() {
-        return subtotal;
-    }
+	public String getCurrency() {
+		return currency;
+	}
 
-    public void setSubtotal(Double subtotal) {
-        this.subtotal = subtotal;
-    }
-
-    public Double getTotalTaxes() {
-        return totalTaxes;
-    }
-
-    public void setTotalTaxes(Double totalTaxes) {
-        this.totalTaxes = totalTaxes;
-    }
-
-    public Double getTotalDue() {
-        return totalDue;
-    }
-
-    public void setTotalDue(Double totalDue) {
-        this.totalDue = totalDue;
-    }
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
 }

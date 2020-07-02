@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Refund of a product in bad conditions." Currency="euro" Date="2020-05-20T23:31:08"
+              Location="36194" SubTotal="2.6666666666666665" TaxRate="0.01" Total="2.6933333333333334" Type="egress"
+              UUID="4000029" Use="G02">
+    <cfdi:Issuer IssuerName="BuzzFeed" IssuerRFC="2000217"/>
+    <cfdi:Receiver ReceiverName="La Bodega de Perdomo" ReceiverRFC="1000009"/>
+</cfdi:Voucher>

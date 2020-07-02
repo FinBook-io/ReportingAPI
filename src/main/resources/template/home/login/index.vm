@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <form class="form-signin" action="/auth/login" method="post">
                                 <div class="form-group">
-                                    <select class="form-control" id="dni" name="dni">
+                                    <select class="form-control" id="signID" name="signID">
                                         <option value="11111111H" selected>11111111H - ME</option>
                                         <option value="00514526Q">00514526Q - Giselle Benton</option>
                                         <option value="02579822G">02579822G - Nevada Mack</option>
@@ -35,6 +35,9 @@
                                     <!-- /.col -->
                                 </div>
                             </form>
+
+                            <button class="btn btn-danger btn-block" autofocus onclick="window.location.href='/auth/sign'">Sign in with certificate</button>
+
                         </div>
                     </div>
                 </div>

@@ -4,16 +4,19 @@ import io.finbook.model.Invoice;
 import io.finbook.model.InvoiceType;
 import io.finbook.util.Utils;
 
-import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 
 public class InvoiceService extends Database {
 
-    private String issuerIdNumberLabel = "issuerIdNumber";
-    private String receiverIdNumberLabel = "receiverIdNumber";
+    private String issuerIdLabel = "issuerId";
+    private String receiverIdLabel = "receiverId";
     private String invoiceTypeLabel = "invoiceType";
     private String invoiceDateLabel = "invoiceDate";
+
+    public void add(Invoice invoice){
+        datastore.save(invoice);
+    }
 
     public List<Invoice> getAllInvoices() {
         List<Invoice> invoicesList = datastore.find(Invoice.class).asList();
@@ -34,19 +37,19 @@ public class InvoiceService extends Database {
 
     public List<Invoice> getAllInvoicesByIssuerId(String id) {
         return datastore.find(Invoice.class)
-                .filter(issuerIdNumberLabel, id)
+                .filter(issuerIdLabel, id)
                 .asList();
     }
 
     public List<Invoice> getAllInvoicesByReceiverId(String id) {
         return datastore.find(Invoice.class)
-                .filter(receiverIdNumberLabel, id)
+                .filter(receiverIdLabel, id)
                 .asList();
     }
 
     public List<Invoice> getAllInvoicesByIssuerIdPerPeriod(String id, LocalDateTime date1, LocalDateTime date2) {
         return datastore.find(Invoice.class)
-                .filter(issuerIdNumberLabel, id)
+                .filter(issuerIdLabel, id)
                 .field(invoiceDateLabel).greaterThan(date1)
                 .field(invoiceDateLabel).lessThan(date2)
                 .asList();
@@ -54,7 +57,7 @@ public class InvoiceService extends Database {
 
     public List<Invoice> getAllInvoicesByReceiverIdPerPeriod(String id, LocalDateTime date1, LocalDateTime date2) {
         return datastore.find(Invoice.class)
-                .filter(receiverIdNumberLabel, id)
+                .filter(receiverIdLabel, id)
                 .field(invoiceDateLabel).greaterThan(date1)
                 .field(invoiceDateLabel).lessThan(date2)
                 .asList();
@@ -69,13 +72,13 @@ public class InvoiceService extends Database {
         switch (invoiceType){
             case INCOME:
                 // User earn money being issuer and receiver when InvoiceType is I (Income)
-                firstFindAs = issuerIdNumberLabel;
-                secondFindAs = receiverIdNumberLabel;
+                firstFindAs = issuerIdLabel;
+                secondFindAs = receiverIdLabel;
                 break;
-            case REFUND:
+            case EGRESS:
                 // User loose money being receiver and issuer when InvoiceType is R (Refund)
-                firstFindAs = receiverIdNumberLabel;
-                secondFindAs = issuerIdNumberLabel;
+                firstFindAs = receiverIdLabel;
+                secondFindAs = issuerIdLabel;
                 break;
             default:
                 return invoicesList; // Null - Empty
@@ -90,7 +93,7 @@ public class InvoiceService extends Database {
 
         invoicesList.addAll(datastore.find(Invoice.class)
                 .filter(secondFindAs, id)
-                .filter(invoiceTypeLabel, InvoiceType.REFUND.getLabel())
+                .filter(invoiceTypeLabel, InvoiceType.EGRESS.getLabel())
                 .field(invoiceDateLabel).greaterThan(date1)
                 .field(invoiceDateLabel).lessThan(date2)
                 .asList());

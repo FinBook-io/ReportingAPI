@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Bill of a eating." Currency="euro" Date="2020-05-18T00:21:33" Location="37394"
+              SubTotal="19.83681742979765" TaxRate="0.22" Total="24.200917264353134" Type="income" UUID="4000024"
+              Use="G01">
+    <cfdi:Issuer IssuerName="el patio de lola" IssuerRFC="1000000"/>
+    <cfdi:Receiver ReceiverName="Cassandra Thomson" ReceiverRFC="3000995"/>
+</cfdi:Voucher>

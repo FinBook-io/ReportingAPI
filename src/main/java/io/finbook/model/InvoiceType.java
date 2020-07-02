@@ -1,8 +1,9 @@
 package io.finbook.model;
 
 public enum InvoiceType {
-    INCOME("I"),
-    REFUND("R");
+    INCOME("income"),
+    EGRESS("egress"),
+    PAYROLL("payroll");
 
     private final String label;
 

@@ -12,7 +12,7 @@ public class InvoiceCommand {
     private static InvoiceService invoiceService = new InvoiceService();
 
     public static ResponseCreator list(String currentUserId) {
-        HashMap<String, Object> data = new HashMap<>();
+        Map<String, Object> data = new HashMap<>();
 
         data.put("invoices", invoiceService.getAllInvoicesById(currentUserId));
 

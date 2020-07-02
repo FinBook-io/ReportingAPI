@@ -1,0 +1,33 @@
+#parse("/template/home/layout.vm")
+#@mainLayout()
+
+<!-- Main content -->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+
+                    <div class="card-header text-center">
+                        <b>Waiting</b> for signing
+                    </div>
+
+                    <div class="card-body">
+                        <form action="/auth/login" method="post">
+                            <input class="form-control" name="sign" value="$textToSign">
+                        </form>
+
+                        <div class="form-group loader"></div>
+
+                        <div id="i-finbook-io-signer" style="display:block; visibility:hidden">
+                            <iframe src="finbSign: $textToSign ws://localhost:8080/echo"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</div><!-- /.content -->
+
+#end

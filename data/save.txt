@@ -1,0 +1,31 @@
+JSONObject barChart = new JSONObject();
+JSONObject chartData = new JSONObject();
+JSONArray labels = new JSONArray();
+JSONArray datasets = new JSONArray();
+
+labels.put("Enero");
+
+JSONObject dato = new JSONObject();
+dato.put("label", "Incomes");
+dato.put("backgroundColor", "#5cb85c");
+dato.put("data", new JSONArray().put(periodIncomesTaxes));
+datasets.put(dato);
+
+dato = new JSONObject();
+dato.put("label", "Refunds");
+dato.put("backgroundColor", "#d9534f");
+dato.put("data", new JSONArray().put(periodRefundsTaxes));
+datasets.put(dato);
+
+dato = new JSONObject();
+dato.put("label", "Incomes");
+dato.put("backgroundColor", "#f0ad4e");
+dato.put("data", new JSONArray().put(totalTaxesDue));
+datasets.put(dato);
+
+barChart.put("type", "bar");
+chartData.put("labels", labels);
+chartData.put("datasets", datasets);
+barChart.put("data", chartData);
+
+data.put("barChart", barChart.toString());

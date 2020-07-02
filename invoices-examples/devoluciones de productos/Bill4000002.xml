@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Refund of a product in bad conditions." Currency="euro" Date="2020-05-21T14:33:00"
+              Location="36663" SubTotal="5.333333333333333" TaxRate="0.07" Total="5.706666666666667" Type="egress"
+              UUID="4000002" Use="G02">
+    <cfdi:Issuer IssuerName="DynCorp" IssuerRFC="2000302"/>
+    <cfdi:Receiver ReceiverName="Restaurante Terraza El Puertillo" ReceiverRFC="1000013"/>
+</cfdi:Voucher>

@@ -2,7 +2,10 @@ package io.finbook.sparkcontroller;
 
 import io.finbook.command.*;
 import io.finbook.command.ReportingCommand;
+import io.finbook.pdf.PDFCommand;
 import spark.Route;
+
+import java.io.IOException;
 
 import static spark.Spark.*;
 
@@ -16,11 +19,24 @@ public class Routes {
     }
 
     public void init(){
+
+        setUpWebSocket();
+
         get("/", map((req, res) -> HomeCommand.index(Auth.isLogged(req))));
+
+        get("/pdf", map((req, res) -> {
+            try {
+                return PDFCommand.init();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }));
 
         // AUTHENTICATION
         path("/auth", () -> {
             get("/login", map(Auth::login));
+            get("/sign", map(Auth::sign));
             post("/login", Auth::initSession);
             get("/logout", Auth::logout);
         });
@@ -56,6 +72,10 @@ public class Routes {
         // ERROR - NOT FOUND
         get("*", map((req, res) -> ErrorCommand.notFound()));
 
+    }
+
+    public void setUpWebSocket(){
+        webSocket("/ws", SignWebSocket.class);
     }
 
 }

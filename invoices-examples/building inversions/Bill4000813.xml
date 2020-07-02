@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Mortgage for company." Currency="euro" Date="2020-05-30T14:40:45" Location="39926"
+              SubTotal="1000.0" TaxRate="0.05" Total="1050.0" Type="income" UUID="4000813" Use="I03">
+    <cfdi:Issuer IssuerName="Apple Inc." IssuerRFC="2000002"/>
+    <cfdi:Receiver ReceiverName="Bank" ReceiverRFC="999999"/>
+</cfdi:Voucher>

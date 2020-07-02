@@ -5,6 +5,9 @@ import io.finbook.responses.StandardResponse;
 import spark.Request;
 import spark.Response;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static spark.Spark.halt;
 
 public class Auth {
@@ -18,8 +21,21 @@ public class Auth {
         );
     }
 
+    public static ResponseCreator sign(Request request, Response response) {
+        if (isLogged(request)) {
+            redirectTo(response, "/admin/dashboard");
+        }
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("textToSign", "testTextToSign");
+
+        return MyResponse.ok(
+                new StandardResponse(data, "home/login/sign")
+        );
+    }
+
     public static String initSession(Request request, Response response) {
-        addSessionAttribute(request, "currentUserId", request.queryParams("dni"));
+        addSessionAttribute(request, "currentUserId", request.queryParams("signID"));
         addSessionAttribute(request, "logged", true);
         redirectTo(response, "/admin/dashboard");
         return null;
