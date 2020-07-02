@@ -105,11 +105,11 @@
             <version>20190722</version>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>io.intino.alexandria</groupId>
             <artifactId>core-framework</artifactId>
             <version>2.0.4</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>io.finbook.datahub</groupId>

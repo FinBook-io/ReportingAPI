@@ -1,5 +1,6 @@
 package io.finbook.sparkcontroller;
 
+import io.finbook.TextGenerator;
 import io.finbook.responses.MyResponse;
 import io.finbook.responses.StandardResponse;
 import spark.Request;
@@ -27,7 +28,7 @@ public class Auth {
         }
 
         Map<String, Object> data = new HashMap<>();
-        data.put("textToSign", "testTextToSign");
+        data.put("textToSign", TextGenerator.generateRandomText());
 
         return MyResponse.ok(
                 new StandardResponse(data, "home/login/sign")

@@ -1,5 +1,11 @@
 /* Custom page CSS
 -------------------------------------------------- */
+
+.if-finbsign{
+    display:block;
+    visibility:hidden;
+}
+
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;

@@ -6,13 +6,12 @@
 int main(int argc, char *argv[])
 {
 char command[256];
-strcpy(command, "java -jar C:/src/reporting/signer/Firma.jar");
+strcpy(command, "java -jar C:/src/reporting/signer/windows/Firma.jar");
  for (int i = 1; i < argc; ++i){
     strcat(command, argv[i]);
     printf("%s",argv[i]);
  }
 system(command);
-return 0;
 }
 
 

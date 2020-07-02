@@ -13,14 +13,14 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/auth/login" method="post">
+                        <form id="signin_form" action="/auth/login" method="post">
                             <input class="form-control" name="sign" value="$textToSign">
                         </form>
 
                         <div class="form-group loader"></div>
 
-                        <div id="i-finbook-io-signer" style="display:block; visibility:hidden">
-                            <iframe src="finbSign: $textToSign ws://localhost:8080/echo"></iframe>
+                        <div class="if-finbsign" data-randomtext="$textToSign">
+                            <iframe src="finbSign: $textToSign ws://localhost:8080/signer"></iframe>
                         </div>
 
                     </div>
