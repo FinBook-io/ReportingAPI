@@ -11,8 +11,6 @@ import static spark.Spark.*;
 
 public class Routes {
 
-    private static final int PORT_NUMBER = 8080;
-
     public Routes() {
     }
 
@@ -21,9 +19,6 @@ public class Routes {
     }
 
     public void init(){
-
-        setUpSpark();
-        setUpWebSocket();
 
         get("/", map((req, res) -> HomeCommand.index(Auth.isLogged(req))));
 
@@ -75,16 +70,6 @@ public class Routes {
         // ERROR - NOT FOUND
         get("*", map((req, res) -> ErrorCommand.notFound()));
 
-    }
-
-    private static void setUpSpark() {
-        staticFiles.location("/public");
-        staticFiles.expireTime(600L);
-        port(PORT_NUMBER);
-    }
-
-    private static void setUpWebSocket(){
-        webSocket("/signer", SignWebSocket.class);
     }
 
 }

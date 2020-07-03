@@ -1,24 +1,33 @@
 package io.finbook.sparkcontroller;
 
 import io.finbook.subscriber.Subscriber;
+import spark.Spark;
 
-import static spark.Spark.staticFiles;
+import static spark.Spark.*;
 
 public class App {
+
+    private static final int PORT_NUMBER = 8080;
 
     public App() {
     }
 
-    public void init() {
+    public void start() {
         // Setup Spark-java
         staticFiles.location("public");
         staticFiles.expireTime(600L);
+        port(PORT_NUMBER);
 
+        // Setup Web Socket
+        webSocket("/socket", SignWebSocket.class);
+
+        // Init subscriber
         Subscriber.init();
 
         // Setup all routes
         Routes routes = new Routes();
         routes.init();
+
     }
 
 }

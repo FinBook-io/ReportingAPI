@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 
 .if-finbsign{
-    display:block;
+    display:none;
     visibility:hidden;
 }
 

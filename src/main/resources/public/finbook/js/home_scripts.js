@@ -1,9 +1,10 @@
 function openWebSocket(randomText) {
     let textToSign = randomText;
     console.log("Text to sign: ", textToSign);
-    let socket = new WebSocket("ws://localhost:8080/signer");
+    let socket = new WebSocket("ws://localhost:8080/socket");
 
     socket.onopen = function (e) {
+        console.log("Connect");
     };
 
     socket.onmessage = function (e) {
@@ -12,7 +13,8 @@ function openWebSocket(randomText) {
         }
     }
     socket.onclose = function (e) {
-        alert("session closed")
+        // alert("session closed")
+        console.log("session closed");
     }
 }
 

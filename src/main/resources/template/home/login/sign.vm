@@ -12,18 +12,22 @@
                         <b>Waiting</b> for signing
                     </div>
 
-                    <div class="card-body">
-                        <form id="signin_form" action="/auth/login" method="post">
-                            <input class="form-control" name="sign" value="$textToSign">
-                        </form>
+                    <div class="card-body align-items-center d-flex justify-content-center">
 
-                        <div class="form-group loader"></div>
-
-                        <div class="if-finbsign" data-randomtext="$textToSign">
-                            <iframe src="finbSign: $textToSign ws://localhost:8080/signer"></iframe>
+                        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
                         </div>
 
+                        <div class="if-finbsign" data-randomtext="$textToSign">
+                            <iframe src="finbSign: $ textToSign ws://localhost:8080/socket"></iframe>
+                        </div>
                     </div>
+                    <form id="signin_form" action="/auth/login" method="post">
+                        <input class="form-control" name="sign" value="$textToSign" readonly>
+                    </form>
                 </div>
             </div>
         </div>
