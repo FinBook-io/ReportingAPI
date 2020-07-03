@@ -8,6 +8,7 @@ import io.finbook.model.Invoice;
 import io.finbook.model.InvoiceType;
 import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
+import io.finbook.util.Path;
 import io.finbook.util.Utils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -39,7 +40,7 @@ public class ReportingCommand {
         data.putAll(getDataForCurrentAnnual(currentUserId));
 
         return MyResponse.ok(
-                new StandardResponse(data, "dashboard/reporting/index")
+                new StandardResponse(data, Path.Template.ADMIN_REPORTING_INDEX)
         );
     }
 

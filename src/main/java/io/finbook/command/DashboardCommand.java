@@ -6,6 +6,7 @@ import io.finbook.model.Invoice;
 import io.finbook.model.InvoiceType;
 import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
+import io.finbook.util.Path;
 import io.finbook.util.Utils;
 
 import java.time.LocalDateTime;
@@ -36,7 +37,7 @@ public class DashboardCommand {
         data.put("totalTaxesDue", incomes - refunds);*/
 
         return MyResponse.ok(
-                new StandardResponse(null, "dashboard/index")
+                new StandardResponse(null, Path.Template.ADMIN_INDEX)
         );
     }
 

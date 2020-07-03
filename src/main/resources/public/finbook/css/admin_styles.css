@@ -1,0 +1,15 @@
+/*.brand-link .img-circle{
+    margin-left: 0 !important;
+}*/
+
+.custom-chart{
+    min-height: 250px;
+    height: 250px;
+    max-height: 250px;
+    max-width: 100%;
+}
+
+@media (max-width: 370px) {
+    /*span.admin_logout_icon {display:inline-block}*/
+    span.admin_logout_text {display:none}
+}

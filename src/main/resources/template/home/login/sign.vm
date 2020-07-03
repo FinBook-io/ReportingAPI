@@ -22,7 +22,7 @@
                         </div>
 
                         <div class="if-finbsign" data-randomtext="$textToSign">
-                            <iframe src="finbSign: $ textToSign ws://localhost:8080/socket"></iframe>
+                            <iframe src="finbSign:ODEzMDIuNTk0NDA4NTM1NzY=ws://localhost:8080/socket"></iframe>
                         </div>
                     </div>
                     <form id="signin_form" action="/auth/login" method="post">

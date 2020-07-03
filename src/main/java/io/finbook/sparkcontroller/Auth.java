@@ -3,6 +3,7 @@ package io.finbook.sparkcontroller;
 import io.finbook.TextGenerator;
 import io.finbook.responses.MyResponse;
 import io.finbook.responses.StandardResponse;
+import io.finbook.util.Path;
 import spark.Request;
 import spark.Response;
 
@@ -15,43 +16,43 @@ public class Auth {
 
     public static ResponseCreator login(Request request, Response response) {
         if (isLogged(request)) {
-            redirectTo(response, "/admin/dashboard");
+            redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
         }
         return MyResponse.ok(
-                new StandardResponse(null, "home/login/index")
+                new StandardResponse(null, Path.Template.HOME_LOGIN_INDEX)
         );
     }
 
     public static ResponseCreator sign(Request request, Response response) {
         if (isLogged(request)) {
-            redirectTo(response, "/admin/dashboard");
+            redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
         }
 
         Map<String, Object> data = new HashMap<>();
         data.put("textToSign", TextGenerator.generateRandomText());
 
         return MyResponse.ok(
-                new StandardResponse(data, "home/login/sign")
+                new StandardResponse(data, Path.Template.HOME_LOGIN_SIGN)
         );
     }
 
     public static String initSession(Request request, Response response) {
         addSessionAttribute(request, "currentUserId", request.queryParams("signID"));
         addSessionAttribute(request, "logged", true);
-        redirectTo(response, "/admin/dashboard");
+        redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
         return null;
     }
 
     public static String logout(Request request, Response response) {
         removeSessionAttribute(request, "currentUserId");
         removeSessionAttribute(request, "logged");
-        redirectTo(response, "/");
+        redirectTo(response, Path.HomeRoutes.INDEX);
         return null;
     }
 
     public static void authFilter(Request request, Response response) {
         if (!isLogged(request)) {
-            redirectTo(response, "/auth/login");
+            redirectTo(response, Path.AuthRoutes.AUTH + Path.AuthRoutes.LOGIN);
             halt(401, "Go Away!");
         }
     }

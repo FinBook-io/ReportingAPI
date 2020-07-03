@@ -6,6 +6,7 @@ import io.finbook.responses.StandardResponse;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.model.Product;
 import io.finbook.service.ProductService;
+import io.finbook.util.Path;
 
 import java.util.HashMap;
 
@@ -28,14 +29,14 @@ public class ProductCommand {
             data.put("products", productService.getAllProduct());
         } catch (Exception ex) {
             return MyResponse.internalServerError(
-                    new StandardResponse(null, "home/errors/500")
+                    new StandardResponse(null, Path.Template.HOME_INTERNAL_SERVER_ERROR)
             );
         }
 
         data.put("products", productService.getAllProduct());
         // new Gson().toJsonTree(productService.getAllProduct())
         return MyResponse.ok(
-                new StandardResponse(data, "dashboard/products/list")
+                new StandardResponse(data, Path.Template.ADMIN_PRODUCTS_LIST)
         );
     }
 

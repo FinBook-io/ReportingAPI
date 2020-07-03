@@ -3,6 +3,7 @@ package io.finbook.sparkcontroller;
 import io.finbook.command.*;
 import io.finbook.command.ReportingCommand;
 import io.finbook.pdf.PDFCommand;
+import io.finbook.util.Path;
 import spark.Route;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ public class Routes {
 
     public void init(){
 
-        get("/", map((req, res) -> HomeCommand.index(Auth.isLogged(req))));
+        get(Path.HomeRoutes.INDEX, map((req, res) -> HomeCommand.index(Auth.isLogged(req))));
 
         get("/pdf", map((req, res) -> {
             try {
@@ -32,43 +33,43 @@ public class Routes {
         }));
 
         // AUTHENTICATION
-        path("/auth", () -> {
-            get("/login", map(Auth::login));
-            get("/sign", map(Auth::sign));
-            post("/login", Auth::initSession);
-            get("/logout", Auth::logout);
+        path(Path.AuthRoutes.AUTH, () -> {
+            get(Path.AuthRoutes.LOGIN, map(Auth::login));
+            get(Path.AuthRoutes.SIGN, map(Auth::sign));
+            post(Path.AuthRoutes.LOGIN, Auth::initSession);
+            get(Path.AuthRoutes.LOGOUT, Auth::logout);
         });
 
         // PRIVATE ROUTES - AUTHENTICATION IS REQUIRED
-        path("/admin", () -> {
+        path(Path.AdminRoutes.ADMIN, () -> {
 
             // AUTHENTICATION FILTER
-            before("/*", Auth::authFilter);
+            before(Path.AdminRoutes.ADMIN_FILTER, Auth::authFilter);
 
             // DASHBOARD
-            get("/dashboard", map((req, res) -> DashboardCommand.index(Auth.getCurrentUserId(req))));
+            get(Path.AdminRoutes.DASHBOARD, map((req, res) -> DashboardCommand.index(Auth.getCurrentUserId(req))));
 
             // PRODUCTS
-            path("/products", () -> {
-                get("", map((req, res) -> ProductCommand.list()));
-                post("", map((req, res) -> ProductCommand.create(req.body())));
+            path(Path.AdminRoutes.PRODUCTS, () -> {
+                get(Path.AdminRoutes.PRODUCTS_EMPTY, map((req, res) -> ProductCommand.list()));
+                post(Path.AdminRoutes.PRODUCTS_EMPTY, map((req, res) -> ProductCommand.create(req.body())));
             });
 
             // INVOICES
-            path("/invoices", () -> {
-                get("", map((req, res) -> InvoiceCommand.list(Auth.getCurrentUserId(req))));
+            path(Path.AdminRoutes.INVOICES, () -> {
+                get(Path.AdminRoutes.INVOICES_EMPTY, map((req, res) -> InvoiceCommand.list(Auth.getCurrentUserId(req))));
             });
 
             // REPORTS
-            path("/reporting", () -> {
-                get("", map((req, res) -> ReportingCommand.index(Auth.getCurrentUserId(req))));
-                post("/ajax-datepicker", (req, res) -> ReportingCommand.getDataForPeriod(Auth.getCurrentUserId(req), req.queryParams("datepicker_value")));
+            path(Path.AdminRoutes.REPORTING, () -> {
+                get(Path.AdminRoutes.REPORTING_EMPTY, map((req, res) -> ReportingCommand.index(Auth.getCurrentUserId(req))));
+                post(Path.AdminRoutes.REPORTING_AJAX_DATEPICKER, (req, res) -> ReportingCommand.getDataForPeriod(Auth.getCurrentUserId(req), req.queryParams("datepicker_value")));
             });
 
         });
 
         // ERROR - NOT FOUND
-        get("*", map((req, res) -> ErrorCommand.notFound()));
+        // get(Path.HomeRoutes.ERROR_404, map((req, res) -> ErrorCommand.notFound()));
 
     }
 

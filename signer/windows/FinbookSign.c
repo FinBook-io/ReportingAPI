@@ -12,6 +12,7 @@ strcpy(command, "java -jar C:/src/reporting/signer/windows/Firma.jar");
     printf("%s",argv[i]);
  }
 system(command);
+return 0;
 }
 
 

@@ -11,7 +11,8 @@ function openWebSocket(randomText) {
         if (JSON.parse(e.data).id === textToSign) {
             document.getElementById("signin_form").submit();
         }
-    }
+    };
+
     socket.onclose = function (e) {
         // alert("session closed")
         console.log("session closed");

@@ -1,0 +1,216 @@
+#parse("/template/admin/layout.vm")
+#@mainLayout()
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h1 class="m-0 text-dark">Dashboard</h1>
+            </div>
+            <!-- /.col
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Starter Page</li>
+                </ol>
+            </div> /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="offset-md-8 col-md-4 offset-sm-6 col-sm-6 col-12 align-self-center">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="datepicker"><i
+                                class="fas fa-calendar-alt"></i></label>
+                    </div>
+                    <select class="form-control" id="datepicker">
+                        <option value="monthly">Monthly</option>
+                        <option value="trimester">Trimester</option>
+                        <option value="semester">Semester</option>
+                        <option value="annual">Annual</option>
+                    </select>
+                    <button type="button" class="btn btn-info btn-flat" data-toggle="modal" data-target="#modal-export"
+                            id="export"><i class="fas fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-success"><i class="fas fa-hand-holding-usd"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Incomes - Total taxes</span>
+                        <span class="info-box-number"><span class="currency" id="incomes"><!--$ incomes--></span></span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-danger"><i class="fas fa-donate"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Refunds - Total taxes</span>
+                        <span class="info-box-number"><span class="currency" id="refunds"><!--$ refunds--></span></span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-warning"><i class="fas fa-balance-scale-left"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total taxes due</span>
+                        <span class="info-box-number"><span class="currency" id="totalTaxesDue"><!--$ totalTaxesDue--></span></span>
+                </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+        <!-- Main row -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- BAR CHART -->
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title">Chart</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart">
+                            <canvas id="canvasBarChart" class="custom-chart"></canvas>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <div class="col-md-6">
+                <!-- PIE CHART -->
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title">Chart</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart">
+                            <canvas id="canvasPieChart" class="custom-chart"></canvas>
+                        </div>
+                    </div><!-- /.card-body -->
+                </div><!-- /.card -->
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Invoices list per selected period</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="datatables_list_with_pagination" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Issuer</th>
+                                <th>Receiver</th>
+                                <th>Subtotal</th>
+                                <th>Total Taxes</th>
+                                <th>Total Due</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Date</th>
+                                <th>Issuer</th>
+                                <th>Receiver</th>
+                                <th>Subtotal</th>
+                                <th>Total Taxes</th>
+                                <th>Total Due</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div><!-- /.card-body -->
+                </div><!-- /.card -->
+            </div><!-- /.column -->
+        </div> <!-- /Main row -->
+
+    </div><!-- /.container-fluid -->
+</section>
+
+<div class="modal fade" id="modal-export" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info">
+                <h4 class="modal-title">Export report</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="col-form-label" for="report_email">Type your email to receive the report</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email" id="report_email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Select the type of document</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked="" id="">
+                        <label class="form-check-label">PDF</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">XML</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Send - Download</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+#end
+
+
+
+

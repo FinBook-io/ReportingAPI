@@ -1,9 +1,10 @@
 package io.finbook.sparkcontroller;
 
 import io.finbook.subscriber.Subscriber;
-import spark.Spark;
+import spark.Route;
 
 import static spark.Spark.*;
+import static spark.debug.DebugScreen.enableDebugScreen;
 
 public class App {
 
@@ -13,10 +14,12 @@ public class App {
     }
 
     public void start() {
+
         // Setup Spark-java
-        staticFiles.location("public");
-        staticFiles.expireTime(600L);
         port(PORT_NUMBER);
+        staticFiles.location("/public");
+        staticFiles.expireTime(600L);
+        // enableDebugScreen();
 
         // Setup Web Socket
         webSocket("/socket", SignWebSocket.class);
