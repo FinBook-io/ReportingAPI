@@ -1,6 +1,6 @@
 package io.finbook.sparkcontroller;
 
-import io.finbook.json.JSONParser;
+import io.finbook.util.JSONParser;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;

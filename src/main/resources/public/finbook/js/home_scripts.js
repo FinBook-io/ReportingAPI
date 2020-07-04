@@ -4,10 +4,11 @@ function openWebSocket(randomText) {
     let socket = new WebSocket("ws://localhost:8080/socket");
 
     socket.onopen = function (e) {
-        console.log("Connect");
+        //console.log("Web socket connected!");
     };
 
     socket.onmessage = function (e) {
+        console.log("ENTRA EN MESSAGE: ");
         if (JSON.parse(e.data).id === textToSign) {
             document.getElementById("signin_form").submit();
         }
@@ -15,7 +16,7 @@ function openWebSocket(randomText) {
 
     socket.onclose = function (e) {
         // alert("session closed")
-        console.log("session closed");
+        console.log("Session web socket closed!");
     }
 }
 

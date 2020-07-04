@@ -11,7 +11,8 @@ strcpy(command, "java -jar /Users/juankevintr/src/reporting/signer/mac/Firma.jar
     strcat(command, argv[i]);
     printf("%s",argv[i]);
  }
-printf("%s",command);
+system(command);
+return 0;
 }
 
 

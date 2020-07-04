@@ -1,4 +1,4 @@
-package io.finbook.json;
+package io.finbook.util;
 
 import org.json.JSONObject;
 
