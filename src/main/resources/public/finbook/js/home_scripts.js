@@ -4,11 +4,10 @@ function openWebSocket(randomText) {
     let socket = new WebSocket("ws://localhost:8080/socket");
 
     socket.onopen = function (e) {
-        //console.log("Web socket connected!");
+        console.log("Web socket connected!");
     };
 
     socket.onmessage = function (e) {
-        console.log("ENTRA EN MESSAGE: ");
         if (JSON.parse(e.data).id === textToSign) {
             document.getElementById("signin_form").submit();
         }
