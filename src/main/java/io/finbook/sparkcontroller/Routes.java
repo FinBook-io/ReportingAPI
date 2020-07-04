@@ -34,10 +34,10 @@ public class Routes {
 
         // AUTHENTICATION
         path(Path.AuthRoutes.AUTH, () -> {
-            get(Path.AuthRoutes.LOGIN, map(Auth::login));
-            get(Path.AuthRoutes.SIGN, map(Auth::sign));
-            post(Path.AuthRoutes.LOGIN, Auth::initSession);
-            get(Path.AuthRoutes.LOGOUT, Auth::logout);
+            get(Path.AuthRoutes.SIGN_IN, map(Auth::signin));
+            get(Path.AuthRoutes.SIGN_CERTIFICATE, map(Auth::sign));
+            post(Path.AuthRoutes.SIGN_IN, Auth::initSession);
+            get(Path.AuthRoutes.SIGN_OUT, Auth::signout);
         });
 
         // PRIVATE ROUTES - AUTHENTICATION IS REQUIRED
@@ -48,12 +48,6 @@ public class Routes {
 
             // DASHBOARD
             get(Path.AdminRoutes.DASHBOARD, map((req, res) -> DashboardCommand.index(Auth.getCurrentUserId(req))));
-
-            // PRODUCTS
-            path(Path.AdminRoutes.PRODUCTS, () -> {
-                get(Path.AdminRoutes.PRODUCTS_EMPTY, map((req, res) -> ProductCommand.list()));
-                post(Path.AdminRoutes.PRODUCTS_EMPTY, map((req, res) -> ProductCommand.create(req.body())));
-            });
 
             // INVOICES
             path(Path.AdminRoutes.INVOICES, () -> {

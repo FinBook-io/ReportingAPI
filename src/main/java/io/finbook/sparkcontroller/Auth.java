@@ -14,7 +14,7 @@ import static spark.Spark.halt;
 
 public class Auth {
 
-    public static ResponseCreator login(Request request, Response response) {
+    public static ResponseCreator signin(Request request, Response response) {
         if (isLogged(request)) {
             redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
         }
@@ -45,7 +45,7 @@ public class Auth {
         return null;
     }
 
-    public static String logout(Request request, Response response) {
+    public static String signout(Request request, Response response) {
         removeSessionAttribute(request, "currentUserId");
         removeSessionAttribute(request, "logged");
         redirectTo(response, Path.HomeRoutes.INDEX);
@@ -54,7 +54,7 @@ public class Auth {
 
     public static void authFilter(Request request, Response response) {
         if (!isLogged(request)) {
-            redirectTo(response, Path.AuthRoutes.AUTH + Path.AuthRoutes.LOGIN);
+            redirectTo(response, Path.AuthRoutes.AUTH + Path.AuthRoutes.SIGN_IN);
             halt(401, "Go Away!");
         }
     }

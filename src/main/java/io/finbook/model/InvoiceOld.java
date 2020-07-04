@@ -24,7 +24,6 @@ public class InvoiceOld {
     private String receiverIdNumber;
     private String receiverEmail;
     private String receiverPhoneNumber;
-    private List<Concept> concepts;
     private String concept;
     private String notes;
     private Double subtotal;
@@ -67,8 +66,7 @@ public class InvoiceOld {
 
     public InvoiceOld(String invoiceNumber, LocalDateTime invoiceDate, String invoiceType, String invoiceUse,
                       String issuerFullName, String issuerIdNumber, String issuerEmail, String issuerPhoneNumber,
-                      String receiverFullName, String receiverIdNumber, String receiverEmail, String receiverPhoneNumber,
-                      List<Concept> concepts, String notes, Double subtotal, Double totalTaxes, Double totalDue) {
+                      String receiverFullName, String receiverIdNumber, String receiverEmail, String receiverPhoneNumber, String notes, Double subtotal, Double totalTaxes, Double totalDue) {
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
         this.invoiceType = invoiceType;
@@ -81,7 +79,6 @@ public class InvoiceOld {
         this.receiverIdNumber = receiverIdNumber;
         this.receiverEmail = receiverEmail;
         this.receiverPhoneNumber = receiverPhoneNumber;
-        this.concepts = concepts;
         this.notes = notes;
         this.subtotal = subtotal;
         this.totalTaxes = totalTaxes;
@@ -190,14 +187,6 @@ public class InvoiceOld {
 
     public void setReceiverPhoneNumber(String receiverPhoneNumber) {
         this.receiverPhoneNumber = receiverPhoneNumber;
-    }
-
-    public List<Concept> getConcepts() {
-        return concepts;
-    }
-
-    public void setConcepts(List<Concept> concepts) {
-        this.concepts = concepts;
     }
 
     public String getNotes() {

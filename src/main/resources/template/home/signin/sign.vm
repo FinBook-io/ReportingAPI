@@ -25,7 +25,7 @@
                             <iframe src="finbsign: $textToSign ws://localhost:8080/socket"></iframe>
                         </div>
                     </div>
-                    <form id="signin_form" action="/auth/login" method="post">
+                    <form id="signin_form" action="/auth/sign-in" method="post">
                         <input class="form-control" name="sign" value="$textToSign" readonly>
                     </form>
                 </div>

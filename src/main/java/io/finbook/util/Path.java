@@ -13,9 +13,9 @@ public class Path {
 		public static final String AUTH = "/auth";
 
 		// Routes
-		public static final String LOGIN = "/login";
-		public static final String SIGN = "/sign";
-		public static final String LOGOUT = "/logout";
+		public static final String SIGN_IN = "/sign-in";
+		public static final String SIGN_CERTIFICATE = "/sign-certificate";
+		public static final String SIGN_OUT = "/sign-out";
 	}
 
 	public static class AdminRoutes {
@@ -27,10 +27,6 @@ public class Path {
 
 		// ROUTES
 		public static final String DASHBOARD = "/dashboard";
-
-		// Products routes
-		public static final String PRODUCTS = "/products";
-		public static final String PRODUCTS_EMPTY = "";
 
 		// Invoices routes
 		public static final String INVOICES = "/invoices";
@@ -45,13 +41,12 @@ public class Path {
 
 	public static class Template {
 		public static final String HOME_INDEX = "home/index";
-		public static final String HOME_LOGIN_INDEX = "home/login/index";
-		public static final String HOME_LOGIN_SIGN = "home/login/sign";
+		public static final String HOME_LOGIN_INDEX = "home/signin/index";
+		public static final String HOME_LOGIN_SIGN = "home/signin/sign";
 		public static final String HOME_NOT_FOUND = "home/errors/404";
 		public static final String HOME_INTERNAL_SERVER_ERROR = "home/errors/500";
 
 		public static final String ADMIN_INDEX = "admin/index";
-		public static final String ADMIN_PRODUCTS_LIST = "admin/products/list";
 		public static final String ADMIN_INVOICES_LIST = "admin/invoices/list";
 		public static final String ADMIN_REPORTING_INDEX = "admin/reporting/index";
 	}
