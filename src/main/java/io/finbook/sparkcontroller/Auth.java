@@ -37,7 +37,9 @@ public class Auth {
     }
 
     public static String initSession(Request request, Response response) {
-        addSessionAttribute(request, "currentUserId", request.queryParams("signID"));
+        String id = "11111111H";
+        // addSessionAttribute(request, "currentUserId", request.queryParams("signID"));
+        addSessionAttribute(request, "currentUserId", id);
         addSessionAttribute(request, "logged", true);
         redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
         return null;
