@@ -30,7 +30,7 @@ public class Subscriber {
 	private static void processedInvoice(ProcessedInvoice e){
 		LocalDateTime date = LocalDateTime.ofInstant(e.date(), ZoneOffset.UTC);
 		Invoice invoice = new Invoice(e.uUID(), date, e.pC(), e.type(), e.use(), e.issuerName(), e.issuerRFC(),
-				e.receiverName(), e.receiverRFC(), e.concept(), e.subtotal(), e.taxRate(), e.total(), e.currency()
+				e.receiverName(), e.receiverRFC(), e.concept(), e.subtotal(), e.taxRate(), e.total(), e.currency(), e.xml()
 		);
 
 		InvoiceService invoiceService = new InvoiceService();

@@ -1,4 +1,4 @@
-package io.finbook.pdf;
+package io.finbook.file;
 
 import io.finbook.responses.MyResponse;
 import io.finbook.responses.StandardResponse;

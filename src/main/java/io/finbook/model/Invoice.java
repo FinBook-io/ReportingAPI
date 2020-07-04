@@ -26,13 +26,14 @@ public class Invoice {
 	private Double taxRate;
 	private Double totalDue;
 	private String currency;
+	private String xmlFile;
 
 	public Invoice() {
 	}
 
 	public Invoice(String invoiceUUID, LocalDateTime invoiceDate, Integer zipCode, String invoiceType,
 				   String usoCFDI, String issuerName, String issuerId, String receiverName, String receiverId,
-				   String concept, Double subtotal, Double taxRate, Double totalDue, String currency) {
+				   String concept, Double subtotal, Double taxRate, Double totalDue, String currency, String xmlFile) {
 		this.invoiceUUID = invoiceUUID;
 		this.invoiceDate = invoiceDate;
 		this.zipCode = zipCode;
@@ -47,6 +48,7 @@ public class Invoice {
 		this.taxRate = taxRate;
 		this.totalDue = totalDue;
 		this.currency = currency;
+		this.xmlFile = xmlFile;
 	}
 
 	public Double getTotalTaxes() {

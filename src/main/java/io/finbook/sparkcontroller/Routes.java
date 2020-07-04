@@ -2,7 +2,9 @@ package io.finbook.sparkcontroller;
 
 import io.finbook.command.*;
 import io.finbook.command.ReportingCommand;
-import io.finbook.pdf.PDFCommand;
+import io.finbook.file.XMLCommand;
+import io.finbook.mail.Mail;
+import io.finbook.file.PDFCommand;
 import io.finbook.util.Path;
 import spark.Route;
 
@@ -29,6 +31,14 @@ public class Routes {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            return null;
+        }));
+
+        get("/xml", map((req, res) -> XMLCommand.init()));
+
+        get("/mail", map((req, res) -> {
+            Mail mail = new Mail();
+            mail.sendMail("juankevin.tr@gmail.com");
             return null;
         }));
 

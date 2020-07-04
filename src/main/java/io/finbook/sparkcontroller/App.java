@@ -25,7 +25,7 @@ public class App {
         webSocket("/socket", SignWebSocket.class);
 
         // Init subscriber
-        Subscriber.init();
+        // Subscriber.init();
 
         // Setup all routes
         Routes routes = new Routes();
