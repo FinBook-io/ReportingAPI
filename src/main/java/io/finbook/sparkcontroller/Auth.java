@@ -24,9 +24,9 @@ public class Auth {
     }
 
     public static ResponseCreator sign(Request request, Response response) {
-        if (isLogged(request)) {
+        /*if (isLogged(request)) {
             redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
-        }
+        }*/
 
         Map<String, Object> data = new HashMap<>();
         data.put("textToSign", TextGenerator.generateRandomText());

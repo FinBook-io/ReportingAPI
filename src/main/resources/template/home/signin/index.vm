@@ -19,7 +19,7 @@
                                         <button type="submit" class="btn btn-secondary btn-block" autofocus>Auto - Sign in</button>
                                     </div>
                                     <div class="col-6">
-                                        <button class="btn btn-success btn-block" autofocus onclick="window.location.href='/auth/sign-certificate'">Sign in with certificate</button>
+                                        <button class="btn btn-success btn-block" onclick="window.location.href='/auth/sign-certificate'">Sign in with certificate</button>
                                     </div>
                                     <!-- /.col -->
                                 </div>

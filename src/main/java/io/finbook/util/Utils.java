@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 import java.util.ListIterator;
@@ -50,6 +51,10 @@ public class Utils {
 
     public static Double formatDoubleTwoDecimals(Double number){
         return (double) Math.round(number*100)/100;
+    }
+
+    public static String encodeStringToBase64(String textToEncode){
+        return Base64.getEncoder().encodeToString(textToEncode.getBytes());
     }
 
 }
