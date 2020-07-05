@@ -1,3 +1,10 @@
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+});
+
 function highlightCurrentPageInNav(){
     // Split route from admin e.g. "/admin/some/thing"
     let routeFromAdmin = location.pathname.split("/admin/");
@@ -120,14 +127,33 @@ function fillOutTableBodyInvoiceList(invoicesList){
     tableToFill.draw();
 }
 
-$(function() {
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000
-    });
+function ajaxSendReport(email){
+    let valueOfSelect = $('#datepicker').val();
+    console.log(valueOfSelect, " - ", email)
 
+    $.ajax({
+        url: "/admin/reporting/ajax-send-report",
+        method: "POST",
+        data: { period : valueOfSelect, email : email },
+        dataType:"JSON",
+        success: function(data){
+            $('#close_modal').trigger('click');
+            $('#report_email').val('');
+            Toast.fire({
+                icon: 'success',
+                title: 'Report sent successfully!'
+            });
+        },
+        error: function () {
+            Toast.fire({
+                icon: 'error',
+                title: 'Something was wrong!'
+            });
+        }
+    });
+}
+
+$(function() {
     /*
     *
     * HIGHLIGHT NAV WITH CURRENT PAGE

@@ -1,5 +1,6 @@
 package io.finbook.util;
 
+import io.finbook.mail.Mail;
 import io.finbook.model.Invoice;
 
 import java.text.DecimalFormat;
@@ -50,11 +51,15 @@ public class Utils {
     }
 
     public static Double formatDoubleTwoDecimals(Double number){
-        return (double) Math.round(number*100)/100;
+        return Math.round(number*100.000)/100.000;
     }
 
     public static String encodeStringToBase64(String textToEncode){
         return Base64.getEncoder().encodeToString(textToEncode.getBytes());
+    }
+
+    public static String doubleToStringFormat(Double amountToRound){
+        return String.format("%.2f", amountToRound);
     }
 
 }

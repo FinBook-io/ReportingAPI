@@ -31,10 +31,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/reporting" class="nav-link">
+                    <a href="/admin/vat-returns" class="nav-link">
                         <i class="nav-icon fas fa-chart-line"></i>
                         <p>
-                            Reporting
+                            VAT Returns
                         </p>
                     </a>
                 </li>

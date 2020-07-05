@@ -27,7 +27,7 @@ public class Routes {
 
         get("/pdf", map((req, res) -> {
             try {
-                return PDFCommand.init();
+                return PDFCommand.reportInPDF();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -66,9 +66,16 @@ public class Routes {
 
             // REPORTS
             path(Path.AdminRoutes.REPORTING, () -> {
-                get(Path.AdminRoutes.REPORTING_EMPTY, map((req, res) -> ReportingCommand.index(Auth.getCurrentUserId(req))));
                 post(Path.AdminRoutes.REPORTING_AJAX_DATEPICKER, (req, res) -> ReportingCommand.getDataForPeriod(Auth.getCurrentUserId(req), req.queryParams("datepicker_value")));
+                post(Path.AdminRoutes.REPORTING_AJAX_SEND_REPORT, (req, res) ->
+                        ReportingCommand.sendReport(
+                                Auth.getCurrentUserId(req),
+                                req.queryParams("period"),
+                                req.queryParams("email")
+                        ));
             });
+
+            get(Path.AdminRoutes.VAT_RETURNS, map((req, res) -> VATReporting.index()));
 
         });
 

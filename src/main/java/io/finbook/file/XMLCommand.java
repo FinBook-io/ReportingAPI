@@ -21,7 +21,7 @@ public class XMLCommand {
 
 		FileOutputStream fos = null;
 		try {
-			fos = new FileOutputStream("C:/src/reporting/src/main/resources/public/finbook/files/testingXML.xml");
+			fos = new FileOutputStream("src/main/resources/public/finbook/files/temp/".concat("testingXML.xml"));
 			fos.write(Base64.getDecoder().decode(xmlFile));
 			fos.close();
 		} catch (IOException e) {

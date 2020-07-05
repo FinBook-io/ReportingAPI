@@ -34,8 +34,9 @@ public class Path {
 
 		// Reporting routes
 		public static final String REPORTING = "/reporting";
-		public static final String REPORTING_EMPTY = "";
+		public static final String VAT_RETURNS = "/vat-returns";
 		public static final String REPORTING_AJAX_DATEPICKER = "/ajax-datepicker";
+		public static final String REPORTING_AJAX_SEND_REPORT = "/ajax-send-report";
 
 	}
 
@@ -48,7 +49,7 @@ public class Path {
 
 		public static final String ADMIN_INDEX = "admin/index";
 		public static final String ADMIN_INVOICES_LIST = "admin/invoices/list";
-		public static final String ADMIN_REPORTING_INDEX = "admin/reporting/index";
+		public static final String ADMIN_VAT_RETURNS_INDEX = "admin/reporting/vat-returns";
 	}
 
 

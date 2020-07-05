@@ -2,6 +2,8 @@ package io.finbook.command;
 
 import io.finbook.chart.BarChart;
 import io.finbook.chart.PieChart;
+import io.finbook.file.PDFCommand;
+import io.finbook.mail.Mail;
 import io.finbook.responses.MyResponse;
 import io.finbook.responses.StandardResponse;
 import io.finbook.model.Invoice;
@@ -13,6 +15,8 @@ import io.finbook.util.Utils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
@@ -24,7 +28,7 @@ public class ReportingCommand {
 
     private static InvoiceService invoiceService = new InvoiceService();
 
-    public static ResponseCreator index(String currentUserId) {
+    /*public static ResponseCreator index(String currentUserId) {
         HashMap<String, Object> data = new HashMap<>();
 
         // MONTHLY
@@ -40,9 +44,9 @@ public class ReportingCommand {
         data.putAll(getDataForCurrentAnnual(currentUserId));
 
         return MyResponse.ok(
-                new StandardResponse(data, Path.Template.ADMIN_REPORTING_INDEX)
+                new StandardResponse(data, Path.Template.HOME_INDEX)
         );
-    }
+    }*/
 
     private static HashMap<String, Object> getDataForCurrentMonth(String currentUserId){
         HashMap<String, Object> data = new HashMap<>();
@@ -160,7 +164,7 @@ public class ReportingCommand {
         Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoicesRefunds);
         data.put("refunds", periodRefundsTaxes);
 
-        double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
+        Double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
 
         data.put("totalTaxesDue", totalTaxesDue);
 
@@ -195,6 +199,65 @@ public class ReportingCommand {
         invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
 
         data.put("invoicesList", invoicesList);
+
+        return new JSONObject(data);
+    }
+
+    public static JSONObject sendReport(String currentUserId, String period, String email){
+        HashMap<String, Object> data = new HashMap<>();
+        LocalDateTime startDate;
+        LocalDateTime endDate = Utils.getCurrentDate();
+
+        switch (period){
+            case "monthly":
+                startDate = Utils.getFirstDayCurrentMonth();
+                break;
+            case "trimester":
+                startDate = getFirstDateOfCurrentTrimester();
+                break;
+            case "semester":
+                startDate = getFirstDateOfCurrentSemester();
+                break;
+            case "annual":
+                startDate = Utils.getDateOfSpecificMonth(1); // starting in January
+                break;
+            default:
+                return null;
+        }
+
+        List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+        Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
+
+
+        List<Invoice> invoicesRefunds = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+        Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoicesRefunds);
+
+        double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
+
+        String[] summary = new String[5];
+        summary[0] = currentUserId;
+        summary[1] = startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString();
+        summary[2] = periodIncomesTaxes.toString();
+        summary[3] = periodRefundsTaxes.toString();
+        summary[4] = Double.toString(totalTaxesDue);
+
+        List<Invoice> invoicesList = new ArrayList<>();
+        invoicesList.addAll(invoicesIncomes);
+        invoicesList.addAll(invoicesRefunds);
+        invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
+
+        String filename = currentUserId + "_" + endDate.toString().replace(":", "");
+        try {
+            PDFCommand pdfCommand = new PDFCommand();
+            pdfCommand.reportGenerate(filename, summary, invoicesList);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Mail mail = new Mail();
+        mail.sendMailAttachFile(email, filename.concat(".pdf"));
 
         return new JSONObject(data);
     }
