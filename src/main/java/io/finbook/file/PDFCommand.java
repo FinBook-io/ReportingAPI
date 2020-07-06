@@ -166,7 +166,7 @@ public class PDFCommand {
 		contentStream.close();
 
 		//Saving the document
-		document.save(new File("C:/src/reporting/src/main/resources/public/finbook/files/spain/new.pdf"));
+		document.save(new File("C:/src/reporting/src/main/resources/public/finbook/files/spain/example.pdf"));
 
 		//Closing the document
 		document.close();
