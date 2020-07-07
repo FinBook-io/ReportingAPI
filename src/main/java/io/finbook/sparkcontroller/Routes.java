@@ -3,7 +3,6 @@ package io.finbook.sparkcontroller;
 import io.finbook.command.*;
 import io.finbook.command.ReportingCommand;
 import io.finbook.file.XMLCommand;
-import io.finbook.mail.Mail;
 import io.finbook.file.PDFCommand;
 import io.finbook.util.Path;
 import spark.Route;
@@ -36,17 +35,13 @@ public class Routes {
 
         get("/xml", map((req, res) -> XMLCommand.init()));
 
-        get("/mail", map((req, res) -> {
-            Mail mail = new Mail();
-            mail.sendMail("juankevin.tr@gmail.com");
-            return null;
-        }));
-
         // AUTHENTICATION
         path(Path.AuthRoutes.AUTH, () -> {
             get(Path.AuthRoutes.SIGN_IN, map(Auth::signin));
-            get(Path.AuthRoutes.SIGN_CERTIFICATE, map(Auth::sign));
             post(Path.AuthRoutes.SIGN_IN, Auth::initSession);
+            get(Path.AuthRoutes.SIGN_CERTIFICATE, map(Auth::sign));
+            post(Path.AuthRoutes.SIGN_CERTIFICATE, (req, res) ->
+                    Auth.initCertificateSession(req));
             get(Path.AuthRoutes.SIGN_OUT, Auth::signout);
         });
 

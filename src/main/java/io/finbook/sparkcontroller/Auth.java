@@ -1,9 +1,11 @@
 package io.finbook.sparkcontroller;
 
 import io.finbook.TextGenerator;
+import io.finbook.Verifier;
 import io.finbook.responses.MyResponse;
 import io.finbook.responses.StandardResponse;
 import io.finbook.util.Path;
+import org.json.JSONObject;
 import spark.Request;
 import spark.Response;
 
@@ -37,11 +39,51 @@ public class Auth {
     }
 
     public static String initSession(Request request, Response response) {
-        String id = "11111111H";
         // addSessionAttribute(request, "currentUserId", request.queryParams("signID"));
+        String id = "11111111H";
+
         addSessionAttribute(request, "currentUserId", id);
         addSessionAttribute(request, "logged", true);
         redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
+        return null;
+    }
+
+    public static JSONObject initCertificateSession(Request request){
+        System.out.println(request.queryParams());
+        
+
+        byte[] textToValidate = request.queryParamsValues("sign").g;
+
+
+        Verifier verifier = new Verifier(textToValidate);
+        String id = verifier.validateSign();
+
+        if (id != null){
+            //addSessionAttribute(request, "currentUserId", id);
+            //addSessionAttribute(request, "logged", true);
+            System.out.println("Sign in success: " + id);
+
+            HashMap<String, Object> data = new HashMap<>();
+            data.put("redirect", Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
+
+            // redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
+            new JSONObject(data);
+        }
+
+        return null;
+    }
+
+    public static String initCertificateSession(Request request, Response response) {
+        byte[] textToValidate = request.queryParams("sign").getBytes();
+        Verifier verifier = new Verifier(textToValidate);
+        String id = verifier.validateSign();
+
+        if (id != null){
+            addSessionAttribute(request, "currentUserId", id);
+            addSessionAttribute(request, "logged", true);
+            redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
+        }
+
         return null;
     }
 
