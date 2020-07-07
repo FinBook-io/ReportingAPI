@@ -5,6 +5,13 @@ const Toast = Swal.mixin({
     timer: 3000
 });
 
+function errorMessage() {
+    Toast.fire({
+        icon: 'error',
+        title: 'Something was wrong!'
+    });
+}
+
 function openWebSocket(randomText) {
     let textToSign = randomText;
     console.log("Text to sign: ", textToSign);
@@ -15,44 +22,35 @@ function openWebSocket(randomText) {
     };
 
     socket.onmessage = function (e) {
-        // console.log(e.data);
         if (JSON.parse(e.data).id === textToSign) {
-            let sign = (JSON.parse(e.data).sign).toString();
-            // document.getElementById("signin_form").submit();
             $.ajax({
                 url: "/auth/sign-certificate",
                 method: "POST",
-                data: JSON.parse(e.data),
+                data: { firmaResponse : e.data },
                 dataType: "JSON",
                 success: function(data){
-                    window.location.href = data.redirect;
+                    if (data.okay){
+                        window.location.href = data.goInside;
+                    }else{
+                        errorMessage();
+                    }
                 },
                 error: function () {
-                    window.location.href = "/auth/sign-in";
-                    Toast.fire({
-                        icon: 'error',
-                        title: 'Something was wrong!'
-                    });
+                    errorMessage();
                 }
             });
-
         }else{
-            window.location.replace("https://www.google.com/");
+            errorMessage();
         }
     };
 
     socket.onclose = function (e) {
-        // alert("session closed")
         console.log("Session web socket closed!");
     }
 }
 
 $(function () {
-    /*
-    *
-    * OPEN WEB SOCKET
-    *
-    * */
+    // Open web socket if is sign page
     let ows = $('.if-finbsign');
     if (ows.length) {
         openWebSocket($("div.if-finbsign").data("randomtext"));

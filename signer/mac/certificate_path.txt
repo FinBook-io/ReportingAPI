@@ -1,1 +1,1 @@
-/Users/juankevintr/src/reporting/signer/mac/Baeldung.cer
+/Users/juankevintr/src/reporting/signer/mac/prueba.crt

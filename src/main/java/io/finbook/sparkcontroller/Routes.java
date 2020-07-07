@@ -40,8 +40,7 @@ public class Routes {
             get(Path.AuthRoutes.SIGN_IN, map(Auth::signin));
             post(Path.AuthRoutes.SIGN_IN, Auth::initSession);
             get(Path.AuthRoutes.SIGN_CERTIFICATE, map(Auth::sign));
-            post(Path.AuthRoutes.SIGN_CERTIFICATE, (req, res) ->
-                    Auth.initCertificateSession(req));
+            post(Path.AuthRoutes.SIGN_CERTIFICATE, (req, res) -> Auth.initCertificateSession(req));
             get(Path.AuthRoutes.SIGN_OUT, Auth::signout);
         });
 
