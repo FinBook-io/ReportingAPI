@@ -60,11 +60,11 @@ public class ReportingCommand {
         Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
         data.put("incomes", periodIncomesTaxes);
 
-        List<Invoice> invoicesRefunds = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
-        Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoicesRefunds);
-        data.put("refunds", periodRefundsTaxes);
+        List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+        Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
+        data.put("egress", periodEgressTaxes);
 
-        Double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
+        Double totalTaxesDue = periodIncomesTaxes - periodEgressTaxes;
 
         data.put("totalTaxesDue", totalTaxesDue);
 
@@ -72,7 +72,7 @@ public class ReportingCommand {
         barChart.getData().setLabels(getMonthsNamesForChart(startDate, amountMonths));
 
         barChart.getData().addDataset("Incomes", "#5cb85c", getIncomesPerMonth(currentUserId, startDate, amountMonths));
-        barChart.getData().addDataset("Refunds", "#d9534f", getRefundsPerMonth(currentUserId, startDate, amountMonths));
+        barChart.getData().addDataset("Egress", "#d9534f", getEgressPerMonth(currentUserId, startDate, amountMonths));
         barChart.getData().addDataset("Total taxes due", "#f0ad4e", getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
 
         data.put("barChart", barChart.toJSON());
@@ -84,18 +84,18 @@ public class ReportingCommand {
         backgrounds.put("#d9534f");
 
         pieChart.getData().addOneLabel("Incomes");
-        pieChart.getData().addOneLabel("Refunds");
+        pieChart.getData().addOneLabel("Egress");
 
         JSONArray pieData = new JSONArray();
         pieData.put(periodIncomesTaxes);
-        pieData.put(periodRefundsTaxes);
+        pieData.put(periodEgressTaxes);
         pieChart.getData().addPieDataset(backgrounds, pieData);
 
         data.put("pieChart", pieChart.toJSON());
 
         List<Invoice> invoicesList = new ArrayList<>();
         invoicesList.addAll(invoicesIncomes);
-        invoicesList.addAll(invoicesRefunds);
+        invoicesList.addAll(invoicesEgress);
         invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
 
         data.put("invoicesList", invoicesList);
@@ -129,21 +129,21 @@ public class ReportingCommand {
         Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
 
 
-        List<Invoice> invoicesRefunds = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
-        Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoicesRefunds);
+        List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+        Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
 
-        double totalTaxesDue = periodIncomesTaxes - periodRefundsTaxes;
+        double totalTaxesDue = periodIncomesTaxes - periodEgressTaxes;
 
         String[] summary = new String[5];
         summary[0] = currentUserId;
         summary[1] = startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString();
         summary[2] = periodIncomesTaxes.toString();
-        summary[3] = periodRefundsTaxes.toString();
+        summary[3] = periodEgressTaxes.toString();
         summary[4] = Double.toString(totalTaxesDue);
 
         List<Invoice> invoicesList = new ArrayList<>();
         invoicesList.addAll(invoicesIncomes);
-        invoicesList.addAll(invoicesRefunds);
+        invoicesList.addAll(invoicesEgress);
         invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
 
         String filename = currentUserId + "_" + endDate.toString().replace(":", "");
@@ -214,7 +214,7 @@ public class ReportingCommand {
 
         return data;
     }
-    private static JSONArray getRefundsPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
+    private static JSONArray getEgressPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
         JSONArray data = new JSONArray();
 
         for (int i = 0; i < amountMonths; i++) {
@@ -239,9 +239,9 @@ public class ReportingCommand {
             Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
 
             invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
-            Double periodRefundsTaxes = invoiceService.getSumTotalTaxes(invoices);
+            Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoices);
 
-            data.put(Utils.formatDoubleTwoDecimals(periodIncomesTaxes - periodRefundsTaxes));
+            data.put(Utils.formatDoubleTwoDecimals(periodIncomesTaxes - periodEgressTaxes));
         }
 
         return data;

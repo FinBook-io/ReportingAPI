@@ -28,8 +28,8 @@ function format_amounts() {
         amounts.each(function() {
             let monetary_value = $(this).text();
             let i = new Intl.NumberFormat('de-DE', {
-                style: 'currency',
-                currency: 'EUR'
+                style: 'currency'
+                ,currency: 'EUR'
             }).format(monetary_value);
             $(this).text(i);
         });
@@ -50,7 +50,7 @@ function ajaxChangeReportPeriod(valueOfSelect){
         dataType:"JSON",
         success: function(data){
             $('#incomes').text(data.incomes);
-            $('#refunds').text(data.refunds);
+            $('#egress').text(data.egress);
             $('#totalTaxesDue').text(data.totalTaxesDue);
             drawBarChart(data.barChart);
             drawPieChart(data.pieChart);

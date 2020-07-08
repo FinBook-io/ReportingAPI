@@ -62,8 +62,8 @@
                     <span class="info-box-icon bg-danger"><i class="fas fa-donate"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Refunds - Total taxes</span>
-                        <span class="info-box-number"><span class="currency" id="refunds"><!--$ refunds--></span></span>
+                        <span class="info-box-text">Egress - Total taxes</span>
+                        <span class="info-box-number"><span class="currency" id="egress"></span></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>

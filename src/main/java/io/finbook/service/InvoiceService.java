@@ -76,7 +76,7 @@ public class InvoiceService extends Database {
                 secondFindAs = receiverIdLabel;
                 break;
             case EGRESS:
-                // User loose money being receiver and issuer when InvoiceType is R (Refund)
+                // User loose money being receiver and issuer when InvoiceType is R (Egress)
                 firstFindAs = receiverIdLabel;
                 secondFindAs = issuerIdLabel;
                 break;

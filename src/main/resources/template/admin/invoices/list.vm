@@ -42,9 +42,9 @@
                                         <td>$invoice.invoiceDate</td>
                                         <td>$invoice.issuerName</td>
                                         <td>$invoice.receiverName</td>
-                                        <td class="currency">$invoice.subtotal</td>
-                                        <td class="currency">$invoice.totalTaxes</td>
-                                        <td class="currency">$invoice.totalDue</td>
+                                        <td>$invoice.subtotal</td>
+                                        <td>$invoice.totalTaxes</td>
+                                        <td>$invoice.totalDue</td>
                                     </tr>
                                 #end
                             </tbody>
