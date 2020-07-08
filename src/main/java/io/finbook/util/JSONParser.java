@@ -10,10 +10,6 @@ public class JSONParser {
 		this.jsonObject = new JSONObject(json);
 	}
 
-	public String getString(String key) {
-		return String.valueOf(jsonObject.get(key));
-	}
-
 	public byte[] getByteArray(String key) {
 		String[] stringArray = splitByCommas(jsonObject.get(key).toString());
 		return toByteArray(stringArray);

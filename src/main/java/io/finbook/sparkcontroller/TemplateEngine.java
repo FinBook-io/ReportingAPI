@@ -1,6 +1,6 @@
 package io.finbook.sparkcontroller;
 
-import io.finbook.responses.StandardResponse;
+import io.finbook.responses.ResponseStructure;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
@@ -21,9 +21,12 @@ public class TemplateEngine {
     public String getTemplateURL(String template){
         return templatesFolder + File.separatorChar + template + templatesExtension;
     }
-    public String render (StandardResponse response){
+
+    public String render (ResponseStructure response){
         Map model = response.getData() == null ? new HashMap<>() : response.getData();
         return instance.render(new ModelAndView(model, getTemplateURL(response.getView())));
     }
 
 }
+
+

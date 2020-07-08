@@ -1,7 +1,7 @@
 package io.finbook.command;
 
-import io.finbook.responses.MyResponse;
-import io.finbook.responses.StandardResponse;
+import io.finbook.responses.CustomResponse;
+import io.finbook.responses.ResponseStructure;
 import io.finbook.service.InvoiceService;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Path;
@@ -17,8 +17,8 @@ public class InvoiceCommand {
 
         data.put("invoices", invoiceService.getAllInvoicesById(currentUserId));
 
-        return MyResponse.created(
-                new StandardResponse(data, Path.Template.ADMIN_INVOICES_LIST)
+        return CustomResponse.ok(
+                new ResponseStructure(data, Path.Template.ADMIN_INVOICES_LIST)
         );
     }
 

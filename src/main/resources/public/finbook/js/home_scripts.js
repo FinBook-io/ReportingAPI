@@ -23,6 +23,7 @@ function openWebSocket(randomText) {
 
     socket.onmessage = function (e) {
         if (JSON.parse(e.data).id === textToSign) {
+            // console.log(JSON.parse(e.data).sign.toString());
             $.ajax({
                 url: "/auth/sign-certificate",
                 method: "POST",
@@ -39,8 +40,6 @@ function openWebSocket(randomText) {
                     errorMessage();
                 }
             });
-        }else{
-            errorMessage();
         }
     };
 

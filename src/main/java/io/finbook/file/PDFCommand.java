@@ -11,8 +11,8 @@ import com.itextpdf.layout.element.List;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.UnitValue;
 import io.finbook.model.Invoice;
-import io.finbook.responses.MyResponse;
-import io.finbook.responses.StandardResponse;
+import io.finbook.responses.CustomResponse;
+import io.finbook.responses.ResponseStructure;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Utils;
 
@@ -59,8 +59,7 @@ public class PDFCommand {
 				.setListSymbol("\u2022")
 				.setFont(timesRoman);
 		// Add ListItem objects
-		list.add(new ListItem("Name: ".concat("-")))
-				.add(new ListItem("ID: ".concat(summary[0])))
+		list.add(new ListItem("ID: ".concat(summary[0])))
 				.add(new ListItem("Reporting period: ".concat(summary[1])));
 		// Add the list
 		document.add(list);
@@ -119,7 +118,6 @@ public class PDFCommand {
 		String filename = "testing";
 		path = path.concat(filename).concat(FILE_EXTENSION);
 
-
 		PdfWriter pdfWriter = new PdfWriter(path);
 		PdfDocument pdfDocument = new PdfDocument(pdfWriter);
 		Document document = new Document(pdfDocument);
@@ -128,52 +126,9 @@ public class PDFCommand {
 
 		document.close();
 
-
-		return MyResponse.ok(
-				new StandardResponse(null, "home/index")
+		return CustomResponse.ok(
+				new ResponseStructure(null, "home/index")
 		);
 	}
-
-	/*public static ResponseCreator init() throws IOException {
-		//Loading an existing document
-		File file = new File("C:/src/reporting/src/main/resources/public/finbook/files/spain/canary/canary_420.pdf");
-		PDDocument document = PDDocument.load(file);
-
-		//Retrieving the pages of the document
-		PDPage page = document.getPage(0);
-		PDPageContentStream contentStream = new PDPageContentStream(document, page);
-
-		//Begin the Content stream
-		contentStream.beginText();
-
-		//Setting the font to the Content stream
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 12);
-
-		//Setting the position for the line
-		contentStream.newLineAtOffset(0, 0);
-
-		String text = "10.000 €";
-
-		//Adding text in the form of string
-		contentStream.showText(text);
-
-		//Ending the content stream
-		contentStream.endText();
-
-		System.out.println("Content added");
-
-		//Closing the content stream
-		contentStream.close();
-
-		//Saving the document
-		document.save(new File("C:/src/reporting/src/main/resources/public/finbook/files/spain/example.pdf"));
-
-		//Closing the document
-		document.close();
-
-		return MyResponse.ok(
-				new StandardResponse(null, "home/index")
-		);
-	}*/
 
 }

@@ -2,12 +2,12 @@ package io.finbook.responses;
 
 import java.util.Map;
 
-public class StandardResponse {
+public class ResponseStructure {
 
     private Map<String, Object> data;
     private String view;
 
-    public StandardResponse(Map<String, Object> data, String view) {
+    public ResponseStructure(Map<String, Object> data, String view) {
         this.data = data;
         this.view = view;
     }

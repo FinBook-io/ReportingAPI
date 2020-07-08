@@ -1,7 +1,7 @@
 package io.finbook.command;
 
-import io.finbook.responses.MyResponse;
-import io.finbook.responses.StandardResponse;
+import io.finbook.responses.CustomResponse;
+import io.finbook.responses.ResponseStructure;
 import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Path;
 
@@ -13,12 +13,12 @@ public class HomeCommand {
         if (isLogged){
             HashMap<String, Object> data = new HashMap<>();
             data.put("logged", true);
-            return MyResponse.ok(
-                    new StandardResponse(data, Path.Template.HOME_INDEX)
+            return CustomResponse.ok(
+                    new ResponseStructure(data, Path.Template.HOME_INDEX)
             );
         }else {
-            return MyResponse.ok(
-                    new StandardResponse(null, Path.Template.HOME_INDEX)
+            return CustomResponse.ok(
+                    new ResponseStructure(null, Path.Template.HOME_INDEX)
             );
         }
     }

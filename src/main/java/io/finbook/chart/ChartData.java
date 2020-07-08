@@ -1,6 +1,5 @@
 package io.finbook.chart;
 
-import com.google.gson.JsonObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

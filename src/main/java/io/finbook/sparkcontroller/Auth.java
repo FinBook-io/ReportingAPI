@@ -2,8 +2,8 @@ package io.finbook.sparkcontroller;
 
 import io.finbook.TextGenerator;
 import io.finbook.Verifier;
-import io.finbook.responses.MyResponse;
-import io.finbook.responses.StandardResponse;
+import io.finbook.responses.CustomResponse;
+import io.finbook.responses.ResponseStructure;
 import io.finbook.util.JSONParser;
 import io.finbook.util.Path;
 import org.json.JSONObject;
@@ -18,32 +18,26 @@ import static spark.Spark.halt;
 public class Auth {
 
     public static ResponseCreator signin(Request request, Response response) {
-        if (isLogged(request)) {
-            redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
-        }
-        return MyResponse.ok(
-                new StandardResponse(null, Path.Template.HOME_LOGIN_INDEX)
+        isLoggedRedirectAdmin(request, response);isLoggedRedirectAdmin(request, response);
+
+        return CustomResponse.ok(
+                new ResponseStructure(null, Path.Template.HOME_LOGIN_INDEX)
         );
     }
 
     public static ResponseCreator sign(Request request, Response response) {
-        /*if (isLogged(request)) {
-            redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
-        }*/
+        isLoggedRedirectAdmin(request, response);
 
         Map<String, Object> data = new HashMap<>();
         data.put("textToSign", TextGenerator.generateRandomText());
 
-        return MyResponse.ok(
-                new StandardResponse(data, Path.Template.HOME_LOGIN_SIGN)
+        return CustomResponse.ok(
+                new ResponseStructure(data, Path.Template.HOME_LOGIN_SIGN)
         );
     }
 
-    public static String initSession(Request request, Response response) {
-        // addSessionAttribute(request, "currentUserId", request.queryParams("signID"));
-        String id = "11111111H";
-
-        addSessionAttribute(request, "currentUserId", id);
+    public static String initDemoSession(Request request, Response response) {
+        addSessionAttribute(request, "currentUserId", "DEMO");
         addSessionAttribute(request, "logged", true);
         redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
         return null;
@@ -55,8 +49,8 @@ public class Auth {
         JSONParser jsonParser = new JSONParser(request.queryParams("firmaResponse"));
         byte[] textToValidate = jsonParser.getByteArray("sign");
 
-        Verifier verifier = new Verifier(textToValidate);
-        String id = verifier.validateSign();
+        // Verifier verifier = new Verifier(textToValidate);
+        String id = new Verifier(textToValidate).validateSign();
 
         if (id != null){
             addSessionAttribute(request, "currentUserId", id);
@@ -84,6 +78,12 @@ public class Auth {
 
     public static boolean isLogged(Request request) {
         return request.session().attribute("logged") != null;
+    }
+
+    public static void isLoggedRedirectAdmin(Request request,  Response response) {
+        if (isLogged(request)) {
+            redirectTo(response, Path.AdminRoutes.ADMIN + Path.AdminRoutes.DASHBOARD);
+        }
     }
 
     public static String getCurrentUserId(Request request) {

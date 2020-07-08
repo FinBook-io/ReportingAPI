@@ -1,10 +1,9 @@
 package io.finbook.file;
 
-import io.finbook.responses.MyResponse;
-import io.finbook.responses.StandardResponse;
+import io.finbook.responses.CustomResponse;
+import io.finbook.responses.ResponseStructure;
 import io.finbook.sparkcontroller.ResponseCreator;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Base64;
@@ -28,8 +27,8 @@ public class XMLCommand {
 			e.printStackTrace();
 		}
 
-		return MyResponse.ok(
-				new StandardResponse(null, "home/index")
+		return CustomResponse.ok(
+				new ResponseStructure(null, "home/index")
 		);
 	}
 

@@ -13,9 +13,6 @@ import static spark.Spark.*;
 
 public class Routes {
 
-    public Routes() {
-    }
-
     private static Route map(Converter c) {
         return (req, res) -> c.convert(req, res).handle(req, res);
     }
@@ -24,21 +21,10 @@ public class Routes {
 
         get(Path.HomeRoutes.INDEX, map((req, res) -> HomeCommand.index(Auth.isLogged(req))));
 
-        get("/pdf", map((req, res) -> {
-            try {
-                return PDFCommand.reportInPDF();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }));
-
-        get("/xml", map((req, res) -> XMLCommand.init()));
-
         // AUTHENTICATION
         path(Path.AuthRoutes.AUTH, () -> {
             get(Path.AuthRoutes.SIGN_IN, map(Auth::signin));
-            post(Path.AuthRoutes.SIGN_IN, Auth::initSession);
+            post(Path.AuthRoutes.SIGN_IN, Auth::initDemoSession);
             get(Path.AuthRoutes.SIGN_CERTIFICATE, map(Auth::sign));
             post(Path.AuthRoutes.SIGN_CERTIFICATE, (req, res) -> Auth.initCertificateSession(req));
             get(Path.AuthRoutes.SIGN_OUT, Auth::signout);
@@ -51,12 +37,10 @@ public class Routes {
             before(Path.AdminRoutes.ADMIN_FILTER, Auth::authFilter);
 
             // DASHBOARD
-            get(Path.AdminRoutes.DASHBOARD, map((req, res) -> DashboardCommand.index(Auth.getCurrentUserId(req))));
+            get(Path.AdminRoutes.DASHBOARD, map((req, res) -> DashboardCommand.index()));
 
             // INVOICES
-            path(Path.AdminRoutes.INVOICES, () -> {
-                get(Path.AdminRoutes.INVOICES_EMPTY, map((req, res) -> InvoiceCommand.list(Auth.getCurrentUserId(req))));
-            });
+            path(Path.AdminRoutes.INVOICES, () -> get(Path.AdminRoutes.INVOICES_EMPTY, map((req, res) -> InvoiceCommand.list(Auth.getCurrentUserId(req)))));
 
             // REPORTS
             path(Path.AdminRoutes.REPORTING, () -> {
@@ -72,6 +56,17 @@ public class Routes {
             get(Path.AdminRoutes.VAT_RETURNS, map((req, res) -> VATReporting.index()));
 
         });
+
+        get("/pdf", map((req, res) -> {
+            try {
+                return PDFCommand.reportInPDF();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }));
+
+        get("/xml", map((req, res) -> XMLCommand.init()));
 
         // ERROR - NOT FOUND
         // get(Path.HomeRoutes.ERROR_404, map((req, res) -> ErrorCommand.notFound()));

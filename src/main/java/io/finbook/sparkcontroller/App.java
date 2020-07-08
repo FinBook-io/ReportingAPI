@@ -1,7 +1,6 @@
 package io.finbook.sparkcontroller;
 
 import io.finbook.subscriber.Subscriber;
-import spark.Route;
 
 import static spark.Spark.*;
 import static spark.debug.DebugScreen.enableDebugScreen;

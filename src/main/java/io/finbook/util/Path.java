@@ -4,7 +4,6 @@ public class Path {
 
 	public static class HomeRoutes {
 		public static final String INDEX = "/";
-		public static final String ERROR_404 = "/*";
 	}
 
 	// Authentication routes
