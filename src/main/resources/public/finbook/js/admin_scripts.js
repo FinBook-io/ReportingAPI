@@ -129,7 +129,7 @@ function fillOutTableBodyInvoiceList(invoicesList){
 
 function ajaxSendReport(email){
     let valueOfSelect = $('#datepicker').val();
-    console.log(valueOfSelect, " - ", email)
+    console.log(valueOfSelect, " - ", email);
 
     $.ajax({
         url: "/admin/reporting/ajax-send-report",
@@ -153,7 +153,21 @@ function ajaxSendReport(email){
     });
 }
 
+function ajaxGetCurrentUserId(){
+    $.ajax({
+        url: "/auth/get-current-user-id",
+        method: "POST",
+        dataType: "JSON",
+        success: function(data){
+            if (data != null){
+                $('#user-id').text(data.userid);
+            }
+        }
+    });
+}
+
 $(function() {
+    ajaxGetCurrentUserId();
     /*
     *
     * HIGHLIGHT NAV WITH CURRENT PAGE

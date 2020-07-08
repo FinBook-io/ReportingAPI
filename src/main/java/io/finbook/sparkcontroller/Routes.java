@@ -28,6 +28,7 @@ public class Routes {
             get(Path.AuthRoutes.SIGN_CERTIFICATE, map(Auth::sign));
             post(Path.AuthRoutes.SIGN_CERTIFICATE, (req, res) -> Auth.initCertificateSession(req));
             get(Path.AuthRoutes.SIGN_OUT, Auth::signout);
+            post(Path.AuthRoutes.GET_CURRENT_USER_ID, (req, res) -> Auth.ajaxGetCurrentUserId(req));
         });
 
         // PRIVATE ROUTES - AUTHENTICATION IS REQUIRED

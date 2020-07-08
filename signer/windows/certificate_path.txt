@@ -1,1 +1,1 @@
-C:\src\reporting\signer\windows\prueba.crt
+C:\src\reporting\signer\certificates\prueba.crt

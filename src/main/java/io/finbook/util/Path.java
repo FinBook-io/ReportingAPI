@@ -15,6 +15,7 @@ public class Path {
 		public static final String SIGN_IN = "/sign-in";
 		public static final String SIGN_CERTIFICATE = "/sign-certificate";
 		public static final String SIGN_OUT = "/sign-out";
+		public static final String GET_CURRENT_USER_ID = "/get-current-user-id";
 	}
 
 	public static class AdminRoutes {

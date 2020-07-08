@@ -1,28 +1,28 @@
 package io.finbook.model;
 
 public enum UsoCFDI {
-	D01("Honorarios Médicos, Dentales y Gastos Hospitalarios"),
-	D02("Gastos Médicos por Incapacidad o Discapacidad"),
-	D03("Gastos Funerales"),
+	D01("Honorarios médicos, dentales y gastos hospitalarios"),
+	D02("Gastos médicos por incapacidad o discapacidad"),
+	D03("Gastos funerales."),
 	D04("Donativos"),
-	D05("Intereses Reales Efectivamente Pagados por Créditos Hipotecarios (Casa Habitación)"),
-	D06("Aportaciones Voluntarias al SAR"),
-	D07("Primas por Seguros de Gastos Médicos"),
-	D08("Gastos de Transportación Escolar Obligatoria"),
-	D09("Depósitos en Cuentas para el Ahorro, Primas que tengan como Base Planes de Pensiones"),
-	D10("Pagos por Servicios Educativos (Colegiaturas)"),
-	G01("Adquisición de Mercancías"),
-	G02("Devoluciones, Descuentos o Bonificaciones"),
-	G03("Gastos en General"),
+	D05("Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)"),
+	D06("Aportaciones voluntarias al SAR"),
+	D07("Primas por seguros de gastos médicos"),
+	D08("Gastos de transportación escolar obligatoria"),
+	D09("Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones"),
+	D10("Pagos por servicios educativos (colegiaturas)"),
+	G01("Adquisición de mercancías"),
+	G02("Devoluciones, descuentos o bonificaciones"),
+	G03("Gastos en general"),
 	I01("Construcciones"),
-	I02("Mobiliario y Equipo de Oficina por Inversiones"),
-	I03("Equipo de Transporte"),
-	I04("Equipo de Cómputo y Accesorios"),
-	I05("Dados, Troqueles, Moldes, Matrices y Herramental"),
-	I06("Comunicaciones Telefónicas"),
-	I07("Comunicaciones Satelitales"),
-	I08("Otra Maquinaria y Equipo"),
-	P01("Por Definir");
+	I02("Mobilario y equipo de oficina por inversiones"),
+	I03("Equipo de transporte"),
+	I04("Equipo de computo y accesorios"),
+	I05("Dados, troqueles, moldes, matrices y herramental"),
+	I06("Comunicaciones telefónicas"),
+	I07("Comunicaciones satelitales"),
+	I08("Otra maquinaria y equipo"),
+	P01("Por definir");
 
 	private final String description;
 

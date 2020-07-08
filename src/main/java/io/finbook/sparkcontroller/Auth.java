@@ -49,7 +49,6 @@ public class Auth {
         JSONParser jsonParser = new JSONParser(request.queryParams("firmaResponse"));
         byte[] textToValidate = jsonParser.getByteArray("sign");
 
-        // Verifier verifier = new Verifier(textToValidate);
         String id = new Verifier(textToValidate).validateSign();
 
         if (id != null){
@@ -60,6 +59,16 @@ public class Auth {
         }
 
         return new JSONObject(data);
+    }
+
+    public static JSONObject ajaxGetCurrentUserId(Request request){
+        String currentUserId = getCurrentUserId(request);
+        if (currentUserId != null){
+            HashMap<String, Object> data = new HashMap<>();
+            data.put("userid", currentUserId);
+            return new JSONObject(data);
+        }
+        return null;
     }
 
     public static String signout(Request request, Response response) {
