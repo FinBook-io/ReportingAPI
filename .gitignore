@@ -287,3 +287,4 @@ $RECYCLE.BIN/
 /.idea/codeStyles/
 /.idea/inspectionProfiles/
 /.idea/jsLibraryMappings.xml
+/src/main/resources/public/finbook/files/temp/*.pdf
