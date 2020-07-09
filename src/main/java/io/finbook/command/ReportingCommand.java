@@ -20,307 +20,299 @@ import java.util.*;
 
 public class ReportingCommand {
 
-    private static InvoiceService invoiceService = new InvoiceService();
+	private static InvoiceService invoiceService = new InvoiceService();
+	private static final String TRIMESTER = "trimester";
+	private static final String SEMESTER = "semester";
+	private static final String ANNUAL = "annual";
 
-    /*
-    *
-    * AJAX REQUESTS
-    *
-    * */
-    public static JSONObject getDataForPeriod(String currentUserId, String period){
-        HashMap<String, Object> data = new HashMap<>();
-        LocalDateTime startDate;
-        LocalDateTime endDate = Utils.getCurrentDate();
-        int amountMonths;
+	/*
+	 * AJAX REQUESTS
+	 * */
+	public static JSONObject getDataForPeriod(String currentUserId, String period) {
+		Map<String, Object> data = new HashMap<>();
+		LocalDateTime startDate = getStartDate(period);
+		LocalDateTime endDate = Utils.getCurrentDate();
+		int amountMonths;
 
-        switch (period){
-            case "monthly":
-                startDate = Utils.getFirstDayCurrentMonth();
-                amountMonths = 1;
-                break;
-            case "trimester":
-                startDate = getFirstDateOfCustomTrimester(Utils.getCurrentMonth());
-                amountMonths = 3;
-                break;
-            case "semester":
-                startDate = getFirstDateOfCurrentSemester();
-                amountMonths = 6;
-                break;
-            case "annual":
-                startDate = Utils.getDateOfSpecificMonth(1); // starting in January
-                amountMonths = 12;
-                break;
-            default:
-                return null;
-        }
+		switch (period) {
+			case TRIMESTER:
+				amountMonths = 3;
+				break;
+			case SEMESTER:
+				amountMonths = 6;
+				break;
+			case ANNUAL:
+				amountMonths = 12;
+				break;
+			default:
+				// Monthly by default
+				amountMonths = 1;
+		}
 
-        List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
-        Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
-        data.put("incomes", periodIncomesTaxes);
+		List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+		Double incomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
+		data.put("incomes", incomesTaxes);
 
-        List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
-        Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
-        data.put("egress", periodEgressTaxes);
+		List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+		Double egressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
+		data.put("egress", egressTaxes);
 
-        Double totalTaxesDue = periodIncomesTaxes - periodEgressTaxes;
+		data.put("totalTaxesDue", incomesTaxes - egressTaxes);
+		data.put("barChart", drawBarChart(currentUserId, startDate, amountMonths));
+		data.put("pieChart", drawPieChart(incomesTaxes, egressTaxes));
 
-        data.put("totalTaxesDue", totalTaxesDue);
+		data.put("invoicesShortedList", getInvoicesShortedListByDate(invoicesIncomes, invoicesEgress));
 
-        BarChart barChart = new BarChart();
-        barChart.getData().setLabels(getMonthsNamesForChart(startDate, amountMonths));
+		return new JSONObject(data);
+	}
 
-        barChart.getData().addDataset("Incomes", "#5cb85c", getIncomesPerMonth(currentUserId, startDate, amountMonths));
-        barChart.getData().addDataset("Egress", "#d9534f", getEgressPerMonth(currentUserId, startDate, amountMonths));
-        barChart.getData().addDataset("Total taxes due", "#f0ad4e", getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
+	public static JSONObject sendIVAReport(String currentUserId, String period, String email) {
+		Map<String, Object> content = new HashMap<>();
+		LocalDateTime startDate = getStartDate(period);
+		LocalDateTime endDate = Utils.getCurrentDate();
 
-        data.put("barChart", barChart.toJSON());
+		String filename = createFilename(currentUserId, endDate);
 
-        PieChart pieChart = new PieChart();
+		List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+		Double incomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
 
-        JSONArray backgrounds = new JSONArray();
-        backgrounds.put("#5cb85c");
-        backgrounds.put("#d9534f");
+		List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+		Double egressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
 
-        pieChart.getData().addOneLabel("Incomes");
-        pieChart.getData().addOneLabel("Egress");
+		content.put("filename", filename);
+		content.put("currentUserId", currentUserId);
+		content.put("period", startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString());
+		content.put("incomesTaxes", incomesTaxes.toString());
+		content.put("egressTaxes", egressTaxes.toString());
+		content.put("totalTaxes", Double.toString(incomesTaxes - egressTaxes));
+		content.put("invoicesShortedList", getInvoicesShortedListByDate(invoicesIncomes, invoicesEgress));
 
-        JSONArray pieData = new JSONArray();
-        pieData.put(periodIncomesTaxes);
-        pieData.put(periodEgressTaxes);
-        pieChart.getData().addPieDataset(backgrounds, pieData);
+		try {
+			IVAReport ivaReport = new IVAReport();
+			ivaReport.create(content);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-        data.put("pieChart", pieChart.toJSON());
+		sendMailWithFiles(email, filename);
 
-        List<Invoice> invoicesList = new ArrayList<>();
-        invoicesList.addAll(invoicesIncomes);
-        invoicesList.addAll(invoicesEgress);
-        invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
+		return new JSONObject();
+	}
 
-        data.put("invoicesList", invoicesList);
+	public static JSONObject sendVATReturnsReport(String currentUserId, String period, String whichPeriod, String email) {
+		Map<String, Object> content = new HashMap<>();
+		LocalDateTime startDate;
+		LocalDateTime endDate = Utils.getCurrentDate();
 
-        return new JSONObject(data);
-    }
+		String model;
+		if (period.equals(TRIMESTER)){
+			int statingMonth;
+			switch (whichPeriod) {
+				case "2T":
+					statingMonth = 4;
+					break;
+				case "3T":
+					statingMonth = 7;
+					break;
+				case "4T":
+					statingMonth = 10;
+					break;
+				default:
+					// First period (1T) by default
+					statingMonth = 1;
+			}
+			startDate = getFirstDateOfCustomTrimester(statingMonth);
+			model = "420";
+		}else if (period.equals(ANNUAL)){
+			startDate = Utils.getDateOfSpecificMonth(1); // starting in January
+			model = "425";
+		}else {
+			return null;
+		}
 
-    public static JSONObject sendReport(String currentUserId, String period, String email){
-        Map<String, Object> content = new HashMap<>();
-        LocalDateTime startDate;
-        LocalDateTime endDate = Utils.getCurrentDate();
+		String filename = createFilename(currentUserId, endDate);
 
-        switch (period){
-            case "monthly":
-                startDate = Utils.getFirstDayCurrentMonth();
-                break;
-            case "trimester":
-                startDate = getFirstDateOfCustomTrimester(Utils.getCurrentMonth());
-                break;
-            case "semester":
-                startDate = getFirstDateOfCurrentSemester();
-                break;
-            case "annual":
-                startDate = Utils.getDateOfSpecificMonth(1); // starting in January
-                break;
-            default:
-                return null;
-        }
-        String filename = currentUserId + "_" + endDate.toString().replace(":", "");
+		List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+		Double incomesWithoutTaxes = invoiceService.getSumTotalWithoutTaxes(invoicesIncomes);
+		Double incomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
 
-        List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
-        Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
+		List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+		Double egressWithoutTaxes = invoiceService.getSumTotalWithoutTaxes(invoicesEgress);
+		Double egressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
 
-        List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
-        Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
+		double totalTaxesDue = incomesTaxes - egressTaxes;
 
-        double totalTaxesDue = periodIncomesTaxes - periodEgressTaxes;
+		content.put("filename", filename);
+		content.put("currentUserId", currentUserId);
+		content.put("year", Utils.getCurrentYear());
+		content.put("period", startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString());
+		content.put("signDate", Utils.getCurrentDate());
+		content.put("incomesWithoutTaxes", incomesWithoutTaxes);
+		content.put("taxRate", "6.50");
+		content.put("incomesTaxes", incomesTaxes);
+		content.put("egressWithoutTaxes", egressWithoutTaxes);
+		content.put("egressTaxes", egressTaxes);
+		content.put("totalTaxesDue", totalTaxesDue);
 
-        List<Invoice> invoicesList = new ArrayList<>();
-        invoicesList.addAll(invoicesIncomes);
-        invoicesList.addAll(invoicesEgress);
-        invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
+		try {
+			if (model.equals("420")) {
+				content.put("whichPeriod", whichPeriod);
+				VATReturnsCanary420 vatReturnsCanary420 = new VATReturnsCanary420();
+				vatReturnsCanary420.create(content);
+			} else {
+				VATReturnsCanary425 vatReturnsCanary425 = new VATReturnsCanary425();
+				vatReturnsCanary425.create(content);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-        content.put("filename", filename);
-        content.put("currentUserId", currentUserId);
-        content.put("period", startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString());
-        content.put("incomesTaxes", periodIncomesTaxes.toString());
-        content.put("egressTaxes", periodEgressTaxes.toString());
-        content.put("totalTaxes", Double.toString(totalTaxesDue));
-        content.put("invoicesList", invoicesList);
+		sendMailWithFiles(email, filename);
 
-        IVAReport IVAReport = new IVAReport();
-        try {
-            IVAReport.create(content);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		return new JSONObject();
+	}
 
-        Mail mail = new Mail();
-        mail.sendMailAttachFile(email, filename.concat(".pdf"));
+	/*
+	 *
+	 * Useful methods
+	 *
+	 * */
+	private static LocalDateTime getStartDate(String period){
+		switch (period) {
+			case TRIMESTER:
+				return getFirstDateOfCustomTrimester(Utils.getCurrentMonth());
+			case SEMESTER:
+				return getFirstDateOfCurrentSemester();
+			case ANNUAL:
+				return Utils.getDateOfSpecificMonth(1); // starting in January
+			default:
+				// Monthly by default
+				return Utils.getFirstDayCurrentMonth();
+		}
+	}
 
-        return new JSONObject();
-    }
+	private static LocalDateTime getFirstDateOfCustomTrimester(int currentMonthNumber) {
+		if (currentMonthNumber >= 1 && currentMonthNumber <= 3) {
+			return Utils.getDateOfSpecificMonth(1); // starting in January
+		} else if (currentMonthNumber >= 4 && currentMonthNumber <= 6) {
+			return Utils.getDateOfSpecificMonth(4); // starting in April
+		} else if (currentMonthNumber >= 7 && currentMonthNumber <= 9) {
+			return Utils.getDateOfSpecificMonth(7); // starting in July
+		} else {
+			return Utils.getDateOfSpecificMonth(10); // starting in July
+		}
+	}
 
-    public static JSONObject sendVATReturnsReport(String currentUserId, String period, String whichPeriod, String email){
-        Map<String, Object> content = new HashMap<>();
-        LocalDateTime startDate;
-        LocalDateTime endDate = Utils.getCurrentDate();
+	private static LocalDateTime getFirstDateOfCurrentSemester() {
+		int currentMonthNumber = Utils.getCurrentMonth();
+		if (currentMonthNumber >= 1 && currentMonthNumber <= 6) {
+			return Utils.getDateOfSpecificMonth(1); // starting in January
+		} else {
+			return Utils.getDateOfSpecificMonth(7); // starting in July
+		}
+	}
 
-        String model;
-        switch (period){
-            case "trimester":
-                int statingMonth;
-                switch (whichPeriod) {
-                    case "1T":
-                        statingMonth = 1;
-                        break;
-                    case "2T":
-                        statingMonth = 4;
-                        break;
-                    case "3T":
-                        statingMonth = 7;
-                        break;
-                    case "4T":
-                        statingMonth = 10;
-                        break;
-                    default:
-                        return null;
-                }
-                startDate = getFirstDateOfCustomTrimester(statingMonth);
-                model = "420";
-                break;
-            case "annual":
-                startDate = Utils.getDateOfSpecificMonth(1); // starting in January
-                model = "425";
-                break;
-            default:
-                return null;
-        }
-        String filename = currentUserId + "_" + endDate.toString().replace(":", "");
+	private static List<Invoice> getInvoicesListPerPeriodAndType(String currentUserId, InvoiceType invoiceType, LocalDateTime startDate, LocalDateTime endDate) {
+		return invoiceService.getInvoicesPerPeriodAndType(currentUserId, invoiceType, startDate, endDate);
+	}
 
-        List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
-        Double incomesWithoutTaxes = invoiceService.getSumTotalWithoutTaxes(invoicesIncomes);
-        Double incomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
+	private static List<Invoice> getInvoicesShortedListByDate(List<Invoice> invoicesIncomes, List<Invoice> invoicesEgress){
+		List<Invoice> invoicesList = new ArrayList<>();
+		invoicesList.addAll(invoicesIncomes);
+		invoicesList.addAll(invoicesEgress);
+		invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
+		return invoicesList;
+	}
 
-        List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
-        Double egressWithoutTaxes = invoiceService.getSumTotalWithoutTaxes(invoicesEgress);
-        Double egressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
+	private static JSONArray getMonthsNamesForChart(LocalDateTime startDate, int amountMonths) {
+		JSONArray months = new JSONArray();
+		for (int i = 0; i < amountMonths; i++) {
+			months.put(startDate.getMonth().plus(i).toString());
+		}
+		return months;
+	}
 
-        double totalTaxesDue = incomesTaxes - egressTaxes;
+	private static JSONArray getIncomesPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths) {
+		JSONArray data = new JSONArray();
 
-        content.put("filename", filename);
-        content.put("currentUserId", currentUserId);
-        content.put("year", Utils.getCurrentYear());
-        content.put("period", startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString());
-        content.put("signDate", Utils.getCurrentDate());
-        content.put("incomesWithoutTaxes", incomesWithoutTaxes);
-        content.put("taxRate", "6.50");
-        content.put("incomesTaxes", incomesTaxes);
-        content.put("egressWithoutTaxes", egressWithoutTaxes);
-        content.put("egressTaxes", egressTaxes);
-        content.put("totalTaxesDue", totalTaxesDue);
+		for (int i = 0; i < amountMonths; i++) {
+			LocalDateTime auxStartDate = startDate.plusMonths(i);
+			LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
+			List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
 
-        try {
-            if (model.equals("420")){
-                content.put("whichPeriod", whichPeriod);
-                VATReturnsCanary420 vatReturnsCanary420 = new VATReturnsCanary420();
-                vatReturnsCanary420.create(content);
-            }else{
-                VATReturnsCanary425 vatReturnsCanary425 = new VATReturnsCanary425();
-                vatReturnsCanary425.create(content);
-            }
+			data.put(invoiceService.getSumTotalTaxes(invoices));
+		}
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		return data;
+	}
 
-        Mail mail = new Mail();
-        mail.sendMailAttachFile(email, filename.concat(".pdf"));
+	private static JSONArray getEgressPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths) {
+		JSONArray data = new JSONArray();
 
-        return new JSONObject();
-    }
+		for (int i = 0; i < amountMonths; i++) {
+			LocalDateTime auxStartDate = startDate.plusMonths(i);
+			LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
+			List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
 
-    /*
-     *
-     * Useful methods
-     *
-     * */
-    private static LocalDateTime getFirstDateOfCustomTrimester(int currentMonthNumber){
-        if (currentMonthNumber >= 1 && currentMonthNumber <= 3){
-            return Utils.getDateOfSpecificMonth(1); // starting in January
-        }else if (currentMonthNumber >= 4 && currentMonthNumber <= 6){
-            return Utils.getDateOfSpecificMonth(4); // starting in April
-        }else if (currentMonthNumber >= 7 && currentMonthNumber <= 9){
-            return Utils.getDateOfSpecificMonth(7); // starting in July
-        }else{
-            return Utils.getDateOfSpecificMonth(10); // starting in July
-        }
-    }
+			data.put(invoiceService.getSumTotalTaxes(invoices));
+		}
 
-    private static LocalDateTime getFirstDateOfCurrentSemester(){
-        int currentMonthNumber = Utils.getCurrentMonth();
-        if (currentMonthNumber >= 1 && currentMonthNumber <= 6){
-            return Utils.getDateOfSpecificMonth(1); // starting in January
-        }else{
-            return Utils.getDateOfSpecificMonth(7); // starting in July
-        }
-    }
+		return data;
+	}
 
-    private static List<Invoice> getInvoicesListPerPeriodAndType(String currentUserId, InvoiceType invoiceType, LocalDateTime startDate, LocalDateTime endDate){
-        return invoiceService.getInvoicesPerPeriodAndType(currentUserId, invoiceType, startDate , endDate);
-    }
+	private static JSONArray getTotalTaxesDuePerMonth(String currentUserId, LocalDateTime startDate, int amountMonths) {
+		JSONArray data = new JSONArray();
 
-    private static JSONArray getMonthsNamesForChart(LocalDateTime startDate, int amountMonths){
-        JSONArray months = new JSONArray();
-        for (int i = 0; i < amountMonths; i++) {
-            months.put(startDate.getMonth().plus(i).toString());
-        }
-        return months;
-    }
+		for (int i = 0; i < amountMonths; i++) {
+			LocalDateTime auxStartDate = startDate.plusMonths(i);
+			LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
 
-    private static JSONArray getIncomesPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
-        JSONArray data = new JSONArray();
+			List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
+			Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
 
-        for (int i = 0; i < amountMonths; i++) {
-            LocalDateTime auxStartDate = startDate.plusMonths(i);
-            LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
-            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
+			invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
+			Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoices);
 
-            data.put(invoiceService.getSumTotalTaxes(invoices));
-        }
+			data.put(Utils.formatDoubleTwoDecimals(periodIncomesTaxes - periodEgressTaxes));
+		}
 
-        return data;
-    }
+		return data;
+	}
 
-    private static JSONArray getEgressPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
-        JSONArray data = new JSONArray();
+	private static JSONObject drawBarChart(String currentUserId, LocalDateTime startDate, int amountMonths){
+		BarChart barChart = new BarChart();
+		barChart.getData().setLabels(getMonthsNamesForChart(startDate, amountMonths));
 
-        for (int i = 0; i < amountMonths; i++) {
-            LocalDateTime auxStartDate = startDate.plusMonths(i);
-            LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
-            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
+		barChart.getData().addDataset("Incomes", "#5cb85c", getIncomesPerMonth(currentUserId, startDate, amountMonths));
+		barChart.getData().addDataset("Egress", "#d9534f", getEgressPerMonth(currentUserId, startDate, amountMonths));
+		barChart.getData().addDataset("Total taxes due", "#f0ad4e", getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
+		return barChart.toJSON();
+	}
 
-            data.put(invoiceService.getSumTotalTaxes(invoices));
-        }
+	private static JSONObject drawPieChart(Double periodIncomesTaxes, Double periodEgressTaxes){
+		PieChart pieChart = new PieChart();
 
-        return data;
-    }
+		JSONArray backgrounds = new JSONArray();
+		backgrounds.put("#5cb85c");
+		backgrounds.put("#d9534f");
 
-    private static JSONArray getTotalTaxesDuePerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
-        JSONArray data = new JSONArray();
+		pieChart.getData().addOneLabel("Incomes");
+		pieChart.getData().addOneLabel("Egress");
 
-        for (int i = 0; i < amountMonths; i++) {
-            LocalDateTime auxStartDate = startDate.plusMonths(i);
-            LocalDateTime endDate = auxStartDate.with(TemporalAdjusters.lastDayOfMonth());
+		JSONArray pieData = new JSONArray();
+		pieData.put(periodIncomesTaxes);
+		pieData.put(periodEgressTaxes);
+		pieChart.getData().addPieDataset(backgrounds, pieData);
+		return pieChart.toJSON();
+	}
 
-            List<Invoice> invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, auxStartDate, endDate);
-            Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoices);
+	private static String createFilename(String currentUserId, LocalDateTime endDate){
+		return currentUserId + "_" + endDate.toString().replace(":", "");
+	}
 
-            invoices = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, auxStartDate, endDate);
-            Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoices);
-
-            data.put(Utils.formatDoubleTwoDecimals(periodIncomesTaxes - periodEgressTaxes));
-        }
-
-        return data;
-    }
-
+	private static void sendMailWithFiles(String email, String filename){
+		Mail mail = new Mail();
+		mail.sendMailAttachFile(email, filename.concat(".pdf"));
+	}
 
 }

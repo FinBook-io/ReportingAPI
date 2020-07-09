@@ -25,10 +25,6 @@ public class ChartData {
         return datasets;
     }
 
-    public void setDatasets(JSONArray datasets) {
-        this.datasets = datasets;
-    }
-
     public void addOneLabel(String label){
         labels.put(label);
     }

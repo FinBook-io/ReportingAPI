@@ -145,7 +145,6 @@ function ajaxSendReport(){
 
     if(isEmail(email)){
         let valueOfSelect = $('#datepicker').val();
-        console.log(email);
         $.ajax({
             url: "/admin/reporting/ajax-send-report",
             method: "POST",
@@ -180,21 +179,20 @@ function ajaxSendVATReturnsReport(flag){
     if (flag){
         period = "trimester";
         whichPeriod = $("input[name='period']:checked").val();
-        email = $('#email_420').val();
+        email = $('#email_420');
     }else{
         period = "annual";
-        email = $('#email_425').val();
+        email = $('#email_425');
     }
 
-    if (isEmail(email)){
+    if (isEmail(email.val())){
         $.ajax({
             url: "/admin/reporting/ajax-vat-returns-report",
             method: "POST",
-            data: { period : period, whichPeriod : whichPeriod, email : email },
+            data: { period : period, whichPeriod : whichPeriod, email : email.val() },
             dataType:"JSON",
-            success: function(data){
-                $('#close_modal').trigger('click');
-                $('#report_email').val('');
+            success: function(){
+                email.val('');
                 Toast.fire({
                     icon: 'success',
                     title: 'Report sent successfully!'

@@ -80,7 +80,7 @@ public class IVAReport implements PDFGenerate{
 		table.addCell(headerCell("TOTAL TAXES"));
 		table.addCell(headerCell("TOTAL DUE"));
 
-		for (Invoice invoice : (java.util.List<Invoice>) content.get("invoicesList")) {
+		for (Invoice invoice : (java.util.List<Invoice>) content.get("invoicesShortedList")) {
 			table.addCell(invoice.getInvoiceDate().toLocalDate().toString());
 			table.addCell(invoice.getInvoiceUUID().toUpperCase());
 			table.addCell(Utils.doubleToStringFormat(invoice.getSubtotal()));

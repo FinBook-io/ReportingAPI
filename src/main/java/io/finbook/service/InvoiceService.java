@@ -18,12 +18,6 @@ public class InvoiceService extends Database {
         datastore.save(invoice);
     }
 
-    public List<Invoice> getAllInvoices() {
-        List<Invoice> invoicesList = datastore.find(Invoice.class).asList();
-        invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
-        return invoicesList;
-    }
-
     public List<Invoice> getAllInvoicesById(String id) {
         List<Invoice> invoicesList = new ArrayList<>();
 
@@ -44,22 +38,6 @@ public class InvoiceService extends Database {
     public List<Invoice> getAllInvoicesByReceiverId(String id) {
         return datastore.find(Invoice.class)
                 .filter(receiverIdLabel, id)
-                .asList();
-    }
-
-    public List<Invoice> getAllInvoicesByIssuerIdPerPeriod(String id, LocalDateTime date1, LocalDateTime date2) {
-        return datastore.find(Invoice.class)
-                .filter(issuerIdLabel, id)
-                .field(invoiceDateLabel).greaterThan(date1)
-                .field(invoiceDateLabel).lessThan(date2)
-                .asList();
-    }
-
-    public List<Invoice> getAllInvoicesByReceiverIdPerPeriod(String id, LocalDateTime date1, LocalDateTime date2) {
-        return datastore.find(Invoice.class)
-                .filter(receiverIdLabel, id)
-                .field(invoiceDateLabel).greaterThan(date1)
-                .field(invoiceDateLabel).lessThan(date2)
                 .asList();
     }
 
