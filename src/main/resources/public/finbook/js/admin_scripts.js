@@ -166,14 +166,21 @@ function ajaxSendReport(){
     });
 }
 
-function ajaxSendReportVATReturns(){
-    let email = $('#email_420').val();
-    let period = $("input[name='period']:checked").val();
-    console.log("Email: ", email, " - Period:", period);
-    /*$.ajax({
-        url: "/admin/reporting/ajax-send-report",
+function ajaxSendVATReturnsReport(flag){
+    let email, period, whichPeriod;
+    if (flag){
+        period = "trimester";
+        whichPeriod = $("input[name='period']:checked").val();
+        email = $('#email_420').val();
+    }else{
+        period = "annual";
+        email = $('#email_425').val();
+    }
+
+    $.ajax({
+        url: "/admin/reporting/ajax-vat-returns-report",
         method: "POST",
-        data: { period : valueOfSelect, email : email },
+        data: { period : period, whichPeriod : whichPeriod, email : email },
         dataType:"JSON",
         success: function(data){
             $('#close_modal').trigger('click');
@@ -189,39 +196,24 @@ function ajaxSendReportVATReturns(){
                 title: 'Something was wrong!'
             });
         }
-    });*/
+    });
 }
-
-
 
 $(function() {
     ajaxGetCurrentUserId();
-    /*
-    *
-    * HIGHLIGHT NAV WITH CURRENT PAGE
-    *
-    * */
     highlightCurrentPageInNav();
 
-    /*
-    *
-    * TABLES WITH DATATABLES
-    *
-    * */
+    // Fill out all dashboard
     let datepicker = $('#datepicker');
     if (datepicker.length){
         ajaxChangeReportPeriod("monthly")
     }
+    // If datapicker changes
     datepicker.on('change', function() {
         ajaxChangeReportPeriod(this.value)
     });
 
-
-    /*
-    *
-    * TABLES WITH DATATABLES
-    *
-    * */
+    // Set up datatables opcions
     $('#datatables_list_with_pagination').DataTable({
         "paging": true,
         "lengthChange": false,
@@ -232,13 +224,6 @@ $(function() {
         "responsive": true,
     });
 
-
-
-    /*
-    *
-    * FORMAT AMOUNTS INTO CURRENCIES
-    *
-    * */
     format_amounts();
 
 });

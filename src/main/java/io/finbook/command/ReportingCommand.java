@@ -2,7 +2,9 @@ package io.finbook.command;
 
 import io.finbook.chart.BarChart;
 import io.finbook.chart.PieChart;
-import io.finbook.file.PDFCommand;
+import io.finbook.pdf.IVAReport;
+import io.finbook.pdf.VATReturnsCanary420;
+import io.finbook.pdf.VATReturnsCanary425;
 import io.finbook.mail.Mail;
 import io.finbook.model.Invoice;
 import io.finbook.model.InvoiceType;
@@ -11,14 +13,10 @@ import io.finbook.util.Utils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class ReportingCommand {
 
@@ -41,7 +39,7 @@ public class ReportingCommand {
                 amountMonths = 1;
                 break;
             case "trimester":
-                startDate = getFirstDateOfCurrentTrimester();
+                startDate = getFirstDateOfCustomTrimester(Utils.getCurrentMonth());
                 amountMonths = 3;
                 break;
             case "semester":
@@ -104,7 +102,7 @@ public class ReportingCommand {
     }
 
     public static JSONObject sendReport(String currentUserId, String period, String email){
-        HashMap<String, Object> data = new HashMap<>();
+        Map<String, Object> content = new HashMap<>();
         LocalDateTime startDate;
         LocalDateTime endDate = Utils.getCurrentDate();
 
@@ -113,7 +111,7 @@ public class ReportingCommand {
                 startDate = Utils.getFirstDayCurrentMonth();
                 break;
             case "trimester":
-                startDate = getFirstDateOfCurrentTrimester();
+                startDate = getFirstDateOfCustomTrimester(Utils.getCurrentMonth());
                 break;
             case "semester":
                 startDate = getFirstDateOfCurrentSemester();
@@ -124,34 +122,32 @@ public class ReportingCommand {
             default:
                 return null;
         }
+        String filename = currentUserId + "_" + endDate.toString().replace(":", "");
 
         List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
         Double periodIncomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
-
 
         List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
         Double periodEgressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
 
         double totalTaxesDue = periodIncomesTaxes - periodEgressTaxes;
 
-        String[] summary = new String[5];
-        summary[0] = currentUserId;
-        summary[1] = startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString();
-        summary[2] = periodIncomesTaxes.toString();
-        summary[3] = periodEgressTaxes.toString();
-        summary[4] = Double.toString(totalTaxesDue);
-
         List<Invoice> invoicesList = new ArrayList<>();
         invoicesList.addAll(invoicesIncomes);
         invoicesList.addAll(invoicesEgress);
         invoicesList.sort(Comparator.comparing(Invoice::getInvoiceDate).reversed());
 
-        String filename = currentUserId + "_" + endDate.toString().replace(":", "");
+        content.put("filename", filename);
+        content.put("currentUserId", currentUserId);
+        content.put("period", startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString());
+        content.put("incomesTaxes", periodIncomesTaxes.toString());
+        content.put("egressTaxes", periodEgressTaxes.toString());
+        content.put("totalTaxes", Double.toString(totalTaxesDue));
+        content.put("invoicesList", invoicesList);
+
+        IVAReport IVAReport = new IVAReport();
         try {
-            PDFCommand pdfCommand = new PDFCommand();
-            pdfCommand.reportGenerate(filename, summary, invoicesList);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            IVAReport.create(content);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -159,7 +155,86 @@ public class ReportingCommand {
         Mail mail = new Mail();
         mail.sendMailAttachFile(email, filename.concat(".pdf"));
 
-        return new JSONObject(data);
+        return new JSONObject();
+    }
+
+    public static JSONObject sendVATReturnsReport(String currentUserId, String period, String whichPeriod, String email){
+        Map<String, Object> content = new HashMap<>();
+        LocalDateTime startDate;
+        LocalDateTime endDate = Utils.getCurrentDate();
+
+        String model;
+        switch (period){
+            case "trimester":
+                int statingMonth;
+                switch (whichPeriod) {
+                    case "1T":
+                        statingMonth = 1;
+                        break;
+                    case "2T":
+                        statingMonth = 4;
+                        break;
+                    case "3T":
+                        statingMonth = 7;
+                        break;
+                    case "4T":
+                        statingMonth = 10;
+                        break;
+                    default:
+                        return null;
+                }
+                startDate = getFirstDateOfCustomTrimester(statingMonth);
+                model = "420";
+                break;
+            case "annual":
+                startDate = Utils.getDateOfSpecificMonth(1); // starting in January
+                model = "425";
+                break;
+            default:
+                return null;
+        }
+        String filename = currentUserId + "_" + endDate.toString().replace(":", "");
+
+        List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
+        Double incomesWithoutTaxes = invoiceService.getSumTotalWithoutTaxes(invoicesIncomes);
+        Double incomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
+
+        List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
+        Double egressWithoutTaxes = invoiceService.getSumTotalWithoutTaxes(invoicesEgress);
+        Double egressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
+
+        double totalTaxesDue = incomesTaxes - egressTaxes;
+
+        content.put("filename", filename);
+        content.put("currentUserId", currentUserId);
+        content.put("year", Utils.getCurrentYear());
+        content.put("period", startDate.toLocalDate().toString() + " | " + endDate.toLocalDate().toString());
+        content.put("signDate", Utils.getCurrentDate());
+        content.put("incomesWithoutTaxes", incomesWithoutTaxes);
+        content.put("taxRate", "6.50");
+        content.put("incomesTaxes", incomesTaxes);
+        content.put("egressWithoutTaxes", egressWithoutTaxes);
+        content.put("egressTaxes", egressTaxes);
+        content.put("totalTaxesDue", totalTaxesDue);
+
+        try {
+            if (model.equals("420")){
+                content.put("whichPeriod", whichPeriod);
+                VATReturnsCanary420 vatReturnsCanary420 = new VATReturnsCanary420();
+                vatReturnsCanary420.create(content);
+            }else{
+                VATReturnsCanary425 vatReturnsCanary425 = new VATReturnsCanary425();
+                vatReturnsCanary425.create(content);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Mail mail = new Mail();
+        mail.sendMailAttachFile(email, filename.concat(".pdf"));
+
+        return new JSONObject();
     }
 
     /*
@@ -167,8 +242,7 @@ public class ReportingCommand {
      * Useful methods
      *
      * */
-    private static LocalDateTime getFirstDateOfCurrentTrimester(){
-        int currentMonthNumber = Utils.getCurrentMonth();
+    private static LocalDateTime getFirstDateOfCustomTrimester(int currentMonthNumber){
         if (currentMonthNumber >= 1 && currentMonthNumber <= 3){
             return Utils.getDateOfSpecificMonth(1); // starting in January
         }else if (currentMonthNumber >= 4 && currentMonthNumber <= 6){
@@ -214,6 +288,7 @@ public class ReportingCommand {
 
         return data;
     }
+
     private static JSONArray getEgressPerMonth(String currentUserId, LocalDateTime startDate, int amountMonths){
         JSONArray data = new JSONArray();
 

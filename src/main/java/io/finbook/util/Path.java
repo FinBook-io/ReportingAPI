@@ -37,6 +37,7 @@ public class Path {
 		public static final String VAT_RETURNS = "/vat-returns";
 		public static final String REPORTING_AJAX_DATEPICKER = "/ajax-datepicker";
 		public static final String REPORTING_AJAX_SEND_REPORT = "/ajax-send-report";
+		public static final String REPORTING_AJAX_SEND_VAT_RETURNS_REPORT = "/ajax-vat-returns-report";
 
 	}
 

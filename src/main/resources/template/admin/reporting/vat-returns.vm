@@ -30,56 +30,69 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label class="col-form-label" for="email_420">Type your email to receive the report</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            </div>
-                            <input type="email" id="email_420" name="email_420" class="form-control"
-                                   placeholder="Email">
-                        </div>
-                    </div>
-                    <label class="col-form-label">Select a trimester period</label>
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="form-group clearfix">
-                                <div class="icheck-primary d-inline">
-                                    <input type="radio" name="period" checked="" id="first" value="1T">
-                                    <label for="first">First (1T)</label>
+                            <div class="form-group">
+                                <label class="col-form-label" for="email_420">Type your email to receive the
+                                    report</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="email" id="email_420" name="email_420" class="form-control"
+                                           placeholder="Email">
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="form-group clearfix">
-                                <div class="icheck-primary d-inline">
-                                    <input type="radio" name="period" id="second" value="2T">
-                                    <label for="second">Second (2T)</label>
+                            <label class="col-form-label">Select a trimester period</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" name="period" checked="" id="first" value="1T">
+                                            <label for="first">First (1T)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" name="period" id="second" value="2T">
+                                            <label for="second">Second (2T)</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group clearfix">
-                                <div class="icheck-primary d-inline">
-                                    <input type="radio" name="period" id="third" value="3T">
-                                    <label for="third">Third (3T)</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" name="period" id="third" value="3T">
+                                            <label for="third">Third (3T)</label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group clearfix">
-                                <div class="icheck-primary d-inline">
-                                    <input type="radio" name="period" id="fourth" value="4T">
-                                    <label for="fourth">Fourth (4T)</label>
+                                <div class="col-sm-6">
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" name="period" id="fourth" value="4T">
+                                            <label for="fourth">Fourth (4T)</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="button" id="vatReturnsTrimesterSend" onclick="ajaxSendReportVATReturns()" class="btn btn-success">Send</button>
+                        <div class="row">
+                            <div class="col-md-3 offset-md-9">
+                                <button type="button" id="vatReturnsTrimesterSend" onclick="ajaxSendVATReturnsReport(true)"
+                                        class="btn btn-block btn-success">Send
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div><!-- /.card-body -->
             </div><!-- /.card -->
@@ -104,11 +117,15 @@
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             </div>
                             <input type="email" id="email_425" name="email_425" class="form-control"
-                                   placeholder="Email">
+                                   placeholder="Email" value="juankevin.tr@gmail.com">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <button type="button" id="vatReturnsAnnualSend" onclick="ajaxSendReportVATReturns()" class="btn btn-success">Send</button>
+                    <div class="row">
+                        <div class="col-md-3 offset-md-9">
+                            <button type="button" id="vatReturnsAnnualSend" onclick="ajaxSendVATReturnsReport(false)"
+                                    class="btn btn-block btn-success">Send
+                            </button>
+                        </div>
                     </div>
                 </div><!-- /.card-body -->
             </div><!-- /.card -->

@@ -2,12 +2,8 @@ package io.finbook.sparkcontroller;
 
 import io.finbook.command.*;
 import io.finbook.command.ReportingCommand;
-import io.finbook.file.XMLCommand;
-import io.finbook.file.PDFCommand;
 import io.finbook.util.Path;
 import spark.Route;
-
-import java.io.IOException;
 
 import static spark.Spark.*;
 
@@ -52,22 +48,18 @@ public class Routes {
                                 req.queryParams("period"),
                                 req.queryParams("email")
                         ));
+                post(Path.AdminRoutes.REPORTING_AJAX_SEND_VAT_RETURNS_REPORT, (req, res) ->
+                        ReportingCommand.sendVATReturnsReport(
+                                Auth.getCurrentUserId(req),
+                                req.queryParams("period"),
+                                req.queryParams("whichPeriod"),
+                                req.queryParams("email")
+                        ));
             });
 
             get(Path.AdminRoutes.VAT_RETURNS, map((req, res) -> VATReporting.index()));
 
         });
-
-        get("/pdf", map((req, res) -> {
-            try {
-                return PDFCommand.reportInPDF();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }));
-
-        get("/xml", map((req, res) -> XMLCommand.init()));
 
         // ERROR - NOT FOUND
         // get(Path.HomeRoutes.ERROR_404, map((req, res) -> ErrorCommand.notFound()));

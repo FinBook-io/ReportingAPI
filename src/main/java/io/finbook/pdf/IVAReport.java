@@ -1,4 +1,4 @@
-package io.finbook.file;
+package io.finbook.pdf;
 
 import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.font.PdfFont;
@@ -11,30 +11,22 @@ import com.itextpdf.layout.element.List;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.UnitValue;
 import io.finbook.model.Invoice;
-import io.finbook.responses.CustomResponse;
-import io.finbook.responses.ResponseStructure;
-import io.finbook.sparkcontroller.ResponseCreator;
 import io.finbook.util.Utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 
-public class PDFCommand {
+public class IVAReport implements PDFGenerate{
 
-	private static String path = "src/main/resources/public/finbook/files/temp/";
-	private static final String FILE_EXTENSION = ".pdf";
-
-	public PDFCommand() {
-
-	}
-
-	public void reportGenerate(String filename, String[] summary, java.util.List<Invoice> invoices) throws IOException {
+	@Override
+	public void create(Map<String, Object> content) throws IOException {
 		PdfFont timesRoman = PdfFontFactory.createFont(StandardFonts.TIMES_ROMAN);
 		PdfFont helveticaBold = PdfFontFactory.createFont(StandardFonts.HELVETICA_BOLD);
 
-		String pathToSave = path.concat(filename).concat(FILE_EXTENSION);
+		String pathToSave = PATH.concat(content.get("filename").toString()).concat(FILE_EXTENSION);
 
 		try {
 			Path fileToDeletePath = Paths.get(pathToSave);
@@ -59,8 +51,8 @@ public class PDFCommand {
 				.setListSymbol("\u2022")
 				.setFont(timesRoman);
 		// Add ListItem objects
-		list.add(new ListItem("ID: ".concat(summary[0])))
-				.add(new ListItem("Reporting period: ".concat(summary[1])));
+		list.add(new ListItem("ID: ".concat(content.get("currentUserId").toString())))
+				.add(new ListItem("Reporting period: ".concat(content.get("period").toString())));
 		// Add the list
 		document.add(list);
 
@@ -72,9 +64,9 @@ public class PDFCommand {
 		table.addCell(headerCell("INCOMES - TAXES"));
 		table.addCell(headerCell("EGRESS - TAXES"));
 		table.addCell(headerCell("TOTAL - TAXES DUE"));
-		table.addCell(centerCell(Utils.doubleToStringFormat(Double.parseDouble(summary[2]))))
-				.addCell(centerCell(Utils.doubleToStringFormat(Double.parseDouble(summary[3]))))
-				.addCell(centerCell(Utils.doubleToStringFormat(Double.parseDouble(summary[4]))));
+		table.addCell(centerCell(content.get("incomesTaxes").toString()))
+				.addCell(centerCell(content.get("egressTaxes").toString()))
+				.addCell(centerCell(content.get("totalTaxes").toString()));
 		document.add(table);
 
 		p = new Paragraph("List of invoices")
@@ -88,7 +80,7 @@ public class PDFCommand {
 		table.addCell(headerCell("TOTAL TAXES"));
 		table.addCell(headerCell("TOTAL DUE"));
 
-		for (Invoice invoice : invoices) {
+		for (Invoice invoice : (java.util.List<Invoice>) content.get("invoicesList")) {
 			table.addCell(invoice.getInvoiceDate().toLocalDate().toString());
 			table.addCell(invoice.getInvoiceUUID().toUpperCase());
 			table.addCell(Utils.doubleToStringFormat(invoice.getSubtotal()));
@@ -98,7 +90,6 @@ public class PDFCommand {
 
 		document.add(table);
 		document.close();
-
 	}
 
 	private Cell headerCell(String textToAdd){
@@ -112,23 +103,6 @@ public class PDFCommand {
 		Cell cell = new Cell(1, 0).add(new Paragraph(textToAdd));
 		cell.setTextAlignment(TextAlignment.CENTER);
 		return cell;
-	}
-
-	public static ResponseCreator reportInPDF() throws IOException {
-		String filename = "testing";
-		path = path.concat(filename).concat(FILE_EXTENSION);
-
-		PdfWriter pdfWriter = new PdfWriter(path);
-		PdfDocument pdfDocument = new PdfDocument(pdfWriter);
-		Document document = new Document(pdfDocument);
-
-		document.add(new Paragraph("Hello world!"));
-
-		document.close();
-
-		return CustomResponse.ok(
-				new ResponseStructure(null, "home/index")
-		);
 	}
 
 }

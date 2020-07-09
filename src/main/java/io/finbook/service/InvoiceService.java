@@ -101,6 +101,14 @@ public class InvoiceService extends Database {
         return invoicesList;
     }
 
+    public Double getSumTotalWithoutTaxes(List<Invoice> invoices) {
+        Double sum = 0.0;
+        for(Invoice invoice : invoices){
+            sum += invoice.getSubtotal();
+        }
+        return Utils.formatDoubleTwoDecimals(sum);
+    }
+
     public Double getSumTotalTaxes(List<Invoice> invoices) {
         Double sum = 0.0;
         for(Invoice invoice : invoices){
