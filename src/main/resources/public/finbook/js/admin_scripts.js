@@ -5,6 +5,19 @@ const Toast = Swal.mixin({
     timer: 3000
 });
 
+function ajaxGetCurrentUserId(){
+    $.ajax({
+        url: "/auth/get-current-user-id",
+        method: "POST",
+        dataType: "JSON",
+        success: function(data){
+            if (data != null){
+                $('#user-id').text(data.userid);
+            }
+        }
+    });
+}
+
 function highlightCurrentPageInNav(){
     // Split route from admin e.g. "/admin/some/thing"
     let routeFromAdmin = location.pathname.split("/admin/");
@@ -127,10 +140,10 @@ function fillOutTableBodyInvoiceList(invoicesList){
     tableToFill.draw();
 }
 
-function ajaxSendReport(email){
+function ajaxSendReport(){
+    let email = $('#report_email').val();
     let valueOfSelect = $('#datepicker').val();
-    console.log(valueOfSelect, " - ", email);
-
+    console.log(email);
     $.ajax({
         url: "/admin/reporting/ajax-send-report",
         method: "POST",
@@ -153,18 +166,33 @@ function ajaxSendReport(email){
     });
 }
 
-function ajaxGetCurrentUserId(){
-    $.ajax({
-        url: "/auth/get-current-user-id",
+function ajaxSendReportVATReturns(){
+    let email = $('#email_420').val();
+    let period = $("input[name='period']:checked").val();
+    console.log("Email: ", email, " - Period:", period);
+    /*$.ajax({
+        url: "/admin/reporting/ajax-send-report",
         method: "POST",
-        dataType: "JSON",
+        data: { period : valueOfSelect, email : email },
+        dataType:"JSON",
         success: function(data){
-            if (data != null){
-                $('#user-id').text(data.userid);
-            }
+            $('#close_modal').trigger('click');
+            $('#report_email').val('');
+            Toast.fire({
+                icon: 'success',
+                title: 'Report sent successfully!'
+            });
+        },
+        error: function () {
+            Toast.fire({
+                icon: 'error',
+                title: 'Something was wrong!'
+            });
         }
-    });
+    });*/
 }
+
+
 
 $(function() {
     ajaxGetCurrentUserId();

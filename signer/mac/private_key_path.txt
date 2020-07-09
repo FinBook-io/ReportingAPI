@@ -1,1 +1,1 @@
-/Users/juankevintr/src/reporting/signer/mac/prueba.p12
+/Users/juankevintr/src/reporting/signer/certificates/prueba.p12

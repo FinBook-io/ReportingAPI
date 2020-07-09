@@ -18,42 +18,101 @@
     <!--<div class="container-fluid">-->
     <!-- Main row -->
     <div class="row">
-        <div class="col-12">
-            <div class="card card-primary card-outline card-outline-tabs">
-                <div class="card-header p-0 border-bottom-0">
-                    <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="custom-tabs-four-monthly-tab" data-toggle="pill" href="#custom-tabs-four-monthly" role="tab" aria-controls="custom-tabs-four-monthly" aria-selected="true">Monthly</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-four-trimester-tab" data-toggle="pill" href="#custom-tabs-four-trimester" role="tab" aria-controls="custom-tabs-four-trimester" aria-selected="false">Trimester</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-four-semester-tab" data-toggle="pill" href="#custom-tabs-four-semester" role="tab" aria-controls="custom-tabs-four-semester" aria-selected="false">Semester</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-four-annual-tab" data-toggle="pill" href="#custom-tabs-four-annual" role="tab" aria-controls="custom-tabs-four-annual" aria-selected="false">Annual</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-four-tabContent">
-                        <div class="tab-pane fade active show" id="custom-tabs-four-monthly" role="tabpanel" aria-labelledby="custom-tabs-four-monthly-tab">
-                            List of Monthly government files</div>
-                        <div class="tab-pane fade" id="custom-tabs-four-trimester" role="tabpanel" aria-labelledby="custom-tabs-four-trimester-tab">
-                            List of Trimester government files
-                        </div>
-                        <div class="tab-pane fade" id="custom-tabs-four-semester" role="tabpanel" aria-labelledby="custom-tabs-four-semester-tab">
-                            List of Semester government files
-                        </div>
-                        <div class="tab-pane fade" id="custom-tabs-four-annual" role="tabpanel" aria-labelledby="custom-tabs-four-annual-tab">
-                            List of Annual government files
-                        </div>
+        <div class="col-md-6">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Canary 420 (Trimester)</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
                     </div>
                 </div>
-                <!-- /.card -->
-            </div>
-        </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="col-form-label" for="email_420">Type your email to receive the report</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" id="email_420" name="email_420" class="form-control"
+                                   placeholder="Email">
+                        </div>
+                    </div>
+                    <label class="col-form-label">Select a trimester period</label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group clearfix">
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" name="period" checked="" id="first" value="1T">
+                                    <label for="first">First (1T)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group clearfix">
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" name="period" id="second" value="2T">
+                                    <label for="second">Second (2T)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group clearfix">
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" name="period" id="third" value="3T">
+                                    <label for="third">Third (3T)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group clearfix">
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" name="period" id="fourth" value="4T">
+                                    <label for="fourth">Fourth (4T)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="vatReturnsTrimesterSend" onclick="ajaxSendReportVATReturns()" class="btn btn-success">Send</button>
+                    </div>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div><!-- /.col (LEFT) -->
+
+        <div class="col-md-6">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title">Canary 425 (Annual)</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="col-form-label" for="email_425">Type your email to receive the report</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" id="email_425" name="email_425" class="form-control"
+                                   placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="vatReturnsAnnualSend" onclick="ajaxSendReportVATReturns()" class="btn btn-success">Send</button>
+                    </div>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div><!-- /.col (RIGHT) -->
     </div> <!-- /Main row -->
     <!--</div> /.container-fluid -->
 </section>

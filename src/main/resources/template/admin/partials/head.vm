@@ -25,6 +25,9 @@
 <!-- SweetAlert 2 -->
 <link rel="stylesheet" type="text/css" href="/sweetalert2/css/sweetalert2.min.css">
 
+<!-- Icheck-Bootstrap -->
+<link rel="stylesheet" type="text/css" href="/icheck-bootstrap/icheck-bootstrap.min.css">
+
 <!-- AdminLTE styles -->
 <link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
 

@@ -90,14 +90,12 @@
                 <!-- BAR CHART -->
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Chart</h3>
+                        <h3 class="card-title">Bar chart</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                                     class="fas fa-minus"></i>
                             </button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                    class="fas fa-times"></i></button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -113,14 +111,12 @@
                 <!-- PIE CHART -->
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Chart</h3>
+                        <h3 class="card-title">Pie chart</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                                     class="fas fa-minus"></i>
                             </button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                    class="fas fa-times"></i></button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -187,21 +183,10 @@
                         <input type="email" id="report_email" name="report_email" class="form-control" placeholder="Email">
                     </div>
                 </div>
-                <!--<div class="form-group">
-                    <label class="col-form-label">Select the type of document</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" checked="" id="">
-                        <label class="form-check-label">PDF</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox">
-                        <label class="form-check-label">XML</label>
-                    </div>
-                </div>-->
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" id="close_modal" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" onclick="ajaxSendReport(document.getElementsByName('report_email')[0].value)" class="btn btn-success">Send</button>
+                <button type="button" onclick="ajaxSendReport()" class="btn btn-success">Send</button>
             </div>
         </div>
         <!-- /.modal-content -->

@@ -1,1 +1,1 @@
-/Users/juankevintr/src/reporting/signer/mac/prueba.crt
+/Users/juankevintr/src/reporting/signer/certificates/prueba.crt
