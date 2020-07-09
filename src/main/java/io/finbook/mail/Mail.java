@@ -55,6 +55,7 @@ public class Mail {
 	}
 
 	public void sendMailAttachFile(String userMail, String filename) {
+		System.out.println("Email to send message: " + userMail);
 		String pathToFile = "src/main/resources/public/finbook/files/temp/".concat(filename);
 
 		Session session = Session.getDefaultInstance(properties);

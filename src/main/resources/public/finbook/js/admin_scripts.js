@@ -142,28 +142,37 @@ function fillOutTableBodyInvoiceList(invoicesList){
 
 function ajaxSendReport(){
     let email = $('#report_email').val();
-    let valueOfSelect = $('#datepicker').val();
-    console.log(email);
-    $.ajax({
-        url: "/admin/reporting/ajax-send-report",
-        method: "POST",
-        data: { period : valueOfSelect, email : email },
-        dataType:"JSON",
-        success: function(data){
-            $('#close_modal').trigger('click');
-            $('#report_email').val('');
-            Toast.fire({
-                icon: 'success',
-                title: 'Report sent successfully!'
-            });
-        },
-        error: function () {
-            Toast.fire({
-                icon: 'error',
-                title: 'Something was wrong!'
-            });
-        }
-    });
+
+    if(isEmail(email)){
+        let valueOfSelect = $('#datepicker').val();
+        console.log(email);
+        $.ajax({
+            url: "/admin/reporting/ajax-send-report",
+            method: "POST",
+            data: { period : valueOfSelect, email : email },
+            dataType:"JSON",
+            success: function(data){
+                $('#close_modal').trigger('click');
+                $('#report_email').val('');
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Report sent successfully!'
+                });
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Something was wrong!'
+                });
+            }
+        });
+    }else {
+        Toast.fire({
+            icon: 'error',
+            title: 'Wrong email format!'
+        });
+    }
+
 }
 
 function ajaxSendVATReturnsReport(flag){
@@ -177,26 +186,38 @@ function ajaxSendVATReturnsReport(flag){
         email = $('#email_425').val();
     }
 
-    $.ajax({
-        url: "/admin/reporting/ajax-vat-returns-report",
-        method: "POST",
-        data: { period : period, whichPeriod : whichPeriod, email : email },
-        dataType:"JSON",
-        success: function(data){
-            $('#close_modal').trigger('click');
-            $('#report_email').val('');
-            Toast.fire({
-                icon: 'success',
-                title: 'Report sent successfully!'
-            });
-        },
-        error: function () {
-            Toast.fire({
-                icon: 'error',
-                title: 'Something was wrong!'
-            });
-        }
-    });
+    if (isEmail(email)){
+        $.ajax({
+            url: "/admin/reporting/ajax-vat-returns-report",
+            method: "POST",
+            data: { period : period, whichPeriod : whichPeriod, email : email },
+            dataType:"JSON",
+            success: function(data){
+                $('#close_modal').trigger('click');
+                $('#report_email').val('');
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Report sent successfully!'
+                });
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Something was wrong!'
+                });
+            }
+        });
+    }else {
+        Toast.fire({
+            icon: 'error',
+            title: 'Wrong email format!'
+        });
+    }
+}
+
+function isEmail(email) {
+    let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
 }
 
 $(function() {
