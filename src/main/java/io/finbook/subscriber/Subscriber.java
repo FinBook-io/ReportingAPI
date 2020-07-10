@@ -13,7 +13,7 @@ import java.time.ZoneOffset;
 
 public class Subscriber {
 
-	private static final String TERMINALS_PATH = "src/reporting/temp/terminals/";
+	private static final String TERMINALS_PATH = "src/datamart/terminals/";
 	private static InvoiceService invoiceService;
 
 	public static void init() {
