@@ -28,7 +28,8 @@ public class ReportingCommand {
 	/*
 	 * AJAX REQUESTS
 	 * */
-	public static JSONObject getDataForPeriod(String currentUserId, String period) {
+
+	public static JSONObject getDataPerPeriod(String currentUserId, String period) {
 		Map<String, Object> data = new HashMap<>();
 		LocalDateTime startDate = getStartDate(period);
 		LocalDateTime endDate = Utils.getCurrentDate();
@@ -51,13 +52,14 @@ public class ReportingCommand {
 
 		List<Invoice> invoicesIncomes = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.INCOME, startDate, endDate);
 		Double incomesTaxes = invoiceService.getSumTotalTaxes(invoicesIncomes);
-		data.put("incomes", incomesTaxes);
 
 		List<Invoice> invoicesEgress = getInvoicesListPerPeriodAndType(currentUserId, InvoiceType.EGRESS, startDate, endDate);
 		Double egressTaxes = invoiceService.getSumTotalTaxes(invoicesEgress);
-		data.put("egress", egressTaxes);
 
+		data.put("incomes", incomesTaxes);
+		data.put("egress", egressTaxes);
 		data.put("totalTaxesDue", incomesTaxes - egressTaxes);
+
 		data.put("barChart", drawBarChart(currentUserId, startDate, amountMonths));
 		data.put("pieChart", drawPieChart(incomesTaxes, egressTaxes));
 
@@ -283,13 +285,19 @@ public class ReportingCommand {
 		BarChart barChart = new BarChart();
 		barChart.getData().setLabels(getMonthsNamesForChart(startDate, amountMonths));
 
-		barChart.getData().addDataset("Incomes", "#5cb85c", getIncomesPerMonth(currentUserId, startDate, amountMonths));
-		barChart.getData().addDataset("Egress", "#d9534f", getEgressPerMonth(currentUserId, startDate, amountMonths));
-		barChart.getData().addDataset("Total taxes due", "#f0ad4e", getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
+		barChart.getData().addDataset("Incomes", "#5cb85c",
+				getIncomesPerMonth(currentUserId, startDate, amountMonths));
+
+		barChart.getData().addDataset("Egress", "#d9534f",
+				getEgressPerMonth(currentUserId, startDate, amountMonths));
+
+		barChart.getData().addDataset("Total taxes due", "#f0ad4e",
+				getTotalTaxesDuePerMonth(currentUserId, startDate, amountMonths));
+
 		return barChart.toJSON();
 	}
 
-	private static JSONObject drawPieChart(Double periodIncomesTaxes, Double periodEgressTaxes){
+	private static JSONObject drawPieChart(Double incomesTaxes, Double egressTaxes){
 		PieChart pieChart = new PieChart();
 
 		JSONArray backgrounds = new JSONArray();
@@ -300,9 +308,11 @@ public class ReportingCommand {
 		pieChart.getData().addOneLabel("Egress");
 
 		JSONArray pieData = new JSONArray();
-		pieData.put(periodIncomesTaxes);
-		pieData.put(periodEgressTaxes);
+		pieData.put(incomesTaxes);
+		pieData.put(egressTaxes);
+
 		pieChart.getData().addPieDataset(backgrounds, pieData);
+
 		return pieChart.toJSON();
 	}
 

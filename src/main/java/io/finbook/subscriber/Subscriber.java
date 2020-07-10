@@ -3,8 +3,6 @@ package io.finbook.subscriber;
 import io.finbook.datahub.DatamartTerminal;
 import io.finbook.datahub.events.ProcessedInvoice;
 import io.finbook.model.Invoice;
-import io.finbook.model.InvoiceType;
-import io.finbook.model.UsoCFDI;
 import io.finbook.service.InvoiceService;
 import io.finbook.util.Utils;
 import io.intino.alexandria.terminal.JmsConnector;
@@ -12,11 +10,10 @@ import io.intino.alexandria.terminal.JmsConnector;
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.Base64;
 
 public class Subscriber {
 
-	private static final String terminalsPath = "C:\\src\\reporting\\temp\\terminals";
+	private static final String TERMINALS_PATH = "src/reporting/temp/terminals/";
 	private static InvoiceService invoiceService;
 
 	public static void init() {
@@ -27,7 +24,7 @@ public class Subscriber {
 				"io.finbook.datamart",
 				"io.finbook.datamart",
 				"reporting.finbook-datamart",
-				new File(terminalsPath)
+				new File(TERMINALS_PATH)
 		);
 		connector.start();
 		DatamartTerminal dt = new DatamartTerminal(connector);

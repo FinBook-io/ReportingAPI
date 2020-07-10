@@ -45,6 +45,7 @@ public class IVAReport implements PDFGenerate{
 
 		// Add a Paragraph
 		document.add(new Paragraph("Company data").setFont(timesRoman));
+
 		// Create a List
 		List list = new List()
 				.setSymbolIndent(12)
@@ -53,7 +54,7 @@ public class IVAReport implements PDFGenerate{
 		// Add ListItem objects
 		list.add(new ListItem("ID: ".concat(content.get("currentUserId").toString())))
 				.add(new ListItem("Reporting period: ".concat(content.get("period").toString())));
-		// Add the list
+		// Add list to the document
 		document.add(list);
 
 		p = new Paragraph("Summary")

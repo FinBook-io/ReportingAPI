@@ -11,8 +11,6 @@ public class InvoiceService extends Database {
 
     private String issuerIdLabel = "issuerId";
     private String receiverIdLabel = "receiverId";
-    private String invoiceTypeLabel = "invoiceType";
-    private String invoiceDateLabel = "invoiceDate";
 
     public void add(Invoice invoice){
         datastore.save(invoice);
@@ -54,7 +52,7 @@ public class InvoiceService extends Database {
                 secondFindAs = receiverIdLabel;
                 break;
             case EGRESS:
-                // User loose money being receiver and issuer when InvoiceType is R (Egress)
+                // User loose money being receiver and issuer when InvoiceType is E (Egress)
                 firstFindAs = receiverIdLabel;
                 secondFindAs = issuerIdLabel;
                 break;
@@ -62,6 +60,8 @@ public class InvoiceService extends Database {
                 return invoicesList; // Null - Empty
         }
 
+        String invoiceTypeLabel = "invoiceType";
+        String invoiceDateLabel = "invoiceDate";
         invoicesList.addAll(datastore.find(Invoice.class)
                 .filter(firstFindAs, id)
                 .filter(invoiceTypeLabel, InvoiceType.INCOME.getLabel())

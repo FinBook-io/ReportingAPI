@@ -176,7 +176,6 @@ function ajaxSendIVAReport(){
             title: 'Wrong email format!'
         });
     }
-
 }
 
 function ajaxSendVATReturnsReport(flag){

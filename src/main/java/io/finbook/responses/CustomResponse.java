@@ -28,27 +28,4 @@ public class CustomResponse {
             return new TemplateEngine().render(body);
         };
     }
-
-    public static ResponseCreator created(ResponseStructure body) {
-        return (req, res) -> {
-            res.status(201);
-            return new TemplateEngine().render(body);
-        };
-    }
-
-    public static ResponseCreator badRequest(ResponseStructure body) {
-        return (req, res) -> {
-            res.status(400);
-            return new TemplateEngine().render(body);
-        };
-    }
-
-    public static ResponseCreator forbidden(ResponseStructure body) {
-        return (req, res) -> {
-            res.status(403);
-            return new TemplateEngine().render(body);
-        };
-    }
-
-    // more methods creating responses
 }

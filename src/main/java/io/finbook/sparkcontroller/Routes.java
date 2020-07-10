@@ -41,7 +41,7 @@ public class Routes {
 
             // REPORTS
             path(Path.AdminRoutes.REPORTING, () -> {
-                post(Path.AdminRoutes.REPORTING_AJAX_DATEPICKER, (req, res) -> ReportingCommand.getDataForPeriod(Auth.getCurrentUserId(req), req.queryParams("datepicker_value")));
+                post(Path.AdminRoutes.REPORTING_AJAX_DATEPICKER, (req, res) -> ReportingCommand.getDataPerPeriod(Auth.getCurrentUserId(req), req.queryParams("datepicker_value")));
                 post(Path.AdminRoutes.REPORTING_AJAX_SEND_REPORT, (req, res) ->
                         ReportingCommand.sendIVAReport(
                                 Auth.getCurrentUserId(req),

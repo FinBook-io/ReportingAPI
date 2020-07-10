@@ -1,11 +1,8 @@
 package io.finbook.sparkcontroller;
 
-import io.finbook.Verifier;
 import io.finbook.subscriber.Subscriber;
-import io.finbook.util.JSONParser;
 
 import static spark.Spark.*;
-import static spark.debug.DebugScreen.enableDebugScreen;
 
 public class App {
 
@@ -15,23 +12,20 @@ public class App {
     }
 
     public void start() {
-
         // Setup Spark-java
         port(PORT_NUMBER);
         staticFiles.location("/public");
         staticFiles.expireTime(600L);
-        // enableDebugScreen();
 
         // Setup Web Socket
         webSocket("/socket", SignWebSocket.class);
 
         // Init subscriber
-        // Subscriber.init();
+        Subscriber.init();
 
         // Setup all routes
         Routes routes = new Routes();
         routes.init();
-
     }
 
 }

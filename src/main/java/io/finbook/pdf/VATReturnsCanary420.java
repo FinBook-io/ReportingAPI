@@ -8,7 +8,6 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Cell;
-import com.itextpdf.layout.element.List;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.property.TextAlignment;
@@ -125,13 +124,14 @@ public class VATReturnsCanary420 implements PDFGenerate {
 		document.close();
 	}
 
-	private Cell topHeaderCell(String textToAdd){
+	private Cell topHeaderCell(String textToAdd) {
 		Cell cell = new Cell(1, 0).add(new Paragraph(textToAdd));
 		cell.setBackgroundColor(new DeviceRgb(20, 225, 225));
 		cell.setBold();
 		return cell;
 	}
-	private Cell nextTopHeaderCell(String textToAdd){
+
+	private Cell nextTopHeaderCell(String textToAdd) {
 		Cell cell = new Cell(1, 0).add(new Paragraph(textToAdd));
 		cell.setBackgroundColor(new DeviceRgb(159, 163, 163));
 		cell.setFontColor(new DeviceRgb(255, 255, 255));
@@ -139,23 +139,16 @@ public class VATReturnsCanary420 implements PDFGenerate {
 		return cell;
 	}
 
-	private Cell headerCell(String textToAdd){
+	private Cell headerCell(String textToAdd) {
 		Cell cell = new Cell(1, 0).add(new Paragraph(textToAdd));
 		cell.setTextAlignment(TextAlignment.CENTER);
 		cell.setBold();
 		return cell;
 	}
 
-	private Cell centerCell(String textToAdd){
+	private Cell centerCell(String textToAdd) {
 		Cell cell = new Cell(1, 0).add(new Paragraph(textToAdd));
 		cell.setTextAlignment(TextAlignment.CENTER);
 		return cell;
 	}
-
-	private List createList(){
-		return new List()
-				.setSymbolIndent(12)
-				.setListSymbol("\u2022")
-				.setFont(timesRoman);
-}
 }
