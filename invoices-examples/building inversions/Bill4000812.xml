@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Mortgage for company." Currency="euro" Date="2020-05-30T14:40:45" Location="35038"
+              SubTotal="1000.0" TaxRate="0.15" Total="1150.0" Type="income" UUID="4000812" Use="I01">
+<cfdi:Issuer IssuerName="Leadertech Consulting" IssuerRFC="2000001"/>
+<cfdi:Receiver ReceiverName="Bank" ReceiverRFC="999999"/>
+</cfdi:Voucher>

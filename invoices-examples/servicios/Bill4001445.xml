@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Service for company." Currency="euro" Date="2020-05-30T14:40:45" Location="37712"
+              SubTotal="101.0" TaxRate="0.09" Total="110.09" Type="income" UUID="4001445" Use="G03">
+    <cfdi:Issuer IssuerName="Global Print" IssuerRFC="2000062"/>
+    <cfdi:Receiver ReceiverName="Metro Cash&amp;Carry" ReceiverRFC="2000104"/>
+</cfdi:Voucher>

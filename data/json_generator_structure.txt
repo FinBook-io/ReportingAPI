@@ -1,0 +1,60 @@
+####################################
+    https://next.json-generator.com/
+
+    NOTE: Do not forget replace DELETE_AFTER_GENERATE for ""
+
+    cd C:\src\reporting\data\
+    mongoimport -d fbtestdb -c invoices --drop --file randomInvoices.json --jsonArray
+####################################
+
+[
+  {
+    'repeat(100)': {
+      _id: {
+        $oid: '{{objectId()}}'
+      },
+      invoiceUUID: 'DELETE_AFTER_GENERATE_{{integer(4000000, 5000000)}}',
+      invoiceDate: {
+        $date: '{{moment(this.date(new Date(2019, 0, 1), new Date())).format("YYYY-MM-DDTHH:mm:ss")}}Z'
+      },
+      zipCode: 'DELETE_AFTER_GENERATE_{{integer(10000, 99999)}}',
+      invoiceType: '{{random("income", "egress")}}',
+      usoCFDI: '{{random("D01", "D02", "D03", "D04", "D05", "D06", "D07", "D08", "D09", "D10", "G01", "G02", "G03", "I01", "I02", "I03", "I04", "I05", "I06", "I07", "I08", "P01")}}',
+      issuerId: '{{random("DEMO", "RCO2816104T1", "DELETE_AFTER_GENERATE_999999", "DELETE_AFTER_GENERATE_2000000", "DELETE_AFTER_GENERATE_2000151", "DELETE_AFTER_GENERATE_3000067")}}',
+      issuerName(tags) {
+        if(this.issuerId === "DEMO"){
+          return "Demo company";
+        }
+        return `${tags.company()}`;
+      },
+      receiverId(tags) {
+        const randomID = ['DEMO', 'RCO2816104T1', 'DELETE_AFTER_GENERATE_999999', 'DELETE_AFTER_GENERATE_2000000', 'DELETE_AFTER_GENERATE_2000151', 'DELETE_AFTER_GENERATE_3000067'];
+
+        var result = randomID[tags.integer(0, randomID.length - 1)];
+
+        while (this.issuerId === result){
+        	result = randomID[tags.integer(0, randomID.length - 1)];
+        }
+
+        return result;
+      },
+      receiverName(tags) {
+        if(this.receiverId === "DEMO"){
+          return "Demo company";
+        }
+        return `${tags.company()}`;
+      },
+      concept: '{{lorem(4, "words")}}',
+      subtotal: '{{floating(250, 2500, 2, "0.00")}}',
+      taxRate: '{{floating(0.01, 0.25)}}',
+      totalDue(tags) {
+        var subT = parseFloat(this.subtotal);
+        var tax = parseFloat(this.taxRate);
+        var total = subT + (subT * tax);
+        return `${total}`;
+      },
+      currency: "euro",
+      xmlFile: ""
+    }
+  }
+]

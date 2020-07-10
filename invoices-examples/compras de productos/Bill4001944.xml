@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Purchase of a product for the restaurant." Currency="euro" Date="2020-05-30T14:40:45"
+              Location="35115" SubTotal="79.2" TaxRate="0.09" Total="86.328" Type="income" UUID="4001944" Use="G01">
+    <cfdi:Issuer IssuerName="Zepter" IssuerRFC="2000325"/>
+    <cfdi:Receiver ReceiverName="el patio de lola" ReceiverRFC="1000000"/>
+</cfdi:Voucher>

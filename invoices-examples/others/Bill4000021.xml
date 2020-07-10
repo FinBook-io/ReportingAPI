@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Bill of a eating." Currency="euro" Date="2020-05-18T00:21:33" Location="37800"
+              SubTotal="587.511083908761" TaxRate="0.23" Total="722.6386332077759" Type="income" UUID="4000021"
+              Use="G01">
+    <cfdi:Issuer IssuerName="The Great Wall" IssuerRFC="1000007"/>
+    <cfdi:Receiver ReceiverName="Penny Rodwell" ReceiverRFC="3000842"/>
+</cfdi:Voucher>

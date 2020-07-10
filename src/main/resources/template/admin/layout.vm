@@ -1,0 +1,27 @@
+#macro(mainLayout)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        #parse("/template/admin/partials/head.vm")
+    </head>
+
+    <body class="hold-transition sidebar-mini">
+        <div class="wrapper">
+            #parse("/template/admin/partials/nav.vm")
+            #parse("/template/admin/partials/sidebar.vm")
+
+            <!-- Content Wrapper - Contains page content -->
+            <div class="content-wrapper">
+                $bodyContent
+            </div>
+            <!-- /.content-wrapper -->
+
+            <footer class="main-footer">
+                #parse("/template/admin/partials/footer.vm")
+            </footer>
+        </div><!-- ./wrapper -->
+
+        #parse("/template/admin/partials/footer_scripts.vm")
+    </body>
+</html>
+#end

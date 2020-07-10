@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Payroll o a worker." Currency="euro" Date="2020-05-30T14:40:45" Location="35115" SubTotal="800.0"
+              TaxRate="0.2" Total="960.0" Type="payroll" UUID="4001955" Use="NO1">
+    <cfdi:Issuer IssuerName="el patio de lola" IssuerRFC="1000000"/>
+    <cfdi:Receiver ReceiverName="Emely Fleming" ReceiverRFC="3001070"/>
+</cfdi:Voucher>

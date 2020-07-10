@@ -1,0 +1,246 @@
+[
+  {
+    "_id": {
+      "$oid": "5ef7a96943359bfb89d0011f"
+    },
+    "invoiceUUID": "4000811",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "37184",
+    "invoiceType": "income",
+    "usoCFDI": "I03",
+    "issuerName": "Biolife Grup",
+    "issuerId": "2000000",
+    "receiverName": "Bank",
+    "receiverId": "999999",
+    "concept": "Mortgage for company",
+    "subtotal": "1000",
+    "taxRate": "0.01",
+    "totalDue": "1010",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9Ik1vcnRnYWdlIGZvciBjb21wYW55LiIgQ3VycmVuY3k9ImV1cm8iIERhdGU9IjIwMjAtMDUtMzBUMTQ6NDA6NDUiIExvY2F0aW9uPSIzNzE4NCINCiAgICAgICAgICAgICAgU3ViVG90YWw9IjEwMDAuMCIgVGF4UmF0ZT0iMC4wMSIgVG90YWw9IjEwMTAuMCIgVHlwZT0iaW5jb21lIiBVVUlEPSI0MDAwODExIiBVc2U9IkkwMyI+DQogICAgPGNmZGk6SXNzdWVyIElzc3Vlck5hbWU9IkJpb2xpZmUgR3J1cCIgSXNzdWVyUkZDPSIyMDAwMDAwIi8+DQogICAgPGNmZGk6UmVjZWl2ZXIgUmVjZWl2ZXJOYW1lPSJCYW5rIiBSZWNlaXZlclJGQz0iOTk5OTk5Ii8+DQo8L2NmZGk6Vm91Y2hlcj4="
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a9707e32b55b08e3e571"
+    },
+    "invoiceUUID": "4000812",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "35038",
+    "invoiceType": "income",
+    "usoCFDI": "I01",
+    "issuerName": "Leadertech Consulting",
+    "issuerId": "2000001",
+    "receiverName": "Bank",
+    "receiverId": "999999",
+    "concept": "Mortgage for company",
+    "subtotal": "1000",
+    "taxRate": "0.15",
+    "totalDue": "1150",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9Ik1vcnRnYWdlIGZvciBjb21wYW55LiIgQ3VycmVuY3k9ImV1cm8iIERhdGU9IjIwMjAtMDUtMzBUMTQ6NDA6NDUiIExvY2F0aW9uPSIzNTAzOCINCiAgICAgICAgICAgICAgU3ViVG90YWw9IjEwMDAuMCIgVGF4UmF0ZT0iMC4xNSIgVG90YWw9IjExNTAuMCIgVHlwZT0iaW5jb21lIiBVVUlEPSI0MDAwODEyIiBVc2U9IkkwMSI+DQo8Y2ZkaTpJc3N1ZXIgSXNzdWVyTmFtZT0iTGVhZGVydGVjaCBDb25zdWx0aW5nIiBJc3N1ZXJSRkM9IjIwMDAwMDEiLz4NCjxjZmRpOlJlY2VpdmVyIFJlY2VpdmVyTmFtZT0iQmFuayIgUmVjZWl2ZXJSRkM9Ijk5OTk5OSIvPg0KPC9jZmRpOlZvdWNoZXI+"
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a9749816d7c51e938b19"
+    },
+    "invoiceUUID": "4001941",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "35115",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerName": "Danone",
+    "issuerId": "2000525",
+    "receiverName": "el patio de lola",
+    "receiverId": "DEMO",
+    "concept": "Purchase of a product for the restaurant",
+    "subtotal": "148.5",
+    "taxRate": "0.07",
+    "totalDue": "158.895",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IlB1cmNoYXNlIG9mIGEgcHJvZHVjdCBmb3IgdGhlIHJlc3RhdXJhbnQuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0zMFQxNDo0MDo0NSINCiAgICAgICAgICAgICAgTG9jYXRpb249IjM1MTE1IiBTdWJUb3RhbD0iMTQ4LjUiIFRheFJhdGU9IjAuMDciIFRvdGFsPSIxNTguODk1IiBUeXBlPSJpbmNvbWUiIFVVSUQ9IjQwMDE5NDEiIFVzZT0iRzAxIj4NCiAgICA8Y2ZkaTpJc3N1ZXIgSXNzdWVyTmFtZT0iRGFub25lIiBJc3N1ZXJSRkM9IjIwMDA1MjUiLz4NCiAgICA8Y2ZkaTpSZWNlaXZlciBSZWNlaXZlck5hbWU9ImVsIHBhdGlvIGRlIGxvbGEiIFJlY2VpdmVyUkZDPSIxMDAwMDAwIi8+DQo8L2NmZGk6Vm91Y2hlcj4="
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a979cfd160470d9d373d"
+    },
+    "invoiceUUID": "4001942",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "35115",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerName": "Facebook",
+    "issuerId": "2000427",
+    "receiverName": "el patio de lola",
+    "receiverId": "DEMO",
+    "concept": "Purchase of a product for the restaurant",
+    "subtotal": "158.4",
+    "taxRate": "0.09",
+    "totalDue": "172.66",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IlB1cmNoYXNlIG9mIGEgcHJvZHVjdCBmb3IgdGhlIHJlc3RhdXJhbnQuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0zMFQxNDo0MDo0NSINCiAgICAgICAgICAgICAgTG9jYXRpb249IjM1MTE1IiBTdWJUb3RhbD0iMTU4LjQiIFRheFJhdGU9IjAuMDkiIFRvdGFsPSIxNzIuNjU2IiBUeXBlPSJpbmNvbWUiIFVVSUQ9IjQwMDE5NDIiIFVzZT0iRzAxIj4NCiAgICA8Y2ZkaTpJc3N1ZXIgSXNzdWVyTmFtZT0iRmFjZWJvb2siIElzc3VlclJGQz0iMjAwMDQyNyIvPg0KICAgIDxjZmRpOlJlY2VpdmVyIFJlY2VpdmVyTmFtZT0iZWwgcGF0aW8gZGUgbG9sYSIgUmVjZWl2ZXJSRkM9IjEwMDAwMDAiLz4NCjwvY2ZkaTpWb3VjaGVyPg=="
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a97d8f78418ff0bdda3e"
+    },
+    "invoiceUUID": "4000000",
+    "invoiceDate": {
+      "$date": "2020-05-20T14:33:00Z"
+    },
+    "zipCode": "35744",
+    "invoiceType": "egress",
+    "usoCFDI": "G02",
+    "issuerName": "AECOM",
+    "issuerId": "2000151",
+    "receiverName": "Miss Asia San Fernando",
+    "receiverId": "1000016",
+    "concept": "Refund of a product in bad conditions",
+    "subtotal": "2.67",
+    "taxRate": "0.06",
+    "totalDue": "2.83",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IlJlZnVuZCBvZiBhIHByb2R1Y3QgaW4gYmFkIGNvbmRpdGlvbnMuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0yMFQxNDozMzowMCINCiAgICAgICAgICAgICAgTG9jYXRpb249IjM1NzQ0IiBTdWJUb3RhbD0iMi42NjY2NjY2NjY2NjY2NjY1IiBUYXhSYXRlPSIwLjA2IiBUb3RhbD0iMi44MjY2NjY2NjY2NjY2NjY3IiBUeXBlPSJlZ3Jlc3MiDQogICAgICAgICAgICAgIFVVSUQ9IjQwMDAwMDAiIFVzZT0iRzAyIj4NCiAgICA8Y2ZkaTpJc3N1ZXIgSXNzdWVyTmFtZT0iQUVDT00iIElzc3VlclJGQz0iMjAwMDE1MSIvPg0KICAgIDxjZmRpOlJlY2VpdmVyIFJlY2VpdmVyTmFtZT0iTWlzcyBBc2lhIFNhbiBGZXJuYW5kbyIgUmVjZWl2ZXJSRkM9IjEwMDAwMTYiLz4NCjwvY2ZkaTpWb3VjaGVyPg=="
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a9832bac78da6fd0ad8b"
+    },
+    "invoiceUUID": "4001953",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "35115",
+    "invoiceType": "payroll",
+    "usoCFDI": "NO1",
+    "issuerName": "el patio de lola",
+    "issuerId": "DEMO",
+    "receiverName": "Liv Lee",
+    "receiverId": "3001064",
+    "concept": "Payroll o a worker",
+    "subtotal": "800",
+    "taxRate": "0.2",
+    "totalDue": "960",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IlBheXJvbGwgbyBhIHdvcmtlci4iIEN1cnJlbmN5PSJldXJvIiBEYXRlPSIyMDIwLTA1LTMwVDE0OjQwOjQ1IiBMb2NhdGlvbj0iMzUxMTUiIFN1YlRvdGFsPSI4MDAuMCINCiAgICAgICAgICAgICAgVGF4UmF0ZT0iMC4yIiBUb3RhbD0iOTYwLjAiIFR5cGU9InBheXJvbGwiIFVVSUQ9IjQwMDE5NTMiIFVzZT0iTk8xIj4NCiAgICA8Y2ZkaTpJc3N1ZXIgSXNzdWVyTmFtZT0iZWwgcGF0aW8gZGUgbG9sYSIgSXNzdWVyUkZDPSIxMDAwMDAwIi8+DQogICAgPGNmZGk6UmVjZWl2ZXIgUmVjZWl2ZXJOYW1lPSJMaXYgTGVlIiBSZWNlaXZlclJGQz0iMzAwMTA2NCIvPg0KPC9jZmRpOlZvdWNoZXI+"
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a98b056e3578888e2511"
+    },
+    "invoiceUUID": "4001441",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "39598",
+    "invoiceType": "income",
+    "usoCFDI": "G03",
+    "issuerName": "CarMax",
+    "issuerId": "2000058",
+    "receiverName": "Erickson",
+    "receiverId": "2000100",
+    "concept": "Service for company",
+    "subtotal": "101.0",
+    "taxRate": "0.11",
+    "totalDue": "112.11",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IlNlcnZpY2UgZm9yIGNvbXBhbnkuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0zMFQxNDo0MDo0NSIgTG9jYXRpb249IjM5NTk4Ig0KICAgICAgICAgICAgICBTdWJUb3RhbD0iMTAxLjAiIFRheFJhdGU9IjAuMTEiIFRvdGFsPSIxMTIuMTEwMDAwMDAwMDAwMDEiIFR5cGU9ImluY29tZSIgVVVJRD0iNDAwMTQ0MSIgVXNlPSJHMDMiPg0KICAgIDxjZmRpOklzc3VlciBJc3N1ZXJOYW1lPSJDYXJNYXgiIElzc3VlclJGQz0iMjAwMDA1OCIvPg0KICAgIDxjZmRpOlJlY2VpdmVyIFJlY2VpdmVyTmFtZT0iRXJpY2tzb24iIFJlY2VpdmVyUkZDPSIyMDAwMTAwIi8+DQo8L2NmZGk6Vm91Y2hlcj4="
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a99f39779e3c0cfc884b"
+    },
+    "invoiceUUID": "4001442",
+    "invoiceDate": {
+      "$date": "2020-05-30T14:40:45Z"
+    },
+    "zipCode": "37683",
+    "invoiceType": "income",
+    "usoCFDI": "G03",
+    "issuerName": "Team Guard SRL",
+    "issuerId": "2000065",
+    "receiverName": "Team Guard SRL",
+    "receiverId": "2000101",
+    "concept": "Service for company",
+    "subtotal": "101.0",
+    "taxRate": "0.1",
+    "totalDue": "111.1",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IlNlcnZpY2UgZm9yIGNvbXBhbnkuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0zMFQxNDo0MDo0NSIgTG9jYXRpb249IjM3NjgzIg0KICAgICAgICAgICAgICBTdWJUb3RhbD0iMTAxLjAiIFRheFJhdGU9IjAuMSIgVG90YWw9IjExMS4xMDAwMDAwMDAwMDAwMSIgVHlwZT0iaW5jb21lIiBVVUlEPSI0MDAxNDQyIiBVc2U9IkcwMyI+DQogICAgPGNmZGk6SXNzdWVyIElzc3Vlck5hbWU9IlRlYW0gR3VhcmQgU1JMIiBJc3N1ZXJSRkM9IjIwMDAwNjUiLz4NCiAgICA8Y2ZkaTpSZWNlaXZlciBSZWNlaXZlck5hbWU9IlRlYW0gR3VhcmQgU1JMIiBSZWNlaXZlclJGQz0iMjAwMDEwMSIvPg0KPC9jZmRpOlZvdWNoZXI+"
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a9998e9f73a2f96ad7fe"
+    },
+    "invoiceUUID": "4000000",
+    "invoiceDate": {
+      "$date": "2020-05-18T00:21:33Z"
+    },
+    "zipCode": "39215",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerName": "las Tapas",
+    "issuerId": "1000020",
+    "receiverName": "Daron Hunt",
+    "receiverId": "3000040",
+    "concept": "Bill of a eating",
+    "subtotal": "8.054354364103418",
+    "taxRate": "0.09",
+    "totalDue": "8.779246256872726",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IkJpbGwgb2YgYSBlYXRpbmcuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0xOFQwMDoyMTozMyIgTG9jYXRpb249IjM5MjE1Ig0KICAgICAgICAgICAgICBTdWJUb3RhbD0iOC4wNTQzNTQzNjQxMDM0MTgiIFRheFJhdGU9IjAuMDkiIFRvdGFsPSI4Ljc3OTI0NjI1Njg3MjcyNiIgVHlwZT0iaW5jb21lIiBVVUlEPSI0MDAwMDAwIg0KICAgICAgICAgICAgICBVc2U9IkcwMSI+DQogICAgPGNmZGk6SXNzdWVyIElzc3Vlck5hbWU9ImxhcyBUYXBhcyIgSXNzdWVyUkZDPSIxMDAwMDIwIi8+DQogICAgPGNmZGk6UmVjZWl2ZXIgUmVjZWl2ZXJOYW1lPSJEYXJvbiBIdW50IiBSZWNlaXZlclJGQz0iMzAwMDA0MCIvPg0KPC9jZmRpOlZvdWNoZXI+"
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a9b3908cf39702eff601"
+    },
+    "invoiceUUID": "4000001",
+    "invoiceDate": {
+      "$date": "2020-05-18T00:21:33Z"
+    },
+    "zipCode": "37394",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerName": "el patio de lola",
+    "issuerId": "DEMO",
+    "receiverName": "Crystal Rainford",
+    "receiverId": "3000046",
+    "concept": "Bill of a eating",
+    "subtotal": "55.786178826619164",
+    "taxRate": "0.15",
+    "totalDue": "64.15410565061204",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IkJpbGwgb2YgYSBlYXRpbmcuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0xOFQwMDoyMTozMyIgTG9jYXRpb249IjM3Mzk0Ig0KICAgICAgICAgICAgICBTdWJUb3RhbD0iNTUuNzg2MTc4ODI2NjE5MTY0IiBUYXhSYXRlPSIwLjE1IiBUb3RhbD0iNjQuMTU0MTA1NjUwNjEyMDQiIFR5cGU9ImluY29tZSIgVVVJRD0iNDAwMDAwMSINCiAgICAgICAgICAgICAgVXNlPSJHMDEiPg0KICAgIDxjZmRpOklzc3VlciBJc3N1ZXJOYW1lPSJlbCBwYXRpbyBkZSBsb2xhIiBJc3N1ZXJSRkM9IjEwMDAwMDAiLz4NCiAgICA8Y2ZkaTpSZWNlaXZlciBSZWNlaXZlck5hbWU9IkNyeXN0YWwgUmFpbmZvcmQiIFJlY2VpdmVyUkZDPSIzMDAwMDQ2Ii8+DQo8L2NmZGk6Vm91Y2hlcj4="
+  },
+  {
+    "_id": {
+      "$oid": "5ef7a9b950c4ac1ab85c55cd"
+    },
+    "invoiceUUID": "4000002",
+    "invoiceDate": {
+      "$date": "2020-05-18T00:21:33Z"
+    },
+    "zipCode": "37394",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerName": "el patio de lola",
+    "issuerId": "DEMO",
+    "receiverName": "Kamila Mcleod",
+    "receiverId": "3000067",
+    "concept": "Bill of a eating",
+    "subtotal": "54.12666806092865",
+    "taxRate": "0.22",
+    "totalDue": "66.03453503433295",
+    "currency": "euro",
+    "xmlFile": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2ZkaTpWb3VjaGVyIENvbmNlcHQ9IkJpbGwgb2YgYSBlYXRpbmcuIiBDdXJyZW5jeT0iZXVybyIgRGF0ZT0iMjAyMC0wNS0xOFQwMDoyMTozMyIgTG9jYXRpb249IjM3Mzk0Ig0KICAgICAgICAgICAgICBTdWJUb3RhbD0iNTQuMTI2NjY4MDYwOTI4NjUiIFRheFJhdGU9IjAuMjIiIFRvdGFsPSI2Ni4wMzQ1MzUwMzQzMzI5NSIgVHlwZT0iaW5jb21lIiBVVUlEPSI0MDAwMDAyIg0KICAgICAgICAgICAgICBVc2U9IkcwMSI+DQogICAgPGNmZGk6SXNzdWVyIElzc3Vlck5hbWU9ImVsIHBhdGlvIGRlIGxvbGEiIElzc3VlclJGQz0iMTAwMDAwMCIvPg0KICAgIDxjZmRpOlJlY2VpdmVyIFJlY2VpdmVyTmFtZT0iS2FtaWxhIE1jbGVvZCIgUmVjZWl2ZXJSRkM9IjMwMDAwNjciLz4NCjwvY2ZkaTpWb3VjaGVyPg=="
+  }
+]
+
+

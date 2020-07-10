@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Bill of a eating." Currency="euro" Date="2020-05-18T00:21:33" Location="39215"
+              SubTotal="8.054354364103418" TaxRate="0.09" Total="8.779246256872726" Type="income" UUID="4000000"
+              Use="G01">
+    <cfdi:Issuer IssuerName="las Tapas" IssuerRFC="1000020"/>
+    <cfdi:Receiver ReceiverName="Daron Hunt" ReceiverRFC="3000040"/>
+</cfdi:Voucher>

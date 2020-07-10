@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Bill of a eating." Currency="euro" Date="2020-05-18T00:21:33" Location="35742"
+              SubTotal="53.67636024256891" TaxRate="0.23" Total="66.02192309835976" Type="income" UUID="4000019"
+              Use="G01">
+    <cfdi:Issuer IssuerName="Cafe Bar Las Vides" IssuerRFC="1000019"/>
+    <cfdi:Receiver ReceiverName="Denny Noon" ReceiverRFC="3000820"/>
+</cfdi:Voucher>

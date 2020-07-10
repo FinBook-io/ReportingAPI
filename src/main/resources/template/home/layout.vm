@@ -1,0 +1,71 @@
+#macro(mainLayout)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="author" content="Juan Kevin Trujillo">
+
+        <!-- Favicon -->
+        <link rel="icon" href="/favicon.png">
+
+        <title>Reporting</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+        <!-- SweetAlert 2 -->
+        <link rel="stylesheet" type="text/css" href="/sweetalert2/css/sweetalert2.min.css">
+
+        <!-- AdminLTE styles -->
+        <link rel="stylesheet" type="text/css" href="/adminlte/css/adminlte.min.css">
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" type="text/css" href="/finbook/css/home_styles.css">
+    </head>
+
+    <body class="hold-transition layout-top-nav">
+        <div class="wrapper">
+            #parse("/template/home/partials/nav.vm")
+
+            <!-- Content Wrapper - Contains page content -->
+            <div class="content-wrapper">
+                $bodyContent
+            </div>
+            <!-- /.content-wrapper -->
+
+            <footer class="main-footer">
+                <!-- Default to the left -->
+                <strong>Copyright &copy; 2020 <a href="https://juankevintrujillo.com/">Juan Kevin Trujillo</a> -</strong> All rights reserved.
+                <!-- To the right -->
+                <div class="float-right d-none d-sm-inline">
+                    <b>Version</b> 1.0-SNAPSHOT
+                </div>
+            </footer>
+        </div><!-- ./wrapper -->
+
+        <!-- REQUIRED SCRIPTS -->
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap (Popper included) -->
+        <script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Font Awesome Icons -->
+        <script type="text/javascript" src="https://kit.fontawesome.com/cacf260cda.js" crossorigin="anonymous"></script>
+
+        <!-- SweetAlert 2 -->
+        <script type="text/javascript" src="/sweetalert2/js/sweetalert2.min.js"></script>
+
+        <!-- AdminLTE scripts -->
+        <script src="/adminlte/js/adminlte.min.js"></script>
+
+        <!-- Custom scripts -->
+        <script src="/finbook/js/home_scripts.js"></script>
+    </body>
+</html>
+#end

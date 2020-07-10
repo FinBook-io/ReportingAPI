@@ -1,0 +1,2202 @@
+[
+  {
+    "_id": {
+      "$oid": "5f064b37a68fbde7de1846ed"
+    },
+    "invoiceUUID": "4188787",
+    "invoiceDate": {
+      "$date": "2020-05-04T21:56:44Z"
+    },
+    "zipCode": "52343",
+    "invoiceType": "egress",
+    "usoCFDI": "D02",
+    "issuerId": "999999",
+    "issuerName": "Zidox",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "aliquip quis voluptate reprehenderit",
+    "subtotal": "1598.88",
+    "taxRate": "0.07",
+    "totalDue": "1710.8016000000002",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37f6c600a8c5fa5343"
+    },
+    "invoiceUUID": "4143152",
+    "invoiceDate": {
+      "$date": "2020-06-03T07:28:43Z"
+    },
+    "zipCode": "56938",
+    "invoiceType": "egress",
+    "usoCFDI": "D05",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000151",
+    "receiverName": "Portalis",
+    "concept": "excepteur dolore aliqua ut",
+    "subtotal": "1202.12",
+    "taxRate": "0.23",
+    "totalDue": "1478.6075999999998",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37f5f3cd9eeb5cf769"
+    },
+    "invoiceUUID": "4419601",
+    "invoiceDate": {
+      "$date": "2020-03-04T05:17:18Z"
+    },
+    "zipCode": "21553",
+    "invoiceType": "income",
+    "usoCFDI": "I03",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Terascape",
+    "concept": "reprehenderit adipisicing enim voluptate",
+    "subtotal": "429.45",
+    "taxRate": "0.21",
+    "totalDue": "519.6345",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b376d9ca8afe03b75bf"
+    },
+    "invoiceUUID": "4584340",
+    "invoiceDate": {
+      "$date": "2020-02-12T14:25:57Z"
+    },
+    "zipCode": "23449",
+    "invoiceType": "income",
+    "usoCFDI": "I08",
+    "issuerId": "2000000",
+    "issuerName": "Gracker",
+    "receiverId": "999999",
+    "receiverName": "Paragonia",
+    "concept": "consectetur sint voluptate exercitation",
+    "subtotal": "1825.33",
+    "taxRate": "0.08",
+    "totalDue": "1971.3564",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b2696fab0ec8ceaa"
+    },
+    "invoiceUUID": "4945946",
+    "invoiceDate": {
+      "$date": "2020-01-05T08:12:37Z"
+    },
+    "zipCode": "44483",
+    "invoiceType": "egress",
+    "usoCFDI": "I06",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Zanity",
+    "receiverId": "3000067",
+    "receiverName": "Gleamink",
+    "concept": "ex dolor fugiat dolore",
+    "subtotal": "1293.00",
+    "taxRate": "0.02",
+    "totalDue": "1318.86",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b373e747b12aaf7218f"
+    },
+    "invoiceUUID": "4362844",
+    "invoiceDate": {
+      "$date": "2020-02-23T04:29:42Z"
+    },
+    "zipCode": "65783",
+    "invoiceType": "egress",
+    "usoCFDI": "D10",
+    "issuerId": "2000000",
+    "issuerName": "Senmei",
+    "receiverId": "2000151",
+    "receiverName": "Krag",
+    "concept": "ad consequat officia laborum",
+    "subtotal": "674.80",
+    "taxRate": "0.03",
+    "totalDue": "695.044",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3758cd6c23ec8be88a"
+    },
+    "invoiceUUID": "4125347",
+    "invoiceDate": {
+      "$date": "2020-01-19T23:35:47Z"
+    },
+    "zipCode": "29176",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "999999",
+    "issuerName": "Qualitex",
+    "receiverId": "2000151",
+    "receiverName": "Solgan",
+    "concept": "dolor Lorem ex enim",
+    "subtotal": "1491.13",
+    "taxRate": "0.22",
+    "totalDue": "1819.1786000000002",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37acb55b649b9bfb87"
+    },
+    "invoiceUUID": "4484604",
+    "invoiceDate": {
+      "$date": "2020-03-08T06:51:23Z"
+    },
+    "zipCode": "70183",
+    "invoiceType": "income",
+    "usoCFDI": "I06",
+    "issuerId": "2000000",
+    "issuerName": "Memora",
+    "receiverId": "2000151",
+    "receiverName": "Urbanshee",
+    "concept": "sunt elit commodo labore",
+    "subtotal": "2449.75",
+    "taxRate": "0.09",
+    "totalDue": "2670.2275",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37e820abac78d7c0a3"
+    },
+    "invoiceUUID": "4275791",
+    "invoiceDate": {
+      "$date": "2020-01-20T02:18:41Z"
+    },
+    "zipCode": "89569",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000000",
+    "receiverName": "Affluex",
+    "concept": "consequat ipsum eu sit",
+    "subtotal": "1078.75",
+    "taxRate": "0.22",
+    "totalDue": "1316.075",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3718cac565f2310200"
+    },
+    "invoiceUUID": "4619110",
+    "invoiceDate": {
+      "$date": "2020-05-13T19:19:42Z"
+    },
+    "zipCode": "67500",
+    "invoiceType": "egress",
+    "usoCFDI": "D09",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000000",
+    "receiverName": "Chorizon",
+    "concept": "adipisicing minim reprehenderit Lorem",
+    "subtotal": "932.52",
+    "taxRate": "0.04",
+    "totalDue": "969.8208",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37d5360b2edfa19af0"
+    },
+    "invoiceUUID": "4468172",
+    "invoiceDate": {
+      "$date": "2020-02-25T11:11:10Z"
+    },
+    "zipCode": "59650",
+    "invoiceType": "income",
+    "usoCFDI": "G03",
+    "issuerId": "2000000",
+    "issuerName": "Endicil",
+    "receiverId": "3000067",
+    "receiverName": "Xelegyl",
+    "concept": "velit dolore excepteur non",
+    "subtotal": "1374.66",
+    "taxRate": "0.11",
+    "totalDue": "1525.8726000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3708818f109b2f2f09"
+    },
+    "invoiceUUID": "4094462",
+    "invoiceDate": {
+      "$date": "2020-07-03T21:03:30Z"
+    },
+    "zipCode": "17842",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "2000000",
+    "issuerName": "Andershun",
+    "receiverId": "999999",
+    "receiverName": "Petigems",
+    "concept": "ut qui amet deserunt",
+    "subtotal": "863.83",
+    "taxRate": "0.16",
+    "totalDue": "1002.0428",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b3cc1634dadb14ff"
+    },
+    "invoiceUUID": "4920259",
+    "invoiceDate": {
+      "$date": "2020-04-16T05:08:13Z"
+    },
+    "zipCode": "24048",
+    "invoiceType": "egress",
+    "usoCFDI": "I02",
+    "issuerId": "2000151",
+    "issuerName": "Zoid",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "ex quis adipisicing id",
+    "subtotal": "1238.05",
+    "taxRate": "0.25",
+    "totalDue": "1547.5625",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37bb0dec14cb6055f6"
+    },
+    "invoiceUUID": "4835214",
+    "invoiceDate": {
+      "$date": "2020-01-17T22:37:54Z"
+    },
+    "zipCode": "35084",
+    "invoiceType": "egress",
+    "usoCFDI": "D04",
+    "issuerId": "3000067",
+    "issuerName": "Atomica",
+    "receiverId": "2000151",
+    "receiverName": "Mantrix",
+    "concept": "cillum occaecat sit ex",
+    "subtotal": "455.63",
+    "taxRate": "0.05",
+    "totalDue": "478.4115",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b370b2104a6df80ace3"
+    },
+    "invoiceUUID": "4248530",
+    "invoiceDate": {
+      "$date": "2020-01-20T02:54:01Z"
+    },
+    "zipCode": "70444",
+    "invoiceType": "egress",
+    "usoCFDI": "D02",
+    "issuerId": "999999",
+    "issuerName": "Netplode",
+    "receiverId": "3000067",
+    "receiverName": "Emtrak",
+    "concept": "elit tempor nulla anim",
+    "subtotal": "2144.45",
+    "taxRate": "0.13",
+    "totalDue": "2423.2284999999997",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37ba7d085905bc9656"
+    },
+    "invoiceUUID": "4053163",
+    "invoiceDate": {
+      "$date": "2020-05-24T22:19:37Z"
+    },
+    "zipCode": "54442",
+    "invoiceType": "egress",
+    "usoCFDI": "G02",
+    "issuerId": "2000151",
+    "issuerName": "Genmy",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Luxuria",
+    "concept": "consequat magna deserunt esse",
+    "subtotal": "808.18",
+    "taxRate": "0.02",
+    "totalDue": "824.3435999999999",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37d0cf8129766a9efb"
+    },
+    "invoiceUUID": "4709459",
+    "invoiceDate": {
+      "$date": "2020-01-20T16:31:59Z"
+    },
+    "zipCode": "15187",
+    "invoiceType": "egress",
+    "usoCFDI": "G01",
+    "issuerId": "2000151",
+    "issuerName": "Neurocell",
+    "receiverId": "2000000",
+    "receiverName": "Snips",
+    "concept": "exercitation occaecat ipsum quis",
+    "subtotal": "827.14",
+    "taxRate": "0.04",
+    "totalDue": "860.2256",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37beb8247d3b7b8b9b"
+    },
+    "invoiceUUID": "4364655",
+    "invoiceDate": {
+      "$date": "2020-06-10T17:37:57Z"
+    },
+    "zipCode": "80545",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "3000067",
+    "issuerName": "Isoswitch",
+    "receiverId": "999999",
+    "receiverName": "Digitalus",
+    "concept": "magna Lorem ipsum consequat",
+    "subtotal": "1754.37",
+    "taxRate": "0.15",
+    "totalDue": "2017.5254999999997",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37d7c7dab8481ead5c"
+    },
+    "invoiceUUID": "4715746",
+    "invoiceDate": {
+      "$date": "2020-02-19T06:37:44Z"
+    },
+    "zipCode": "77188",
+    "invoiceType": "egress",
+    "usoCFDI": "D04",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Rubadub",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "eu proident cupidatat nulla",
+    "subtotal": "2357.94",
+    "taxRate": "0.23",
+    "totalDue": "2900.2662",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37eafc5aec059e8f37"
+    },
+    "invoiceUUID": "4120790",
+    "invoiceDate": {
+      "$date": "2020-03-11T10:35:29Z"
+    },
+    "zipCode": "13076",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "2000151",
+    "issuerName": "Aquasure",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Glukgluk",
+    "concept": "laboris irure adipisicing id",
+    "subtotal": "1017.44",
+    "taxRate": "0.18",
+    "totalDue": "1200.5792000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b378728bf21f3f28ecf"
+    },
+    "invoiceUUID": "4107280",
+    "invoiceDate": {
+      "$date": "2020-05-31T15:03:17Z"
+    },
+    "zipCode": "48933",
+    "invoiceType": "egress",
+    "usoCFDI": "D09",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "3000067",
+    "receiverName": "Lunchpod",
+    "concept": "aliquip non ex laboris",
+    "subtotal": "1819.40",
+    "taxRate": "0.2",
+    "totalDue": "2183.28",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3772682619a40760eb"
+    },
+    "invoiceUUID": "4654784",
+    "invoiceDate": {
+      "$date": "2020-04-14T06:16:42Z"
+    },
+    "zipCode": "46728",
+    "invoiceType": "egress",
+    "usoCFDI": "G03",
+    "issuerId": "999999",
+    "issuerName": "Jamnation",
+    "receiverId": "3000067",
+    "receiverName": "Microluxe",
+    "concept": "labore officia duis Lorem",
+    "subtotal": "983.91",
+    "taxRate": "0.24",
+    "totalDue": "1220.0484",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3710de96393550efb5"
+    },
+    "invoiceUUID": "4582296",
+    "invoiceDate": {
+      "$date": "2020-04-28T18:13:37Z"
+    },
+    "zipCode": "86125",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Sportan",
+    "concept": "in velit duis adipisicing",
+    "subtotal": "1518.12",
+    "taxRate": "0.16",
+    "totalDue": "1761.0192",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37c17024b4c1cd9110"
+    },
+    "invoiceUUID": "4586293",
+    "invoiceDate": {
+      "$date": "2020-07-07T23:05:17Z"
+    },
+    "zipCode": "80774",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerId": "999999",
+    "issuerName": "Interfind",
+    "receiverId": "2000151",
+    "receiverName": "Solaren",
+    "concept": "non et pariatur aliquip",
+    "subtotal": "2349.85",
+    "taxRate": "0.12",
+    "totalDue": "2631.832",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37eede45409ee3dad3"
+    },
+    "invoiceUUID": "4475813",
+    "invoiceDate": {
+      "$date": "2020-03-13T23:10:45Z"
+    },
+    "zipCode": "67230",
+    "invoiceType": "egress",
+    "usoCFDI": "D03",
+    "issuerId": "2000151",
+    "issuerName": "Bolax",
+    "receiverId": "999999",
+    "receiverName": "Zentility",
+    "concept": "tempor exercitation magna et",
+    "subtotal": "1146.43",
+    "taxRate": "0.25",
+    "totalDue": "1433.0375000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3713eae681ad3088b7"
+    },
+    "invoiceUUID": "4313508",
+    "invoiceDate": {
+      "$date": "2020-01-03T06:26:12Z"
+    },
+    "zipCode": "48322",
+    "invoiceType": "egress",
+    "usoCFDI": "I07",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Pushcart",
+    "concept": "ut est consectetur enim",
+    "subtotal": "1823.05",
+    "taxRate": "0.05",
+    "totalDue": "1914.2024999999999",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37764276404974b64c"
+    },
+    "invoiceUUID": "4103068",
+    "invoiceDate": {
+      "$date": "2020-02-18T03:56:46Z"
+    },
+    "zipCode": "79227",
+    "invoiceType": "income",
+    "usoCFDI": "D09",
+    "issuerId": "2000000",
+    "issuerName": "Eventex",
+    "receiverId": "2000151",
+    "receiverName": "Virva",
+    "concept": "nisi quis cupidatat culpa",
+    "subtotal": "1965.78",
+    "taxRate": "0.14",
+    "totalDue": "2240.9892",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37d138d3c8dd91303f"
+    },
+    "invoiceUUID": "4438489",
+    "invoiceDate": {
+      "$date": "2020-02-27T01:33:29Z"
+    },
+    "zipCode": "17374",
+    "invoiceType": "egress",
+    "usoCFDI": "D10",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Cytrex",
+    "receiverId": "2000000",
+    "receiverName": "Xanide",
+    "concept": "duis magna tempor veniam",
+    "subtotal": "673.47",
+    "taxRate": "0.04",
+    "totalDue": "700.4088",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37f1b6b41f8ca5e282"
+    },
+    "invoiceUUID": "4589579",
+    "invoiceDate": {
+      "$date": "2020-04-11T02:15:57Z"
+    },
+    "zipCode": "29870",
+    "invoiceType": "income",
+    "usoCFDI": "D03",
+    "issuerId": "999999",
+    "issuerName": "Exposa",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "Lorem do dolore elit",
+    "subtotal": "2374.50",
+    "taxRate": "0.14",
+    "totalDue": "2706.93",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b373df3f26f0bab5fca"
+    },
+    "invoiceUUID": "4425953",
+    "invoiceDate": {
+      "$date": "2020-05-15T05:47:20Z"
+    },
+    "zipCode": "49769",
+    "invoiceType": "income",
+    "usoCFDI": "D01",
+    "issuerId": "3000067",
+    "issuerName": "Musaphics",
+    "receiverId": "2000151",
+    "receiverName": "Accuprint",
+    "concept": "elit consectetur deserunt mollit",
+    "subtotal": "2024.40",
+    "taxRate": "0.1",
+    "totalDue": "2226.84",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3759305607667356e5"
+    },
+    "invoiceUUID": "4075583",
+    "invoiceDate": {
+      "$date": "2020-05-28T16:55:54Z"
+    },
+    "zipCode": "22945",
+    "invoiceType": "income",
+    "usoCFDI": "D02",
+    "issuerId": "2000000",
+    "issuerName": "Exoblue",
+    "receiverId": "3000067",
+    "receiverName": "Overplex",
+    "concept": "excepteur sunt Lorem labore",
+    "subtotal": "684.11",
+    "taxRate": "0.17",
+    "totalDue": "800.4087000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b372913499524430b41"
+    },
+    "invoiceUUID": "4602384",
+    "invoiceDate": {
+      "$date": "2020-01-21T23:45:00Z"
+    },
+    "zipCode": "76031",
+    "invoiceType": "income",
+    "usoCFDI": "D02",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000151",
+    "receiverName": "Anivet",
+    "concept": "nostrud labore tempor aliquip",
+    "subtotal": "650.42",
+    "taxRate": "0.03",
+    "totalDue": "669.9326",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3771717a028ee45331"
+    },
+    "invoiceUUID": "4390544",
+    "invoiceDate": {
+      "$date": "2020-03-31T16:22:49Z"
+    },
+    "zipCode": "57300",
+    "invoiceType": "egress",
+    "usoCFDI": "D08",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Digial",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "reprehenderit culpa minim commodo",
+    "subtotal": "831.14",
+    "taxRate": "0.01",
+    "totalDue": "839.4514",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37aad7e2c287d1f794"
+    },
+    "invoiceUUID": "4959968",
+    "invoiceDate": {
+      "$date": "2020-07-01T03:36:18Z"
+    },
+    "zipCode": "33294",
+    "invoiceType": "egress",
+    "usoCFDI": "I03",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "3000067",
+    "receiverName": "Gogol",
+    "concept": "ea commodo commodo quis",
+    "subtotal": "1895.65",
+    "taxRate": "0.15",
+    "totalDue": "2179.9975",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37adaa554fafad8652"
+    },
+    "invoiceUUID": "4087388",
+    "invoiceDate": {
+      "$date": "2020-05-26T11:51:18Z"
+    },
+    "zipCode": "10476",
+    "invoiceType": "egress",
+    "usoCFDI": "D03",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Aquamate",
+    "receiverId": "2000000",
+    "receiverName": "Zerology",
+    "concept": "occaecat aliqua consectetur veniam",
+    "subtotal": "716.24",
+    "taxRate": "0.25",
+    "totalDue": "895.3",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b377012a4751c3f1ce8"
+    },
+    "invoiceUUID": "4132476",
+    "invoiceDate": {
+      "$date": "2020-03-12T00:37:12Z"
+    },
+    "zipCode": "94218",
+    "invoiceType": "egress",
+    "usoCFDI": "I07",
+    "issuerId": "2000000",
+    "issuerName": "Geekko",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "cupidatat officia aute laborum",
+    "subtotal": "672.09",
+    "taxRate": "0.2",
+    "totalDue": "806.508",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37be2207367264072b"
+    },
+    "invoiceUUID": "4174986",
+    "invoiceDate": {
+      "$date": "2020-01-11T22:38:28Z"
+    },
+    "zipCode": "97293",
+    "invoiceType": "egress",
+    "usoCFDI": "P01",
+    "issuerId": "999999",
+    "issuerName": "Combogene",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "exercitation irure ut eiusmod",
+    "subtotal": "878.43",
+    "taxRate": "0.19",
+    "totalDue": "1045.3317",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b371e35bf4bac2ca32f"
+    },
+    "invoiceUUID": "4078443",
+    "invoiceDate": {
+      "$date": "2020-03-12T03:43:57Z"
+    },
+    "zipCode": "11381",
+    "invoiceType": "income",
+    "usoCFDI": "D09",
+    "issuerId": "3000067",
+    "issuerName": "Strozen",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "laboris nisi voluptate sint",
+    "subtotal": "1238.30",
+    "taxRate": "0.05",
+    "totalDue": "1300.215",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b376ffd6417fa33bcc6"
+    },
+    "invoiceUUID": "4107267",
+    "invoiceDate": {
+      "$date": "2020-05-13T05:38:38Z"
+    },
+    "zipCode": "81984",
+    "invoiceType": "income",
+    "usoCFDI": "D07",
+    "issuerId": "3000067",
+    "issuerName": "Kongene",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Deepends",
+    "concept": "aute pariatur deserunt laboris",
+    "subtotal": "2495.88",
+    "taxRate": "0.11",
+    "totalDue": "2770.4268",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37f373c0b9d5d9f8fc"
+    },
+    "invoiceUUID": "4250625",
+    "invoiceDate": {
+      "$date": "2020-04-20T18:49:55Z"
+    },
+    "zipCode": "95079",
+    "invoiceType": "egress",
+    "usoCFDI": "I07",
+    "issuerId": "2000151",
+    "issuerName": "Corecom",
+    "receiverId": "999999",
+    "receiverName": "Zensus",
+    "concept": "nisi cupidatat esse qui",
+    "subtotal": "704.88",
+    "taxRate": "0.15",
+    "totalDue": "810.612",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b371268741a4ca33d0a"
+    },
+    "invoiceUUID": "4222080",
+    "invoiceDate": {
+      "$date": "2020-06-07T20:03:22Z"
+    },
+    "zipCode": "69850",
+    "invoiceType": "income",
+    "usoCFDI": "I04",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Kinetica",
+    "receiverId": "3000067",
+    "receiverName": "Uberlux",
+    "concept": "consectetur anim nulla mollit",
+    "subtotal": "1599.69",
+    "taxRate": "0.25",
+    "totalDue": "1999.6125000000002",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37e1a57b02a24bb723"
+    },
+    "invoiceUUID": "4275677",
+    "invoiceDate": {
+      "$date": "2020-02-25T22:44:34Z"
+    },
+    "zipCode": "29478",
+    "invoiceType": "income",
+    "usoCFDI": "D03",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Supremia",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "officia est non nulla",
+    "subtotal": "1353.53",
+    "taxRate": "0.19",
+    "totalDue": "1610.7006999999999",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37106f1f41961654a3"
+    },
+    "invoiceUUID": "4685924",
+    "invoiceDate": {
+      "$date": "2020-06-25T00:14:10Z"
+    },
+    "zipCode": "38740",
+    "invoiceType": "income",
+    "usoCFDI": "D05",
+    "issuerId": "2000000",
+    "issuerName": "Xleen",
+    "receiverId": "2000151",
+    "receiverName": "Hydrocom",
+    "concept": "officia occaecat quis officia",
+    "subtotal": "1356.56",
+    "taxRate": "0.23",
+    "totalDue": "1668.5688",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3774582431ebca3d32"
+    },
+    "invoiceUUID": "4432262",
+    "invoiceDate": {
+      "$date": "2020-05-17T12:24:45Z"
+    },
+    "zipCode": "74602",
+    "invoiceType": "egress",
+    "usoCFDI": "G03",
+    "issuerId": "999999",
+    "issuerName": "Megall",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "ipsum anim quis sint",
+    "subtotal": "2231.29",
+    "taxRate": "0.03",
+    "totalDue": "2298.2287",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b3f62e62554bfa07"
+    },
+    "invoiceUUID": "4445354",
+    "invoiceDate": {
+      "$date": "2020-01-23T00:46:17Z"
+    },
+    "zipCode": "16356",
+    "invoiceType": "income",
+    "usoCFDI": "D02",
+    "issuerId": "2000151",
+    "issuerName": "Geeknet",
+    "receiverId": "999999",
+    "receiverName": "Gorganic",
+    "concept": "do dolore ut eiusmod",
+    "subtotal": "561.19",
+    "taxRate": "0.17",
+    "totalDue": "656.5923",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37039d9592c7033ed1"
+    },
+    "invoiceUUID": "4974808",
+    "invoiceDate": {
+      "$date": "2020-06-15T05:47:58Z"
+    },
+    "zipCode": "80128",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Hawkster",
+    "receiverId": "3000067",
+    "receiverName": "Recrisys",
+    "concept": "do occaecat culpa anim",
+    "subtotal": "2036.00",
+    "taxRate": "0.12",
+    "totalDue": "2280.32",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3779a26565a5c9d00e"
+    },
+    "invoiceUUID": "4158913",
+    "invoiceDate": {
+      "$date": "2020-01-14T03:32:46Z"
+    },
+    "zipCode": "29348",
+    "invoiceType": "egress",
+    "usoCFDI": "G03",
+    "issuerId": "2000151",
+    "issuerName": "Polaria",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Nurali",
+    "concept": "mollit cupidatat esse ea",
+    "subtotal": "1420.21",
+    "taxRate": "0.12",
+    "totalDue": "1590.6352",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b374c5a55a5fed38ff2"
+    },
+    "invoiceUUID": "4841089",
+    "invoiceDate": {
+      "$date": "2020-06-05T20:39:29Z"
+    },
+    "zipCode": "35487",
+    "invoiceType": "income",
+    "usoCFDI": "I06",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Gronk",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "voluptate tempor nulla voluptate",
+    "subtotal": "1094.77",
+    "taxRate": "0.05",
+    "totalDue": "1149.5085",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37459ca3eccd1d5aeb"
+    },
+    "invoiceUUID": "4870495",
+    "invoiceDate": {
+      "$date": "2020-06-02T03:39:34Z"
+    },
+    "zipCode": "10291",
+    "invoiceType": "egress",
+    "usoCFDI": "D02",
+    "issuerId": "3000067",
+    "issuerName": "Neteria",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Turnling",
+    "concept": "quis proident qui magna",
+    "subtotal": "1772.19",
+    "taxRate": "0.22",
+    "totalDue": "2162.0718",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37ef132405afe66fb2"
+    },
+    "invoiceUUID": "4125629",
+    "invoiceDate": {
+      "$date": "2020-04-03T05:22:37Z"
+    },
+    "zipCode": "18556",
+    "invoiceType": "income",
+    "usoCFDI": "I06",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Honotron",
+    "concept": "elit cupidatat anim qui",
+    "subtotal": "1404.52",
+    "taxRate": "0.15",
+    "totalDue": "1615.1979999999999",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3726524fc09308fe8e"
+    },
+    "invoiceUUID": "4204035",
+    "invoiceDate": {
+      "$date": "2020-02-21T08:00:29Z"
+    },
+    "zipCode": "44367",
+    "invoiceType": "income",
+    "usoCFDI": "D08",
+    "issuerId": "2000000",
+    "issuerName": "Flum",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Enervate",
+    "concept": "mollit occaecat occaecat cupidatat",
+    "subtotal": "1440.48",
+    "taxRate": "0.16",
+    "totalDue": "1670.9568",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3772432dc530735762"
+    },
+    "invoiceUUID": "4582073",
+    "invoiceDate": {
+      "$date": "2020-05-23T16:20:44Z"
+    },
+    "zipCode": "20019",
+    "invoiceType": "income",
+    "usoCFDI": "G01",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "3000067",
+    "receiverName": "Corporana",
+    "concept": "minim veniam ea adipisicing",
+    "subtotal": "804.24",
+    "taxRate": "0.06",
+    "totalDue": "852.4944",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37d0c2d76bdb295393"
+    },
+    "invoiceUUID": "4855058",
+    "invoiceDate": {
+      "$date": "2020-03-07T15:08:02Z"
+    },
+    "zipCode": "24080",
+    "invoiceType": "income",
+    "usoCFDI": "D03",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "3000067",
+    "receiverName": "Poochies",
+    "concept": "occaecat incididunt veniam occaecat",
+    "subtotal": "622.42",
+    "taxRate": "0.16",
+    "totalDue": "722.0072",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b376efa865ebafc1b3e"
+    },
+    "invoiceUUID": "4062085",
+    "invoiceDate": {
+      "$date": "2020-02-25T00:03:55Z"
+    },
+    "zipCode": "50760",
+    "invoiceType": "income",
+    "usoCFDI": "D02",
+    "issuerId": "2000151",
+    "issuerName": "Cubicide",
+    "receiverId": "999999",
+    "receiverName": "Decratex",
+    "concept": "velit sint incididunt id",
+    "subtotal": "805.28",
+    "taxRate": "0.1",
+    "totalDue": "885.808",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37bec277fc34d51578"
+    },
+    "invoiceUUID": "4610961",
+    "invoiceDate": {
+      "$date": "2020-02-01T01:57:53Z"
+    },
+    "zipCode": "73218",
+    "invoiceType": "income",
+    "usoCFDI": "I08",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Isoternia",
+    "receiverId": "999999",
+    "receiverName": "Bizmatic",
+    "concept": "nisi amet magna duis",
+    "subtotal": "2113.07",
+    "taxRate": "0.13",
+    "totalDue": "2387.7691000000004",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3798e40b34f2ee582d"
+    },
+    "invoiceUUID": "4885708",
+    "invoiceDate": {
+      "$date": "2020-03-25T16:29:21Z"
+    },
+    "zipCode": "27497",
+    "invoiceType": "egress",
+    "usoCFDI": "I07",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "999999",
+    "receiverName": "Digigene",
+    "concept": "dolore eu qui commodo",
+    "subtotal": "839.18",
+    "taxRate": "0.01",
+    "totalDue": "847.5717999999999",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37869cf0634558d882"
+    },
+    "invoiceUUID": "4619863",
+    "invoiceDate": {
+      "$date": "2020-01-09T09:33:37Z"
+    },
+    "zipCode": "43822",
+    "invoiceType": "income",
+    "usoCFDI": "D01",
+    "issuerId": "2000000",
+    "issuerName": "Multron",
+    "receiverId": "2000151",
+    "receiverName": "Kiosk",
+    "concept": "cupidatat officia laborum voluptate",
+    "subtotal": "600.33",
+    "taxRate": "0.04",
+    "totalDue": "624.3432",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37204680bb79eef3f1"
+    },
+    "invoiceUUID": "4977227",
+    "invoiceDate": {
+      "$date": "2020-04-18T22:42:38Z"
+    },
+    "zipCode": "24346",
+    "invoiceType": "egress",
+    "usoCFDI": "G02",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Zappix",
+    "receiverId": "3000067",
+    "receiverName": "Cuizine",
+    "concept": "aliquip consequat cupidatat pariatur",
+    "subtotal": "2029.86",
+    "taxRate": "0.08",
+    "totalDue": "2192.2488",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3744003db196588578"
+    },
+    "invoiceUUID": "4988507",
+    "invoiceDate": {
+      "$date": "2020-06-07T15:20:04Z"
+    },
+    "zipCode": "66589",
+    "invoiceType": "income",
+    "usoCFDI": "G02",
+    "issuerId": "2000151",
+    "issuerName": "Acruex",
+    "receiverId": "2000000",
+    "receiverName": "Renovize",
+    "concept": "magna consectetur minim dolore",
+    "subtotal": "696.25",
+    "taxRate": "0.13",
+    "totalDue": "786.7625",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b376924d5cdaec1d256"
+    },
+    "invoiceUUID": "4029556",
+    "invoiceDate": {
+      "$date": "2020-04-22T20:02:29Z"
+    },
+    "zipCode": "81880",
+    "invoiceType": "income",
+    "usoCFDI": "D02",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Miracula",
+    "receiverId": "2000151",
+    "receiverName": "Netplax",
+    "concept": "aute laboris ad culpa",
+    "subtotal": "800.69",
+    "taxRate": "0.06",
+    "totalDue": "848.7314",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b7bcdc99de52fe03"
+    },
+    "invoiceUUID": "4441721",
+    "invoiceDate": {
+      "$date": "2020-04-12T01:22:27Z"
+    },
+    "zipCode": "23154",
+    "invoiceType": "income",
+    "usoCFDI": "I01",
+    "issuerId": "2000000",
+    "issuerName": "Jasper",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "exercitation nulla mollit ad",
+    "subtotal": "1176.42",
+    "taxRate": "0.21",
+    "totalDue": "1423.4682",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37a9cc00e91709d69e"
+    },
+    "invoiceUUID": "4073675",
+    "invoiceDate": {
+      "$date": "2020-03-28T20:59:29Z"
+    },
+    "zipCode": "50157",
+    "invoiceType": "egress",
+    "usoCFDI": "I01",
+    "issuerId": "999999",
+    "issuerName": "Franscene",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "sit excepteur commodo magna",
+    "subtotal": "1665.14",
+    "taxRate": "0.03",
+    "totalDue": "1715.0942",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37303ca94e44bb737d"
+    },
+    "invoiceUUID": "4306477",
+    "invoiceDate": {
+      "$date": "2020-04-21T21:27:20Z"
+    },
+    "zipCode": "98773",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "2000000",
+    "issuerName": "Magmina",
+    "receiverId": "3000067",
+    "receiverName": "Entropix",
+    "concept": "nostrud eiusmod ipsum voluptate",
+    "subtotal": "1002.96",
+    "taxRate": "0.02",
+    "totalDue": "1023.0192000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b01d7ca80a7a3024"
+    },
+    "invoiceUUID": "4840311",
+    "invoiceDate": {
+      "$date": "2020-03-28T02:09:14Z"
+    },
+    "zipCode": "58259",
+    "invoiceType": "income",
+    "usoCFDI": "I08",
+    "issuerId": "2000000",
+    "issuerName": "Satiance",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "ullamco ea deserunt commodo",
+    "subtotal": "400.23",
+    "taxRate": "0.17",
+    "totalDue": "468.26910000000004",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b376375eebfedb46201"
+    },
+    "invoiceUUID": "4229400",
+    "invoiceDate": {
+      "$date": "2020-06-04T18:10:41Z"
+    },
+    "zipCode": "55760",
+    "invoiceType": "egress",
+    "usoCFDI": "G01",
+    "issuerId": "3000067",
+    "issuerName": "Exotechno",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "pariatur excepteur esse velit",
+    "subtotal": "2239.75",
+    "taxRate": "0.09",
+    "totalDue": "2441.3275",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37f2001b44f40401ba"
+    },
+    "invoiceUUID": "4091960",
+    "invoiceDate": {
+      "$date": "2020-03-05T06:05:21Z"
+    },
+    "zipCode": "61859",
+    "invoiceType": "egress",
+    "usoCFDI": "D04",
+    "issuerId": "999999",
+    "issuerName": "Progenex",
+    "receiverId": "2000151",
+    "receiverName": "Balooba",
+    "concept": "Lorem esse aliquip duis",
+    "subtotal": "2474.36",
+    "taxRate": "0.23",
+    "totalDue": "3043.4628000000002",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3795d47e181e304fc6"
+    },
+    "invoiceUUID": "4825815",
+    "invoiceDate": {
+      "$date": "2020-01-23T08:13:37Z"
+    },
+    "zipCode": "63893",
+    "invoiceType": "income",
+    "usoCFDI": "D09",
+    "issuerId": "3000067",
+    "issuerName": "Assitia",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Soprano",
+    "concept": "sint consequat est laborum",
+    "subtotal": "1876.86",
+    "taxRate": "0.16",
+    "totalDue": "2177.1576",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b379db2565a6450b0b5"
+    },
+    "invoiceUUID": "4905755",
+    "invoiceDate": {
+      "$date": "2020-01-30T05:30:07Z"
+    },
+    "zipCode": "79581",
+    "invoiceType": "income",
+    "usoCFDI": "G03",
+    "issuerId": "2000151",
+    "issuerName": "Momentia",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "dolor in exercitation nulla",
+    "subtotal": "2277.99",
+    "taxRate": "0.22",
+    "totalDue": "2779.1477999999997",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37a8a78e4279bb3897"
+    },
+    "invoiceUUID": "4256934",
+    "invoiceDate": {
+      "$date": "2020-05-05T03:50:21Z"
+    },
+    "zipCode": "26236",
+    "invoiceType": "income",
+    "usoCFDI": "D03",
+    "issuerId": "2000000",
+    "issuerName": "Liquicom",
+    "receiverId": "999999",
+    "receiverName": "Cormoran",
+    "concept": "magna non eiusmod proident",
+    "subtotal": "975.62",
+    "taxRate": "0.03",
+    "totalDue": "1004.8886",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3701ddac6e1147df4f"
+    },
+    "invoiceUUID": "4337557",
+    "invoiceDate": {
+      "$date": "2020-03-09T15:26:09Z"
+    },
+    "zipCode": "47775",
+    "invoiceType": "egress",
+    "usoCFDI": "I06",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Intergeek",
+    "receiverId": "999999",
+    "receiverName": "Exodoc",
+    "concept": "dolor sunt mollit eu",
+    "subtotal": "419.00",
+    "taxRate": "0.24",
+    "totalDue": "519.56",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37d5302ecdc50ccb7e"
+    },
+    "invoiceUUID": "4302994",
+    "invoiceDate": {
+      "$date": "2020-02-01T04:38:20Z"
+    },
+    "zipCode": "28295",
+    "invoiceType": "income",
+    "usoCFDI": "D05",
+    "issuerId": "999999",
+    "issuerName": "Plutorque",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "veniam exercitation minim eu",
+    "subtotal": "2217.90",
+    "taxRate": "0.17",
+    "totalDue": "2594.943",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b375f769fe9f5dd8d1b"
+    },
+    "invoiceUUID": "4781952",
+    "invoiceDate": {
+      "$date": "2020-01-25T03:40:32Z"
+    },
+    "zipCode": "96875",
+    "invoiceType": "egress",
+    "usoCFDI": "D06",
+    "issuerId": "2000000",
+    "issuerName": "Wazzu",
+    "receiverId": "2000151",
+    "receiverName": "Skinserve",
+    "concept": "irure nulla nisi ea",
+    "subtotal": "484.72",
+    "taxRate": "0.22",
+    "totalDue": "591.3584000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3798dc0e9ad701cee5"
+    },
+    "invoiceUUID": "4981502",
+    "invoiceDate": {
+      "$date": "2020-04-02T04:13:49Z"
+    },
+    "zipCode": "95672",
+    "invoiceType": "egress",
+    "usoCFDI": "I04",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000000",
+    "receiverName": "Pyrami",
+    "concept": "velit proident aliquip ut",
+    "subtotal": "296.11",
+    "taxRate": "0.25",
+    "totalDue": "370.13750000000005",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b373aeb1b85194fa61d"
+    },
+    "invoiceUUID": "4303601",
+    "invoiceDate": {
+      "$date": "2020-04-13T00:49:51Z"
+    },
+    "zipCode": "15821",
+    "invoiceType": "income",
+    "usoCFDI": "I01",
+    "issuerId": "2000151",
+    "issuerName": "Letpro",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Ebidco",
+    "concept": "commodo laborum irure eiusmod",
+    "subtotal": "251.05",
+    "taxRate": "0.2",
+    "totalDue": "301.26",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3716aedfeb164ba6e4"
+    },
+    "invoiceUUID": "4548777",
+    "invoiceDate": {
+      "$date": "2020-04-21T16:47:07Z"
+    },
+    "zipCode": "26678",
+    "invoiceType": "egress",
+    "usoCFDI": "D07",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000000",
+    "receiverName": "Talae",
+    "concept": "aute fugiat dolore occaecat",
+    "subtotal": "1429.61",
+    "taxRate": "0.09",
+    "totalDue": "1558.2749",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b371a5baec4b86a4109"
+    },
+    "invoiceUUID": "4306503",
+    "invoiceDate": {
+      "$date": "2020-07-02T17:46:16Z"
+    },
+    "zipCode": "67549",
+    "invoiceType": "income",
+    "usoCFDI": "D10",
+    "issuerId": "2000000",
+    "issuerName": "Singavera",
+    "receiverId": "999999",
+    "receiverName": "Isologica",
+    "concept": "excepteur quis fugiat veniam",
+    "subtotal": "888.89",
+    "taxRate": "0.05",
+    "totalDue": "933.3344999999999",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37a2e783e1b318a2c6"
+    },
+    "invoiceUUID": "4851284",
+    "invoiceDate": {
+      "$date": "2020-06-01T07:56:05Z"
+    },
+    "zipCode": "51912",
+    "invoiceType": "egress",
+    "usoCFDI": "I03",
+    "issuerId": "2000151",
+    "issuerName": "Aquasseur",
+    "receiverId": "2000000",
+    "receiverName": "Quinex",
+    "concept": "proident velit sint velit",
+    "subtotal": "990.73",
+    "taxRate": "0.15",
+    "totalDue": "1139.3395",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37484e7dcff7838303"
+    },
+    "invoiceUUID": "4079189",
+    "invoiceDate": {
+      "$date": "2020-02-02T09:45:29Z"
+    },
+    "zipCode": "16635",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Zenco",
+    "receiverId": "2000000",
+    "receiverName": "Portaline",
+    "concept": "laborum adipisicing cupidatat veniam",
+    "subtotal": "2175.86",
+    "taxRate": "0.24",
+    "totalDue": "2698.0664",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b797a335350cfc85"
+    },
+    "invoiceUUID": "4450437",
+    "invoiceDate": {
+      "$date": "2020-04-18T01:42:38Z"
+    },
+    "zipCode": "98636",
+    "invoiceType": "egress",
+    "usoCFDI": "D03",
+    "issuerId": "3000067",
+    "issuerName": "Elentrix",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "mollit adipisicing aliqua laboris",
+    "subtotal": "1834.32",
+    "taxRate": "0.18",
+    "totalDue": "2164.4975999999997",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3709adfbb46994565c"
+    },
+    "invoiceUUID": "4435911",
+    "invoiceDate": {
+      "$date": "2020-02-13T03:11:58Z"
+    },
+    "zipCode": "13998",
+    "invoiceType": "income",
+    "usoCFDI": "I08",
+    "issuerId": "2000000",
+    "issuerName": "Polarium",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Vicon",
+    "concept": "consectetur commodo ea pariatur",
+    "subtotal": "1602.19",
+    "taxRate": "0.21",
+    "totalDue": "1938.6499000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37552bff1acce95a12"
+    },
+    "invoiceUUID": "4358462",
+    "invoiceDate": {
+      "$date": "2020-02-05T03:32:10Z"
+    },
+    "zipCode": "90120",
+    "invoiceType": "income",
+    "usoCFDI": "I06",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Crustatia",
+    "receiverId": "2000000",
+    "receiverName": "Kog",
+    "concept": "velit in cillum labore",
+    "subtotal": "388.83",
+    "taxRate": "0.12",
+    "totalDue": "435.4896",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b860559e187c10ef"
+    },
+    "invoiceUUID": "4169557",
+    "invoiceDate": {
+      "$date": "2020-03-26T05:55:01Z"
+    },
+    "zipCode": "39289",
+    "invoiceType": "income",
+    "usoCFDI": "I07",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000000",
+    "receiverName": "Pawnagra",
+    "concept": "quis qui officia nisi",
+    "subtotal": "2381.51",
+    "taxRate": "0.23",
+    "totalDue": "2929.2573",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37b03858bd2059bdc9"
+    },
+    "invoiceUUID": "4881660",
+    "invoiceDate": {
+      "$date": "2020-06-26T22:15:13Z"
+    },
+    "zipCode": "56506",
+    "invoiceType": "egress",
+    "usoCFDI": "G01",
+    "issuerId": "2000000",
+    "issuerName": "Dragbot",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "Lorem mollit minim culpa",
+    "subtotal": "1781.08",
+    "taxRate": "0.24",
+    "totalDue": "2208.5391999999997",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37efde50be9450d6d8"
+    },
+    "invoiceUUID": "4006002",
+    "invoiceDate": {
+      "$date": "2020-01-30T16:26:43Z"
+    },
+    "zipCode": "27162",
+    "invoiceType": "income",
+    "usoCFDI": "I06",
+    "issuerId": "2000151",
+    "issuerName": "Adornica",
+    "receiverId": "RCO2816104T1",
+    "receiverName": "Cubix",
+    "concept": "incididunt ut ad et",
+    "subtotal": "2331.96",
+    "taxRate": "0.05",
+    "totalDue": "2448.558",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37fa18f7f155d5113d"
+    },
+    "invoiceUUID": "4114768",
+    "invoiceDate": {
+      "$date": "2020-05-12T01:38:10Z"
+    },
+    "zipCode": "61492",
+    "invoiceType": "income",
+    "usoCFDI": "I05",
+    "issuerId": "999999",
+    "issuerName": "Cinesanct",
+    "receiverId": "2000151",
+    "receiverName": "Gallaxia",
+    "concept": "velit qui consectetur elit",
+    "subtotal": "1532.17",
+    "taxRate": "0.06",
+    "totalDue": "1624.1002",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b375f87f847e73e437a"
+    },
+    "invoiceUUID": "4392392",
+    "invoiceDate": {
+      "$date": "2020-03-08T12:10:30Z"
+    },
+    "zipCode": "63734",
+    "invoiceType": "egress",
+    "usoCFDI": "I02",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Bittor",
+    "receiverId": "2000000",
+    "receiverName": "Accupharm",
+    "concept": "cupidatat officia nulla minim",
+    "subtotal": "972.66",
+    "taxRate": "0.2",
+    "totalDue": "1167.192",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b373447ad2562e0bc56"
+    },
+    "invoiceUUID": "4432315",
+    "invoiceDate": {
+      "$date": "2020-02-08T14:17:25Z"
+    },
+    "zipCode": "15789",
+    "invoiceType": "income",
+    "usoCFDI": "I08",
+    "issuerId": "2000000",
+    "issuerName": "Insurity",
+    "receiverId": "3000067",
+    "receiverName": "Insuron",
+    "concept": "qui consectetur nostrud irure",
+    "subtotal": "2053.10",
+    "taxRate": "0.11",
+    "totalDue": "2278.941",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b376e2fd9eaca8a17da"
+    },
+    "invoiceUUID": "4954263",
+    "invoiceDate": {
+      "$date": "2020-03-21T19:26:55Z"
+    },
+    "zipCode": "61093",
+    "invoiceType": "egress",
+    "usoCFDI": "D06",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "3000067",
+    "receiverName": "Cognicode",
+    "concept": "nulla reprehenderit esse sunt",
+    "subtotal": "2408.89",
+    "taxRate": "0.02",
+    "totalDue": "2457.0678",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37913cb046447e6ee6"
+    },
+    "invoiceUUID": "4630338",
+    "invoiceDate": {
+      "$date": "2020-02-13T19:09:53Z"
+    },
+    "zipCode": "62779",
+    "invoiceType": "income",
+    "usoCFDI": "I07",
+    "issuerId": "999999",
+    "issuerName": "Acium",
+    "receiverId": "3000067",
+    "receiverName": "Bristo",
+    "concept": "aliqua cillum dolore officia",
+    "subtotal": "1885.88",
+    "taxRate": "0.13",
+    "totalDue": "2131.0444",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37622c827875acc424"
+    },
+    "invoiceUUID": "4860885",
+    "invoiceDate": {
+      "$date": "2020-06-18T18:47:26Z"
+    },
+    "zipCode": "84101",
+    "invoiceType": "income",
+    "usoCFDI": "D06",
+    "issuerId": "999999",
+    "issuerName": "Futuris",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "magna velit eu anim",
+    "subtotal": "2353.37",
+    "taxRate": "0.14",
+    "totalDue": "2682.8418",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b379ea2152f8adc8b92"
+    },
+    "invoiceUUID": "4020152",
+    "invoiceDate": {
+      "$date": "2020-03-22T17:48:46Z"
+    },
+    "zipCode": "31763",
+    "invoiceType": "income",
+    "usoCFDI": "D01",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Zillatide",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "ipsum cillum veniam ea",
+    "subtotal": "2473.96",
+    "taxRate": "0.18",
+    "totalDue": "2919.2728",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3716bce5ce477567cc"
+    },
+    "invoiceUUID": "4117603",
+    "invoiceDate": {
+      "$date": "2020-03-11T07:11:24Z"
+    },
+    "zipCode": "73894",
+    "invoiceType": "income",
+    "usoCFDI": "D09",
+    "issuerId": "2000151",
+    "issuerName": "Intrawear",
+    "receiverId": "999999",
+    "receiverName": "Pearlesex",
+    "concept": "cupidatat eiusmod ea ad",
+    "subtotal": "720.62",
+    "taxRate": "0.21",
+    "totalDue": "871.9502",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3748557599370f2ec0"
+    },
+    "invoiceUUID": "4127760",
+    "invoiceDate": {
+      "$date": "2020-02-27T22:48:24Z"
+    },
+    "zipCode": "27250",
+    "invoiceType": "egress",
+    "usoCFDI": "I01",
+    "issuerId": "2000151",
+    "issuerName": "Earthplex",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "officia qui eiusmod sint",
+    "subtotal": "547.20",
+    "taxRate": "0.09",
+    "totalDue": "596.4480000000001",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b378fd19b18a7413e16"
+    },
+    "invoiceUUID": "4632226",
+    "invoiceDate": {
+      "$date": "2020-03-09T13:53:34Z"
+    },
+    "zipCode": "27909",
+    "invoiceType": "egress",
+    "usoCFDI": "P01",
+    "issuerId": "2000151",
+    "issuerName": "Fanfare",
+    "receiverId": "999999",
+    "receiverName": "Xinware",
+    "concept": "commodo tempor non et",
+    "subtotal": "1820.63",
+    "taxRate": "0.04",
+    "totalDue": "1893.4552",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b377b2ba1368aa71f85"
+    },
+    "invoiceUUID": "4851114",
+    "invoiceDate": {
+      "$date": "2020-01-30T17:14:04Z"
+    },
+    "zipCode": "91870",
+    "invoiceType": "egress",
+    "usoCFDI": "D08",
+    "issuerId": "999999",
+    "issuerName": "Zoxy",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "nostrud velit tempor laboris",
+    "subtotal": "341.69",
+    "taxRate": "0.23",
+    "totalDue": "420.2787",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37ad1e88ee5bc0956b"
+    },
+    "invoiceUUID": "4328921",
+    "invoiceDate": {
+      "$date": "2020-06-19T02:10:05Z"
+    },
+    "zipCode": "91423",
+    "invoiceType": "egress",
+    "usoCFDI": "I01",
+    "issuerId": "999999",
+    "issuerName": "Buzzworks",
+    "receiverId": "3000067",
+    "receiverName": "Bluplanet",
+    "concept": "dolore mollit eu et",
+    "subtotal": "274.88",
+    "taxRate": "0.07",
+    "totalDue": "294.1216",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b37ab1290a3b6709e15"
+    },
+    "invoiceUUID": "4966433",
+    "invoiceDate": {
+      "$date": "2020-02-21T08:26:39Z"
+    },
+    "zipCode": "87651",
+    "invoiceType": "income",
+    "usoCFDI": "D07",
+    "issuerId": "999999",
+    "issuerName": "Syntac",
+    "receiverId": "2000000",
+    "receiverName": "Oceanica",
+    "concept": "deserunt consequat in anim",
+    "subtotal": "2449.05",
+    "taxRate": "0.15",
+    "totalDue": "2816.4075000000003",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b378d12cc2bcce6c594"
+    },
+    "invoiceUUID": "4263750",
+    "invoiceDate": {
+      "$date": "2020-06-09T16:36:40Z"
+    },
+    "zipCode": "45088",
+    "invoiceType": "income",
+    "usoCFDI": "I03",
+    "issuerId": "DEMO",
+    "issuerName": "Demo company",
+    "receiverId": "2000151",
+    "receiverName": "Fitcore",
+    "concept": "officia Lorem laboris quis",
+    "subtotal": "1869.54",
+    "taxRate": "0.12",
+    "totalDue": "2093.8848",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3719d34eeccb9e60fa"
+    },
+    "invoiceUUID": "4645096",
+    "invoiceDate": {
+      "$date": "2020-06-14T04:17:47Z"
+    },
+    "zipCode": "72270",
+    "invoiceType": "income",
+    "usoCFDI": "I01",
+    "issuerId": "2000151",
+    "issuerName": "Verton",
+    "receiverId": "999999",
+    "receiverName": "Velity",
+    "concept": "exercitation et duis consectetur",
+    "subtotal": "2408.44",
+    "taxRate": "0.24",
+    "totalDue": "2986.4656",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f064b3793cad28b37ecef93"
+    },
+    "invoiceUUID": "4102653",
+    "invoiceDate": {
+      "$date": "2020-06-24T00:42:42Z"
+    },
+    "zipCode": "83613",
+    "invoiceType": "income",
+    "usoCFDI": "I03",
+    "issuerId": "2000000",
+    "issuerName": "Geofarm",
+    "receiverId": "3000067",
+    "receiverName": "Comveyer",
+    "concept": "incididunt ut commodo elit",
+    "subtotal": "2060.80",
+    "taxRate": "0.2",
+    "totalDue": "2472.96",
+    "currency": "euro",
+    "xmlFile": ""
+  }
+]

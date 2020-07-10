@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Refund of a product in bad conditions." Currency="euro" Date="2020-05-21T14:33:00"
+              Location="38902" SubTotal="5.333333333333333" TaxRate="0.13" Total="6.0266666666666655" Type="egress"
+              UUID="4000001" Use="G02">
+    <cfdi:Issuer IssuerName="Demaco" IssuerRFC="2000544"/>
+    <cfdi:Receiver ReceiverName="La Bodega de Perdomo" ReceiverRFC="1000009"/>
+</cfdi:Voucher>

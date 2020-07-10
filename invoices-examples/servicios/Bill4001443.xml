@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Service for company." Currency="euro" Date="2020-05-30T14:40:45" Location="36238"
+              SubTotal="101.0" TaxRate="0.2" Total="121.19999999999999" Type="income" UUID="4001443" Use="G03">
+    <cfdi:Issuer IssuerName="Biolife Grup" IssuerRFC="2000054"/>
+    <cfdi:Receiver ReceiverName="Facebook" ReceiverRFC="2000102"/>
+</cfdi:Voucher>

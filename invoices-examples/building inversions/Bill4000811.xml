@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Mortgage for company." Currency="euro" Date="2020-05-30T14:40:45" Location="37184"
+              SubTotal="1000.0" TaxRate="0.01" Total="1010.0" Type="income" UUID="4000811" Use="I03">
+    <cfdi:Issuer IssuerName="Biolife Grup" IssuerRFC="2000000"/>
+    <cfdi:Receiver ReceiverName="Bank" ReceiverRFC="999999"/>
+</cfdi:Voucher>

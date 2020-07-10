@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Refund of a product in bad conditions." Currency="euro" Date="2020-05-20T14:33:00"
+              Location="35744" SubTotal="2.6666666666666665" TaxRate="0.06" Total="2.8266666666666667" Type="egress"
+              UUID="4000000" Use="G02">
+    <cfdi:Issuer IssuerName="AECOM" IssuerRFC="2000151"/>
+    <cfdi:Receiver ReceiverName="Miss Asia San Fernando" ReceiverRFC="1000016"/>
+</cfdi:Voucher>

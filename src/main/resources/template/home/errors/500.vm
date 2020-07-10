@@ -1,0 +1,8 @@
+#parse("/template/home/layout.vm")
+#@mainLayout()
+
+<div class="text-center" data-gr-c-s-loaded="true">
+    <h1>505: Internal Server Error</h1>
+</div>
+
+#end

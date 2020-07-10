@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cfdi:Voucher Concept="Bill of a eating." Currency="euro" Date="2020-05-18T00:21:33" Location="36991"
+              SubTotal="75.46524882560246" TaxRate="0.09" Total="82.25712121990668" Type="income" UUID="4000013"
+              Use="G01">
+    <cfdi:Issuer IssuerName="Buenclima" IssuerRFC="1000023"/>
+    <cfdi:Receiver ReceiverName="Julian Bell" ReceiverRFC="3000671"/>
+</cfdi:Voucher>
