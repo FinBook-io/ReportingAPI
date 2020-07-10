@@ -186,7 +186,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" id="close_modal" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" onclick="ajaxSendReport()" class="btn btn-success">Send</button>
+                <button type="button" onclick="ajaxSendIVAReport()" class="btn btn-success">Send</button>
             </div>
         </div>
         <!-- /.modal-content -->

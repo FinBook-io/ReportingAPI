@@ -35,6 +35,11 @@ function highlightCurrentPageInNav(){
     $('#sidebar .nav-sidebar a[href="/admin/' + highlightRoute + '"]').addClass('active');
 }
 
+function isEmail(email) {
+    let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+}
+
 function format_amounts() {
     let amounts = $('.currency');
     if (amounts.length){
@@ -67,7 +72,7 @@ function ajaxChangeReportPeriod(valueOfSelect){
             $('#totalTaxesDue').text(data.totalTaxesDue);
             drawBarChart(data.barChart);
             drawPieChart(data.pieChart);
-            fillOutTableBodyInvoiceList(data.invoicesList);
+            fillOutTableBodyInvoiceList(data.invoicesShortedList);
             format_amounts();
         },
         error: function () {
@@ -140,7 +145,7 @@ function fillOutTableBodyInvoiceList(invoicesList){
     tableToFill.draw();
 }
 
-function ajaxSendReport(){
+function ajaxSendIVAReport(){
     let email = $('#report_email').val();
 
     if(isEmail(email)){
@@ -213,11 +218,6 @@ function ajaxSendVATReturnsReport(flag){
     }
 }
 
-function isEmail(email) {
-    let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email);
-}
-
 $(function() {
     ajaxGetCurrentUserId();
     highlightCurrentPageInNav();
@@ -225,12 +225,14 @@ $(function() {
     // Fill out all dashboard
     let datepicker = $('#datepicker');
     if (datepicker.length){
-        ajaxChangeReportPeriod("monthly")
+        ajaxChangeReportPeriod("monthly");
     }
-    // If datapicker changes
+    // If datepicker changes
     datepicker.on('change', function() {
-        ajaxChangeReportPeriod(this.value)
+        ajaxChangeReportPeriod(this.value);
     });
+
+    format_amounts();
 
     // Set up datatables opcions
     $('#datatables_list_with_pagination').DataTable({
@@ -242,7 +244,5 @@ $(function() {
         "autoWidth": false,
         "responsive": true,
     });
-
-    format_amounts();
 
 });
