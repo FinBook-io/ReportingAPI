@@ -4,6 +4,7 @@
     NOTE: Do not forget replace DELETE_AFTER_GENERATE for ""
 
     cd C:\src\reporting\data\
+    cd /Users/juankevintr/src/reporting/data
     mongoimport -d fbtestdb -c invoices --drop --file randomInvoices.json --jsonArray
 ####################################
 

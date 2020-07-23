@@ -2198,5 +2198,49 @@
     "totalDue": "2472.96",
     "currency": "euro",
     "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f18d16440e08c5ea8cdb1a0"
+    },
+    "invoiceUUID": "20201001",
+    "invoiceDate": {
+      "$date": "2020-07-22T00:00:00Z"
+    },
+    "zipCode": "35017",
+    "invoiceType": "income",
+    "usoCFDI": "I03",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Presentation",
+    "receiverId": "3000067",
+    "receiverName": "Comveyer",
+    "concept": "Income invoice",
+    "subtotal": "2060.80",
+    "taxRate": "0.2",
+    "totalDue": "2472.96",
+    "currency": "euro",
+    "xmlFile": ""
+  },
+  {
+    "_id": {
+      "$oid": "5f18d1ad08d8de084f5c47d5"
+    },
+    "invoiceUUID": "4143152",
+    "invoiceDate": {
+      "$date": "2020-07-22T00:10:00Z"
+    },
+    "zipCode": "56938",
+    "invoiceType": "egress",
+    "usoCFDI": "D05",
+    "issuerId": "RCO2816104T1",
+    "issuerName": "Presentation",
+    "receiverId": "DEMO",
+    "receiverName": "Demo company",
+    "concept": "Egress invoice",
+    "subtotal": "1293.00",
+    "taxRate": "0.1",
+    "totalDue": "1422.30",
+    "currency": "euro",
+    "xmlFile": ""
   }
 ]

@@ -14,7 +14,7 @@ function errorMessage() {
 
 function openWebSocket(randomText) {
     let textToSign = randomText;
-    console.log("Text to sign: ", textToSign);
+    // console.log("Text to sign: ", textToSign);
     let socket = new WebSocket("ws://localhost:8080/socket");
 
     socket.onopen = function (e) {
